@@ -9,7 +9,7 @@ onMounted(async () => {
       const response = await axiosInstance.get('information/resume/');
       data.value = response.data[0];
    } catch (error) {
-      data.value = { resume: "#" }; // Provide a fallback link in case of an error
+      data.value = { resume: "#" };
    }
 });
 </script>
@@ -24,7 +24,7 @@ onMounted(async () => {
 
       <div class="flex flex-wrap items-center gap-x-4 gap-y-2 lg:gap-x-6 text-white text-xs md:text-sm">
          <RouterLink to="/projects" class="hover:text-cyan-500">Projects</RouterLink>
-         <RouterLink to="/blogs" class="hover:text-cyan-500">Blogs</RouterLink>
+         <!-- <RouterLink to="/blogs" class="hover:text-cyan-500">Blogs</RouterLink> -->
          <RouterLink to="/contact" class="hover:text-cyan-500">Contact</RouterLink>
          
          <a :href="data.resume" target="_blank" class="rounded-full border border-white px-4 py-2 hover:bg-white/10 hover:border-cyan-500 hover:text-cyan-500">

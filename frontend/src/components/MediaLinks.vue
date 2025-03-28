@@ -16,7 +16,7 @@ onMounted(async () => {
 </script>
 
 <template>
-   <div class="flex mt-6 mb-12 items-center text-white">
+   <div class="flex items-center text-white">
       <div v-for="(platform, index) in data" :key="index">
          <div v-if="platform.platform_name === 'fb'">
             <a :href="platform.link" target="_blank">

@@ -72,7 +72,7 @@ const formatDate = (dateString) => {
                </div>
             </div>
 
-            <h3 class="text-lg font-medium text-white group-hover:text-cyan-400 mb-3 transition-colors duration-300 line-clamp-2 min-h-[3rem]">
+            <h3 class="text-xl font-medium text-white group-hover:text-cyan-400 mb-3 transition-colors duration-300 line-clamp-2 min-h-[3rem]">
                {{ name }}
             </h3>
 
