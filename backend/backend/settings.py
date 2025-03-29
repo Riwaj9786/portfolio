@@ -36,6 +36,7 @@ LOCAL_APPS = [
     'skills',
     'services',
     'projects',
+    'contact',
 ]
 
 THIRD_PARTY_APPS = [

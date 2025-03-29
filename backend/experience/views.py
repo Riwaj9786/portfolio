@@ -8,4 +8,4 @@ class ExperienceViewSet(ReadOnlyModelViewSet):
    queryset = Experience.objects.all()
    serializer_class = ExperienceSerializer
    filter_backends = (OrderingFilter,)
-   ordering = ('-start_date',)
+   ordering = ('-start_date', '-end_date')
