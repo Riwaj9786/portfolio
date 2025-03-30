@@ -1,0 +1,880 @@
+[
+   {
+       "model": "account.user",
+       "pk": 1,
+       "fields": {
+           "password": "pbkdf2_sha256$870000$OS7eBbOBLn65vpl05hmcsz$SUnQi43odZNZjI97pWtzjt6xxcDNFidzR/mAlLMU0Tc=",
+           "last_login": "2025-03-28T17:11:50Z",
+           "updated_at": "2025-03-28T18:06:03.479Z",
+           "email": "riwajbhurtel9786@gmail.com",
+           "name": "Riwaj Bhurtel",
+           "title": "Computer Engineer | Graphics Designer",
+           "short_bio": "Full Stack Developer (Django & Vue) | Graphic Designer with 4+ years of experience. Passionate about building scalable apps and compelling designs.",
+           "description": "I am a Computer Engineer and Full Stack Developer with expertise in Django and Vue JS, dedicated to building scalable, efficient, and user-friendly web applications. With over four years of experience in Graphic Design, I specialize in crafting visually compelling brand identities and digital assets that enhance user engagement.\r\n\r\nBeyond my technical skills, I have a strong background in leadership and community engagement. I served as the President of the Rotaract Club of Pokhara University, where I led initiatives in professional development, community service, and networking. Additionally, as the Campus Director for the Hult Prize at Pokhara University, I played a key role in fostering entrepreneurship and social innovation, guiding students to develop impactful startup ideas.\r\n\r\nWith a blend of technology, design, and leadership experience, I am passionate about creating innovative solutions that drive meaningful impact.",
+           "profile_pic": "uploads/profile_pic/Riwaj.jpg",
+           "resume": "uploads/resume/Riwaj_Bhurtel.pdf",
+           "is_active": true,
+           "is_staff": true,
+           "is_superuser": true,
+           "groups": [],
+           "user_permissions": []
+       }
+   },
+   {
+       "model": "account.medialinks",
+       "pk": 1,
+       "fields": {
+           "updated_at": "2025-03-28T17:47:19.422Z",
+           "platform_name": "fb",
+           "link": "https://www.facebook.com/riwaj.bhurtel/"
+       }
+   },
+   {
+       "model": "account.medialinks",
+       "pk": 2,
+       "fields": {
+           "updated_at": "2025-03-28T17:47:27.176Z",
+           "platform_name": "ig",
+           "link": "https://www.instagram.com/guns_n_mercury/"
+       }
+   },
+   {
+       "model": "account.medialinks",
+       "pk": 3,
+       "fields": {
+           "updated_at": "2025-03-28T17:47:32.195Z",
+           "platform_name": "be",
+           "link": "https://www.behance.net/riwajbhurtel"
+       }
+   },
+   {
+       "model": "account.medialinks",
+       "pk": 4,
+       "fields": {
+           "updated_at": "2025-03-28T17:47:55.269Z",
+           "platform_name": "lkin",
+           "link": "https://www.linkedin.com/in/riwaj-bhurtel/"
+       }
+   },
+   {
+       "model": "account.medialinks",
+       "pk": 5,
+       "fields": {
+           "updated_at": "2025-03-28T17:48:20.420Z",
+           "platform_name": "gh",
+           "link": "https://github.com/Riwaj9786"
+       }
+   },
+   {
+       "model": "experience.experience",
+       "pk": 1,
+       "fields": {
+           "updated_at": "2025-03-28T17:45:37.640Z",
+           "title": "Backend Developer",
+           "company": "Youth Innovation Lab",
+           "company_url": "https://youthinnovationlab.org/",
+           "start_date": "2024-11-18",
+           "end_date": null,
+           "job_type": "Onsite",
+           "skills": [
+               1,
+               2,
+               3,
+               4,
+               10,
+               13,
+               14,
+               15,
+               26
+           ]
+       }
+   },
+   {
+       "model": "experience.experience",
+       "pk": 2,
+       "fields": {
+           "updated_at": "2025-03-28T18:02:53.250Z",
+           "title": "Graphics Designer",
+           "company": "Before Education Consultancy",
+           "company_url": "https://www.beforeeducation.com.np/",
+           "start_date": "2023-10-01",
+           "end_date": null,
+           "job_type": "Remote",
+           "skills": [
+               16,
+               17,
+               19,
+               20,
+               28
+           ]
+       }
+   },
+   {
+       "model": "experience.experience",
+       "pk": 3,
+       "fields": {
+           "updated_at": "2025-03-28T17:52:37.979Z",
+           "title": "Founder, Creative Director",
+           "company": "Rioz Graphics",
+           "company_url": null,
+           "start_date": "2021-08-01",
+           "end_date": null,
+           "job_type": "Hybrid",
+           "skills": [
+               1,
+               2,
+               5,
+               6,
+               7,
+               16,
+               17,
+               18,
+               19,
+               20
+           ]
+       }
+   },
+   {
+       "model": "experience.experience",
+       "pk": 4,
+       "fields": {
+           "updated_at": "2025-03-28T18:03:12.012Z",
+           "title": "Graphics Designer",
+           "company": "Himalayan Purifier Pvt. Ltd.",
+           "company_url": "https://himalayanpurifier.com/",
+           "start_date": "2020-12-01",
+           "end_date": null,
+           "job_type": "Remote",
+           "skills": [
+               16,
+               17,
+               18,
+               28
+           ]
+       }
+   },
+   {
+       "model": "experience.experience",
+       "pk": 5,
+       "fields": {
+           "updated_at": "2025-03-28T18:02:27.383Z",
+           "title": "Technical Officer",
+           "company": "CPN (UML) Gandaki",
+           "company_url": null,
+           "start_date": "2022-09-01",
+           "end_date": "2022-11-30",
+           "job_type": "Onsite",
+           "skills": [
+               16,
+               17,
+               19,
+               20,
+               28
+           ]
+       }
+   },
+   {
+       "model": "experience.experience",
+       "pk": 6,
+       "fields": {
+           "updated_at": "2025-03-28T17:55:28.147Z",
+           "title": "Technical Officer",
+           "company": "Yeti Football Club, Australia",
+           "company_url": null,
+           "start_date": "2022-12-01",
+           "end_date": "2024-04-30",
+           "job_type": "Remote",
+           "skills": [
+               16,
+               17,
+               19,
+               20,
+               28
+           ]
+       }
+   },
+   {
+       "model": "experience.experience",
+       "pk": 7,
+       "fields": {
+           "updated_at": "2025-03-28T17:57:18.877Z",
+           "title": "Qualification Compliance Associate",
+           "company": "Queensford College, Australia",
+           "company_url": "https://queensford.edu.au/",
+           "start_date": "2022-10-01",
+           "end_date": "2023-12-30",
+           "job_type": "Remote",
+           "skills": [
+               25,
+               29,
+               30
+           ]
+       }
+   },
+   {
+       "model": "experience.experience",
+       "pk": 8,
+       "fields": {
+           "updated_at": "2025-03-28T17:58:33.848Z",
+           "title": "IT Officer",
+           "company": "Ambirise IT Solution",
+           "company_url": "https://ambirise.com/",
+           "start_date": "2020-10-01",
+           "end_date": "2023-08-31",
+           "job_type": "Hybrid",
+           "skills": [
+               5,
+               6,
+               7,
+               9,
+               11,
+               12,
+               16,
+               17,
+               18,
+               19,
+               28
+           ]
+       }
+   },
+   {
+       "model": "experience.experience",
+       "pk": 9,
+       "fields": {
+           "updated_at": "2025-03-28T17:59:39.026Z",
+           "title": "President",
+           "company": "Rotaract Club of Pokhara University",
+           "company_url": "https://www.rotaractpu.org/",
+           "start_date": "2023-07-01",
+           "end_date": "2024-06-30",
+           "job_type": "Onsite",
+           "skills": [
+               16,
+               19,
+               28,
+               29,
+               30
+           ]
+       }
+   },
+   {
+       "model": "experience.experience",
+       "pk": 10,
+       "fields": {
+           "updated_at": "2025-03-28T18:00:17.024Z",
+           "title": "Campus Director",
+           "company": "Hult Prize Pokhara University",
+           "company_url": null,
+           "start_date": "2023-07-01",
+           "end_date": "2024-06-30",
+           "job_type": "Hybrid",
+           "skills": [
+               16,
+               19,
+               20,
+               25,
+               28,
+               29,
+               30
+           ]
+       }
+   },
+   {
+       "model": "projects.projectcategory",
+       "pk": 1,
+       "fields": {
+           "updated_at": "2025-03-28T18:38:45.902Z",
+           "name": "Web Development"
+       }
+   },
+   {
+       "model": "projects.projectcategory",
+       "pk": 2,
+       "fields": {
+           "updated_at": "2025-03-28T18:39:06.335Z",
+           "name": "Graphic & Digital Marketing"
+       }
+   },
+   {
+       "model": "projects.projectcategory",
+       "pk": 3,
+       "fields": {
+           "updated_at": "2025-03-28T18:39:10.134Z",
+           "name": "Logo Design"
+       }
+   },
+   {
+       "model": "projects.project",
+       "pk": 1,
+       "fields": {
+           "updated_at": "2025-03-28T18:40:28.289Z",
+           "name": "Chat API with Websockets",
+           "link": "https://github.com/Riwaj9786/chat_api.git",
+           "client": null,
+           "banner_image": "",
+           "start_date": "2025-02-01",
+           "end_date": "2025-03-01",
+           "category": 1,
+           "skills": [
+               1,
+               2,
+               3,
+               4,
+               10,
+               13,
+               14,
+               26
+           ]
+       }
+   },
+   {
+       "model": "projects.project",
+       "pk": 2,
+       "fields": {
+           "updated_at": "2025-03-28T18:43:08.613Z",
+           "name": "Digital Marketing",
+           "link": "https://www.behance.net/gallery/206586757/Digital-Marketing_Education-Consultancy",
+           "client": "Spark International Education Consultancy",
+           "banner_image": "uploads/projects/Screenshot_2025-03-26_at_2.17.43pm.png",
+           "start_date": "2024-09-01",
+           "end_date": "2025-01-31",
+           "category": 2,
+           "skills": [
+               16,
+               17,
+               19,
+               20,
+               28
+           ]
+       }
+   },
+   {
+       "model": "projects.project",
+       "pk": 3,
+       "fields": {
+           "updated_at": "2025-03-28T18:44:01.605Z",
+           "name": "Billboard Design",
+           "link": "https://www.behance.net/gallery/206782745/Billboard-Design",
+           "client": "Wikreate Solutions",
+           "banner_image": "uploads/projects/Screenshot_2025-03-26_at_2.14.07pm.png",
+           "start_date": "2023-08-01",
+           "end_date": null,
+           "category": 2,
+           "skills": [
+               16,
+               17,
+               19
+           ]
+       }
+   },
+   {
+       "model": "projects.project",
+       "pk": 4,
+       "fields": {
+           "updated_at": "2025-03-28T18:45:44.475Z",
+           "name": "Sarbam Foods (Backend)",
+           "link": "https://sarbamfoods.com/",
+           "client": "Sarbam Foods",
+           "banner_image": "uploads/projects/2_j2xyCOx.png",
+           "start_date": "2024-12-01",
+           "end_date": "2025-02-28",
+           "category": 1,
+           "skills": [
+               1,
+               2,
+               4,
+               5,
+               6,
+               10,
+               13,
+               14,
+               15,
+               26
+           ]
+       }
+   },
+   {
+       "model": "projects.project",
+       "pk": 5,
+       "fields": {
+           "updated_at": "2025-03-28T18:48:54.287Z",
+           "name": "Digital Marketing",
+           "link": "https://www.upwork.com/freelancers/~01adf88c8d3c0b78ad?p=1760710503430660096",
+           "client": "Sweet Life Partner, Australia",
+           "banner_image": "uploads/projects/Screenshot_2025-03-28_at_5.50.48pm.png",
+           "start_date": "2021-08-01",
+           "end_date": "2022-11-30",
+           "category": 2,
+           "skills": [
+               16,
+               17,
+               18,
+               19,
+               28
+           ]
+       }
+   },
+   {
+       "model": "projects.project",
+       "pk": 6,
+       "fields": {
+           "updated_at": "2025-03-28T18:50:52.519Z",
+           "name": "Tournament Digital Support",
+           "link": "https://www.upwork.com/freelancers/~01adf88c8d3c0b78ad?p=1760708944531107840",
+           "client": "Yeti Football Club, Australia",
+           "banner_image": "uploads/projects/Screenshot_2025-03-28_at_5.52.34pm.png",
+           "start_date": "2022-12-01",
+           "end_date": "2024-04-30",
+           "category": 2,
+           "skills": [
+               16,
+               17,
+               18,
+               19,
+               20,
+               28
+           ]
+       }
+   },
+   {
+       "model": "projects.project",
+       "pk": 7,
+       "fields": {
+           "updated_at": "2025-03-29T02:06:37.969Z",
+           "name": "Advanced Assignment and Student Management System with Plagiarism Checker",
+           "link": "https://github.com/Riwaj9786/advanced_sms",
+           "client": null,
+           "banner_image": "",
+           "start_date": "2023-12-01",
+           "end_date": "2024-04-30",
+           "category": 1,
+           "skills": [
+               1,
+               2,
+               5,
+               6,
+               7,
+               9,
+               11,
+               19
+           ]
+       }
+   },
+   {
+       "model": "services.service",
+       "pk": 1,
+       "fields": {
+           "updated_at": "2025-03-28T17:33:14.748Z",
+           "title": "Web Development",
+           "icon": "uploads/icons/services/351-3517325_web-development-icon-png-front-end-development-icon.png",
+           "description": "Building scalable, high-performance websites with seamless user experiences."
+       }
+   },
+   {
+       "model": "services.service",
+       "pk": 2,
+       "fields": {
+           "updated_at": "2025-03-28T17:33:43.248Z",
+           "title": "Graphics Design",
+           "icon": "uploads/icons/services/graphics.png",
+           "description": "Crafting visually stunning designs that captivate and engage."
+       }
+   },
+   {
+       "model": "services.service",
+       "pk": 3,
+       "fields": {
+           "updated_at": "2025-03-28T17:34:01.174Z",
+           "title": "Branding & Marketing",
+           "icon": "uploads/icons/services/9423005.png",
+           "description": "Creating & Developing strategic campaigns to boost visibility and growth."
+       }
+   },
+   {
+       "model": "skills.skillcategory",
+       "pk": 1,
+       "fields": {
+           "updated_at": "2025-03-28T17:15:06.529Z",
+           "name": "Backend"
+       }
+   },
+   {
+       "model": "skills.skillcategory",
+       "pk": 2,
+       "fields": {
+           "updated_at": "2025-03-28T17:15:11.619Z",
+           "name": "Frontend"
+       }
+   },
+   {
+       "model": "skills.skillcategory",
+       "pk": 4,
+       "fields": {
+           "updated_at": "2025-03-28T17:15:27.204Z",
+           "name": "Data Science"
+       }
+   },
+   {
+       "model": "skills.skillcategory",
+       "pk": 5,
+       "fields": {
+           "updated_at": "2025-03-28T17:15:31.610Z",
+           "name": "Database"
+       }
+   },
+   {
+       "model": "skills.skillcategory",
+       "pk": 6,
+       "fields": {
+           "updated_at": "2025-03-28T17:15:38.905Z",
+           "name": "DevOps"
+       }
+   },
+   {
+       "model": "skills.skillcategory",
+       "pk": 7,
+       "fields": {
+           "updated_at": "2025-03-28T17:15:43.542Z",
+           "name": "Others"
+       }
+   },
+   {
+       "model": "skills.skillcategory",
+       "pk": 8,
+       "fields": {
+           "updated_at": "2025-03-28T17:16:01.179Z",
+           "name": "Graphics"
+       }
+   },
+   {
+       "model": "skills.skill",
+       "pk": 1,
+       "fields": {
+           "updated_at": "2025-03-28T17:18:31.709Z",
+           "name": "Python",
+           "level": 8.0,
+           "logo": "uploads/icons/skills/267_Python-512.webp",
+           "category": 1
+       }
+   },
+   {
+       "model": "skills.skill",
+       "pk": 2,
+       "fields": {
+           "updated_at": "2025-03-28T17:18:52.206Z",
+           "name": "Django",
+           "level": 8.0,
+           "logo": "uploads/icons/skills/django-icon.webp",
+           "category": 1
+       }
+   },
+   {
+       "model": "skills.skill",
+       "pk": 3,
+       "fields": {
+           "updated_at": "2025-03-28T17:19:12.970Z",
+           "name": "Django Channels",
+           "level": 5.0,
+           "logo": "uploads/icons/skills/0_jwhnh7jJZeigWdtH.jpg",
+           "category": 1
+       }
+   },
+   {
+       "model": "skills.skill",
+       "pk": 4,
+       "fields": {
+           "updated_at": "2025-03-28T17:19:26.130Z",
+           "name": "Celery",
+           "level": 6.0,
+           "logo": "uploads/icons/skills/Celery_logo.png",
+           "category": 1
+       }
+   },
+   {
+       "model": "skills.skill",
+       "pk": 5,
+       "fields": {
+           "updated_at": "2025-03-28T17:19:54.397Z",
+           "name": "HTML 5",
+           "level": 8.0,
+           "logo": "uploads/icons/skills/HTML5_logo_and_wordmark.svg.png",
+           "category": 2
+       }
+   },
+   {
+       "model": "skills.skill",
+       "pk": 6,
+       "fields": {
+           "updated_at": "2025-03-28T17:20:10.087Z",
+           "name": "CSS 3",
+           "level": 7.0,
+           "logo": "uploads/icons/skills/CSS3_logo.svg.png",
+           "category": 2
+       }
+   },
+   {
+       "model": "skills.skill",
+       "pk": 7,
+       "fields": {
+           "updated_at": "2025-03-28T17:20:25.237Z",
+           "name": "Javascript",
+           "level": 7.0,
+           "logo": "uploads/icons/skills/JavaScript-logo.png",
+           "category": 2
+       }
+   },
+   {
+       "model": "skills.skill",
+       "pk": 8,
+       "fields": {
+           "updated_at": "2025-03-28T17:20:44.729Z",
+           "name": "TailwindCSS",
+           "level": 8.0,
+           "logo": "uploads/icons/skills/Tailwind_CSS_Logo.svg.png",
+           "category": 2
+       }
+   },
+   {
+       "model": "skills.skill",
+       "pk": 9,
+       "fields": {
+           "updated_at": "2025-03-28T17:21:06.861Z",
+           "name": "Bootstrap",
+           "level": 7.0,
+           "logo": "uploads/icons/skills/bootstrap-5-logo-png_seeklogo-386607.png",
+           "category": 2
+       }
+   },
+   {
+       "model": "skills.skill",
+       "pk": 10,
+       "fields": {
+           "updated_at": "2025-03-28T17:34:46.490Z",
+           "name": "Redis",
+           "level": 6.0,
+           "logo": "uploads/icons/skills/redis.webp",
+           "category": 5
+       }
+   },
+   {
+       "model": "skills.skill",
+       "pk": 11,
+       "fields": {
+           "updated_at": "2025-03-28T17:35:08.755Z",
+           "name": "MySQL",
+           "level": 7.0,
+           "logo": "uploads/icons/skills/mysql.png",
+           "category": 5
+       }
+   },
+   {
+       "model": "skills.skill",
+       "pk": 12,
+       "fields": {
+           "updated_at": "2025-03-28T17:35:21.426Z",
+           "name": "MongoDB",
+           "level": 6.0,
+           "logo": "uploads/icons/skills/mongo.png",
+           "category": 5
+       }
+   },
+   {
+       "model": "skills.skill",
+       "pk": 13,
+       "fields": {
+           "updated_at": "2025-03-28T17:35:32.783Z",
+           "name": "PostgreSQL",
+           "level": 8.0,
+           "logo": "uploads/icons/skills/postgrese.png",
+           "category": 5
+       }
+   },
+   {
+       "model": "skills.skill",
+       "pk": 14,
+       "fields": {
+           "updated_at": "2025-03-28T17:36:06.465Z",
+           "name": "Docker",
+           "level": 7.0,
+           "logo": "uploads/icons/skills/97_Docker_logo_logos-512.webp",
+           "category": 6
+       }
+   },
+   {
+       "model": "skills.skill",
+       "pk": 15,
+       "fields": {
+           "updated_at": "2025-03-28T17:36:39.682Z",
+           "name": "NGINX",
+           "level": 6.0,
+           "logo": "uploads/icons/skills/download.png",
+           "category": 6
+       }
+   },
+   {
+       "model": "skills.skill",
+       "pk": 16,
+       "fields": {
+           "updated_at": "2025-03-28T17:36:58.948Z",
+           "name": "Adobe Photoshop",
+           "level": 8.5,
+           "logo": "uploads/icons/skills/Adobe_Photoshop_CC_icon.svg.png",
+           "category": 8
+       }
+   },
+   {
+       "model": "skills.skill",
+       "pk": 17,
+       "fields": {
+           "updated_at": "2025-03-28T17:37:16.326Z",
+           "name": "Adobe Illustrator",
+           "level": 7.5,
+           "logo": "uploads/icons/skills/Adobe_Illustrator_CC_icon.svg.png",
+           "category": 8
+       }
+   },
+   {
+       "model": "skills.skill",
+       "pk": 18,
+       "fields": {
+           "updated_at": "2025-03-28T17:37:58.786Z",
+           "name": "Adobe Premiere Pro",
+           "level": 6.0,
+           "logo": "uploads/icons/skills/65e09abf952724557f01e3b7_Premiere_icon.png",
+           "category": 8
+       }
+   },
+   {
+       "model": "skills.skill",
+       "pk": 19,
+       "fields": {
+           "updated_at": "2025-03-28T17:38:13.692Z",
+           "name": "Canva",
+           "level": 8.0,
+           "logo": "uploads/icons/skills/canva.webp",
+           "category": 8
+       }
+   },
+   {
+       "model": "skills.skill",
+       "pk": 20,
+       "fields": {
+           "updated_at": "2025-03-28T17:38:28.524Z",
+           "name": "Logo Design",
+           "level": 7.0,
+           "logo": "uploads/icons/skills/Rioz.jpg",
+           "category": 8
+       }
+   },
+   {
+       "model": "skills.skill",
+       "pk": 21,
+       "fields": {
+           "updated_at": "2025-03-28T17:38:49.539Z",
+           "name": "Vue JS",
+           "level": 6.5,
+           "logo": "uploads/icons/skills/Vue.js_Logo_2.svg.png",
+           "category": 2
+       }
+   },
+   {
+       "model": "skills.skill",
+       "pk": 22,
+       "fields": {
+           "updated_at": "2025-03-28T17:39:51.300Z",
+           "name": "NumPy",
+           "level": 7.0,
+           "logo": "uploads/icons/skills/numpy.png",
+           "category": 4
+       }
+   },
+   {
+       "model": "skills.skill",
+       "pk": 23,
+       "fields": {
+           "updated_at": "2025-03-28T17:40:06.281Z",
+           "name": "Pandas",
+           "level": 6.5,
+           "logo": "uploads/icons/skills/pandas.png",
+           "category": 4
+       }
+   },
+   {
+       "model": "skills.skill",
+       "pk": 24,
+       "fields": {
+           "updated_at": "2025-03-28T17:40:30.192Z",
+           "name": "MatplotLib",
+           "level": 6.0,
+           "logo": "uploads/icons/skills/Created_with_Matplotlib-logo.svg.png",
+           "category": 4
+       }
+   },
+   {
+       "model": "skills.skill",
+       "pk": 25,
+       "fields": {
+           "updated_at": "2025-03-28T17:41:07.202Z",
+           "name": "Jira",
+           "level": 6.5,
+           "logo": "uploads/icons/skills/jira.jpeg",
+           "category": 7
+       }
+   },
+   {
+       "model": "skills.skill",
+       "pk": 26,
+       "fields": {
+           "updated_at": "2025-03-28T17:42:16.428Z",
+           "name": "Rest API",
+           "level": 8.0,
+           "logo": "uploads/icons/skills/restapi.png",
+           "category": 1
+       }
+   },
+   {
+       "model": "skills.skill",
+       "pk": 27,
+       "fields": {
+           "updated_at": "2025-03-28T17:41:55.651Z",
+           "name": "NodeJS",
+           "level": 6.0,
+           "logo": "uploads/icons/skills/nodejs.png",
+           "category": 1
+       }
+   },
+   {
+       "model": "skills.skill",
+       "pk": 28,
+       "fields": {
+           "updated_at": "2025-03-28T17:43:00.129Z",
+           "name": "Meta Business Suite",
+           "level": 7.0,
+           "logo": "uploads/icons/skills/233VSmAsi5mRqo1hd77OZcJQh2c.webp",
+           "category": 8
+       }
+   },
+   {
+       "model": "skills.skill",
+       "pk": 29,
+       "fields": {
+           "updated_at": "2025-03-28T17:43:18.889Z",
+           "name": "Microsoft 365",
+           "level": 6.0,
+           "logo": "uploads/icons/skills/20230310065921Microsoft_365_2022.svg.png",
+           "category": 7
+       }
+   },
+   {
+       "model": "skills.skill",
+       "pk": 30,
+       "fields": {
+           "updated_at": "2025-03-28T17:43:57.693Z",
+           "name": "Microsoft Excel",
+           "level": 7.5,
+           "logo": "uploads/icons/skills/excel.jpeg",
+           "category": 7
+       }
+   }
+   ]
+   
