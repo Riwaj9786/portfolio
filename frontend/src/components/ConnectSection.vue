@@ -1,19 +1,23 @@
 <script setup>
 import Information from './Information.vue';
 import MediaLinks from './MediaLinks.vue';
-
 import axios from 'axios';
 import axiosInstance from '@/axios';
 import { ref, onMounted } from 'vue';
 
 const data = ref([]);
+const isLoading = ref(true); // Add loading state
+const error = ref(null); // Properly declare error ref
 
 onMounted(async () => {
-   try{
+   try {
       const response = await axiosInstance.get('contact/information/');
       data.value = response.data[0];
-   } catch(error) {
-      error.value = "Error Fetching Data!"
+   } catch(err) {
+      error.value = "Error Fetching Data!";
+      console.error(err);
+   } finally {
+      isLoading.value = false; // Set loading to false when done
    }
 });
 </script>
@@ -26,7 +30,19 @@ onMounted(async () => {
          </div>
          <hr class="text-white">
       </div>
-      <div class="flex flex-col flex-grow mt-4">
+      
+      <!-- Loading state -->
+      <div v-if="isLoading" class="flex-grow flex items-center justify-center">
+         <div class="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-cyan-500"></div>
+      </div>
+      
+      <!-- Error state -->
+      <div v-else-if="error" class="flex-grow flex items-center justify-center text-red-500">
+         {{ error }}
+      </div>
+      
+      <!-- Content -->
+      <div v-else class="flex flex-col flex-grow mt-4">
          <div class="flex text-gray-300 text-xl mb-6 flex-grow">
             <div class="flex flex-col w-full justify-end text-xs md:text-lg md:text-left">
                <div class="hidden xl:block w-full h-full rounded-xl">

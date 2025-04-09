@@ -6,8 +6,7 @@ import ConnectSection from '@/components/ConnectSection.vue';
 </script>
 
 <template>
-   <div class="flex flex-col min-h-screen">
-      <NavBar/>
+   <div class="flex flex-col">
       <div class="grid grid-cols-1 xl:grid-cols-2 gap-6 px-6 py-12">
          <div class="flex">
             <div class="w-full h-full flex items-stretch">

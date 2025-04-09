@@ -1,11 +1,17 @@
 <script setup>
-import { RouterLink, RouterView } from 'vue-router'
-import Home from './views/Home.vue';
-import Projects from './views/Projects.vue';
+import { RouterView } from 'vue-router'
+import NavBar from './components/NavBar.vue'
+import FooterComponent from './components/FooterComponent.vue'
 </script>
 
 <template>
-  <!-- <Home/>
-  <Projects/> -->
-  <RouterView/>
+  <div class="min-h-screen flex flex-col">
+    <NavBar />
+    
+    <main class="flex-1">
+      <RouterView />
+    </main>
+
+    <FooterComponent />
+  </div>
 </template>

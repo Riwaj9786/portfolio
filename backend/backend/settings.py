@@ -26,7 +26,7 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', cast=bool, default=True)
 
-ALLOWED_HOSTS = ['riwajbhurtel.com.np', 'www.riwajbhurtel.com.np', 'localhost', '172.16.100.81', '192.168.1.7']
+ALLOWED_HOSTS = ['riwajbhurtel.com.np', 'www.riwajbhurtel.com.np', 'localhost', '172.16.100.81', '192.168.1.7', '192.168.1.2']
 
 
 # Application definition

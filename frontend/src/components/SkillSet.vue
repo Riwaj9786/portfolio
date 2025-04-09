@@ -8,6 +8,7 @@ const selectedCategory = ref(null);
 const skills = ref([]);
 const errorMessage = ref(null);
 const loading = ref(false);
+const imageLoaded = ref({}); // Track loaded state for each image
 
 onMounted(async () => {
    try {
@@ -28,17 +29,27 @@ const fetchSkills = async (category) => {
    selectedCategory.value = category;
    loading.value = true;
    skills.value = [];
+   imageLoaded.value = {}; // Reset loaded state when fetching new skills
 
    try {
       const encodedCategory = encodeURIComponent(category);
       const response = await axiosInstance.get(`skill/?category__name=${encodedCategory}`);
       skills.value = response.data;
+      
+      // Initialize image loaded state
+      skills.value.forEach((skill, index) => {
+         imageLoaded.value[index] = false;
+      });
    } catch (error) {
       console.error("Error fetching skills:", error);
       errorMessage.value = "Failed to load skills";
    } finally {
       loading.value = false;
    }
+};
+
+const handleImageLoad = (index) => {
+   imageLoaded.value[index] = true;
 };
 </script>
 
@@ -52,12 +63,23 @@ const fetchSkills = async (category) => {
       
       <div v-else-if="!errorMessage" class="text-gray-400 text-center">Loading categories...</div>
 
-      <div v-if="selectedCategory" class="mt-6">         
+      <div v-if="selectedCategory">         
          <div v-if="loading" class="text-gray-400 text-center mt-2">Loading skills...</div>
 
          <div v-if="skills.length" class="flex flex-col gap-2">
             <div v-for="(skill, index) in skills" :key="index" class="flex w-full p-2 rounded-xl items-center gap-3">
-               <img :src="skill.logo" :alt="skill.name" class="w-10 h-10 max-h-10 rounded-full object-contain">
+               <!-- Skeleton loader for logo -->
+               <div v-if="!imageLoaded[index]" class="w-10 h-10 rounded-full bg-gray-700 animate-pulse"></div>
+               
+               <!-- Actual image (hidden until loaded) -->
+               <img 
+                  :src="skill.logo" 
+                  :alt="skill.name" 
+                  class="w-10 h-10 max-h-10 rounded-full object-contain"
+                  :class="{'hidden': !imageLoaded[index]}"
+                  @load="handleImageLoad(index)"
+               >
+               
                <div class="w-full">
                   <h3 class="text-white font-semibold">{{ skill.name }}</h3>
                   <div class="bg-gray-500 rounded-full h-2 mt-1">

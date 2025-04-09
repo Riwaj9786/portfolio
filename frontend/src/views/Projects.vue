@@ -9,12 +9,8 @@ import { RouterView } from 'vue-router';
 
 <template>
    <div class="flex flex-col min-h-screen">
-      <NavBar/>
       <div class="flex-grow text-white">
          <ProjectsPage/>
-      </div>
-      <div class="mx-12 mt-auto">
-         <FooterComponent/>
       </div>
    </div>
 </template>

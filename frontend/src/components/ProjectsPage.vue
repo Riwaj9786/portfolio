@@ -15,12 +15,15 @@ const loading = ref(false);
 
 onMounted(async () => {
    try {
+      loading.value = true;
       const response = await axiosInstance.get('projects/categories/');
-      categories.value = [{ name: 'All' }, ...response.data]; // Add "All" category
+      categories.value = [{ name: 'All' }, ...response.data];
       selectedCategory.value = categories.value[0];
-      fetchProjects('All'); // Fetch all projects initially
+      await fetchProjects('All');
    } catch (error) {
       errorMessage.value = "Error Fetching Categories!";
+   } finally {
+      loading.value = false;
    }
 });
 
@@ -80,8 +83,25 @@ watch(searchQuery, applySearchFilter);
                <SearchComponent @updateSearch="(query) => (searchQuery = query)" />
             </div>
          </div>
+         
+         <div v-if="loading" class="w-full py-12 flex flex-col items-center space-y-4">
+            <div class="animate-pulse flex space-x-4 w-full max-w-md">
+               <div class="flex-1 space-y-4 py-1">
+                  <div class="h-4 bg-gray-700 rounded w-3/4"></div>
+                  <div class="space-y-2">
+                     <div class="h-4 bg-gray-700 rounded"></div>
+                     <div class="h-4 bg-gray-700 rounded w-5/6"></div>
+                  </div>
+               </div>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full justify-items-center">
+               <div v-for="i in 3" :key="i" class="w-full max-w-xs sm:max-w-none h-64 bg-gray-800 rounded-lg animate-pulse"></div>
+            </div>
+         </div>
+         
+         <!-- Empty state -->
          <div 
-            v-if="!filteredProjects.length && !errorMessage" 
+            v-else-if="!filteredProjects.length && !errorMessage" 
             class="text-center py-12 text-white/60 w-full"
          >
             <p class="text-lg">No projects found</p>
@@ -90,22 +110,21 @@ watch(searchQuery, applySearchFilter);
             </p>
          </div>
 
-         <div v-if="selectedCategory" class="mt-6">
-            <div v-if="loading" class="text-gray-400 text-center mt-2">Loading Projects...</div>
-               <div v-if="filteredProjects.length" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full justify-items-center">
-                  <ProjectCard
-                     v-for="(project, index) in filteredProjects" 
-                     :key="index"
-                     :name="project.name"
-                     :banner_image="project.banner_image"
-                     :skills="project.skills"
-                     :client="project.client"
-                     :start_date="project.start_date"
-                     :end_date="project.end_date"
-                     :link="project.link"
-                     class="h-full transition-opacity duration-300 w-full max-w-xs sm:max-w-none"
-                  />
-               </div>
+         <div v-else class="mt-6 w-full">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full justify-items-center">
+               <ProjectCard
+                  v-for="(project, index) in filteredProjects" 
+                  :key="index"
+                  :name="project.name"
+                  :banner_image="project.banner_image"
+                  :skills="project.skills"
+                  :client="project.client"
+                  :start_date="project.start_date"
+                  :end_date="project.end_date"
+                  :link="project.link"
+                  class="h-full transition-all duration-300 hover:scale-[1.02] w-full max-w-xs sm:max-w-none"
+               />
+            </div>
          </div>
       </div>
    </div>
