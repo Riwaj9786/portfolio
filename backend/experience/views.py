@@ -9,3 +9,6 @@ class ExperienceViewSet(ReadOnlyModelViewSet):
    serializer_class = ExperienceSerializer
    filter_backends = (OrderingFilter,)
    ordering = ('-start_date', '-end_date')
+
+   def get_queryset(self):
+      return Experience.objects.filter(to_display=True)

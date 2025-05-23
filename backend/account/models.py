@@ -6,6 +6,8 @@ from backend.utils import validate_file_size, validate_image_extension, validate
 
 from account.managers import UserManager
 
+from django_ckeditor_5.fields import CKEditor5Field
+
 
 class User(AbstractBaseUser, PermissionsMixin, TimeStampedModel):
    email = models.EmailField(unique=True)
@@ -14,7 +16,7 @@ class User(AbstractBaseUser, PermissionsMixin, TimeStampedModel):
    title = models.CharField(max_length=800)
 
    short_bio = models.TextField(null=True, blank=True)
-   description = models.TextField(null=True, blank=True)
+   description = CKEditor5Field('Text', config_name='extends', null=True, blank=True)
 
    profile_pic = models.ImageField(upload_to='uploads/profile_pic/', null=True, blank=True, validators=[validate_image_extension, validate_file_size])
    resume = models.FileField(upload_to='uploads/resume/', null=True, blank=True, validators=[validate_file_size, validate_pdf])

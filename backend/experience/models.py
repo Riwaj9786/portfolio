@@ -22,6 +22,8 @@ class Experience(TimeStampedModel):
 
    skills = models.ManyToManyField(Skill, related_name='job_skills')
 
+   to_display = models.BooleanField(default=True)
+
 
    def __str__(self):
       return f"{self.title}: {self.company}"

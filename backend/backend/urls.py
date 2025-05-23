@@ -15,13 +15,16 @@ urlpatterns = [
     path('api/', lambda request: JsonResponse({"message": "Welcome to the API root"})),
     
     path('api/v1/information/', include('account.urls')),
+    path('api/v1/appointment/', include('appointment.urls')),
     path('api/v1/experience/', include('experience.urls')),
     path('api/v1/skill/', include('skills.urls')),
     path('api/v1/service/', include('services.urls')),
     path('api/v1/projects/', include('projects.urls')),
     path('api/v1/contact/', include('contact.urls')),
+    path('api/v1/blogs/', include('blogs.urls')),
+
+    path("ckeditor5/", include('django_ckeditor_5.urls')),
 ]
 
-if settings.DEBUG:
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

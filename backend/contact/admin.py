@@ -7,6 +7,7 @@ from contact.models import ContactInformation, Message
 class MessageAdmin(admin.ModelAdmin):
    list_display = ('name', 'email', 'created_at')
    list_display_links = list_display
+   list_per_page = 15
 
    readonly_fields = ('name', 'email', 'message', 'created_at')
 

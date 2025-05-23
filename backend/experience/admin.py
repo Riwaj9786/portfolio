@@ -5,17 +5,18 @@ from experience.models import Experience
 
 @admin.register(Experience)
 class ExperienceAdmin(admin.ModelAdmin):
-   list_display = ('title', 'company', 'job_type_preview', 'start_date', 'end_date_preview')
+   list_display = ('title', 'company', 'job_type_preview', 'start_date', 'end_date_preview', 'to_display')
    list_display_links = list_display
    readonly_fields = ('updated_at',)
    search_fields = ('title', 'company')
    list_filter = ('job_type',)
    filter_horizontal = ('skills',)
    ordering = ('-start_date', '-end_date')
+   list_per_page = 5
 
    fieldsets = (
       ("Basic Information", {
-         "fields": ('title', 'company', 'company_url', 'job_type', 'updated_at')
+         "fields": ('title', 'company', 'company_url', 'job_type', 'to_display', 'updated_at')
       }),
       ("Time", {
          "fields": ('start_date', 'end_date')

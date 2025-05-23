@@ -9,6 +9,7 @@ class SkillAdmin(admin.ModelAdmin):
    list_display_links = list_display
    readonly_fields = ('updated_at',)
    list_filter = ('category__name',)
+   list_per_page = 8
 
    def category_type(self, obj):
       if obj.category:
