@@ -1,0 +1,5054 @@
+[
+{
+  "model": "admin.logentry",
+  "pk": 1,
+  "fields": {
+    "action_time": "2025-05-21T05:16:02.464Z",
+    "user": 1,
+    "content_type": 6,
+    "object_id": "1",
+    "object_repr": "riwajbhurtel9786@gmail.com",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Title\", \"Resume\", \"Profile pic\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 2,
+  "fields": {
+    "action_time": "2025-05-21T05:16:57.037Z",
+    "user": 1,
+    "content_type": 6,
+    "object_id": "1",
+    "object_repr": "riwajbhurtel9786@gmail.com",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Short bio\", \"Description\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 3,
+  "fields": {
+    "action_time": "2025-05-21T05:17:37.793Z",
+    "user": 1,
+    "content_type": 6,
+    "object_id": "1",
+    "object_repr": "riwajbhurtel9786@gmail.com",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 4,
+  "fields": {
+    "action_time": "2025-05-21T05:18:02.063Z",
+    "user": 1,
+    "content_type": 6,
+    "object_id": "1",
+    "object_repr": "riwajbhurtel9786@gmail.com",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Profile pic\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 5,
+  "fields": {
+    "action_time": "2025-05-21T05:19:22.133Z",
+    "user": 1,
+    "content_type": 6,
+    "object_id": "1",
+    "object_repr": "riwajbhurtel9786@gmail.com",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Profile pic\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 6,
+  "fields": {
+    "action_time": "2025-05-21T05:21:19.908Z",
+    "user": 1,
+    "content_type": 6,
+    "object_id": "1",
+    "object_repr": "riwajbhurtel9786@gmail.com",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Resume\", \"Profile pic\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 7,
+  "fields": {
+    "action_time": "2025-05-21T05:21:53.500Z",
+    "user": 1,
+    "content_type": 6,
+    "object_id": "1",
+    "object_repr": "riwajbhurtel9786@gmail.com",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Resume\", \"Profile pic\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 8,
+  "fields": {
+    "action_time": "2025-05-21T05:22:09.476Z",
+    "user": 1,
+    "content_type": 6,
+    "object_id": "1",
+    "object_repr": "riwajbhurtel9786@gmail.com",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Profile pic\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 9,
+  "fields": {
+    "action_time": "2025-05-21T05:24:01.135Z",
+    "user": 1,
+    "content_type": 6,
+    "object_id": "1",
+    "object_repr": "riwajbhurtel9786@gmail.com",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Profile pic\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 10,
+  "fields": {
+    "action_time": "2025-05-21T05:25:22.770Z",
+    "user": 1,
+    "content_type": 6,
+    "object_id": "1",
+    "object_repr": "riwajbhurtel9786@gmail.com",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Resume\", \"Profile pic\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 11,
+  "fields": {
+    "action_time": "2025-05-21T05:25:57.207Z",
+    "user": 1,
+    "content_type": 6,
+    "object_id": "1",
+    "object_repr": "riwajbhurtel9786@gmail.com",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Resume\", \"Profile pic\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 12,
+  "fields": {
+    "action_time": "2025-05-21T05:26:14.354Z",
+    "user": 1,
+    "content_type": 6,
+    "object_id": "1",
+    "object_repr": "riwajbhurtel9786@gmail.com",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Resume\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 13,
+  "fields": {
+    "action_time": "2025-05-21T05:26:37.139Z",
+    "user": 1,
+    "content_type": 6,
+    "object_id": "1",
+    "object_repr": "riwajbhurtel9786@gmail.com",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Profile pic\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 14,
+  "fields": {
+    "action_time": "2025-05-21T05:28:00.786Z",
+    "user": 1,
+    "content_type": 6,
+    "object_id": "1",
+    "object_repr": "riwajbhurtel9786@gmail.com",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Resume\", \"Profile pic\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 15,
+  "fields": {
+    "action_time": "2025-05-21T05:28:28.223Z",
+    "user": 1,
+    "content_type": 6,
+    "object_id": "1",
+    "object_repr": "riwajbhurtel9786@gmail.com",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Resume\", \"Profile pic\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 16,
+  "fields": {
+    "action_time": "2025-05-21T05:28:41.402Z",
+    "user": 1,
+    "content_type": 6,
+    "object_id": "1",
+    "object_repr": "riwajbhurtel9786@gmail.com",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Resume\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 17,
+  "fields": {
+    "action_time": "2025-05-21T05:28:53.885Z",
+    "user": 1,
+    "content_type": 6,
+    "object_id": "1",
+    "object_repr": "riwajbhurtel9786@gmail.com",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Profile pic\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 18,
+  "fields": {
+    "action_time": "2025-05-21T05:34:42.179Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "1",
+    "object_repr": "Chat API with Websockets",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"name\": \"project image\", \"object\": \"Chat API with Websockets: uploads/projects/e0c2e935bbe5067c796d71d83dcf45c0.jpeg\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 19,
+  "fields": {
+    "action_time": "2025-05-21T05:36:02.913Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "1",
+    "object_repr": "Chat API with Websockets",
+    "action_flag": 2,
+    "change_message": "[{\"deleted\": {\"name\": \"project image\", \"object\": \"Chat API with Websockets: uploads/projects/e0c2e935bbe5067c796d71d83dcf45c0.jpeg\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 20,
+  "fields": {
+    "action_time": "2025-05-21T05:36:32.234Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "1",
+    "object_repr": "Chat API with Websockets",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"name\": \"project image\", \"object\": \"Chat API with Websockets: uploads/projects/\\u0905\\u092a\\u0919\\u0917\\u0924-\\u0938\\u092e\\u0935\\u0936_\\u0935\\u092a\\u0926_\\u091c\\u0916\\u092e_\\u0928\\u092f\\u0928\\u0915\\u0930\\u0923.jpg\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 21,
+  "fields": {
+    "action_time": "2025-05-21T05:36:43.909Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "1",
+    "object_repr": "Chat API with Websockets",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"name\": \"project image\", \"object\": \"Chat API with Websockets: uploads/projects/e0c2e935bbe5067c796d71d83dcf45c0.jpeg\", \"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 22,
+  "fields": {
+    "action_time": "2025-05-21T05:37:18.990Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "1",
+    "object_repr": "Chat API with Websockets",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Banner image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 23,
+  "fields": {
+    "action_time": "2025-05-21T05:37:30.417Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "1",
+    "object_repr": "Chat API with Websockets",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"name\": \"project image\", \"object\": \"Chat API with Websockets: uploads/projects/\\u0905\\u092a\\u0919\\u0917\\u0924-\\u0938\\u092e\\u0935\\u0936_\\u0935\\u092a\\u0926_\\u091c\\u0916\\u092e_\\u0928\\u092f\\u0928\\u0915\\u0930\\u0923.jpg\", \"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 24,
+  "fields": {
+    "action_time": "2025-05-21T05:37:46.348Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "1",
+    "object_repr": "Chat API with Websockets",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"name\": \"project image\", \"object\": \"Chat API with Websockets: uploads/projects/e0c2e935bbe5067c796d71d83dcf45c0_t022mui.jpeg\", \"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 25,
+  "fields": {
+    "action_time": "2025-05-21T05:38:47.480Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "1",
+    "object_repr": "Chat API with Websockets",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"name\": \"project image\", \"object\": \"Chat API with Websockets: uploads/projects/\\u0905\\u092a\\u0919\\u0917\\u0924-\\u0938\\u092e\\u0935\\u0936_\\u0935\\u092a\\u0926_\\u091c\\u0916\\u092e_\\u0928\\u092f\\u0928\\u0915\\u0930\\u0923_WWYaYMx.jpg\", \"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 26,
+  "fields": {
+    "action_time": "2025-05-21T05:39:00.623Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "1",
+    "object_repr": "Chat API with Websockets",
+    "action_flag": 2,
+    "change_message": "[{\"deleted\": {\"name\": \"project image\", \"object\": \"Chat API with Websockets: uploads/projects/\\u0905\\u092a\\u0919\\u0917\\u0924-\\u0938\\u092e\\u0935\\u0936_\\u0935\\u092a\\u0926_\\u091c\\u0916\\u092e_\\u0928\\u092f\\u0928\\u0915\\u0930\\u0923_WWYaYMx.jpg\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 27,
+  "fields": {
+    "action_time": "2025-05-21T05:39:13.980Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "1",
+    "object_repr": "Chat API with Websockets",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Banner image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 28,
+  "fields": {
+    "action_time": "2025-05-21T05:46:19.879Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "1",
+    "object_repr": "Chat API with Websockets",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Banner image\", \"Text\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 29,
+  "fields": {
+    "action_time": "2025-05-21T05:47:01.150Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "1",
+    "object_repr": "Chat API with Websockets",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"name\": \"project link\", \"object\": \"Chat API with Websockets: Github\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 30,
+  "fields": {
+    "action_time": "2025-05-21T05:47:15.601Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "1",
+    "object_repr": "Chat API with Websockets",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 31,
+  "fields": {
+    "action_time": "2025-05-21T05:49:35.066Z",
+    "user": 1,
+    "content_type": 6,
+    "object_id": "1",
+    "object_repr": "riwajbhurtel9786@gmail.com",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Text\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 32,
+  "fields": {
+    "action_time": "2025-05-21T05:50:06.389Z",
+    "user": 1,
+    "content_type": 6,
+    "object_id": "1",
+    "object_repr": "riwajbhurtel9786@gmail.com",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Text\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 33,
+  "fields": {
+    "action_time": "2025-05-21T05:50:32.014Z",
+    "user": 1,
+    "content_type": 6,
+    "object_id": "1",
+    "object_repr": "riwajbhurtel9786@gmail.com",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Text\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 34,
+  "fields": {
+    "action_time": "2025-05-21T05:53:51.528Z",
+    "user": 1,
+    "content_type": 6,
+    "object_id": "1",
+    "object_repr": "riwajbhurtel9786@gmail.com",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Text\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 35,
+  "fields": {
+    "action_time": "2025-05-21T05:55:39.276Z",
+    "user": 1,
+    "content_type": 6,
+    "object_id": "1",
+    "object_repr": "riwajbhurtel9786@gmail.com",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Text\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 36,
+  "fields": {
+    "action_time": "2025-05-21T05:55:54.038Z",
+    "user": 1,
+    "content_type": 6,
+    "object_id": "1",
+    "object_repr": "riwajbhurtel9786@gmail.com",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Text\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 37,
+  "fields": {
+    "action_time": "2025-05-21T05:57:53.095Z",
+    "user": 1,
+    "content_type": 6,
+    "object_id": "1",
+    "object_repr": "riwajbhurtel9786@gmail.com",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 38,
+  "fields": {
+    "action_time": "2025-05-21T06:03:27.204Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "2",
+    "object_repr": "Graphic & Digital Marketing",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 39,
+  "fields": {
+    "action_time": "2025-05-21T06:03:33.083Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "1",
+    "object_repr": "Web Development",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 40,
+  "fields": {
+    "action_time": "2025-05-21T06:06:48.505Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "4",
+    "object_repr": "Sarbam Foods (Backend)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Text\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 41,
+  "fields": {
+    "action_time": "2025-05-21T06:06:52.656Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "4",
+    "object_repr": "Sarbam Foods (Backend)",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 42,
+  "fields": {
+    "action_time": "2025-05-21T06:06:54.966Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "2",
+    "object_repr": "Digital Marketing",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Text\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 43,
+  "fields": {
+    "action_time": "2025-05-21T06:06:56.797Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "7",
+    "object_repr": "Advanced Assignment and Student Management System with Plagiarism Checker",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Text\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 44,
+  "fields": {
+    "action_time": "2025-05-21T06:06:59.070Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "7",
+    "object_repr": "Advanced Assignment and Student Management System with Plagiarism Checker",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 45,
+  "fields": {
+    "action_time": "2025-05-21T06:07:01.499Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "3",
+    "object_repr": "Billboard Design",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Text\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 46,
+  "fields": {
+    "action_time": "2025-05-21T06:07:06.171Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "6",
+    "object_repr": "Tournament Digital Support",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Text\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 47,
+  "fields": {
+    "action_time": "2025-05-21T06:07:10.962Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "5",
+    "object_repr": "Digital Marketing",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Text\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 48,
+  "fields": {
+    "action_time": "2025-05-21T07:54:24.342Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "2",
+    "object_repr": "Digital Marketing",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 49,
+  "fields": {
+    "action_time": "2025-05-21T07:54:43.152Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "1",
+    "object_repr": "Chat API with Websockets",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 50,
+  "fields": {
+    "action_time": "2025-05-21T07:54:47.513Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "1",
+    "object_repr": "Chat API with Websockets",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 51,
+  "fields": {
+    "action_time": "2025-05-21T07:59:17.797Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "1",
+    "object_repr": "Real-Time Chat Application with Django Channels & Knox Authentication",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 52,
+  "fields": {
+    "action_time": "2025-05-21T08:00:19.909Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "1",
+    "object_repr": "Real-Time Chat Application with Django Channels & Knox Authentication",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 53,
+  "fields": {
+    "action_time": "2025-05-21T08:02:50.735Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "1",
+    "object_repr": "Real-Time Chat Application with Django Channels & Knox Authentication",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 54,
+  "fields": {
+    "action_time": "2025-05-21T08:03:16.753Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "1",
+    "object_repr": "Real-Time Chat Application with Django Channels & Knox Authentication",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 55,
+  "fields": {
+    "action_time": "2025-05-21T08:03:54.358Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "1",
+    "object_repr": "Real-Time Chat Application with Django Channels & Knox Authentication",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 56,
+  "fields": {
+    "action_time": "2025-05-21T08:04:38.414Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "1",
+    "object_repr": "Real-Time Chat Application with Django Channels & Knox Authentication",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 57,
+  "fields": {
+    "action_time": "2025-05-21T08:05:52.763Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "1",
+    "object_repr": "Real-Time Chat Application with Django Channels & Knox Authentication",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 58,
+  "fields": {
+    "action_time": "2025-05-21T08:09:16.844Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "1",
+    "object_repr": "Real-Time Chat Application with Django Channels & Knox Authentication",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 59,
+  "fields": {
+    "action_time": "2025-05-21T08:11:50.145Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "1",
+    "object_repr": "Real-Time Chat Application with Django Channels & Knox Authentication",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 60,
+  "fields": {
+    "action_time": "2025-05-21T08:12:13.571Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "1",
+    "object_repr": "Real-Time Chat Application with Django Channels & Knox Authentication",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 61,
+  "fields": {
+    "action_time": "2025-05-21T08:14:07.985Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "1",
+    "object_repr": "Real-Time Chat Application with Django Channels & Knox Authentication",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Description\", \"Distinct Features\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 62,
+  "fields": {
+    "action_time": "2025-05-21T11:47:22.733Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "1",
+    "object_repr": "Real-Time Chat Application with Django Channels & Knox Authentication (Backend)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 63,
+  "fields": {
+    "action_time": "2025-05-21T13:21:30.628Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "1",
+    "object_repr": "Real-Time Chat Application with Django Channels & Knox Authentication (Backend)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 64,
+  "fields": {
+    "action_time": "2025-05-21T15:10:26.993Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "1",
+    "object_repr": "Real-Time Chat Application with Django Channels & Knox Authentication (Backend)",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 65,
+  "fields": {
+    "action_time": "2025-05-21T16:44:49.022Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "1",
+    "object_repr": "Real-Time Chat Application with Django Channels & Knox Authentication (Backend)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Distinct Features\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 66,
+  "fields": {
+    "action_time": "2025-05-21T16:45:35.132Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "1",
+    "object_repr": "Real-Time Chat Application with Django Channels & Knox Authentication (Backend)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Distinct Features\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 67,
+  "fields": {
+    "action_time": "2025-05-21T17:02:34.099Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "1",
+    "object_repr": "Real-Time Chat Application with Django Channels & Knox Authentication (Backend)",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"name\": \"project image\", \"object\": \"Real-Time Chat Application with Django Channels & Knox Authentication (Backend): uploads/projects/WhatsApp_Image_2025-05-21_at_7.25.19pm.jpeg\"}}, {\"added\": {\"name\": \"project image\", \"object\": \"Real-Time Chat Application with Django Channels & Knox Authentication (Backend): uploads/projects/e0c2e935bbe5067c796d71d83dcf45c0.jpeg\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 68,
+  "fields": {
+    "action_time": "2025-05-21T17:35:03.052Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "1",
+    "object_repr": "Real-Time Chat Application with Django Channels & Knox Authentication (Backend)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 69,
+  "fields": {
+    "action_time": "2025-05-21T17:35:45.015Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "1",
+    "object_repr": "Real-Time Chat Application with Django Channels & Knox Authentication (Backend)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 70,
+  "fields": {
+    "action_time": "2025-05-21T17:40:46.152Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "1",
+    "object_repr": "Backend Developer: Youth Innovation Lab",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 71,
+  "fields": {
+    "action_time": "2025-05-21T17:40:50.203Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "10",
+    "object_repr": "Campus Director: Hult Prize Pokhara University",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"To display\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 72,
+  "fields": {
+    "action_time": "2025-05-21T17:40:54.687Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "9",
+    "object_repr": "President: Rotaract Club of Pokhara University",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"To display\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 73,
+  "fields": {
+    "action_time": "2025-05-21T17:41:01.136Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "4",
+    "object_repr": "Graphics Designer: Himalayan Purifier Pvt. Ltd.",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"To display\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 74,
+  "fields": {
+    "action_time": "2025-05-21T17:41:10.386Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "5",
+    "object_repr": "Technical Officer: CPN (UML) Gandaki",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"To display\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 75,
+  "fields": {
+    "action_time": "2025-05-21T17:41:58.441Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "6",
+    "object_repr": "Technical Officer: Yeti Football Club, Australia",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"To display\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 76,
+  "fields": {
+    "action_time": "2025-05-21T17:42:16.076Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "2",
+    "object_repr": "Graphics Designer: Before Education Consultancy",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"To display\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 77,
+  "fields": {
+    "action_time": "2025-05-21T17:42:43.942Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "4",
+    "object_repr": "Graphics Designer: Himalayan Purifier Pvt. Ltd.",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"To display\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 78,
+  "fields": {
+    "action_time": "2025-05-21T17:43:29.429Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "4",
+    "object_repr": "Graphics Designer: Himalayan Purifier Pvt. Ltd.",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"End date\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 79,
+  "fields": {
+    "action_time": "2025-05-21T17:46:35.177Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "1",
+    "object_repr": "Real-Time Chat Application with Django Channels & Knox Authentication (Backend)",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 80,
+  "fields": {
+    "action_time": "2025-05-21T17:51:22.614Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "1",
+    "object_repr": "Real-Time Chat Application with Django Channels & Knox Authentication (Backend)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Is archive\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 81,
+  "fields": {
+    "action_time": "2025-05-21T17:51:33.653Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "1",
+    "object_repr": "Real-Time Chat Application with Django Channels & Knox Authentication (Backend)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Is archive\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 82,
+  "fields": {
+    "action_time": "2025-05-21T17:51:41.977Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "1",
+    "object_repr": "Real-Time Chat Application with Django Channels & Knox Authentication (Backend)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Is archive\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 83,
+  "fields": {
+    "action_time": "2025-05-21T17:51:51.369Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "1",
+    "object_repr": "Real-Time Chat Application with Django Channels & Knox Authentication (Backend)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Is archive\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 84,
+  "fields": {
+    "action_time": "2025-05-21T17:59:41.654Z",
+    "user": 1,
+    "content_type": 6,
+    "object_id": "1",
+    "object_repr": "riwajbhurtel9786@gmail.com",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 85,
+  "fields": {
+    "action_time": "2025-05-21T18:00:44.335Z",
+    "user": 1,
+    "content_type": 6,
+    "object_id": "1",
+    "object_repr": "riwajbhurtel9786@gmail.com",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Profile pic\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 86,
+  "fields": {
+    "action_time": "2025-05-21T18:03:19.893Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "31",
+    "object_repr": "Seaborn",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 87,
+  "fields": {
+    "action_time": "2025-05-21T18:04:00.606Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "32",
+    "object_repr": "SQLite",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 88,
+  "fields": {
+    "action_time": "2025-05-21T18:04:42.982Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "33",
+    "object_repr": "AWS Cloud",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 89,
+  "fields": {
+    "action_time": "2025-05-21T18:05:48.553Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "34",
+    "object_repr": "Figma",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 90,
+  "fields": {
+    "action_time": "2025-05-21T18:06:56.776Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "35",
+    "object_repr": "Wordpress",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 91,
+  "fields": {
+    "action_time": "2025-05-21T18:07:10.666Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "36",
+    "object_repr": "Linux (Ubuntu)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 92,
+  "fields": {
+    "action_time": "2025-05-21T18:12:48.665Z",
+    "user": 1,
+    "content_type": 18,
+    "object_id": "3",
+    "object_repr": "Experiencing as a President in Rotaract Club of Pokhara University",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 93,
+  "fields": {
+    "action_time": "2025-05-21T18:12:53.541Z",
+    "user": 1,
+    "content_type": 18,
+    "object_id": "1",
+    "object_repr": "Participating in Hult Dubai Regionals 2023",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 94,
+  "fields": {
+    "action_time": "2025-05-21T18:12:57.818Z",
+    "user": 1,
+    "content_type": 18,
+    "object_id": "4",
+    "object_repr": "Blog 3",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 95,
+  "fields": {
+    "action_time": "2025-05-21T18:12:57.818Z",
+    "user": 1,
+    "content_type": 18,
+    "object_id": "3",
+    "object_repr": "Experiencing as a President in Rotaract Club of Pokhara University",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 96,
+  "fields": {
+    "action_time": "2025-05-21T18:12:57.818Z",
+    "user": 1,
+    "content_type": 18,
+    "object_id": "1",
+    "object_repr": "Participating in Hult Dubai Regionals 2023",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 97,
+  "fields": {
+    "action_time": "2025-05-22T01:10:56.846Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "1",
+    "object_repr": "Real-Time Chat Application with Django Channels & Knox Authentication (Backend)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"name\": \"project image\", \"object\": \"Real-Time Chat Application with Django Channels & Knox Authentication (Backend): \", \"fields\": [\"Image\"]}}, {\"changed\": {\"name\": \"project image\", \"object\": \"Real-Time Chat Application with Django Channels & Knox Authentication (Backend): uploads/projects/Screenshot_2025-05-22_at_6.55.39am.png\", \"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 98,
+  "fields": {
+    "action_time": "2025-05-22T01:11:14.152Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "1",
+    "object_repr": "Real-Time Chat Application with Django Channels & Knox Authentication (Backend)",
+    "action_flag": 2,
+    "change_message": "[{\"deleted\": {\"name\": \"project image\", \"object\": \"Real-Time Chat Application with Django Channels & Knox Authentication (Backend): \"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 99,
+  "fields": {
+    "action_time": "2025-05-22T01:12:09.559Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "1",
+    "object_repr": "Real-Time Chat Application with Django Channels & Knox Authentication (Backend)",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"name\": \"project image\", \"object\": \"Real-Time Chat Application with Django Channels & Knox Authentication (Backend): uploads/projects/Screenshot_2025-05-22_at_6.56.56am.png\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 100,
+  "fields": {
+    "action_time": "2025-05-22T01:14:04.830Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "4",
+    "object_repr": "Sarbam Foods (Backend)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}, {\"added\": {\"name\": \"project link\", \"object\": \"Sarbam Foods (Backend): Github\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 101,
+  "fields": {
+    "action_time": "2025-05-22T01:14:38.464Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "4",
+    "object_repr": "Sarbam Foods (Backend)",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"name\": \"project image\", \"object\": \"Sarbam Foods (Backend): uploads/projects/2_j2xyCOx_Svw1kC6.png\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 102,
+  "fields": {
+    "action_time": "2025-05-22T01:14:51.773Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "4",
+    "object_repr": "Sarbam Foods (Backend)",
+    "action_flag": 2,
+    "change_message": "[{\"deleted\": {\"name\": \"project link\", \"object\": \"Sarbam Foods (Backend): Github\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 103,
+  "fields": {
+    "action_time": "2025-05-22T01:19:36.753Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "4",
+    "object_repr": "Powering Sarbam Foods with Django: A Complete Backend for Stock, Orders, and Authentication",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Name\", \"Description\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 104,
+  "fields": {
+    "action_time": "2025-05-22T01:21:52.339Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "4",
+    "object_repr": "Powering Sarbam Foods with Django: A Complete Backend for Stock, Orders, and Authentication",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 105,
+  "fields": {
+    "action_time": "2025-05-22T01:22:22.960Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "4",
+    "object_repr": "Powering Sarbam Foods with Django: A Complete Backend for Stock, Orders, and Authentication",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 106,
+  "fields": {
+    "action_time": "2025-05-22T01:25:43.565Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "4",
+    "object_repr": "Powering Sarbam Foods with Django: A Complete Backend for Stock, Orders, and Authentication",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Distinct Features\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 107,
+  "fields": {
+    "action_time": "2025-05-22T01:42:31.434Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "4",
+    "object_repr": "Powering Sarbam Foods with Django: A Complete Backend for Stock, Orders, and Authentication",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"name\": \"project image\", \"object\": \"Powering Sarbam Foods with Django: A Complete Backend for Stock, Orders, and Authentication: uploads/projects/Screenshot_2025-05-22_at_7.27.11am.png\"}}, {\"deleted\": {\"name\": \"project image\", \"object\": \"Powering Sarbam Foods with Django: A Complete Backend for Stock, Orders, and Authentication: uploads/projects/2_j2xyCOx_Svw1kC6.png\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 108,
+  "fields": {
+    "action_time": "2025-05-22T01:44:03.079Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "4",
+    "object_repr": "Powering Sarbam Foods with Django: A Complete Backend for Stock, Orders, and Authentication",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"name\": \"project image\", \"object\": \"Powering Sarbam Foods with Django: A Complete Backend for Stock, Orders, and Authentication: uploads/projects/Screenshot_2025-05-22_at_7.28.49am.png\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 109,
+  "fields": {
+    "action_time": "2025-05-22T02:04:40.857Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "4",
+    "object_repr": "Powering Sarbam Foods with Django: A Complete Backend for Stock, Orders, and Authentication",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"name\": \"project link\", \"object\": \"Powering Sarbam Foods with Django: A Complete Backend for Stock, Orders, and Authentication: Github\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 110,
+  "fields": {
+    "action_time": "2025-05-22T02:05:28.188Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "4",
+    "object_repr": "Powering Sarbam Foods with Django: A Complete Backend for Stock, Orders, and Authentication",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"name\": \"project link\", \"object\": \"Powering Sarbam Foods with Django: A Complete Backend for Stock, Orders, and Authentication: Website\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 111,
+  "fields": {
+    "action_time": "2025-05-22T02:06:03.706Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "4",
+    "object_repr": "Powering Sarbam Foods with Django: A Complete Backend for Stock, Orders, and Authentication",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"name\": \"project link\", \"object\": \"Powering Sarbam Foods with Django: A Complete Backend for Stock, Orders, and Authentication: Website\", \"fields\": [\"Link\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 112,
+  "fields": {
+    "action_time": "2025-05-22T02:08:49.420Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "6",
+    "object_repr": "x",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 113,
+  "fields": {
+    "action_time": "2025-05-22T02:10:06.446Z",
+    "user": 1,
+    "content_type": 6,
+    "object_id": "1",
+    "object_repr": "riwajbhurtel9786@gmail.com",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Text\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 114,
+  "fields": {
+    "action_time": "2025-05-22T02:14:10.454Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "1",
+    "object_repr": "Real-Time Chat Application with Django Channels & Knox Authentication (Backend)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 115,
+  "fields": {
+    "action_time": "2025-05-22T02:25:36.796Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "8",
+    "object_repr": "A Complete Branding Journey for Spark International Education Consultancy",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"project image\", \"object\": \"A Complete Branding Journey for Spark International Education Consultancy: uploads/projects/spark_logo.jpg\"}}, {\"added\": {\"name\": \"project image\", \"object\": \"A Complete Branding Journey for Spark International Education Consultancy: uploads/projects/spark_cover.jpg\"}}, {\"added\": {\"name\": \"project image\", \"object\": \"A Complete Branding Journey for Spark International Education Consultancy: uploads/projects/spark_congrats.jpg\"}}, {\"added\": {\"name\": \"project image\", \"object\": \"A Complete Branding Journey for Spark International Education Consultancy: uploads/projects/hiring.jpg\"}}, {\"added\": {\"name\": \"project image\", \"object\": \"A Complete Branding Journey for Spark International Education Consultancy: uploads/projects/abroad_spark.jpg\"}}, {\"added\": {\"name\": \"project link\", \"object\": \"A Complete Branding Journey for Spark International Education Consultancy: Website\"}}, {\"added\": {\"name\": \"project link\", \"object\": \"A Complete Branding Journey for Spark International Education Consultancy: Facebook\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 116,
+  "fields": {
+    "action_time": "2025-05-22T02:28:48.507Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "8",
+    "object_repr": "A Complete Branding Journey for Spark International Education Consultancy",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 117,
+  "fields": {
+    "action_time": "2025-05-22T02:29:13.824Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "8",
+    "object_repr": "A Complete Branding Journey for Spark International Education Consultancy",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 118,
+  "fields": {
+    "action_time": "2025-05-22T02:30:27.883Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "8",
+    "object_repr": "A Complete Branding Journey for Spark International Education Consultancy",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Distinct Features\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 119,
+  "fields": {
+    "action_time": "2025-05-22T02:32:35.312Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "8",
+    "object_repr": "A Complete Branding Journey: Spark International Education Consultancy",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 120,
+  "fields": {
+    "action_time": "2025-05-22T02:41:57.460Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "2",
+    "object_repr": "Digital Marketing",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 121,
+  "fields": {
+    "action_time": "2025-05-22T02:51:45.893Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "7",
+    "object_repr": "Advanced Assignment and Student Management System with Plagiarism Checker",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Banner image\", \"Description\"]}}, {\"added\": {\"name\": \"project image\", \"object\": \"Advanced Assignment and Student Management System with Plagiarism Checker: uploads/projects/Screenshot_2025-05-22_at_8.36.29am.png\"}}, {\"added\": {\"name\": \"project image\", \"object\": \"Advanced Assignment and Student Management System with Plagiarism Checker: uploads/projects/edu-assist.png\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 122,
+  "fields": {
+    "action_time": "2025-05-22T09:26:44.995Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "7",
+    "object_repr": "Advanced Assignment and Student Management System with Plagiarism Checker",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"End date\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 123,
+  "fields": {
+    "action_time": "2025-05-22T09:33:47.460Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "7",
+    "object_repr": "Advanced Assignment and Student Management System with Plagiarism Checker",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Description\", \"Distinct Features\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 124,
+  "fields": {
+    "action_time": "2025-05-22T09:34:34.737Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "7",
+    "object_repr": "Advanced Assignment and Student Management System with Plagiarism Checker",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Distinct Features\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 125,
+  "fields": {
+    "action_time": "2025-05-22T09:36:11.730Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "7",
+    "object_repr": "Advanced Assignment and Student Management System with Plagiarism Checker",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 126,
+  "fields": {
+    "action_time": "2025-05-22T09:42:46.578Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "7",
+    "object_repr": "Advanced Assignment and Student Management System with Plagiarism Checker",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 127,
+  "fields": {
+    "action_time": "2025-05-22T09:43:19.216Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "7",
+    "object_repr": "Advanced Assignment and Student Management System with Plagiarism Checker",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 128,
+  "fields": {
+    "action_time": "2025-05-22T09:43:36.817Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "7",
+    "object_repr": "Advanced Assignment and Student Management System with Plagiarism Checker",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 129,
+  "fields": {
+    "action_time": "2025-05-22T09:44:51.408Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "7",
+    "object_repr": "Advanced Assignment and Student Management System with Plagiarism Checker",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"name\": \"project link\", \"object\": \"Advanced Assignment and Student Management System with Plagiarism Checker: Github\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 130,
+  "fields": {
+    "action_time": "2025-05-22T09:45:52.076Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "7",
+    "object_repr": "Advanced Assignment and Student Management System with Plagiarism Checker",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"name\": \"project image\", \"object\": \"Advanced Assignment and Student Management System with Plagiarism Checker: uploads/projects/Screenshot_2025-05-22_at_3.30.36pm.png\", \"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 131,
+  "fields": {
+    "action_time": "2025-05-22T09:46:10.993Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "7",
+    "object_repr": "Advanced Assignment and Student Management System with Plagiarism Checker",
+    "action_flag": 2,
+    "change_message": "[{\"deleted\": {\"name\": \"project image\", \"object\": \"Advanced Assignment and Student Management System with Plagiarism Checker: \"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 132,
+  "fields": {
+    "action_time": "2025-05-22T09:46:42.587Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "7",
+    "object_repr": "Advanced Assignment and Student Management System with Plagiarism Checker",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"name\": \"project image\", \"object\": \"Advanced Assignment and Student Management System with Plagiarism Checker: uploads/projects/Screenshot_2025-05-22_at_3.31.30pm.png\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 133,
+  "fields": {
+    "action_time": "2025-05-22T09:47:49.081Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "7",
+    "object_repr": "Advanced Assignment and Student Management System with Plagiarism Checker",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"name\": \"project image\", \"object\": \"Advanced Assignment and Student Management System with Plagiarism Checker: uploads/projects/Screenshot_2025-05-22_at_3.32.09pm.png\"}}, {\"added\": {\"name\": \"project image\", \"object\": \"Advanced Assignment and Student Management System with Plagiarism Checker: uploads/projects/Screenshot_2025-05-22_at_3.32.25pm.png\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 134,
+  "fields": {
+    "action_time": "2025-05-22T09:53:49.189Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "7",
+    "object_repr": "Advanced Assignment and Student Management System with Plagiarism Checker",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 135,
+  "fields": {
+    "action_time": "2025-05-22T10:13:10.665Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "7",
+    "object_repr": "Advanced Assignment and Student Management System with Plagiarism Checker",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"name\": \"project image\", \"object\": \"Advanced Assignment and Student Management System with Plagiarism Checker: uploads/projects/Screenshot_2025-05-22_at_3.30.36pm.png\", \"fields\": [\"Caption\"]}}, {\"changed\": {\"name\": \"project image\", \"object\": \"Advanced Assignment and Student Management System with Plagiarism Checker: uploads/projects/Screenshot_2025-05-22_at_3.31.30pm.png\", \"fields\": [\"Caption\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 136,
+  "fields": {
+    "action_time": "2025-05-22T10:14:47.102Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "7",
+    "object_repr": "Advanced Assignment and Student Management System with Plagiarism Checker",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"name\": \"project image\", \"object\": \"Advanced Assignment and Student Management System with Plagiarism Checker: uploads/projects/Screenshot_2025-05-22_at_3.32.09pm.png\", \"fields\": [\"Caption\"]}}, {\"changed\": {\"name\": \"project image\", \"object\": \"Advanced Assignment and Student Management System with Plagiarism Checker: uploads/projects/Screenshot_2025-05-22_at_3.32.25pm.png\", \"fields\": [\"Caption\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 137,
+  "fields": {
+    "action_time": "2025-05-22T10:16:30.410Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "7",
+    "object_repr": "Advanced Assignment and Student Management System with Plagiarism Checker",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"name\": \"project image\", \"object\": \"Advanced Assignment and Student Management System with Plagiarism Checker: uploads/projects/edu-assist.png\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 138,
+  "fields": {
+    "action_time": "2025-05-22T10:28:59.563Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "1",
+    "object_repr": "Real-Time Chat Application with Django Channels & Knox Authentication (Backend)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"name\": \"project image\", \"object\": \"Real-Time Chat Application with Django Channels & Knox Authentication (Backend): uploads/projects/Screenshot_2025-05-22_at_6.55.39am.png\", \"fields\": [\"Caption\"]}}, {\"changed\": {\"name\": \"project image\", \"object\": \"Real-Time Chat Application with Django Channels & Knox Authentication (Backend): uploads/projects/Screenshot_2025-05-22_at_6.56.56am.png\", \"fields\": [\"Caption\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 139,
+  "fields": {
+    "action_time": "2025-05-22T10:29:48.357Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "4",
+    "object_repr": "Powering Sarbam Foods with Django: A Complete Backend for Stock, Orders, and Authentication",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"name\": \"project image\", \"object\": \"Powering Sarbam Foods with Django: A Complete Backend for Stock, Orders, and Authentication: uploads/projects/Screenshot_2025-05-22_at_7.27.11am.png\", \"fields\": [\"Caption\"]}}, {\"changed\": {\"name\": \"project image\", \"object\": \"Powering Sarbam Foods with Django: A Complete Backend for Stock, Orders, and Authentication: uploads/projects/Screenshot_2025-05-22_at_7.28.49am.png\", \"fields\": [\"Caption\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 140,
+  "fields": {
+    "action_time": "2025-05-22T10:32:37.808Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "8",
+    "object_repr": "A Complete Branding Journey: Spark International Education Consultancy",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"name\": \"project image\", \"object\": \"A Complete Branding Journey: Spark International Education Consultancy: uploads/projects/spark_logo.jpg\", \"fields\": [\"Caption\"]}}, {\"changed\": {\"name\": \"project image\", \"object\": \"A Complete Branding Journey: Spark International Education Consultancy: uploads/projects/spark_cover.jpg\", \"fields\": [\"Caption\"]}}, {\"changed\": {\"name\": \"project image\", \"object\": \"A Complete Branding Journey: Spark International Education Consultancy: uploads/projects/spark_congrats.jpg\", \"fields\": [\"Caption\"]}}, {\"changed\": {\"name\": \"project image\", \"object\": \"A Complete Branding Journey: Spark International Education Consultancy: uploads/projects/hiring.jpg\", \"fields\": [\"Caption\"]}}, {\"changed\": {\"name\": \"project image\", \"object\": \"A Complete Branding Journey: Spark International Education Consultancy: uploads/projects/abroad_spark.jpg\", \"fields\": [\"Caption\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 141,
+  "fields": {
+    "action_time": "2025-05-22T10:39:12.326Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "9",
+    "object_repr": "Portfolio Website",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"project image\", \"object\": \"Portfolio Website: uploads/projects/Screenshot_2025-05-22_at_4.21.34pm.png\"}}, {\"added\": {\"name\": \"project link\", \"object\": \"Portfolio Website: Website\"}}, {\"added\": {\"name\": \"project link\", \"object\": \"Portfolio Website: Github\"}}, {\"added\": {\"name\": \"project link\", \"object\": \"Portfolio Website: Figma\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 142,
+  "fields": {
+    "action_time": "2025-05-22T10:51:49.673Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "9",
+    "object_repr": "Portfolio Website",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Description\", \"Distinct Features\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 143,
+  "fields": {
+    "action_time": "2025-05-22T10:52:31.277Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "9",
+    "object_repr": "Portfolio Website",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 144,
+  "fields": {
+    "action_time": "2025-05-22T10:53:38.416Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "9",
+    "object_repr": "Full-Stack Developer Portfolio – Django, Vue & AWS",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 145,
+  "fields": {
+    "action_time": "2025-05-22T10:55:12.108Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "9",
+    "object_repr": "Full-Stack Developer Portfolio – Django, Vue & AWS",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"name\": \"project image\", \"object\": \"Full-Stack Developer Portfolio \\u2013 Django, Vue & AWS: uploads/projects/Screenshot_2025-05-22_at_4.39.47pm.png\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 146,
+  "fields": {
+    "action_time": "2025-05-22T10:56:36.561Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "9",
+    "object_repr": "Full-Stack Developer Portfolio – Django, Vue & AWS",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"name\": \"project image\", \"object\": \"Full-Stack Developer Portfolio \\u2013 Django, Vue & AWS: uploads/projects/Screenshot_2025-05-22_at_4.40.58pm.png\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 147,
+  "fields": {
+    "action_time": "2025-05-22T10:57:28.129Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "9",
+    "object_repr": "Full-Stack Developer Portfolio – Django, Vue & AWS",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Distinct Features\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 148,
+  "fields": {
+    "action_time": "2025-05-22T13:29:39.616Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "9",
+    "object_repr": "Full-Stack Developer Portfolio – Django, Vue & AWS",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 149,
+  "fields": {
+    "action_time": "2025-05-22T13:30:30.489Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "9",
+    "object_repr": "Full-Stack Developer Portfolio – Django, Vue & AWS",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 150,
+  "fields": {
+    "action_time": "2025-05-22T14:57:56.870Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "3",
+    "object_repr": "Brand Identity & Logo Design for Before Education Consultancy",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Name\", \"Client\", \"Banner image\", \"Category\", \"Start date\", \"Description\"]}}, {\"added\": {\"name\": \"project link\", \"object\": \"Brand Identity & Logo Design for Before Education Consultancy: Facebook\"}}, {\"changed\": {\"name\": \"project link\", \"object\": \"Brand Identity & Logo Design for Before Education Consultancy: Behance\", \"fields\": [\"Link\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 151,
+  "fields": {
+    "action_time": "2025-05-22T15:02:07.626Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "3",
+    "object_repr": "Brand Identity & Logo Design for Before Education Consultancy",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Description\", \"Distinct Features\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 152,
+  "fields": {
+    "action_time": "2025-05-22T15:14:16.826Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "3",
+    "object_repr": "Brand Identity & Logo Design for Before Education Consultancy",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"name\": \"project image\", \"object\": \"Brand Identity & Logo Design for Before Education Consultancy: uploads/projects/before_logo_explain.png\"}}, {\"added\": {\"name\": \"project image\", \"object\": \"Brand Identity & Logo Design for Before Education Consultancy: uploads/projects/before_logo.jpg\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 153,
+  "fields": {
+    "action_time": "2025-05-22T15:18:08.752Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "5",
+    "object_repr": "Digital Marketing",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Is archive\", \"Description\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 154,
+  "fields": {
+    "action_time": "2025-05-22T15:18:25.503Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "5",
+    "object_repr": "Digital Marketing",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Is archive\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 155,
+  "fields": {
+    "action_time": "2025-05-22T15:28:45.439Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "5",
+    "object_repr": "Rebranding the Sweet Life Partner Logo",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Name\", \"Category\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 156,
+  "fields": {
+    "action_time": "2025-05-22T15:29:09.973Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "5",
+    "object_repr": "Rebranding the Sweet Life Partner Logo",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Skills\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 157,
+  "fields": {
+    "action_time": "2025-05-22T16:07:14.744Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "5",
+    "object_repr": "Rebranding the Sweet Life Partner Logo",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Description\", \"Distinct Features\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 158,
+  "fields": {
+    "action_time": "2025-05-22T16:14:18.726Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "5",
+    "object_repr": "Rebranding the Sweet Life Partner Logo",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"name\": \"project image\", \"object\": \"Rebranding the Sweet Life Partner Logo: uploads/projects/SLP_logo_explain.png\"}}, {\"added\": {\"name\": \"project image\", \"object\": \"Rebranding the Sweet Life Partner Logo: uploads/projects/3D_Finish.png\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 159,
+  "fields": {
+    "action_time": "2025-05-22T16:22:11.970Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "5",
+    "object_repr": "Rebranding the Sweet Life Partner Logo",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"End date\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 160,
+  "fields": {
+    "action_time": "2025-05-22T16:36:33.051Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "6",
+    "object_repr": "Tournament Digital Support for Kandel Consultancy Cup",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Name\", \"Description\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 161,
+  "fields": {
+    "action_time": "2025-05-22T16:36:50.659Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "6",
+    "object_repr": "Tournament Digital Support for Kandel Consultancy Cup",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 162,
+  "fields": {
+    "action_time": "2025-05-22T16:38:37.986Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "10",
+    "object_repr": "Digital Marketing and Graphic Design: Sweet Life Partner Australia",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 163,
+  "fields": {
+    "action_time": "2025-05-22T16:38:45.836Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "10",
+    "object_repr": "Digital Marketing and Graphic Design: Sweet Life Partner",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 164,
+  "fields": {
+    "action_time": "2025-05-22T16:38:52.534Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "5",
+    "object_repr": "Rebranding the Sweet Life Partner Logo",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Client\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 165,
+  "fields": {
+    "action_time": "2025-05-22T16:42:46.038Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "10",
+    "object_repr": "Digital Marketing and Graphic Design: Sweet Life Partner",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"name\": \"project image\", \"object\": \"Digital Marketing and Graphic Design: Sweet Life Partner: uploads/projects/3D_Finish_h6y7hLn.png\"}}, {\"added\": {\"name\": \"project image\", \"object\": \"Digital Marketing and Graphic Design: Sweet Life Partner: uploads/projects/cover_slp.jpg\"}}, {\"added\": {\"name\": \"project image\", \"object\": \"Digital Marketing and Graphic Design: Sweet Life Partner: uploads/projects/Swing.png\"}}, {\"added\": {\"name\": \"project image\", \"object\": \"Digital Marketing and Graphic Design: Sweet Life Partner: uploads/projects/Logo_Christmas.png\"}}, {\"added\": {\"name\": \"project image\", \"object\": \"Digital Marketing and Graphic Design: Sweet Life Partner: uploads/projects/preference.png\"}}, {\"added\": {\"name\": \"project image\", \"object\": \"Digital Marketing and Graphic Design: Sweet Life Partner: uploads/projects/Kites_Dashain.png\"}}, {\"added\": {\"name\": \"project image\", \"object\": \"Digital Marketing and Graphic Design: Sweet Life Partner: uploads/projects/Purnima.png\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 166,
+  "fields": {
+    "action_time": "2025-05-22T16:43:51.624Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "10",
+    "object_repr": "Digital Marketing and Graphic Design: Sweet Life Partner",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"name\": \"project image\", \"object\": \"Digital Marketing and Graphic Design: Sweet Life Partner: uploads/projects/chowk_tira.png\"}}, {\"added\": {\"name\": \"project image\", \"object\": \"Digital Marketing and Graphic Design: Sweet Life Partner: uploads/projects/sapana_ko_mayalu.png\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 167,
+  "fields": {
+    "action_time": "2025-05-22T16:44:19.825Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "10",
+    "object_repr": "Digital Marketing and Graphic Design: Sweet Life Partner",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 168,
+  "fields": {
+    "action_time": "2025-05-22T16:49:12.819Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "10",
+    "object_repr": "Digital Marketing and Graphic Design: Sweet Life Partner",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Description\", \"Distinct Features\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 169,
+  "fields": {
+    "action_time": "2025-05-22T16:50:01.163Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "10",
+    "object_repr": "Digital Marketing and Graphic Design: Sweet Life Partner",
+    "action_flag": 2,
+    "change_message": "[{\"deleted\": {\"name\": \"project image\", \"object\": \"Digital Marketing and Graphic Design: Sweet Life Partner: uploads/projects/3D_Finish_h6y7hLn.png\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 170,
+  "fields": {
+    "action_time": "2025-05-22T17:17:40.108Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "6",
+    "object_repr": "Tournament Digital Support for Kandel Consultancy Cup",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"name\": \"project image\", \"object\": \"Tournament Digital Support for Kandel Consultancy Cup: uploads/projects/Kandel_Cup_Logo.png\"}}, {\"added\": {\"name\": \"project image\", \"object\": \"Tournament Digital Support for Kandel Consultancy Cup: uploads/projects/Trophy_Night.png\"}}, {\"added\": {\"name\": \"project image\", \"object\": \"Tournament Digital Support for Kandel Consultancy Cup: uploads/projects/league_table.jpg\"}}, {\"added\": {\"name\": \"project image\", \"object\": \"Tournament Digital Support for Kandel Consultancy Cup: uploads/projects/yeti_draw.jpg\"}}, {\"added\": {\"name\": \"project image\", \"object\": \"Tournament Digital Support for Kandel Consultancy Cup: uploads/projects/winners.jpg\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 171,
+  "fields": {
+    "action_time": "2025-05-22T17:23:44.204Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "6",
+    "object_repr": "Tournament Digital Support for Kandel Consultancy Cup",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Description\", \"Distinct Features\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 172,
+  "fields": {
+    "action_time": "2025-05-22T17:28:21.279Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "6",
+    "object_repr": "Tournament Digital Support for Kandel Consultancy Cup",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Description\", \"Distinct Features\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 173,
+  "fields": {
+    "action_time": "2025-05-22T17:33:51.796Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "11",
+    "object_repr": "Brand Identity and Logo Design: Spark International Education Consultancy",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 174,
+  "fields": {
+    "action_time": "2025-05-22T17:34:46.265Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "11",
+    "object_repr": "Brand Identity and Logo Design: Spark International Education Consultancy",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"name\": \"project link\", \"object\": \"Brand Identity and Logo Design: Spark International Education Consultancy: Behance\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 175,
+  "fields": {
+    "action_time": "2025-05-22T17:44:01.923Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "11",
+    "object_repr": "Brand Identity and Logo Design: Spark International Education Consultancy",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Description\", \"Distinct Features\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 176,
+  "fields": {
+    "action_time": "2025-05-22T17:57:53.604Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "11",
+    "object_repr": "Brand Identity and Logo Design: Spark International Education Consultancy",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"name\": \"project image\", \"object\": \"Brand Identity and Logo Design: Spark International Education Consultancy: uploads/projects/spark_explain.png\"}}, {\"added\": {\"name\": \"project image\", \"object\": \"Brand Identity and Logo Design: Spark International Education Consultancy: uploads/projects/logo_description.jpg\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 177,
+  "fields": {
+    "action_time": "2025-05-22T17:59:35.925Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "11",
+    "object_repr": "Brand Identity and Logo Design: Spark International Education Consultancy",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Start date\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 178,
+  "fields": {
+    "action_time": "2025-05-22T18:06:48.869Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "7",
+    "object_repr": "Advanced Assignment and Student Management System with Plagiarism Checker",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 179,
+  "fields": {
+    "action_time": "2025-05-22T18:06:57.824Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "9",
+    "object_repr": "Full-Stack Developer Portfolio – Django, Vue & AWS",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Skills\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 180,
+  "fields": {
+    "action_time": "2025-05-22T18:09:55.272Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "11",
+    "object_repr": "Brand Identity and Logo Design: Spark International Education Consultancy",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"name\": \"project image\", \"object\": \"Brand Identity and Logo Design: Spark International Education Consultancy: uploads/projects/logo_description.jpg\", \"fields\": [\"Caption\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 181,
+  "fields": {
+    "action_time": "2025-05-23T03:46:50.865Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "9",
+    "object_repr": "Full-Stack Developer Portfolio – Django, Vue & AWS",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 182,
+  "fields": {
+    "action_time": "2025-05-23T03:47:18.263Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "9",
+    "object_repr": "Full-Stack Developer Portfolio – Django, Vue & AWS",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 183,
+  "fields": {
+    "action_time": "2025-05-23T03:51:31.303Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "12",
+    "object_repr": "Building a Brand Logo for Retic Films",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 184,
+  "fields": {
+    "action_time": "2025-05-23T03:57:07.398Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "12",
+    "object_repr": "Building a Brand Logo for Retic Films",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Description\", \"Distinct Features\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 185,
+  "fields": {
+    "action_time": "2025-05-23T04:06:12.666Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "12",
+    "object_repr": "Building a Brand Logo for Retic Films",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"name\": \"project image\", \"object\": \"Building a Brand Logo for Retic Films: uploads/projects/Retic_Logo_Explain.png\"}}, {\"added\": {\"name\": \"project image\", \"object\": \"Building a Brand Logo for Retic Films: uploads/projects/retic_final.png\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 186,
+  "fields": {
+    "action_time": "2025-05-23T04:12:31.430Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "9",
+    "object_repr": "Full-Stack Developer Portfolio – Django, Vue & AWS",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"name\": \"project image\", \"object\": \"Full-Stack Developer Portfolio \\u2013 Django, Vue & AWS: uploads/projects/Screenshot_2025-05-22_at_4.21.34pm.png\", \"fields\": [\"Caption\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 187,
+  "fields": {
+    "action_time": "2025-05-23T04:32:15.621Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "13",
+    "object_repr": "Rooted in Culture, Crafted for Celebration: The Mama Ghar Entertainment Identity",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 188,
+  "fields": {
+    "action_time": "2025-05-23T04:38:56.776Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "13",
+    "object_repr": "Rooted in Culture, Crafted for Celebration: The Mama Ghar Entertainment Identity",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"name\": \"project image\", \"object\": \"Rooted in Culture, Crafted for Celebration: The Mama Ghar Entertainment Identity: uploads/projects/mamaghar_explain.png\"}}, {\"added\": {\"name\": \"project image\", \"object\": \"Rooted in Culture, Crafted for Celebration: The Mama Ghar Entertainment Identity: uploads/projects/mamaghar_logo.jpg\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 189,
+  "fields": {
+    "action_time": "2025-05-23T04:41:19.963Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "13",
+    "object_repr": "Rooted in Culture, Crafted for Celebration: The Mama Ghar Entertainment Identity",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Start date\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 190,
+  "fields": {
+    "action_time": "2025-05-23T08:38:35.804Z",
+    "user": 1,
+    "content_type": 21,
+    "object_id": "1",
+    "object_repr": "Sushant Rawal: 2025-05-23 14:15:00+00:00",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 191,
+  "fields": {
+    "action_time": "2025-05-23T08:40:15.892Z",
+    "user": 1,
+    "content_type": 21,
+    "object_id": "1",
+    "object_repr": "Sushant Rawal: 2025-05-23 14:15:00+00:00",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 1,
+  "fields": {
+    "name": "Can add log entry",
+    "content_type": 1,
+    "codename": "add_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 2,
+  "fields": {
+    "name": "Can change log entry",
+    "content_type": 1,
+    "codename": "change_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 3,
+  "fields": {
+    "name": "Can delete log entry",
+    "content_type": 1,
+    "codename": "delete_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 4,
+  "fields": {
+    "name": "Can view log entry",
+    "content_type": 1,
+    "codename": "view_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 5,
+  "fields": {
+    "name": "Can add permission",
+    "content_type": 2,
+    "codename": "add_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 6,
+  "fields": {
+    "name": "Can change permission",
+    "content_type": 2,
+    "codename": "change_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 7,
+  "fields": {
+    "name": "Can delete permission",
+    "content_type": 2,
+    "codename": "delete_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 8,
+  "fields": {
+    "name": "Can view permission",
+    "content_type": 2,
+    "codename": "view_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 9,
+  "fields": {
+    "name": "Can add group",
+    "content_type": 3,
+    "codename": "add_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 10,
+  "fields": {
+    "name": "Can change group",
+    "content_type": 3,
+    "codename": "change_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 11,
+  "fields": {
+    "name": "Can delete group",
+    "content_type": 3,
+    "codename": "delete_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 12,
+  "fields": {
+    "name": "Can view group",
+    "content_type": 3,
+    "codename": "view_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 13,
+  "fields": {
+    "name": "Can add content type",
+    "content_type": 4,
+    "codename": "add_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 14,
+  "fields": {
+    "name": "Can change content type",
+    "content_type": 4,
+    "codename": "change_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 15,
+  "fields": {
+    "name": "Can delete content type",
+    "content_type": 4,
+    "codename": "delete_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 16,
+  "fields": {
+    "name": "Can view content type",
+    "content_type": 4,
+    "codename": "view_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 17,
+  "fields": {
+    "name": "Can add session",
+    "content_type": 5,
+    "codename": "add_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 18,
+  "fields": {
+    "name": "Can change session",
+    "content_type": 5,
+    "codename": "change_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 19,
+  "fields": {
+    "name": "Can delete session",
+    "content_type": 5,
+    "codename": "delete_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 20,
+  "fields": {
+    "name": "Can view session",
+    "content_type": 5,
+    "codename": "view_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 21,
+  "fields": {
+    "name": "Can add User",
+    "content_type": 6,
+    "codename": "add_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 22,
+  "fields": {
+    "name": "Can change User",
+    "content_type": 6,
+    "codename": "change_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 23,
+  "fields": {
+    "name": "Can delete User",
+    "content_type": 6,
+    "codename": "delete_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 24,
+  "fields": {
+    "name": "Can view User",
+    "content_type": 6,
+    "codename": "view_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 25,
+  "fields": {
+    "name": "Can add Media Link",
+    "content_type": 7,
+    "codename": "add_medialinks"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 26,
+  "fields": {
+    "name": "Can change Media Link",
+    "content_type": 7,
+    "codename": "change_medialinks"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 27,
+  "fields": {
+    "name": "Can delete Media Link",
+    "content_type": 7,
+    "codename": "delete_medialinks"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 28,
+  "fields": {
+    "name": "Can view Media Link",
+    "content_type": 7,
+    "codename": "view_medialinks"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 29,
+  "fields": {
+    "name": "Can add Experience",
+    "content_type": 8,
+    "codename": "add_experience"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 30,
+  "fields": {
+    "name": "Can change Experience",
+    "content_type": 8,
+    "codename": "change_experience"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 31,
+  "fields": {
+    "name": "Can delete Experience",
+    "content_type": 8,
+    "codename": "delete_experience"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 32,
+  "fields": {
+    "name": "Can view Experience",
+    "content_type": 8,
+    "codename": "view_experience"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 33,
+  "fields": {
+    "name": "Can add skill category",
+    "content_type": 9,
+    "codename": "add_skillcategory"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 34,
+  "fields": {
+    "name": "Can change skill category",
+    "content_type": 9,
+    "codename": "change_skillcategory"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 35,
+  "fields": {
+    "name": "Can delete skill category",
+    "content_type": 9,
+    "codename": "delete_skillcategory"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 36,
+  "fields": {
+    "name": "Can view skill category",
+    "content_type": 9,
+    "codename": "view_skillcategory"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 37,
+  "fields": {
+    "name": "Can add skill",
+    "content_type": 10,
+    "codename": "add_skill"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 38,
+  "fields": {
+    "name": "Can change skill",
+    "content_type": 10,
+    "codename": "change_skill"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 39,
+  "fields": {
+    "name": "Can delete skill",
+    "content_type": 10,
+    "codename": "delete_skill"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 40,
+  "fields": {
+    "name": "Can view skill",
+    "content_type": 10,
+    "codename": "view_skill"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 41,
+  "fields": {
+    "name": "Can add Service",
+    "content_type": 11,
+    "codename": "add_service"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 42,
+  "fields": {
+    "name": "Can change Service",
+    "content_type": 11,
+    "codename": "change_service"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 43,
+  "fields": {
+    "name": "Can delete Service",
+    "content_type": 11,
+    "codename": "delete_service"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 44,
+  "fields": {
+    "name": "Can view Service",
+    "content_type": 11,
+    "codename": "view_service"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 45,
+  "fields": {
+    "name": "Can add Project Category",
+    "content_type": 12,
+    "codename": "add_projectcategory"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 46,
+  "fields": {
+    "name": "Can change Project Category",
+    "content_type": 12,
+    "codename": "change_projectcategory"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 47,
+  "fields": {
+    "name": "Can delete Project Category",
+    "content_type": 12,
+    "codename": "delete_projectcategory"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 48,
+  "fields": {
+    "name": "Can view Project Category",
+    "content_type": 12,
+    "codename": "view_projectcategory"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 49,
+  "fields": {
+    "name": "Can add project",
+    "content_type": 13,
+    "codename": "add_project"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 50,
+  "fields": {
+    "name": "Can change project",
+    "content_type": 13,
+    "codename": "change_project"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 51,
+  "fields": {
+    "name": "Can delete project",
+    "content_type": 13,
+    "codename": "delete_project"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 52,
+  "fields": {
+    "name": "Can view project",
+    "content_type": 13,
+    "codename": "view_project"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 53,
+  "fields": {
+    "name": "Can add project link",
+    "content_type": 14,
+    "codename": "add_projectlink"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 54,
+  "fields": {
+    "name": "Can change project link",
+    "content_type": 14,
+    "codename": "change_projectlink"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 55,
+  "fields": {
+    "name": "Can delete project link",
+    "content_type": 14,
+    "codename": "delete_projectlink"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 56,
+  "fields": {
+    "name": "Can view project link",
+    "content_type": 14,
+    "codename": "view_projectlink"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 57,
+  "fields": {
+    "name": "Can add project image",
+    "content_type": 15,
+    "codename": "add_projectimage"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 58,
+  "fields": {
+    "name": "Can change project image",
+    "content_type": 15,
+    "codename": "change_projectimage"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 59,
+  "fields": {
+    "name": "Can delete project image",
+    "content_type": 15,
+    "codename": "delete_projectimage"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 60,
+  "fields": {
+    "name": "Can view project image",
+    "content_type": 15,
+    "codename": "view_projectimage"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 61,
+  "fields": {
+    "name": "Can add Message",
+    "content_type": 16,
+    "codename": "add_message"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 62,
+  "fields": {
+    "name": "Can change Message",
+    "content_type": 16,
+    "codename": "change_message"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 63,
+  "fields": {
+    "name": "Can delete Message",
+    "content_type": 16,
+    "codename": "delete_message"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 64,
+  "fields": {
+    "name": "Can view Message",
+    "content_type": 16,
+    "codename": "view_message"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 65,
+  "fields": {
+    "name": "Can add Information",
+    "content_type": 17,
+    "codename": "add_contactinformation"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 66,
+  "fields": {
+    "name": "Can change Information",
+    "content_type": 17,
+    "codename": "change_contactinformation"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 67,
+  "fields": {
+    "name": "Can delete Information",
+    "content_type": 17,
+    "codename": "delete_contactinformation"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 68,
+  "fields": {
+    "name": "Can view Information",
+    "content_type": 17,
+    "codename": "view_contactinformation"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 69,
+  "fields": {
+    "name": "Can add blog",
+    "content_type": 18,
+    "codename": "add_blog"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 70,
+  "fields": {
+    "name": "Can change blog",
+    "content_type": 18,
+    "codename": "change_blog"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 71,
+  "fields": {
+    "name": "Can delete blog",
+    "content_type": 18,
+    "codename": "delete_blog"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 72,
+  "fields": {
+    "name": "Can view blog",
+    "content_type": 18,
+    "codename": "view_blog"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 73,
+  "fields": {
+    "name": "Can add Blog Image",
+    "content_type": 19,
+    "codename": "add_blogimage"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 74,
+  "fields": {
+    "name": "Can change Blog Image",
+    "content_type": 19,
+    "codename": "change_blogimage"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 75,
+  "fields": {
+    "name": "Can delete Blog Image",
+    "content_type": 19,
+    "codename": "delete_blogimage"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 76,
+  "fields": {
+    "name": "Can view Blog Image",
+    "content_type": 19,
+    "codename": "view_blogimage"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 77,
+  "fields": {
+    "name": "Can add featured blog",
+    "content_type": 20,
+    "codename": "add_featuredblog"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 78,
+  "fields": {
+    "name": "Can change featured blog",
+    "content_type": 20,
+    "codename": "change_featuredblog"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 79,
+  "fields": {
+    "name": "Can delete featured blog",
+    "content_type": 20,
+    "codename": "delete_featuredblog"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 80,
+  "fields": {
+    "name": "Can view featured blog",
+    "content_type": 20,
+    "codename": "view_featuredblog"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 81,
+  "fields": {
+    "name": "Can add Appointment Request",
+    "content_type": 21,
+    "codename": "add_appointment"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 82,
+  "fields": {
+    "name": "Can change Appointment Request",
+    "content_type": 21,
+    "codename": "change_appointment"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 83,
+  "fields": {
+    "name": "Can delete Appointment Request",
+    "content_type": 21,
+    "codename": "delete_appointment"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 84,
+  "fields": {
+    "name": "Can view Appointment Request",
+    "content_type": 21,
+    "codename": "view_appointment"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 1,
+  "fields": {
+    "app_label": "admin",
+    "model": "logentry"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 2,
+  "fields": {
+    "app_label": "auth",
+    "model": "permission"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 3,
+  "fields": {
+    "app_label": "auth",
+    "model": "group"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 4,
+  "fields": {
+    "app_label": "contenttypes",
+    "model": "contenttype"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 5,
+  "fields": {
+    "app_label": "sessions",
+    "model": "session"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 6,
+  "fields": {
+    "app_label": "account",
+    "model": "user"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 7,
+  "fields": {
+    "app_label": "account",
+    "model": "medialinks"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 8,
+  "fields": {
+    "app_label": "experience",
+    "model": "experience"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 9,
+  "fields": {
+    "app_label": "skills",
+    "model": "skillcategory"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 10,
+  "fields": {
+    "app_label": "skills",
+    "model": "skill"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 11,
+  "fields": {
+    "app_label": "services",
+    "model": "service"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 12,
+  "fields": {
+    "app_label": "projects",
+    "model": "projectcategory"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 13,
+  "fields": {
+    "app_label": "projects",
+    "model": "project"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 14,
+  "fields": {
+    "app_label": "projects",
+    "model": "projectlink"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 15,
+  "fields": {
+    "app_label": "projects",
+    "model": "projectimage"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 16,
+  "fields": {
+    "app_label": "contact",
+    "model": "message"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 17,
+  "fields": {
+    "app_label": "contact",
+    "model": "contactinformation"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 18,
+  "fields": {
+    "app_label": "blogs",
+    "model": "blog"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 19,
+  "fields": {
+    "app_label": "blogs",
+    "model": "blogimage"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 20,
+  "fields": {
+    "app_label": "blogs",
+    "model": "featuredblog"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 21,
+  "fields": {
+    "app_label": "appointment",
+    "model": "appointment"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "pmzzo7rjsyjwh8xme86hrqqbnuknvxmb",
+  "fields": {
+    "session_data": ".eJxVjDsOwjAQBe_iGlkO-CdKes5gPe-ucQA5UpxUiLtDpBTQvpl5L5WwLjWtXeY0sjqrQR1-twx6SNsA39Fuk6apLfOY9abonXZ9nViel939O6jo9VsL8skZeGIXYQsBZDzKseTAJToyZMBxYAkkJTgfPVP2TixFZlhR7w8vOToM:1uHbni:9u-r65piHmxfByQHl1cv84RsBB78BGx1s4p5PTpnv3Y",
+    "expire_date": "2025-06-04T05:15:34.146Z"
+  }
+},
+{
+  "model": "account.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$870000$NXENKg3knztSRX9snV94BG$dT7woUSbrmjFtm0vJQDWFB0ExXC2uIeHbDPb7FFGI8I=",
+    "last_login": "2025-05-21T05:15:34.145Z",
+    "updated_at": "2025-05-22T02:10:06.445Z",
+    "email": "riwajbhurtel9786@gmail.com",
+    "name": "Er. Riwaj Bhurtel",
+    "title": "Computer Engineer | Graphics Designer",
+    "short_bio": "Full Stack Developer (Django & Vue) | Graphic Designer with 4+ years of experience. Passionate about building scalable apps and compelling designs.",
+    "description": "<p>I am a <strong>Computer Engineer</strong> and <strong>Full Stack Developer</strong> specializing in <strong>Django</strong> and <strong>Vue.js</strong>, with a strong focus on building scalable, efficient, and intuitive web applications. With over <strong>four years of experience in Graphic Design</strong>, I also bring a creative edge to my work, crafting visually engaging brand identities and digital assets that elevate user experiences.</p><p>&nbsp;</p><p>In addition to my technical and design capabilities, I have a proven track record of <strong>leadership</strong> and <strong>community involvement</strong>. I am passionate about leveraging the power of technology and design to develop impactful, user-centric solutions that address real-world challenges. By bridging the gap between functionality and aesthetics, I strive to create digital experiences that are not only effective but meaningful.</p>",
+    "profile_pic": "uploads/profile_pic/Riwaj_Portfolio_1.png",
+    "resume": "uploads/resume/Resume.pdf",
+    "is_active": true,
+    "is_staff": true,
+    "is_superuser": true,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "account.medialinks",
+  "pk": 1,
+  "fields": {
+    "updated_at": "2025-03-28T17:47:19.422Z",
+    "platform_name": "fb",
+    "link": "https://www.facebook.com/riwaj.bhurtel/"
+  }
+},
+{
+  "model": "account.medialinks",
+  "pk": 2,
+  "fields": {
+    "updated_at": "2025-03-28T17:47:27.176Z",
+    "platform_name": "ig",
+    "link": "https://www.instagram.com/guns_n_mercury/"
+  }
+},
+{
+  "model": "account.medialinks",
+  "pk": 3,
+  "fields": {
+    "updated_at": "2025-03-28T17:47:32.195Z",
+    "platform_name": "be",
+    "link": "https://www.behance.net/riwajbhurtel"
+  }
+},
+{
+  "model": "account.medialinks",
+  "pk": 4,
+  "fields": {
+    "updated_at": "2025-03-28T17:47:55.269Z",
+    "platform_name": "lkin",
+    "link": "https://www.linkedin.com/in/riwaj-bhurtel/"
+  }
+},
+{
+  "model": "account.medialinks",
+  "pk": 5,
+  "fields": {
+    "updated_at": "2025-03-28T17:48:20.420Z",
+    "platform_name": "gh",
+    "link": "https://github.com/Riwaj9786"
+  }
+},
+{
+  "model": "account.medialinks",
+  "pk": 6,
+  "fields": {
+    "updated_at": "2025-05-22T02:08:49.419Z",
+    "platform_name": "x",
+    "link": "https://x.com/Riwaj9786"
+  }
+},
+{
+  "model": "experience.experience",
+  "pk": 1,
+  "fields": {
+    "updated_at": "2025-05-21T17:40:46.150Z",
+    "title": "Backend Developer",
+    "company": "Youth Innovation Lab",
+    "company_url": "https://youthinnovationlab.org/",
+    "start_date": "2024-11-18",
+    "end_date": null,
+    "job_type": "Onsite",
+    "to_display": true,
+    "skills": [
+      1,
+      2,
+      3,
+      4,
+      10,
+      13,
+      14,
+      15,
+      26
+    ]
+  }
+},
+{
+  "model": "experience.experience",
+  "pk": 2,
+  "fields": {
+    "updated_at": "2025-05-21T17:42:16.073Z",
+    "title": "Graphics Designer",
+    "company": "Before Education Consultancy",
+    "company_url": "https://www.beforeeducation.com.np/",
+    "start_date": "2023-10-01",
+    "end_date": null,
+    "job_type": "Remote",
+    "to_display": false,
+    "skills": [
+      16,
+      17,
+      19,
+      20,
+      28
+    ]
+  }
+},
+{
+  "model": "experience.experience",
+  "pk": 3,
+  "fields": {
+    "updated_at": "2025-03-28T17:52:37.979Z",
+    "title": "Founder, Creative Director",
+    "company": "Rioz Graphics",
+    "company_url": null,
+    "start_date": "2021-08-01",
+    "end_date": null,
+    "job_type": "Hybrid",
+    "to_display": true,
+    "skills": [
+      1,
+      2,
+      5,
+      6,
+      7,
+      16,
+      17,
+      18,
+      19,
+      20
+    ]
+  }
+},
+{
+  "model": "experience.experience",
+  "pk": 4,
+  "fields": {
+    "updated_at": "2025-05-21T17:43:29.427Z",
+    "title": "Graphics Designer",
+    "company": "Himalayan Purifier Pvt. Ltd.",
+    "company_url": "https://himalayanpurifier.com/",
+    "start_date": "2020-12-01",
+    "end_date": "2025-04-30",
+    "job_type": "Remote",
+    "to_display": true,
+    "skills": [
+      16,
+      17,
+      18,
+      28
+    ]
+  }
+},
+{
+  "model": "experience.experience",
+  "pk": 5,
+  "fields": {
+    "updated_at": "2025-05-21T17:41:10.379Z",
+    "title": "Technical Officer",
+    "company": "CPN (UML) Gandaki",
+    "company_url": null,
+    "start_date": "2022-09-01",
+    "end_date": "2022-11-30",
+    "job_type": "Onsite",
+    "to_display": false,
+    "skills": [
+      16,
+      17,
+      19,
+      20,
+      28
+    ]
+  }
+},
+{
+  "model": "experience.experience",
+  "pk": 6,
+  "fields": {
+    "updated_at": "2025-05-21T17:41:58.436Z",
+    "title": "Technical Officer",
+    "company": "Yeti Football Club, Australia",
+    "company_url": null,
+    "start_date": "2022-12-01",
+    "end_date": "2024-04-30",
+    "job_type": "Remote",
+    "to_display": false,
+    "skills": [
+      16,
+      17,
+      19,
+      20,
+      28
+    ]
+  }
+},
+{
+  "model": "experience.experience",
+  "pk": 7,
+  "fields": {
+    "updated_at": "2025-03-28T17:57:18.877Z",
+    "title": "Qualification Compliance Associate",
+    "company": "Queensford College, Australia",
+    "company_url": "https://queensford.edu.au/",
+    "start_date": "2022-10-01",
+    "end_date": "2023-12-30",
+    "job_type": "Remote",
+    "to_display": true,
+    "skills": [
+      25,
+      29,
+      30
+    ]
+  }
+},
+{
+  "model": "experience.experience",
+  "pk": 8,
+  "fields": {
+    "updated_at": "2025-03-28T17:58:33.848Z",
+    "title": "IT Officer",
+    "company": "Ambirise IT Solution",
+    "company_url": "https://ambirise.com/",
+    "start_date": "2020-10-01",
+    "end_date": "2023-08-31",
+    "job_type": "Hybrid",
+    "to_display": true,
+    "skills": [
+      5,
+      6,
+      7,
+      9,
+      11,
+      12,
+      16,
+      17,
+      18,
+      19,
+      28
+    ]
+  }
+},
+{
+  "model": "experience.experience",
+  "pk": 9,
+  "fields": {
+    "updated_at": "2025-05-21T17:40:54.686Z",
+    "title": "President",
+    "company": "Rotaract Club of Pokhara University",
+    "company_url": "https://www.rotaractpu.org/",
+    "start_date": "2023-07-01",
+    "end_date": "2024-06-30",
+    "job_type": "Onsite",
+    "to_display": false,
+    "skills": [
+      16,
+      19,
+      28,
+      29,
+      30
+    ]
+  }
+},
+{
+  "model": "experience.experience",
+  "pk": 10,
+  "fields": {
+    "updated_at": "2025-05-21T17:40:50.200Z",
+    "title": "Campus Director",
+    "company": "Hult Prize Pokhara University",
+    "company_url": null,
+    "start_date": "2023-07-01",
+    "end_date": "2024-06-30",
+    "job_type": "Hybrid",
+    "to_display": false,
+    "skills": [
+      16,
+      19,
+      20,
+      25,
+      28,
+      29,
+      30
+    ]
+  }
+},
+{
+  "model": "skills.skillcategory",
+  "pk": 1,
+  "fields": {
+    "updated_at": "2025-03-28T17:15:06.529Z",
+    "name": "Backend"
+  }
+},
+{
+  "model": "skills.skillcategory",
+  "pk": 2,
+  "fields": {
+    "updated_at": "2025-03-28T17:15:11.619Z",
+    "name": "Frontend"
+  }
+},
+{
+  "model": "skills.skillcategory",
+  "pk": 4,
+  "fields": {
+    "updated_at": "2025-03-28T17:15:27.204Z",
+    "name": "Data Science"
+  }
+},
+{
+  "model": "skills.skillcategory",
+  "pk": 5,
+  "fields": {
+    "updated_at": "2025-03-28T17:15:31.610Z",
+    "name": "Database"
+  }
+},
+{
+  "model": "skills.skillcategory",
+  "pk": 6,
+  "fields": {
+    "updated_at": "2025-03-28T17:15:38.905Z",
+    "name": "DevOps"
+  }
+},
+{
+  "model": "skills.skillcategory",
+  "pk": 7,
+  "fields": {
+    "updated_at": "2025-03-28T17:15:43.542Z",
+    "name": "Others"
+  }
+},
+{
+  "model": "skills.skillcategory",
+  "pk": 8,
+  "fields": {
+    "updated_at": "2025-03-28T17:16:01.179Z",
+    "name": "Graphics"
+  }
+},
+{
+  "model": "skills.skill",
+  "pk": 1,
+  "fields": {
+    "updated_at": "2025-03-28T17:18:31.709Z",
+    "name": "Python",
+    "level": 8.0,
+    "logo": "uploads/icons/skills/267_Python-512.webp",
+    "category": 1
+  }
+},
+{
+  "model": "skills.skill",
+  "pk": 2,
+  "fields": {
+    "updated_at": "2025-03-28T17:18:52.206Z",
+    "name": "Django",
+    "level": 8.0,
+    "logo": "uploads/icons/skills/django-icon.webp",
+    "category": 1
+  }
+},
+{
+  "model": "skills.skill",
+  "pk": 3,
+  "fields": {
+    "updated_at": "2025-03-28T17:19:12.970Z",
+    "name": "Django Channels",
+    "level": 5.0,
+    "logo": "uploads/icons/skills/0_jwhnh7jJZeigWdtH.jpg",
+    "category": 1
+  }
+},
+{
+  "model": "skills.skill",
+  "pk": 4,
+  "fields": {
+    "updated_at": "2025-03-28T17:19:26.130Z",
+    "name": "Celery",
+    "level": 6.0,
+    "logo": "uploads/icons/skills/Celery_logo.png",
+    "category": 1
+  }
+},
+{
+  "model": "skills.skill",
+  "pk": 5,
+  "fields": {
+    "updated_at": "2025-03-28T17:19:54.397Z",
+    "name": "HTML 5",
+    "level": 8.0,
+    "logo": "uploads/icons/skills/HTML5_logo_and_wordmark.svg.png",
+    "category": 2
+  }
+},
+{
+  "model": "skills.skill",
+  "pk": 6,
+  "fields": {
+    "updated_at": "2025-03-28T17:20:10.087Z",
+    "name": "CSS 3",
+    "level": 7.0,
+    "logo": "uploads/icons/skills/CSS3_logo.svg.png",
+    "category": 2
+  }
+},
+{
+  "model": "skills.skill",
+  "pk": 7,
+  "fields": {
+    "updated_at": "2025-03-28T17:20:25.237Z",
+    "name": "Javascript",
+    "level": 7.0,
+    "logo": "uploads/icons/skills/JavaScript-logo.png",
+    "category": 2
+  }
+},
+{
+  "model": "skills.skill",
+  "pk": 8,
+  "fields": {
+    "updated_at": "2025-03-28T17:20:44.729Z",
+    "name": "TailwindCSS",
+    "level": 8.0,
+    "logo": "uploads/icons/skills/Tailwind_CSS_Logo.svg.png",
+    "category": 2
+  }
+},
+{
+  "model": "skills.skill",
+  "pk": 9,
+  "fields": {
+    "updated_at": "2025-03-28T17:21:06.861Z",
+    "name": "Bootstrap",
+    "level": 7.0,
+    "logo": "uploads/icons/skills/bootstrap-5-logo-png_seeklogo-386607.png",
+    "category": 2
+  }
+},
+{
+  "model": "skills.skill",
+  "pk": 10,
+  "fields": {
+    "updated_at": "2025-03-28T17:34:46.490Z",
+    "name": "Redis",
+    "level": 6.0,
+    "logo": "uploads/icons/skills/redis.webp",
+    "category": 5
+  }
+},
+{
+  "model": "skills.skill",
+  "pk": 11,
+  "fields": {
+    "updated_at": "2025-03-28T17:35:08.755Z",
+    "name": "MySQL",
+    "level": 7.0,
+    "logo": "uploads/icons/skills/mysql.png",
+    "category": 5
+  }
+},
+{
+  "model": "skills.skill",
+  "pk": 12,
+  "fields": {
+    "updated_at": "2025-03-28T17:35:21.426Z",
+    "name": "MongoDB",
+    "level": 6.0,
+    "logo": "uploads/icons/skills/mongo.png",
+    "category": 5
+  }
+},
+{
+  "model": "skills.skill",
+  "pk": 13,
+  "fields": {
+    "updated_at": "2025-03-28T17:35:32.783Z",
+    "name": "PostgreSQL",
+    "level": 8.0,
+    "logo": "uploads/icons/skills/postgrese.png",
+    "category": 5
+  }
+},
+{
+  "model": "skills.skill",
+  "pk": 14,
+  "fields": {
+    "updated_at": "2025-03-28T17:36:06.465Z",
+    "name": "Docker",
+    "level": 7.0,
+    "logo": "uploads/icons/skills/97_Docker_logo_logos-512.webp",
+    "category": 6
+  }
+},
+{
+  "model": "skills.skill",
+  "pk": 15,
+  "fields": {
+    "updated_at": "2025-03-28T17:36:39.682Z",
+    "name": "NGINX",
+    "level": 6.0,
+    "logo": "uploads/icons/skills/download.png",
+    "category": 6
+  }
+},
+{
+  "model": "skills.skill",
+  "pk": 16,
+  "fields": {
+    "updated_at": "2025-03-28T17:36:58.948Z",
+    "name": "Adobe Photoshop",
+    "level": 8.5,
+    "logo": "uploads/icons/skills/Adobe_Photoshop_CC_icon.svg.png",
+    "category": 8
+  }
+},
+{
+  "model": "skills.skill",
+  "pk": 17,
+  "fields": {
+    "updated_at": "2025-03-28T17:37:16.326Z",
+    "name": "Adobe Illustrator",
+    "level": 7.5,
+    "logo": "uploads/icons/skills/Adobe_Illustrator_CC_icon.svg.png",
+    "category": 8
+  }
+},
+{
+  "model": "skills.skill",
+  "pk": 18,
+  "fields": {
+    "updated_at": "2025-03-28T17:37:58.786Z",
+    "name": "Adobe Premiere Pro",
+    "level": 6.0,
+    "logo": "uploads/icons/skills/65e09abf952724557f01e3b7_Premiere_icon.png",
+    "category": 8
+  }
+},
+{
+  "model": "skills.skill",
+  "pk": 19,
+  "fields": {
+    "updated_at": "2025-03-28T17:38:13.692Z",
+    "name": "Canva",
+    "level": 8.0,
+    "logo": "uploads/icons/skills/canva.webp",
+    "category": 8
+  }
+},
+{
+  "model": "skills.skill",
+  "pk": 20,
+  "fields": {
+    "updated_at": "2025-03-28T17:38:28.524Z",
+    "name": "Logo Design",
+    "level": 7.0,
+    "logo": "uploads/icons/skills/Rioz.jpg",
+    "category": 8
+  }
+},
+{
+  "model": "skills.skill",
+  "pk": 21,
+  "fields": {
+    "updated_at": "2025-03-28T17:38:49.539Z",
+    "name": "Vue JS",
+    "level": 6.5,
+    "logo": "uploads/icons/skills/Vue.js_Logo_2.svg.png",
+    "category": 2
+  }
+},
+{
+  "model": "skills.skill",
+  "pk": 22,
+  "fields": {
+    "updated_at": "2025-03-28T17:39:51.300Z",
+    "name": "NumPy",
+    "level": 7.0,
+    "logo": "uploads/icons/skills/numpy.png",
+    "category": 4
+  }
+},
+{
+  "model": "skills.skill",
+  "pk": 23,
+  "fields": {
+    "updated_at": "2025-03-28T17:40:06.281Z",
+    "name": "Pandas",
+    "level": 6.5,
+    "logo": "uploads/icons/skills/pandas.png",
+    "category": 4
+  }
+},
+{
+  "model": "skills.skill",
+  "pk": 24,
+  "fields": {
+    "updated_at": "2025-03-28T17:40:30.192Z",
+    "name": "MatplotLib",
+    "level": 6.0,
+    "logo": "uploads/icons/skills/Created_with_Matplotlib-logo.svg.png",
+    "category": 4
+  }
+},
+{
+  "model": "skills.skill",
+  "pk": 25,
+  "fields": {
+    "updated_at": "2025-03-28T17:41:07.202Z",
+    "name": "Jira",
+    "level": 6.5,
+    "logo": "uploads/icons/skills/jira.jpeg",
+    "category": 7
+  }
+},
+{
+  "model": "skills.skill",
+  "pk": 26,
+  "fields": {
+    "updated_at": "2025-03-28T17:42:16.428Z",
+    "name": "Rest API",
+    "level": 8.0,
+    "logo": "uploads/icons/skills/restapi.png",
+    "category": 1
+  }
+},
+{
+  "model": "skills.skill",
+  "pk": 27,
+  "fields": {
+    "updated_at": "2025-03-28T17:41:55.651Z",
+    "name": "NodeJS",
+    "level": 6.0,
+    "logo": "uploads/icons/skills/nodejs.png",
+    "category": 1
+  }
+},
+{
+  "model": "skills.skill",
+  "pk": 28,
+  "fields": {
+    "updated_at": "2025-03-28T17:43:00.129Z",
+    "name": "Meta Business Suite",
+    "level": 7.0,
+    "logo": "uploads/icons/skills/233VSmAsi5mRqo1hd77OZcJQh2c.webp",
+    "category": 8
+  }
+},
+{
+  "model": "skills.skill",
+  "pk": 29,
+  "fields": {
+    "updated_at": "2025-03-28T17:43:18.889Z",
+    "name": "Microsoft 365",
+    "level": 6.0,
+    "logo": "uploads/icons/skills/20230310065921Microsoft_365_2022.svg.png",
+    "category": 7
+  }
+},
+{
+  "model": "skills.skill",
+  "pk": 30,
+  "fields": {
+    "updated_at": "2025-03-28T17:43:57.693Z",
+    "name": "Microsoft Excel",
+    "level": 7.5,
+    "logo": "uploads/icons/skills/excel.jpeg",
+    "category": 7
+  }
+},
+{
+  "model": "skills.skill",
+  "pk": 31,
+  "fields": {
+    "updated_at": "2025-05-21T18:03:19.889Z",
+    "name": "Seaborn",
+    "level": 6.5,
+    "logo": "uploads/icons/skills/download_KgKY3lP.png",
+    "category": 4
+  }
+},
+{
+  "model": "skills.skill",
+  "pk": 32,
+  "fields": {
+    "updated_at": "2025-05-21T18:04:00.604Z",
+    "name": "SQLite",
+    "level": 8.0,
+    "logo": "uploads/icons/skills/download_1.png",
+    "category": 5
+  }
+},
+{
+  "model": "skills.skill",
+  "pk": 33,
+  "fields": {
+    "updated_at": "2025-05-21T18:04:42.981Z",
+    "name": "AWS Cloud",
+    "level": 6.0,
+    "logo": "uploads/icons/skills/download_2.png",
+    "category": 6
+  }
+},
+{
+  "model": "skills.skill",
+  "pk": 34,
+  "fields": {
+    "updated_at": "2025-05-21T18:05:48.551Z",
+    "name": "Figma",
+    "level": 7.0,
+    "logo": "uploads/icons/skills/download_3.png",
+    "category": 8
+  }
+},
+{
+  "model": "skills.skill",
+  "pk": 35,
+  "fields": {
+    "updated_at": "2025-05-21T18:06:56.772Z",
+    "name": "Wordpress",
+    "level": 6.0,
+    "logo": "uploads/icons/skills/wordpress.jpeg",
+    "category": 7
+  }
+},
+{
+  "model": "skills.skill",
+  "pk": 36,
+  "fields": {
+    "updated_at": "2025-05-21T18:07:10.663Z",
+    "name": "Linux (Ubuntu)",
+    "level": 6.0,
+    "logo": "uploads/icons/skills/ubuntu.jpeg",
+    "category": 7
+  }
+},
+{
+  "model": "services.service",
+  "pk": 1,
+  "fields": {
+    "updated_at": "2025-03-28T17:33:14.748Z",
+    "title": "Web Development",
+    "icon": "uploads/icons/services/351-3517325_web-development-icon-png-front-end-development-icon.png",
+    "description": "Building scalable, high-performance websites with seamless user experiences."
+  }
+},
+{
+  "model": "services.service",
+  "pk": 2,
+  "fields": {
+    "updated_at": "2025-03-28T17:33:43.248Z",
+    "title": "Graphics Design",
+    "icon": "uploads/icons/services/graphics.png",
+    "description": "Crafting visually stunning designs that captivate and engage."
+  }
+},
+{
+  "model": "services.service",
+  "pk": 3,
+  "fields": {
+    "updated_at": "2025-03-28T17:34:01.174Z",
+    "title": "Branding & Marketing",
+    "icon": "uploads/icons/services/9423005.png",
+    "description": "Creating & Developing strategic campaigns to boost visibility and growth."
+  }
+},
+{
+  "model": "projects.projectcategory",
+  "pk": 1,
+  "fields": {
+    "updated_at": "2025-05-21T06:03:33.081Z",
+    "name": "Web Development"
+  }
+},
+{
+  "model": "projects.projectcategory",
+  "pk": 2,
+  "fields": {
+    "updated_at": "2025-05-21T06:03:27.203Z",
+    "name": "Graphic & Digital Marketing"
+  }
+},
+{
+  "model": "projects.projectcategory",
+  "pk": 3,
+  "fields": {
+    "updated_at": "2025-03-28T18:39:10.134Z",
+    "name": "Logo Design"
+  }
+},
+{
+  "model": "projects.project",
+  "pk": 1,
+  "fields": {
+    "updated_at": "2025-05-22T10:28:59.558Z",
+    "name": "Real-Time Chat Application with Django Channels & Knox Authentication (Backend)",
+    "client": null,
+    "banner_image": "uploads/projects/banner_images/download.jpeg",
+    "is_archive": false,
+    "start_date": "2025-02-01",
+    "end_date": "2025-03-01",
+    "description": "<p>Building a secure real-time chat application with <strong>Django Channels</strong> and <strong>Knox Authentication</strong> addresses the growing need for instant communication in platforms such as team collaboration, community interaction, and customer support. Real-time chat features are now integral to many platforms, making this project highly relevant.</p><p>&nbsp;</p><p>The journey begins with setting up a custom user model using Django’s <strong>AbstractBaseUser</strong>. Instead of relying on the default user model, this custom model includes an email as the unique identifier for login, a required name field to personalize the chat experience, and an optional avatar field for storing user profile pictures. This early customization ensures the authentication system fits seamlessly with the overall application.</p><p>&nbsp;</p><p>At the heart of the chat app are two main models: <strong>ChatRoom</strong> and <strong>Message</strong>. The ChatRoom model includes a name, members represented by a many-to-many relationship with the custom user model, and a unique slug generated using slugify combined with random characters. The Message model links to a ChatRoom and a sender (the user who sent the message), storing the actual message content as a CharField. This design allows efficient message storage and retrieval, while also restricting room access to authorized members.</p><p>&nbsp;</p><p>To enable real-time messaging, Django Channels is integrated into the project. By installing packages like channels, channels-redis, and daphne, and updating settings such as <strong>ASGI_APPLICATION</strong>, the app can handle <strong>WebSocket connections</strong>. During development, an <strong>InMemoryChannelLayer</strong> is used for convenience, though a Redis-backed channel layer is recommended for production environments for better performance and reliability.</p><p>&nbsp;</p><p>Security is a major focus, especially since chat applications handle constant user data exchange. <strong>Knox Authentication</strong> is used to secure WebSocket connections via a custom middleware called <strong>KnoxAuthMiddleware</strong>. This middleware ensures that only users with valid Knox tokens can open WebSocket connections, effectively preventing unauthorized access and safeguarding real-time data.</p><p>&nbsp;</p><p>The <strong>ChatConsumer</strong> class is the core WebSocket handler. It manages user connections and disconnections, receives messages from clients, broadcasts messages to chat groups, and persists messages to the database. By overriding methods like connect, disconnect, and receive_json, the consumer delivers smooth and responsive chat interactions.</p><p>&nbsp;</p><p>Finally, WebSocket routing and ASGI configuration are set up using <strong>ProtocolTypeRouter, AuthMiddlewareStack,</strong> and the custom <strong>KnoxAuthMiddleware</strong>, ensuring all incoming WebSocket requests are authenticated and correctly routed to the chat consumer. Testing the implementation with Postman confirmed that messages flow properly with valid Knox tokens, and that messages are saved correctly in the database.</p><p>&nbsp;</p><p>In summary, this project combines real-time WebSocket communication with secure token-based authentication within Django. Using Django Channels, Knox, and a custom user model, it builds a scalable and production-ready chat app architecture, ready to be enhanced with <strong>Redis</strong> for channel layers. Whether you’re building a social platform, collaboration tool, or support system, this approach provides a robust foundation for secure, real-time communication.</p>",
+    "distinct_features": "<ul><li>Real-time messaging via <strong>Django Channels</strong>.</li><li>Token-based authentication using <strong>Knox</strong>.</li><li>Custom User Model.</li><li>Secure <strong>WebSocket connections</strong> restricted to authenticated users.</li><li>Production-ready with <code><strong>RedisChannelLayer</strong></code>.</li></ul>",
+    "category": 1,
+    "slug": "chat-api-with-websockets-oYavl",
+    "skills": [
+      1,
+      2,
+      3,
+      4,
+      10,
+      13,
+      14,
+      26
+    ]
+  }
+},
+{
+  "model": "projects.project",
+  "pk": 3,
+  "fields": {
+    "updated_at": "2025-05-22T15:14:16.822Z",
+    "name": "Brand Identity & Logo Design for Before Education Consultancy",
+    "client": "Before Education Consultancy",
+    "banner_image": "uploads/projects/banner_images/before_logo.jpg",
+    "is_archive": false,
+    "start_date": "2022-06-01",
+    "end_date": null,
+    "description": "<p>For <strong>Before Education Consultancy</strong>, I designed a logo that reflects both <strong>academic excellence</strong> and a <strong>modern, trustworthy brand identity</strong>.</p><p>&nbsp;</p><p>The logo concept is built around meaningful symbolism:</p><ul><li><strong>Graduation Hat on Top</strong>: Represents academic achievement and the consultancy’s core focus on education.</li><li><strong>Books Under the Hat</strong>: Symbolizes knowledge, learning, and the foundational support the consultancy offers students.</li><li><p><strong>Pillar Structures Forming 'B4'</strong>: A creative abbreviation of “Before,” subtly integrated into the design as structural elements that stand for strength, guidance, and progress.</p><p>&nbsp;</p></li></ul><p>The color palette leans toward a <strong>fresh lime tone</strong>, evoking <strong>growth, energy, and clarity</strong>, which aligns with the brand's mission to prepare students for their educational journey.</p><p>&nbsp;</p><p>Typography is set in a <strong>clean sans-serif style</strong>:</p><ul><li><strong>“Before”</strong> is prominently displayed in bold, uppercase letters to establish strong brand recall.</li><li><p><strong>“Education Consultancy”</strong> is placed below in smaller, minimalist text to maintain clarity without overpowering the main name.</p><p>&nbsp;</p></li></ul><p>The result is a <strong>modern, academic, and approachable logo</strong> that visually communicates the consultancy's purpose: guiding students with confidence and clarity — <i>before</i> they take the next big step.</p>",
+    "distinct_features": "<ul><li><strong>Graduation hat symbol</strong> to represent academic success</li><li><strong>Books under the hat</strong> symbolizing knowledge and guidance</li><li><strong>Pillars form 'B4'</strong> creatively referencing \"Before\"</li><li><strong>Lime color palette</strong> for freshness, growth, and clarity</li><li><strong>Sans-serif typography</strong> for a clean, modern look</li><li><strong>Clear hierarchy</strong>: “Before” bold and large, tagline subtle and supportive</li></ul>",
+    "category": 3,
+    "slug": "billboard-design-PwzaT",
+    "skills": [
+      16,
+      17,
+      19
+    ]
+  }
+},
+{
+  "model": "projects.project",
+  "pk": 4,
+  "fields": {
+    "updated_at": "2025-05-22T10:29:48.352Z",
+    "name": "Powering Sarbam Foods with Django: A Complete Backend for Stock, Orders, and Authentication",
+    "client": "Sarbam Foods",
+    "banner_image": "uploads/projects/2_j2xyCOx.png",
+    "is_archive": false,
+    "start_date": "2024-12-01",
+    "end_date": "2025-02-28",
+    "description": "<p>In today’s digital landscape, even local businesses need reliable and scalable software to handle operations like inventory management and online sales. I recently had the opportunity to build a complete backend system for <strong>Sarbam Foods</strong>, a growing food company, using <strong>Django</strong>, a high-level Python web framework. This project empowered the business to streamline its stock management, online ordering, and user authentication — all in one place.</p><p>&nbsp;</p><h3><strong>Project Overview</strong></h3><p>&nbsp;</p><p>The Sarbam Foods backend is built with <strong>Django REST Framework (DRF)</strong> and is designed to serve both internal staff and customers via APIs. From managing live stock to placing product orders and handling secure user sessions, this backend acts as the backbone of Sarbam Foods' digital operations.</p><p>&nbsp;</p><p>Whether a customer wants to order a product online, or an admin needs to track product availability, this system provides seamless support.</p><p>&nbsp;</p><h3><strong>Key Features</strong></h3><p>Here are the distinct features of the project:</p><ul><li><strong>Stock Management System</strong><ul><li>Tracks inventory of all food products.</li><li>Automatic stock deduction upon order placement.</li><li><p>Admin panel for adding/updating/removing products and quantities.</p><p>&nbsp;</p></li></ul></li><li><strong>Online Product Ordering</strong><ul><li>RESTful API for browsing and placing orders.</li><li>Cart management and order tracking functionalities.</li><li><p>Order confirmation via email.</p><p>&nbsp;</p></li></ul></li><li><strong>JWT-Based Authentication</strong><ul><li>Secure login and signup using <strong>JSON Web Tokens (JWT)</strong>.</li><li>Token refresh and access endpoints for protected resources.</li><li><p>Role-based access for admins and regular users.</p><p>&nbsp;</p></li></ul></li><li><strong>Email Integration</strong><ul><li>Sends confirmation emails on registration and order placement.</li><li>Password reset and email verification functionality.</li><li><p>Integrated with Django’s email backend for production readiness.</p><p>&nbsp;</p></li></ul></li><li><strong>Admin Dashboard</strong><ul><li>Built-in Django admin panel customized for managing users, products, and orders.</li><li><p>Filter, search, and bulk actions for faster admin workflow.</p><p>&nbsp;</p></li></ul></li><li><strong>Mobile-Friendly API</strong><ul><li>Designed to be consumed by mobile and web frontends.</li><li><p>Well-structured, versioned endpoints using Django REST Framework.</p><p>&nbsp;</p></li></ul></li><li><p><strong>Tested and Documented</strong></p><ul><li>API tested via <strong>Postman</strong> and thoroughly documented.</li><li>Modular design ready for deployment and further expansion.</li></ul><p>&nbsp;</p></li></ul><p>The flexibility of Django and DRF made it easy to scale and adapt the backend to match Sarbam Foods’ growing requirements.</p><p>&nbsp;</p><p>If you’re working on a similar project or planning to build a backend for your business, feel free to reach out or explore Django — it’s powerful, secure, and developer-friendly.</p>",
+    "distinct_features": "<ul><li>Real-time stock management with auto-deduction on orders</li><li>Online product ordering via <strong>RESTful APIs</strong></li><li>Secure authentication using <strong>JWT</strong></li><li>Email verification, password reset, and order confirmations</li><li>Admin panel for managing products, users, and orders</li></ul>",
+    "category": 1,
+    "slug": "sarbam-foods-backend-Po0tg",
+    "skills": [
+      1,
+      2,
+      4,
+      5,
+      6,
+      10,
+      13,
+      14,
+      15,
+      26
+    ]
+  }
+},
+{
+  "model": "projects.project",
+  "pk": 5,
+  "fields": {
+    "updated_at": "2025-05-22T16:38:52.533Z",
+    "name": "Rebranding the Sweet Life Partner Logo",
+    "client": "Sweet Life Partner",
+    "banner_image": "uploads/projects/Screenshot_2025-03-28_at_5.50.48pm.png",
+    "is_archive": false,
+    "start_date": "2021-08-01",
+    "end_date": null,
+    "description": "<p><strong>Sweet Life Partner (SLP)</strong> is a matrimonial service based in <strong>Australia</strong>, dedicated to connecting individuals in meaningful, lifelong relationships. The rebranding project focused on redefining their visual identity to better align with their mission: bringing love, trust, and commitment together under a modern, emotionally resonant brand.</p><p>&nbsp;</p><p>The new <strong>logo design</strong> is symbolic, minimal, and emotionally expressive:</p><ul><li><strong>Two Intertwined Rings</strong> – A silver ring on the <strong>left</strong> and a gold ring on the <strong>right</strong> symbolize the sacred union of two individuals. Their intertwined form represents unity, balance, and the lifelong bond of marriage.</li><li><strong>Heart Symbol Above the Rings</strong> ❤️ – Placed delicately above the point where the rings connect, the heart conveys the central emotion behind SLP's services — love, care, and partnership.</li><li><strong>Embedded Initials (S-L-P)</strong> – Each section of the rings subtly features a letter: <strong>‘S’ in the silver ring</strong>, <strong>‘L’ in the overlap</strong>, and <strong>‘P’ in the gold ring</strong>. This adds a unique layer of identity while maintaining aesthetic simplicity.</li></ul><p>&nbsp;</p><p>The color contrast of <strong>silver and gold</strong> was chosen not only for elegance but also to symbolize <strong>diversity, value, and timeless commitment</strong>. These precious metals reflect the uniqueness of each partner and the lasting value of marriage.</p><p>&nbsp;</p><p>To complement the logo, a clean and balanced visual style was established, ensuring the new identity is both <strong>modern and emotionally engaging</strong> across digital and print platforms.</p><p><br><br>This rebranding not only modernizes the visual identity of Sweet Life Partner but also reinforces its core message:</p><p><strong>“Helping two hearts find one sweet life.”</strong></p>",
+    "distinct_features": "<ul><li><strong>Intertwined silver and gold rings</strong> symbolizing unity and commitment</li><li><strong>Heart icon above the rings</strong> representing love and emotional connection</li><li><strong>Letters S, L, P embedded</strong> into the ring sections for brand identity</li><li><strong>Silver (left) and gold (right)</strong> for elegance, value, and balance</li><li><strong>Modern, clean, and emotionally resonant design</strong> across platforms</li></ul>",
+    "category": 3,
+    "slug": "digital-marketing-5Z3Dv",
+    "skills": [
+      16,
+      17,
+      19
+    ]
+  }
+},
+{
+  "model": "projects.project",
+  "pk": 6,
+  "fields": {
+    "updated_at": "2025-05-22T17:28:21.276Z",
+    "name": "Tournament Digital Support for Kandel Consultancy Cup",
+    "client": "Yeti Football Club, Australia",
+    "banner_image": "uploads/projects/Screenshot_2025-03-28_at_5.52.34pm.png",
+    "is_archive": false,
+    "start_date": "2022-12-01",
+    "end_date": "2024-04-30",
+    "description": "<p>For the <i>Kandel Consultancy Cup</i> organized by Yeti Football Club Australia, I was deeply involved in the Graphic and Digital Marketing efforts that supported the event from its inception to completion. My responsibilities spanned a wide range of creative and technical tasks aimed at ensuring the event had a strong and cohesive <strong>visual presence across all platforms and materials.</strong></p><p>&nbsp;</p><p>I began by designing the official <strong>event logo</strong>, which served as the foundation for the entire tournament’s branding. This logo was used consistently across promotional materials, social media campaigns, and physical assets to create a recognizable identity for the competition. Beyond the logo, I crafted specialized designs tailored for key moments and aspects of the tournament, such as s<strong>ocial media graphics, event posters, and banners</strong>, to effectively capture attention and generate excitement among participants and fans alike.</p><p>&nbsp;</p><p>My role also extended into the operational side of the tournament, where I provided <strong>technical support</strong> by managing the creation of team draws and ensuring that the league tables were accurately updated throughout the competition. This involved close coordination with the event organizers to maintain the integrity and flow of the matches, helping to keep both players and audiences informed in real time.</p><p>&nbsp;</p><p>In addition, I designed various physical materials critical to the <strong>event’s presentation and professionalism</strong>. These included custom team certificates recognizing participants’ efforts, detailed scorecards used during matches to track performance, and visually appealing props such as large-format cash prize cheques for the winners. These props added a ceremonial aspect to the event’s conclusion and were key in creating memorable photo opportunities that further boosted the tournament’s visibility.</p><p>&nbsp;</p><p>Overall, my contributions ensured that the Kandel Consultancy Cup was not only well-organized behind the scenes but also presented in a visually engaging and professional manner, enhancing the overall experience for players, fans, and organizers alike.</p>",
+    "distinct_features": "<ul><li>Designed <strong>event branding assets</strong> including logos, posters, certificates, and scorecards.</li><li>Created matchday graphics, winner cheques, and event props for presentation.</li><li>Provided technical support for fixtures, draws, and live league table updates.</li><li><strong>Boosted social media </strong>engagement through timely and professional visual content.</li></ul>",
+    "category": 2,
+    "slug": "tournament-digital-support-I35dl",
+    "skills": [
+      16,
+      17,
+      18,
+      19,
+      20,
+      28
+    ]
+  }
+},
+{
+  "model": "projects.project",
+  "pk": 7,
+  "fields": {
+    "updated_at": "2025-05-22T18:06:48.866Z",
+    "name": "Advanced Assignment and Student Management System with Plagiarism Checker",
+    "client": null,
+    "banner_image": "uploads/projects/banner_images/edu-assist.png",
+    "is_archive": false,
+    "start_date": "2023-12-01",
+    "end_date": "2024-08-25",
+    "description": "<p>In an era of increasing digitization in education, managing academic processes efficiently has become critical for institutions. This project — an <strong>Academic Management System</strong> — was developed to streamline and automate key academic workflows such as internal mark uploads, assignment submissions, plagiarism detection, and MCQ grading through OMR technology. The goal was to create a platform that enhances transparency, accountability, and academic integrity while improving the user experience for students, teachers, and administrators alike.</p><p>&nbsp;</p><h3><strong>Objectives</strong></h3><ul><li>Simplify the internal mark uploading process for faculty.</li><li>Enable students to submit assignments online with deadline enforcement.</li><li>Integrate an automated plagiarism detection module.</li><li>Introduce an OMR-based grading system for MCQ evaluations.</li><li>Build a scalable and secure platform that can be integrated with other educational tools in the future.</li></ul><p>&nbsp;</p><p><strong>Plagiarism Detection Workflow:</strong></p><ul><li>File Upload: Accepts DOCX and PDF files.</li><li>File Reader (<code>read_file</code>): Extracts text from the uploaded document.</li><li>Text Preprocessor (<code>preprocessor_text</code>): Cleans and standardizes content for analysis.</li><li>Sentence Splitter (<code>split_sentences</code>): Breaks the content into analyzable sentences.</li><li>Plagiarism Checker (<code>check_plagiarism</code>): Compares the document against existing assignments and flags matching text.</li><li><p>Output Generator: Displays detailed plagiarism reports with highlighted matches.</p><p>&nbsp;</p></li></ul><p>This ensures authenticity, promotes original work, and helps both students and teachers maintain ethical academic standards.</p><p>&nbsp;</p><p><strong>OMR System for MCQ Grading</strong></p><p>The system automates MCQ assessment by enabling instructors to scan and grade OMR sheets. This significantly reduces manual effort and increases grading accuracy.</p><p>&nbsp;</p><h3><strong>Tools and Technologies Used</strong></h3><figure class=\"table\"><table><thead><tr><th>Category</th><th>Technology/Tool</th><th>Purpose</th></tr></thead><tbody><tr><td><strong>Frontend</strong></td><td>Bootstrap</td><td>Responsive UI across devices</td></tr><tr><td><strong>Backend</strong></td><td>Django</td><td>Secure, scalable web application framework</td></tr><tr><td><strong>Database</strong></td><td>SQLite</td><td>Lightweight, file-based data storage</td></tr><tr><td><strong>API Development</strong></td><td>Django REST Framework</td><td>Creation of RESTful APIs for integration</td></tr><tr><td><strong>File Handling</strong></td><td>Python File I/O, docx, PyPDF2</td><td>To read and process uploaded documents</td></tr><tr><td><strong>Plagiarism Check</strong></td><td>Custom Python Scripts</td><td>Text processing and comparison logic</td></tr><tr><td><strong>OMR Integration</strong></td><td>Image processing libs</td><td>Scanning and reading OMR sheets (future extension)</td></tr></tbody></table></figure><p>&nbsp;</p><h3><strong>Outcomes</strong></h3><ul><li>Mark uploading became significantly more efficient.</li><li>Assignment deadlines are enforced digitally, ensuring timely submissions.</li><li>Academic integrity is protected through automatic plagiarism checking.</li><li>MCQ grading is now faster and less prone to human error.</li><li>Educators gain more control, and students enjoy greater transparency in academic records.</li></ul>",
+    "distinct_features": "<ul><li><strong>Internal Mark Upload</strong>: Instructors can easily add or update grades; students get instant access to their marks.</li><li><strong>Assignment Submission</strong>: Students submit work online; system tracks deadlines, sends alerts, and blocks late submissions.</li><li><strong>Plagiarism Detection</strong>: Checks student submissions for copied content to ensure originality and uphold academic integrity.</li></ul>",
+    "category": 1,
+    "slug": "advanced-assignment-and-student-manageme-M7b9z",
+    "skills": [
+      1,
+      2,
+      5,
+      6,
+      7,
+      9,
+      11,
+      19
+    ]
+  }
+},
+{
+  "model": "projects.project",
+  "pk": 8,
+  "fields": {
+    "updated_at": "2025-05-22T10:32:37.802Z",
+    "name": "A Complete Branding Journey: Spark International Education Consultancy",
+    "client": "Spark International Education Consultancy",
+    "banner_image": "uploads/projects/banner_images/spark.png",
+    "is_archive": false,
+    "start_date": "2024-11-01",
+    "end_date": "2025-01-30",
+    "description": "<p>Spark International Education Consultancy aimed to establish a distinctive identity in the competitive education consulting industry. My responsibility was to create a complete branding and marketing foundation that would make the organization stand out and connect effectively with its target audience — students seeking guidance for international studies.</p><p>&nbsp;</p><h3><strong>Roles &amp; Responsibilities</strong></h3><ul><li><strong>Brand Development</strong><br>I worked closely with the company’s leadership to understand their mission and values. Based on this insight, I created a complete visual identity system:<ul><li>Designed a <strong>modern and meaningful logo</strong> that resonates with trust, guidance, and global opportunity.</li><li>Selected a brand <strong>color palette</strong> and <strong>typography system</strong> that reflects professionalism and approachability.</li><li><p>Developed brand consistency across digital and print media.</p><p>&nbsp;</p></li></ul></li><li><strong>Social Media Marketing</strong><br>Built and executed a social media strategy to increase visibility, attract leads, and engage the audience:<ul><li>Designed <strong>branded post templates</strong> for platforms like Facebook and Instagram.</li><li>Managed campaign content calendars.</li><li><p>Focused on <strong>audience growth and retention</strong>, leading to improved online presence and inquiries.</p><p>&nbsp;</p></li></ul></li><li><strong>Company Profile Creation</strong><ul><li>Drafted and designed a compelling <strong>company profile</strong> for both online and offline use, showcasing services, success stories, and core values.</li><li><p>Ensured all profile materials reflected a <strong>consistent tone and design</strong>.</p><p>&nbsp;</p></li></ul></li><li><strong>Website Design &amp; Development</strong><br>Using <strong>WordPress</strong>, I designed a <strong>responsive</strong>, SEO-ready website:<ul><li>Optimized for both mobile and desktop users.</li><li>Structured with easy-to-navigate content, service listings, contact forms, and blog sections.</li><li>Embedded key <strong>branding elements</strong> to ensure brand recognition and trust.</li></ul></li></ul><p>&nbsp;</p><h3><strong>Outcome &amp; Impact</strong></h3><ul><li>Established a <strong>recognizable brand identity</strong> across all mediums.</li><li>Increased <strong>social media engagement and followers</strong> organically through consistent content.</li><li>Built a <strong>professional online presence</strong> that led to increased inquiries and trust from clients.</li><li>Delivered all assets with scalability in mind — enabling Spark to expand its marketing activities without rebranding.</li></ul>",
+    "distinct_features": "<ul><li><strong>Logo &amp; Branding</strong>: Designed logo and brand identity</li><li><strong>Social Media</strong>: Managed and created marketing content</li><li><strong>Company Profile</strong>: Designed professional company profile</li><li><strong>Website</strong>: Built responsive WordPress site</li><li><strong>Growth</strong>: Boosted online presence and engagement</li></ul>",
+    "category": 2,
+    "slug": "a-complete-branding-journey-for-spark-in-3ZkQI",
+    "skills": [
+      5,
+      6,
+      16,
+      17,
+      19,
+      20,
+      28,
+      35
+    ]
+  }
+},
+{
+  "model": "projects.project",
+  "pk": 9,
+  "fields": {
+    "updated_at": "2025-05-23T04:12:31.424Z",
+    "name": "Full-Stack Developer Portfolio – Django, Vue & AWS",
+    "client": null,
+    "banner_image": "uploads/projects/banner_images/Screenshot_2025-05-22_at_4.21.34pm.png",
+    "is_archive": false,
+    "start_date": "2025-03-01",
+    "end_date": "2025-04-30",
+    "description": "<p>This portfolio website is a full-fledged <strong>personal branding platform</strong> built from scratch using a modern full-stack architecture. It serves as a central hub for showcasing my projects, technical skills, blog posts, and real-world experience. Every part of the system — from API design and database schema to frontend rendering and server deployment — was carefully crafted to ensure performance, scalability, and maintainability.</p><p>&nbsp;</p><p>The goal of this project was not just to build a website, but to simulate a <strong>production-grade system</strong> similar to what’s used in real startups or enterprise apps. It reflects my hands-on experience with a complete development workflow — from backend logic to frontend UI, from containerization to cloud deployment.</p><p>&nbsp;</p><h3><strong>Technology Stack</strong></h3><p><strong>a. Backend</strong></p><ul><li><strong>Django</strong>: A robust and secure Python web framework used to handle the server-side logic, user authentication, and data modeling.</li><li><strong>Django Rest Framework (DRF)</strong>: Used to build a scalable, clean, and versioned RESTful API that the frontend consumes.</li><li><strong>PostgreSQL</strong>: The primary relational database system — chosen for its reliability, performance, and advanced querying capabilities.</li><li><p><strong>Redis</strong>: Integrated as a caching layer for API responses and session data, dramatically improving performance under load.</p><p>&nbsp;</p></li></ul><p><strong>b. Frontend</strong></p><ul><li><p><strong>VueJS (Composition API + Script Setup)</strong>: Enables a modern reactive UI with a component-based architecture. Vue provides a seamless single-page application (SPA) experience with smooth transitions, reactivity, and interactivity.</p><p>&nbsp;</p></li><li><p><strong>TailwindCSS</strong>: Utility-first CSS framework that helped build a responsive and custom-designed interface with minimal custom CSS. Ensures consistent styling across the app and rapid prototyping.</p><p>&nbsp;</p></li></ul><p><strong>c. DevOps &amp; Infrastructure</strong></p><ul><li><strong>Docker</strong>: Every component of the app is containerized for consistency, portability, and scalability. I’ve created separate containers for the backend, frontend, Redis, PostgreSQL, and Nginx.</li><li><strong>Nginx</strong>: Acts as a reverse proxy and static file server, managing traffic efficiently and securely between services.</li><li><strong>Linux (Ubuntu)</strong>: The server OS running on the EC2 instance, providing a secure and lightweight environment for production workloads.</li><li><strong>AWS EC2 Instance</strong>: The entire application stack is deployed on a virtual machine running on <strong>Amazon Web Services (AWS)</strong>. This gave me hands-on experience with cloud infrastructure, SSH configuration, firewall rules, SSL certification, and uptime monitoring.</li><li><strong>Gunicorn</strong>: Used as the Python WSGI HTTP server to serve the Django application in production.</li><li><strong>Certbot + Let's Encrypt</strong>: Configured SSL certificates for HTTPS support, ensuring encrypted and secure communication.</li></ul><p>&nbsp;</p><p><strong>d. UI/UX Design</strong></p><ul><li><strong>Figma</strong>: designed the entire UI/UX of the portfolio website before development. This included:<ul><li>Creating wireframes and high-fidelity mockups</li><li>Planning responsive layouts for desktop and mobile</li><li>Designing reusable components like buttons, cards, and modals</li><li>Collaborating visually with layout ideas before writing any code</li><li>Using Figma helped ensure a <strong>user-friendly, visually consistent</strong> frontend that translated seamlessly into TailwindCSS and Vue components.<strong>&nbsp;</strong></li></ul></li></ul><p>&nbsp;</p><h3><strong>Version 2 Enhancements (v2)</strong></h3><p>The current version of the site (v2) introduces <strong>major architectural and UX enhancements</strong>, designed to improve performance, maintainability, and user engagement.</p><ul><li><strong>Feature Flag System</strong>: Integrated a flexible flag system that allows specific features (like experience tab, or project drafts) to be enabled/disabled dynamically — without deploying new code.</li><li><strong>Individual Project Pages</strong>: Each project now links to a detailed description page, including:<ul><li>Overview and purpose</li><li>Tech stack and architecture</li><li>Images related to the projects</li></ul></li><li><strong>Improved State Management</strong>: Leveraged Vue’s reactivity system to enhance UX, including image sliders, modals, and animations.</li><li><p><strong>Responsive Image Slider</strong>: Built a lightweight, responsive image slider using Vue transitions, supporting full-screen previews and smooth animations.</p><p>&nbsp;</p></li></ul>",
+    "distinct_features": "<ul><li><strong>Built with Django &amp; Django REST Framework</strong> for a modular, secure backend and clean API design</li><li><strong>Vue 3 SPA with TailwindCSS</strong> for a fast, responsive, and modern frontend experience</li><li><strong>Fully Dockerized Architecture</strong>, including frontend, backend, Redis, PostgreSQL, and Nginx</li><li><p><strong>Deployed on AWS EC2</strong> (Ubuntu) with Nginx reverse proxy, Gunicorn, and SSL via Let’s Encrypt</p><p>&nbsp;</p></li></ul>",
+    "category": 1,
+    "slug": "portfolio-website-tlqdr",
+    "skills": [
+      1,
+      2,
+      3,
+      4,
+      36,
+      7,
+      8,
+      10,
+      13,
+      15,
+      21,
+      26
+    ]
+  }
+},
+{
+  "model": "projects.project",
+  "pk": 10,
+  "fields": {
+    "updated_at": "2025-05-22T16:50:01.160Z",
+    "name": "Digital Marketing and Graphic Design: Sweet Life Partner",
+    "client": "Sweet Life Partner",
+    "banner_image": "uploads/projects/banner_images/3D_Finish.png",
+    "is_archive": false,
+    "start_date": "2021-08-01",
+    "end_date": "2022-11-30",
+    "description": "<p>This project highlights an ongoing creative collaboration with <strong>Sweet Life Partner (SLP)</strong> — a premium matrimony service based in Australia. The project focuses on establishing and strengthening <strong>visual brand identity</strong>, enhancing <strong>social media engagement</strong>, and aligning the company’s communication with <strong>emotional, cultural, and seasonal narratives</strong>.</p><p>&nbsp;</p><p>At the heart of this project is the brand’s refined visual identity, symbolized by its <strong>rebranded logo</strong>—featuring <strong>entwined gold and silver rings</strong> marked with the letters <strong>S, L, and P</strong>, topped with a heart. This core design language inspired a wide variety of complementary visuals that were used across campaigns and platforms.</p><p>&nbsp;</p><p><strong>Key Design Deliverables:</strong></p><ul><li><strong>Logo Variants and Themed Visuals</strong>: Including the <strong>3D Finish Logo</strong>, <strong>Christmas-themed adaptations</strong>, and multiple occasion-based designs (e.g., Dashain kites, Purnima celebration) to keep the brand contextually relevant and emotionally resonant throughout the year.</li><li><strong>Social Media Campaigns</strong>: Graphics such as <i>“It’s always better with your love”</i> and <i>“Unique Design to match the partner with same preferences”</i> were tailored to reflect the brand’s core message of love, connection, and compatibility. These visuals were carefully designed to build trust and relatability with the target audience.</li><li><strong>Trend-Driven Creatives</strong>: Designs such as <i>“Chowk Tira”</i> and <i>“Sapana Ko Mayalu”</i> embraced viral cultural moments and online trends to keep the brand lively, youthful, and highly shareable. These pieces not only increased engagement but also helped the brand become part of larger social conversations.</li><li><strong>Brand Consistency Across Channels</strong>: Every visual element—whether a story post, a profile banner, or a feed update—was crafted using a consistent color palette, typography, and theme, reinforcing brand recognition and trust.</li></ul><p>&nbsp;</p><p>This project was not only a showcase of graphic design skills but also a strategic exercise in <strong>emotional branding</strong> and <strong>digital storytelling</strong>. The goal was to move beyond aesthetics and create designs that <strong>speak to the heart</strong>, making Sweet Life Partner a more relatable and memorable name in the online matchmaking space.</p><p>&nbsp;</p><p>As a result, the brand witnessed improved <strong>engagement metrics</strong>, increased <strong>follower base</strong>, and a more cohesive visual identity across its platforms. The continuous adaptation of themes, festivals, and trends has allowed Sweet Life Partner to remain dynamic and culturally connected—an essential factor in the world of digital matrimony.</p>",
+    "distinct_features": "<ul><li><strong>Brand Identity Design</strong> – Created a premium logo and visual system using symbolic elements (rings, heart, initials).</li><li><strong>Trend-Based Campaigns</strong> – Designed graphics aligned with cultural events and viral social media trends (e.g., Dashain, Purnima).</li><li><strong>Emotional Storytelling</strong> – Used captions and visuals that reflect love, connection, and shared preferences.</li><li><strong>Platform Consistency</strong> – Maintained cohesive brand aesthetics across all social media channels.</li><li><strong>Engagement-Focused Strategy</strong> – Boosted interaction and follower growth through relatable, shareable creatives.</li></ul>",
+    "category": 2,
+    "slug": "digital-marketing-and-graphic-design-swe-Da8Vl",
+    "skills": [
+      16,
+      17,
+      18,
+      19,
+      20,
+      28
+    ]
+  }
+},
+{
+  "model": "projects.project",
+  "pk": 11,
+  "fields": {
+    "updated_at": "2025-05-22T18:09:55.269Z",
+    "name": "Brand Identity and Logo Design: Spark International Education Consultancy",
+    "client": "Spark International Education Consultancy",
+    "banner_image": "uploads/projects/banner_images/spark_logo.jpg",
+    "is_archive": false,
+    "start_date": "2024-08-01",
+    "end_date": null,
+    "description": "<p>I created the logo for <strong>Spark International Education Consultancy</strong> to visually represent its mission of guiding students toward higher education and success. The design thoughtfully integrates multiple symbolic elements that together tell a story of knowledge, inspiration, and growth.</p><p>&nbsp;</p><p>At the heart of the logo is a <strong>student figure</strong>, depicted wearing a graduation cap, symbolizing achievement and academic accomplishment. This figure is holding a bright <strong>spark</strong> above their head, which represents the ignition of curiosity, motivation, and the pursuit of knowledge. The spark conveys the idea of inspiration—lighting the way forward for students as they navigate their educational journey.</p><p>&nbsp;</p><p>The <strong>diyo</strong> (a traditional lamp) is another key element in the logo, symbolizing enlightenment and guidance. It reflects the consultancy’s role as a beacon of hope and support, illuminating the path for students in their quest for education abroad or higher learning opportunities. This traditional element connects cultural heritage with modern aspirations, emphasizing that education is both a timeless and transformative force.</p><p>&nbsp;</p><p>Books are also incorporated into the design to signify the <strong>foundation of learning</strong> and the <strong>accumulation of knowledge</strong>. These books emphasize academic rigor, intellectual growth, and the resources that Spark International Education Consultancy provides to help students succeed.</p><p>&nbsp;</p><p>The color palette of the logo plays an important role in reinforcing these themes. The <strong>blue</strong> hues convey <strong>trust, professionalism, and stability</strong>—qualities essential in an education consultancy that students and parents rely on for guidance and support. Meanwhile, the <strong>orange</strong> tones introduce <strong>warmth, enthusiasm, and energy, capturing the spark of creativity and optimism</strong> that drives students toward their goals.</p><p>&nbsp;</p><p>Together, the blue and orange colors balance each other to create a vibrant yet dependable identity, illustrating that Spark International Education Consultancy is both a <strong>steady guide and an inspiring force.</strong> The combination of symbolic elements and meaningful colors creates a logo that is not only visually appealing but also deeply representative of the consultancy’s commitment to empowering students on their educational journey.</p>",
+    "distinct_features": "<ul><li>Combines traditional <strong>diyo</strong> and books to symbolize guidance and knowledge.</li><li>Features a student with a graduation cap holding a spark, representing inspiration and achievement.</li><li>Uses <strong>blue</strong> for trust and professionalism, and <strong>orange</strong> for energy and creativity.</li><li>Balances cultural heritage with modern educational aspirations.</li></ul>",
+    "category": 3,
+    "slug": "brand-identity-and-logo-design-spark-int-RLg4Y",
+    "skills": [
+      16,
+      17,
+      19,
+      20
+    ]
+  }
+},
+{
+  "model": "projects.project",
+  "pk": 12,
+  "fields": {
+    "updated_at": "2025-05-23T04:06:12.661Z",
+    "name": "Building a Brand Logo for Retic Films",
+    "client": "Retic Films",
+    "banner_image": "uploads/projects/banner_images/Retic_Logo.png",
+    "is_archive": false,
+    "start_date": "2022-01-15",
+    "end_date": null,
+    "description": "<p>The logo for <strong>Retic Films</strong>, a photography and videography company based in Pokhara, is a visually striking and conceptually rich design that cleverly incorporates multiple symbolic elements related to filmmaking and visual storytelling. Here's a detailed description and interpretation:</p><p>&nbsp;</p><h3><strong>Logo Structure &amp; Symbolism</strong></h3><p><strong>1. Letterform Integration (R &amp; F)</strong></p><ul><li>The design smartly fuses the letters <strong>\"R\"</strong> and <strong>\"F\"</strong>—the initials of <strong>Retic Films</strong>—into a single, cohesive symbol.</li><li>The <strong>\"R\"</strong> forms the main body and outline of the design, crafted with smooth, rounded edges. This gives the logo a modern, minimalist look.</li><li>The <strong>\"F\"</strong> is embedded within the \"R\", styled with a film reel motif—highlighted by diagonal filmstrip perforations on the horizontal lines of the \"F\".</li></ul><p><strong>2. Film Reel Motif</strong></p><ul><li>The <strong>grey filmstrip elements</strong> not only form the arms of the \"F\" but also serve as a clear reference to the <strong>film reel</strong>, which is integral to videography and photography.</li><li>These details communicate the brand’s core services—cinematography, video production, and photography—instantly and effectively.</li></ul><p><strong>3. Jellyfish-like Shape</strong></p><ul><li>The overall silhouette subtly resembles a <strong>jellyfish</strong>, a clever nod to fluid motion and the underwater elegance often associated with creative flow and camera movement.</li><li>This organic form may also suggest flexibility, creativity, and the natural artistry involved in visual storytelling.</li></ul><p><strong>4. Shutter Button Representation</strong></p><ul><li>A <strong>white dot</strong> near the top of the \"R\" can be interpreted as a <strong>shutter button</strong>, an iconic symbol in photography.</li><li>This small but important detail connects the viewer immediately to the act of capturing a moment—a core part of Retic Films’ identity.</li></ul><p>&nbsp;</p><h3><strong>Typography &amp; Color Palette</strong></h3><p><strong>a. Text:</strong></p><ul><li><strong>\"RETIC\"</strong> is presented in bold, uppercase white letters, ensuring strong visibility and emphasis.</li><li><strong>\"FILMS\"</strong> is written in a lighter, gray tone, providing visual contrast and hierarchy between the brand name and its industry.</li></ul><p><strong>b. Color Scheme:</strong></p><ul><li>The background is a <strong>deep navy blue</strong> with subtle dot patterns, giving a cinematic and professional vibe.</li><li>The combination of <strong>white, gray, and blue</strong> projects trust, creativity, and clarity—values that align with a professional production house.</li></ul><p>&nbsp;</p><h3><strong>Design Aesthetic</strong></h3><ul><li><strong>Modern, minimal, and meaningful</strong>, the design balances clarity with creativity.</li><li>It is versatile and scalable—ideal for digital platforms, business cards, merchandise, and video watermarks.</li><li>The thoughtful layering of elements ensures that even when simplified or viewed from afar, the essence of the brand remains clear.</li></ul>",
+    "distinct_features": "<ul><li><strong>R &amp; F Integration</strong> – Cleverly combines initials into one form.</li><li><strong>Film Reel Elements</strong> – Grey lines mimic filmstrips.</li><li><strong>Jellyfish Shape</strong> – Abstract form suggests creativity and flow.</li><li><strong>Shutter Button Dot</strong> – Symbolizes photography function.</li><li><strong>Bold Typography</strong> – \"RETIC\" stands out; \"FILMS\" complements subtly.</li><li><strong>Cinematic Colors</strong> – Deep blue, white, and grey reflect professionalism.</li><li><strong>Modern &amp; Minimal</strong> – Clean, scalable design for versatile use.</li></ul>",
+    "category": 3,
+    "slug": "building-a-brand-logo-for-retic-films-AOI59",
+    "skills": [
+      16,
+      17,
+      20,
+      28
+    ]
+  }
+},
+{
+  "model": "projects.project",
+  "pk": 13,
+  "fields": {
+    "updated_at": "2025-05-23T04:41:19.961Z",
+    "name": "Rooted in Culture, Crafted for Celebration: The Mama Ghar Entertainment Identity",
+    "client": "Mamaghar Entertainment",
+    "banner_image": "uploads/projects/banner_images/mamaghar_logo.jpg",
+    "is_archive": false,
+    "start_date": "2024-07-29",
+    "end_date": null,
+    "description": "<p><strong>Mama Ghar Entertainment</strong> is an event management company that emphasizes cultural roots, warmth, togetherness, and joyful celebrations. The brand name “Mama Ghar” translates to “Maternal Uncle’s Home” in Nepali, evoking a strong sense of nostalgia, safety, and belonging—a place associated with joy, childhood memories, and festive gatherings.</p><p>&nbsp;</p><h3><strong>Logo Design Concept</strong></h3><p><strong>1. Traditional Nepali House Silhouette</strong></p><ul><li>The central structure outlines a <strong>typical Nepali home</strong> with <strong>golden strokes</strong>, symbolizing cultural heritage, warmth, and familial comfort.</li><li>The house’s layered roof and windows are minimalist yet distinct, emphasizing authenticity without visual clutter.</li></ul><p><strong>2. Children Illustration (Vanji &amp; Vanja)</strong></p><ul><li>Two stylized children figures at the base represent <strong>Vanji and Vanja</strong>, symbolic of innocence, fun, and joyful togetherness.</li><li>Their hand-in-hand posture underlines <strong>unity, inclusivity, and the familial essence</strong> of the brand’s services.</li></ul><p><strong>3. Bold Typography</strong></p><ul><li>The brand name <strong>\"MAMA GHAR\"</strong> is written in <strong>bold, white, uppercase sans-serif</strong> font, exuding confidence and clarity.</li><li>The clean, modern font balances well with the traditional elements of the house.</li></ul><p><strong>4. Subtext - ENTERTAINMENT</strong></p><ul><li>Positioned underneath in <strong>golden uppercase serif</strong>, the word <strong>\"ENTERTAINMENT\"</strong> reflects sophistication and elegance.</li><li>The serif font here adds contrast and a hint of celebration, fitting for an events company.</li></ul><p><strong>5. Starburst/Flare Detail</strong></p><ul><li>The <strong>golden starbursts</strong> embedded in the letters <strong>\"M\"</strong> and <strong>\"R\"</strong> of <strong>MAMA GHAR</strong> are symbolic representations of the <strong>sun and moon</strong> from the <strong>Nepalese national flag</strong>.</li></ul><p>&nbsp;</p><h3><strong>Brand Colors</strong></h3><figure class=\"table\"><table><thead><tr><th>Color</th><th>Hex Code</th><th>Meaning in Context</th></tr></thead><tbody><tr><td><strong>Gold</strong></td><td>#FFD700</td><td>Luxury, celebration, tradition, festivity</td></tr><tr><td><strong>White</strong></td><td>#FFFFFF</td><td>Simplicity, clarity, trust</td></tr><tr><td><strong>Black</strong></td><td>#000000</td><td>Sophistication, elegance, depth</td></tr></tbody></table></figure><p>&nbsp;</p><p>These colors combine to reflect the <strong>premium, culturally rooted, and joyous</strong> nature of the brand.</p><p>&nbsp;</p><h3><strong>Typography</strong></h3><ul><li><strong>Primary Font (\"MAMA GHAR\")</strong>:<ul><li><strong>Style</strong>: Bold, Sans-serif, All Caps</li><li><strong>Attributes</strong>: Strong, clean, and modern—ensures legibility and brand authority.</li></ul></li><li><strong>Secondary Font (\"ENTERTAINMENT\")</strong>:<ul><li><strong>Style</strong>: Elegant Serif, All Caps, Gold-colored</li><li><strong>Attributes</strong>: Stylish, traditional, and refined—conveys celebration and class.</li></ul></li></ul><p>&nbsp;</p><h3><strong>Design Tone &amp; Message</strong></h3><p>The logo conveys a perfect balance between <strong>modern professionalism</strong> and <strong>cultural nostalgia</strong>. It tells a story—of home, warmth, childhood joy, and unforgettable events—making it ideal for an event management company that aims to create lasting memories.</p>",
+    "distinct_features": "<ul><li><strong>Traditional Nepali House</strong> – Gold outline reflects cultural roots and warmth.</li><li><strong>Sun &amp; Moon Symbols</strong> – Starbursts represent elements from the Nepal flag.</li><li><strong>Playful Children</strong> – Vanji &amp; Vanja symbolize joy and togetherness.</li><li><strong>Bold + Elegant Fonts</strong> – Strong main title with classy golden subtext.</li></ul>",
+    "category": 3,
+    "slug": "rooted-in-culture-crafted-for-celebratio-CAoUq",
+    "skills": [
+      16,
+      17,
+      19
+    ]
+  }
+},
+{
+  "model": "projects.projectlink",
+  "pk": 1,
+  "fields": {
+    "updated_at": "2025-05-22T14:57:56.868Z",
+    "project": 3,
+    "name": "Behance",
+    "link": "https://www.behance.net/gallery/223839867/Logo-Design-Before-Education"
+  }
+},
+{
+  "model": "projects.projectlink",
+  "pk": 2,
+  "fields": {
+    "updated_at": "2025-05-21T05:47:01.148Z",
+    "project": 1,
+    "name": "Github",
+    "link": "https://github.com/Riwaj9786/chat_api"
+  }
+},
+{
+  "model": "projects.projectlink",
+  "pk": 4,
+  "fields": {
+    "updated_at": "2025-05-22T02:04:40.856Z",
+    "project": 4,
+    "name": "Github",
+    "link": "https://github.com/Sarbam-Foods/backend-web"
+  }
+},
+{
+  "model": "projects.projectlink",
+  "pk": 5,
+  "fields": {
+    "updated_at": "2025-05-22T02:06:03.705Z",
+    "project": 4,
+    "name": "Website",
+    "link": "https://sarbamfoods.com/"
+  }
+},
+{
+  "model": "projects.projectlink",
+  "pk": 6,
+  "fields": {
+    "updated_at": "2025-05-22T02:25:36.794Z",
+    "project": 8,
+    "name": "Website",
+    "link": "https://sparkeducation.com.np/"
+  }
+},
+{
+  "model": "projects.projectlink",
+  "pk": 7,
+  "fields": {
+    "updated_at": "2025-05-22T02:25:36.795Z",
+    "project": 8,
+    "name": "Facebook",
+    "link": "https://www.facebook.com/spark.shishuwa"
+  }
+},
+{
+  "model": "projects.projectlink",
+  "pk": 8,
+  "fields": {
+    "updated_at": "2025-05-22T09:44:51.407Z",
+    "project": 7,
+    "name": "Github",
+    "link": "https://github.com/Riwaj9786/advanced_sms"
+  }
+},
+{
+  "model": "projects.projectlink",
+  "pk": 9,
+  "fields": {
+    "updated_at": "2025-05-22T10:39:12.324Z",
+    "project": 9,
+    "name": "Website",
+    "link": "https://riwajbhurtel.com.np/"
+  }
+},
+{
+  "model": "projects.projectlink",
+  "pk": 10,
+  "fields": {
+    "updated_at": "2025-05-22T10:39:12.325Z",
+    "project": 9,
+    "name": "Github",
+    "link": "https://github.com/Riwaj9786/portfolio"
+  }
+},
+{
+  "model": "projects.projectlink",
+  "pk": 11,
+  "fields": {
+    "updated_at": "2025-05-22T10:39:12.325Z",
+    "project": 9,
+    "name": "Figma",
+    "link": "https://www.figma.com/design/OT5o7tfUQKVVcql5ZAiOTu/Portfolio?node-id=0-1&t=LJlwXK6KUF1bSqas-1"
+  }
+},
+{
+  "model": "projects.projectlink",
+  "pk": 12,
+  "fields": {
+    "updated_at": "2025-05-22T14:57:56.868Z",
+    "project": 3,
+    "name": "Facebook",
+    "link": "https://www.facebook.com/before.educationconsultancy"
+  }
+},
+{
+  "model": "projects.projectlink",
+  "pk": 13,
+  "fields": {
+    "updated_at": "2025-05-22T17:34:46.264Z",
+    "project": 11,
+    "name": "Behance",
+    "link": "https://www.behance.net/gallery/223838325/Spark-Logo-Design"
+  }
+},
+{
+  "model": "projects.projectimage",
+  "pk": 4,
+  "fields": {
+    "updated_at": "2025-05-22T10:28:59.561Z",
+    "project": 1,
+    "image": "uploads/projects/Screenshot_2025-05-22_at_6.55.39am.png",
+    "caption": "Custom Knox Middleware Implementation"
+  }
+},
+{
+  "model": "projects.projectimage",
+  "pk": 5,
+  "fields": {
+    "updated_at": "2025-05-22T10:28:59.562Z",
+    "project": 1,
+    "image": "uploads/projects/Screenshot_2025-05-22_at_6.56.56am.png",
+    "caption": "Websocket Consumer Setup"
+  }
+},
+{
+  "model": "projects.projectimage",
+  "pk": 7,
+  "fields": {
+    "updated_at": "2025-05-22T10:29:48.355Z",
+    "project": 4,
+    "image": "uploads/projects/Screenshot_2025-05-22_at_7.27.11am.png",
+    "caption": "Github Project Repo Tree Structure"
+  }
+},
+{
+  "model": "projects.projectimage",
+  "pk": 8,
+  "fields": {
+    "updated_at": "2025-05-22T10:29:48.356Z",
+    "project": 4,
+    "image": "uploads/projects/Screenshot_2025-05-22_at_7.28.49am.png",
+    "caption": "Integrating the mail sending logic with Celery Integration"
+  }
+},
+{
+  "model": "projects.projectimage",
+  "pk": 9,
+  "fields": {
+    "updated_at": "2025-05-22T10:32:37.805Z",
+    "project": 8,
+    "image": "uploads/projects/spark_logo.jpg",
+    "caption": "Final Logo of Spark International Education"
+  }
+},
+{
+  "model": "projects.projectimage",
+  "pk": 10,
+  "fields": {
+    "updated_at": "2025-05-22T10:32:37.806Z",
+    "project": 8,
+    "image": "uploads/projects/spark_cover.jpg",
+    "caption": "Cover Design for Social Media Handles"
+  }
+},
+{
+  "model": "projects.projectimage",
+  "pk": 11,
+  "fields": {
+    "updated_at": "2025-05-22T10:32:37.806Z",
+    "project": 8,
+    "image": "uploads/projects/spark_congrats.jpg",
+    "caption": "Promoting Engagement with the Company Clients through Digital Marketing"
+  }
+},
+{
+  "model": "projects.projectimage",
+  "pk": 12,
+  "fields": {
+    "updated_at": "2025-05-22T10:32:37.807Z",
+    "project": 8,
+    "image": "uploads/projects/hiring.jpg",
+    "caption": "Social Media Designs related to Vacancy"
+  }
+},
+{
+  "model": "projects.projectimage",
+  "pk": 13,
+  "fields": {
+    "updated_at": "2025-05-22T10:32:37.808Z",
+    "project": 8,
+    "image": "uploads/projects/abroad_spark.jpg",
+    "caption": "Design representing Higher Abroad Studies"
+  }
+},
+{
+  "model": "projects.projectimage",
+  "pk": 15,
+  "fields": {
+    "updated_at": "2025-05-22T10:13:10.662Z",
+    "project": 7,
+    "image": "uploads/projects/Screenshot_2025-05-22_at_3.30.36pm.png",
+    "caption": "Project Sequence Diagram"
+  }
+},
+{
+  "model": "projects.projectimage",
+  "pk": 16,
+  "fields": {
+    "updated_at": "2025-05-22T10:13:10.664Z",
+    "project": 7,
+    "image": "uploads/projects/Screenshot_2025-05-22_at_3.31.30pm.png",
+    "caption": "Project Use Case Diagram"
+  }
+},
+{
+  "model": "projects.projectimage",
+  "pk": 17,
+  "fields": {
+    "updated_at": "2025-05-22T10:14:47.101Z",
+    "project": 7,
+    "image": "uploads/projects/Screenshot_2025-05-22_at_3.32.09pm.png",
+    "caption": "Plagiarism Checker Teacher Dashboard"
+  }
+},
+{
+  "model": "projects.projectimage",
+  "pk": 18,
+  "fields": {
+    "updated_at": "2025-05-22T10:14:47.102Z",
+    "project": 7,
+    "image": "uploads/projects/Screenshot_2025-05-22_at_3.32.25pm.png",
+    "caption": "Marks Marking View"
+  }
+},
+{
+  "model": "projects.projectimage",
+  "pk": 19,
+  "fields": {
+    "updated_at": "2025-05-22T10:16:30.408Z",
+    "project": 7,
+    "image": "uploads/projects/edu-assist.png",
+    "caption": "Edu-Assist Dashboard"
+  }
+},
+{
+  "model": "projects.projectimage",
+  "pk": 20,
+  "fields": {
+    "updated_at": "2025-05-23T04:12:31.429Z",
+    "project": 9,
+    "image": "uploads/projects/Screenshot_2025-05-22_at_4.21.34pm.png",
+    "caption": "Web Responsive Home Page (v2)"
+  }
+},
+{
+  "model": "projects.projectimage",
+  "pk": 21,
+  "fields": {
+    "updated_at": "2025-05-22T10:55:12.106Z",
+    "project": 9,
+    "image": "uploads/projects/Screenshot_2025-05-22_at_4.39.47pm.png",
+    "caption": "Code Environment Frontend"
+  }
+},
+{
+  "model": "projects.projectimage",
+  "pk": 22,
+  "fields": {
+    "updated_at": "2025-05-22T10:56:36.559Z",
+    "project": 9,
+    "image": "uploads/projects/Screenshot_2025-05-22_at_4.40.58pm.png",
+    "caption": "Backend Administration Dashboard"
+  }
+},
+{
+  "model": "projects.projectimage",
+  "pk": 23,
+  "fields": {
+    "updated_at": "2025-05-22T15:14:16.824Z",
+    "project": 3,
+    "image": "uploads/projects/before_logo_explain.png",
+    "caption": "Before Logo Concept Visualization"
+  }
+},
+{
+  "model": "projects.projectimage",
+  "pk": 24,
+  "fields": {
+    "updated_at": "2025-05-22T15:14:16.826Z",
+    "project": 3,
+    "image": "uploads/projects/before_logo.jpg",
+    "caption": "Final Approved Logo"
+  }
+},
+{
+  "model": "projects.projectimage",
+  "pk": 25,
+  "fields": {
+    "updated_at": "2025-05-22T16:14:18.723Z",
+    "project": 5,
+    "image": "uploads/projects/SLP_logo_explain.png",
+    "caption": "Visualisation of the SLP Logo concept"
+  }
+},
+{
+  "model": "projects.projectimage",
+  "pk": 26,
+  "fields": {
+    "updated_at": "2025-05-22T16:14:18.725Z",
+    "project": 5,
+    "image": "uploads/projects/3D_Finish.png",
+    "caption": "Final Rebranded Logo"
+  }
+},
+{
+  "model": "projects.projectimage",
+  "pk": 28,
+  "fields": {
+    "updated_at": "2025-05-22T16:42:46.034Z",
+    "project": 10,
+    "image": "uploads/projects/cover_slp.jpg",
+    "caption": "Social Media Cover"
+  }
+},
+{
+  "model": "projects.projectimage",
+  "pk": 29,
+  "fields": {
+    "updated_at": "2025-05-22T16:42:46.035Z",
+    "project": 10,
+    "image": "uploads/projects/Swing.png",
+    "caption": "It's always better with your love"
+  }
+},
+{
+  "model": "projects.projectimage",
+  "pk": 30,
+  "fields": {
+    "updated_at": "2025-05-22T16:42:46.035Z",
+    "project": 10,
+    "image": "uploads/projects/Logo_Christmas.png",
+    "caption": "Christmas Themed Logo"
+  }
+},
+{
+  "model": "projects.projectimage",
+  "pk": 31,
+  "fields": {
+    "updated_at": "2025-05-22T16:42:46.036Z",
+    "project": 10,
+    "image": "uploads/projects/preference.png",
+    "caption": "Unique Design to match the partner with same preferences."
+  }
+},
+{
+  "model": "projects.projectimage",
+  "pk": 32,
+  "fields": {
+    "updated_at": "2025-05-22T16:42:46.037Z",
+    "project": 10,
+    "image": "uploads/projects/Kites_Dashain.png",
+    "caption": "Occasion based Love Design"
+  }
+},
+{
+  "model": "projects.projectimage",
+  "pk": 33,
+  "fields": {
+    "updated_at": "2025-05-22T16:42:46.037Z",
+    "project": 10,
+    "image": "uploads/projects/Purnima.png",
+    "caption": "Another Occasion based Celebratory Design"
+  }
+},
+{
+  "model": "projects.projectimage",
+  "pk": 34,
+  "fields": {
+    "updated_at": "2025-05-22T16:43:51.622Z",
+    "project": 10,
+    "image": "uploads/projects/chowk_tira.png",
+    "caption": "Design based on current trends"
+  }
+},
+{
+  "model": "projects.projectimage",
+  "pk": 35,
+  "fields": {
+    "updated_at": "2025-05-22T16:43:51.623Z",
+    "project": 10,
+    "image": "uploads/projects/sapana_ko_mayalu.png",
+    "caption": "Design based on trends"
+  }
+},
+{
+  "model": "projects.projectimage",
+  "pk": 36,
+  "fields": {
+    "updated_at": "2025-05-22T17:17:40.103Z",
+    "project": 6,
+    "image": "uploads/projects/Kandel_Cup_Logo.png",
+    "caption": "Logo Design for the event Kandel Consultancy Cup"
+  }
+},
+{
+  "model": "projects.projectimage",
+  "pk": 37,
+  "fields": {
+    "updated_at": "2025-05-22T17:17:40.105Z",
+    "project": 6,
+    "image": "uploads/projects/Trophy_Night.png",
+    "caption": "Trophy Display Design with 3d Trophy designed"
+  }
+},
+{
+  "model": "projects.projectimage",
+  "pk": 38,
+  "fields": {
+    "updated_at": "2025-05-22T17:17:40.106Z",
+    "project": 6,
+    "image": "uploads/projects/league_table.jpg",
+    "caption": "League Table for the official matches for the competition"
+  }
+},
+{
+  "model": "projects.projectimage",
+  "pk": 39,
+  "fields": {
+    "updated_at": "2025-05-22T17:17:40.106Z",
+    "project": 6,
+    "image": "uploads/projects/yeti_draw.jpg",
+    "caption": "Group Draw for the Kandel Cup Teams"
+  }
+},
+{
+  "model": "projects.projectimage",
+  "pk": 40,
+  "fields": {
+    "updated_at": "2025-05-22T17:17:40.107Z",
+    "project": 6,
+    "image": "uploads/projects/winners.jpg",
+    "caption": "Introducing the Winners of the Cup"
+  }
+},
+{
+  "model": "projects.projectimage",
+  "pk": 41,
+  "fields": {
+    "updated_at": "2025-05-22T17:57:53.599Z",
+    "project": 11,
+    "image": "uploads/projects/spark_explain.png",
+    "caption": "Explanation of the Representation of the elements in the Spark Logo"
+  }
+},
+{
+  "model": "projects.projectimage",
+  "pk": 42,
+  "fields": {
+    "updated_at": "2025-05-22T18:09:55.271Z",
+    "project": 11,
+    "image": "uploads/projects/logo_description.jpg",
+    "caption": "Representational Description of Spark Logo"
+  }
+},
+{
+  "model": "projects.projectimage",
+  "pk": 43,
+  "fields": {
+    "updated_at": "2025-05-23T04:06:12.663Z",
+    "project": 12,
+    "image": "uploads/projects/Retic_Logo_Explain.png",
+    "caption": "Visual Representation of the Logo Concept"
+  }
+},
+{
+  "model": "projects.projectimage",
+  "pk": 44,
+  "fields": {
+    "updated_at": "2025-05-23T04:06:12.665Z",
+    "project": 12,
+    "image": "uploads/projects/retic_final.png",
+    "caption": "Final Approved Logo"
+  }
+},
+{
+  "model": "projects.projectimage",
+  "pk": 45,
+  "fields": {
+    "updated_at": "2025-05-23T04:38:56.773Z",
+    "project": 13,
+    "image": "uploads/projects/mamaghar_explain.png",
+    "caption": "Visualization of the Logo Concept"
+  }
+},
+{
+  "model": "projects.projectimage",
+  "pk": 46,
+  "fields": {
+    "updated_at": "2025-05-23T04:38:56.775Z",
+    "project": 13,
+    "image": "uploads/projects/mamaghar_logo.jpg",
+    "caption": "Final Approved Logo"
+  }
+},
+{
+  "model": "contact.contactinformation",
+  "pk": 1,
+  "fields": {
+    "contact_banner": "uploads/contact_banner/Black_Gradient_Minimalist_Corporate_Business_Personal_Profile_New_YY8OLw0.png",
+    "whatsapp": "+977 9869146101",
+    "address": "Rithepani, Pokhara-27, Kaski"
+  }
+}
+]
