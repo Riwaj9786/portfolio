@@ -19,10 +19,24 @@ const categoryClickHandler = (category) => {
    emit('categorySelected', category);
    isDropdownOpen.value = false;
 };
+
+const scrollContainer = ref(null);
+
+const scrollLeft = () => {
+   if (scrollContainer.value) {
+      scrollContainer.value.scrollBy({ left: -150, behavior: 'smooth' });
+   }
+};
+
+const scrollRight = () => {
+   if (scrollContainer.value) {
+      scrollContainer.value.scrollBy({ left: 150, behavior: 'smooth' });
+   }
+};
 </script>
 
 <template>
-   <div class="border border-gray-300 md:border-none md:bg-white/10 rounded-xl p-3 w-full shadow-md">
+   <div class="border md:border-none md:bg-white/10 rounded-xl p-3 w-full shadow-md">
       <div class="relative sm:hidden">
          <button 
          @click="isDropdownOpen = !isDropdownOpen"
@@ -58,20 +72,52 @@ const categoryClickHandler = (category) => {
             </div>
          </transition>
       </div>
-
-      <div class="hidden sm:flex flex-wrap gap-2">
+      <div class="relative hidden sm:block">
          <button
-         v-for="(item, index) in list"
-         :key="index"
-         @click="categoryClickHandler(item)"
-         class="px-4 py-2 rounded-lg text-white text-sm font-medium transition-all"
-         :class="{
-            'bg-cyan-500': item === activeCategory,
-            'hover:bg-cyan-500/50': item !== activeCategory
-         }"
+            @click="scrollLeft"
+            aria-label="Scroll left"
+            class="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 bg-gray-800 text-white p-2 rounded-full shadow hover:bg-gray-700"
          >
-         {{ item }}
+            <i class="pi pi-angle-left"></i>
+         </button>
+
+         <div
+            ref="scrollContainer"
+            class="overflow-x-auto whitespace-nowrap scrollbar-hide mx-10"
+         >
+            <div class="flex gap-2 w-max items-center">
+               <button
+                  v-for="(item, index) in list"
+                  :key="index"
+                  @click="categoryClickHandler(item)"
+                  class="px-4 py-2 rounded-lg text-white text-sm font-medium transition-all"
+                  :class="{
+                     'bg-cyan-500': item === activeCategory,
+                     'hover:bg-cyan-500/50': item !== activeCategory
+                  }"
+               >
+                  {{ item }}
+               </button>
+            </div>
+         </div>
+
+         <button
+            @click="scrollRight"
+            aria-label="Scroll right"
+            class="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 bg-gray-800 text-white p-2 rounded-full shadow hover:bg-gray-700"
+         >
+            <i class="pi pi-angle-right"></i>
          </button>
       </div>
+
    </div>
 </template>
+
+<style>
+.scrollbar-hide::-webkit-scrollbar {
+   display: none;
+}
+.scrollbar-hide {
+   scrollbar-width: none;
+}
+</style>

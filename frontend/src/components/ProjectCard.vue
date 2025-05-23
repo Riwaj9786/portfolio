@@ -16,17 +16,16 @@ const props = defineProps({
    },
    client: {
       type: String,
-      default: 'Rioz Graphics'
+      default: 'Project'
    },
    start_date: {
       type: Date,
-      default: '2024-03-11',
       required: true
    },
    end_date: {
       type: Date
    },
-   link: {
+   slug: {
       type: String,
       required: false
    }
@@ -46,7 +45,7 @@ const formatDate = (dateString) => {
 </script>
 
 <template>
-   <a :href="link" target="_blank">
+   <RouterLink :to="`/projects/${slug}`">
       <div class="w-full h-full">
          <div 
             class="relative h-full w-full flex flex-col p-4 bg-white/5 rounded-xl border border-white/5 
@@ -93,5 +92,5 @@ const formatDate = (dateString) => {
             </div>
          </div>
       </div>
-   </a>
+   </RouterLink>
 </template>

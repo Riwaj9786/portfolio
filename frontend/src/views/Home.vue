@@ -8,7 +8,6 @@ import ServicesHome from "@/components/ServicesHome.vue";
 
 import { ref, onMounted } from "vue";
 import axiosInstance from "@/axios";
-import FooterComponent from "@/components/FooterComponent.vue";
 
 const data = ref([]);
 const loading = ref(true);
@@ -45,7 +44,7 @@ onMounted(async () => {
                <div class="h-4 w-3/4 bg-gray-700 rounded"></div>
             </div>
             <p v-else-if="error" class="text-red-500">{{ error }}</p>
-            <p v-else>{{ data.description }}</p>
+            <div v-else v-html="data.description" class="text-justify description-container"></div>
          </div>
          
          <div class="m-12">
@@ -63,3 +62,32 @@ onMounted(async () => {
       </div>
    </div>
 </template>
+
+<style>
+   .description-container ul,
+   .description-container ol {
+      padding-left: 1.25rem;
+      margin-top: 0.5rem;
+      margin-bottom: 0.5rem;
+   }
+
+   .description-container ul {
+      list-style-type: disc;
+   }
+
+   .description-container ol {
+      list-style-type: decimal;
+   }
+
+   .description-container ul li,
+   .description-container ol li {
+      margin-left: 1rem;
+      margin-bottom: 0.25rem;
+   }
+
+   /* ✅ Cyan text for bold content */
+   .description-container b,
+   .description-container strong {
+      color: #22d3ee; /* Tailwind's cyan-400 */
+   }
+</style>

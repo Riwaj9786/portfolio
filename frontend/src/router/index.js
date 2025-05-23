@@ -3,6 +3,7 @@ import Home from '@/views/Home.vue'
 import Projects from '@/views/Projects.vue'
 import Blogs from '@/views/Blogs.vue'
 import Contact from '@/views/Contact.vue'
+import ProjectDetail from '@/views/ProjectDetail.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -18,13 +19,18 @@ const router = createRouter({
       component: Projects,
     },
     {
-      path: '/blogs',
-      name: 'blogs',
-      component: Blogs,
+      path: '/projects/:slug',
+      name: 'projectDetail',
+      component: ProjectDetail,
     },
+    // {
+    //   path: '/blogs',
+    //   name: 'blogs',
+    //   component: Blogs,
+    // },
     {
-      path: '/contact',
-      name: 'contact',
+      path: '/connect',
+      name: 'connect',
       component: Contact,
     }
   ],

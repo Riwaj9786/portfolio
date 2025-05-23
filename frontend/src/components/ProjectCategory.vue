@@ -22,11 +22,12 @@ const categoryClickHandler = (category) => {
 </script>
 
 <template>
-   <div class="border border-gray-300 md:border-none md:bg-white/10 rounded-xl p-3 w-full shadow-md">
+   <div class="md:bg-white/10 rounded-xl p-3 w-full shadow-md">
+      <!-- Mobile dropdown -->
       <div class="relative sm:hidden">
          <button 
-         @click="isDropdownOpen = !isDropdownOpen"
-         class="w-full flex justify-between items-center text-white bg-gray-800 text-sm md:text-lg font-medium px-4 py-2 rounded-lg hover:bg-gray-700 transition-all duration-200"
+            @click="isDropdownOpen = !isDropdownOpen"
+            class="w-full flex justify-between items-center text-white bg-gray-800 text-sm md:text-lg font-medium px-4 py-2 rounded-lg hover:bg-gray-700 transition-all duration-200"
          >
             {{ activeCategory || "Select Category" }}
             <span 
@@ -38,38 +39,38 @@ const categoryClickHandler = (category) => {
          </button>
 
          <transition
-         enter-active-class="transition duration-150 ease-out"
-         leave-active-class="transition duration-100 ease-in"
+            enter-active-class="transition duration-150 ease-out"
+            leave-active-class="transition duration-100 ease-in"
          >
-         <div 
-            v-if="isDropdownOpen"
-            class="absolute left-0 w-full bg-gray-900 rounded-lg mt-2 shadow-lg z-10 overflow-hidden"
-         >
-            <button 
-               v-for="(category, index) in list" 
-               :key="index"
-               @click="categoryClickHandler(category)"
-               class="w-full text-left px-4 py-2 text-white hover:bg-cyan-500 cursor-pointer transition-colors"
-               :class="{ 'bg-cyan-500': category.name === activeCategory }"
+            <div 
+               v-if="isDropdownOpen"
+               class="absolute left-0 w-full bg-gray-900 rounded-lg mt-2 shadow-lg z-10 overflow-hidden"
             >
-               {{ category.name }}
-            </button>
-         </div>
+               <button 
+                  v-for="(category, index) in list" 
+                  :key="index"
+                  @click="categoryClickHandler(category)"
+                  class="w-full text-left px-4 py-2 text-white hover:bg-cyan-500 transition-colors duration-200"
+                  :class="{ 'bg-cyan-500': category.name === activeCategory }"
+               >
+                  {{ category.name }}
+               </button>
+            </div>
          </transition>
       </div>
 
-      <div class="hidden sm:flex flex-wrap justify-evenly items-center gap-2">
+      <div class="hidden sm:grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 w-full">
          <button 
-         v-for="(category, index) in list"
-         :key="index"
-         @click="categoryClickHandler(category)"
-         class="text-white text-xs sm:text-xs md:text-sm px-4 py-2 rounded-lg cursor-pointer transition-all duration-200"
-         :class="{
-            'bg-cyan-500': category.name === activeCategory,
-            'hover:bg-cyan-500/50': category.name !== activeCategory
-         }"
+            v-for="(category, index) in list"
+            :key="index"
+            @click="categoryClickHandler(category)"
+            class="w-full py-2 text-white text-sm font-medium rounded-lg cursor-pointer transition-all duration-200 flex items-center justify-center text-center"
+            :class="{
+               'bg-cyan-500': category.name === activeCategory,
+               'hover:bg-cyan-500/50': category.name !== activeCategory
+            }"
          >
-         {{ category.name }}
+            {{ category.name }}
          </button>
       </div>
    </div>
