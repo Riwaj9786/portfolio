@@ -24,7 +24,7 @@ const toggleMenu = () => {
       <div class="flex justify-between items-center px-4 py-3 md:px-8">
          <RouterLink to="/" class="flex items-center">
             <div class="h-10 w-10 md:h-12 md:w-12">
-               <img src="../assets/Rioz.png" alt="Logo" class="w-full h-full object-contain" />
+               <img src="../assets/Rioz.jpg" alt="Logo" class="w-full h-full object-contain" />
             </div>
          </RouterLink>
 
