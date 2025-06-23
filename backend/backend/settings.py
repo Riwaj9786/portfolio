@@ -32,13 +32,13 @@ ALLOWED_HOSTS = ['riwajbhurtel.com.np', 'www.riwajbhurtel.com.np', 'api.riwajbhu
 # Application definition
 LOCAL_APPS = [
     'account',
-    'appointment',
     'experience',
     'skills',
     'services',
     'projects',
     'contact',
     'blogs',
+    'testimonial',
 ]
 
 THIRD_PARTY_APPS = [
@@ -46,6 +46,7 @@ THIRD_PARTY_APPS = [
     'corsheaders',
     'django_filters',
     'django_ckeditor_5',
+    'adminsortable2',
 ]
 
 INSTALLED_APPS = [
@@ -161,6 +162,19 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 AUTH_USER_MODEL = 'account.User'
 
+CELERY_TIMEZONE = "Asia/Kathmandu"
+CELERY_BROKER_URL = config('CELERY_BROKER_URL')
+CELERY_ACCEPT_CONTENT = ["json"]
+CELERY_TASK_SERIALIZER = "json"
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = config('EMAIL_HOST', default='smtp.gmail.com')
+EMAIL_PORT = config('EMAIL_PORT', default=587, cast=int)
+EMAIL_USE_TLS = config('EMAIL_USE_TLS', default=True, cast=bool)
+EMAIL_HOST_USER = config('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
+
+FRONTEND_URL = config('FRONTEND_URL')
 
 customColorPalette = [
         {

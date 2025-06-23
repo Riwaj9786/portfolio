@@ -46,3 +46,6 @@ class FeaturedBlog(models.Model):
 
    def __str__(self):
       return 'Featured Blog'
+
+   class Meta:
+      verbose_name_plural = 'Featured Blog'

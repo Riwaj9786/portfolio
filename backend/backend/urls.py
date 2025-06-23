@@ -15,13 +15,13 @@ urlpatterns = [
     path('api/', lambda request: JsonResponse({"message": "Welcome to the API root"})),
     
     path('api/v1/information/', include('account.urls')),
-    path('api/v1/appointment/', include('appointment.urls')),
     path('api/v1/experience/', include('experience.urls')),
     path('api/v1/skill/', include('skills.urls')),
     path('api/v1/service/', include('services.urls')),
     path('api/v1/projects/', include('projects.urls')),
     path('api/v1/contact/', include('contact.urls')),
     path('api/v1/blogs/', include('blogs.urls')),
+    path('api/v1/testimonial/', include('testimonial.urls')),
 
     path("ckeditor5/", include('django_ckeditor_5.urls')),
 ]
