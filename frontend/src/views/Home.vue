@@ -5,6 +5,7 @@ import Experience from "@/components/Experience.vue";
 import ProjectsButton from "@/components/ProjectsButton.vue";
 import SkillSet from "@/components/SkillSet.vue";
 import ServicesHome from "@/components/ServicesHome.vue";
+import Testimonials from "@/components/Testimonials.vue";
 
 import { ref, onMounted } from "vue";
 import axiosInstance from "@/axios";
@@ -55,6 +56,9 @@ onMounted(async () => {
          </div>
          <div class="m-12">
             <ServicesHome/>
+         </div>
+         <div class="m-12">
+            <Testimonials/>
          </div>
          <div class="m-12">
             <SkillSet/>
