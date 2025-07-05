@@ -1,9 +1,9 @@
 <script setup>
-import ProjectDescription from "@/components/ProjectDescription.vue";
-import ProjectSideHandles from "@/components/ProjectSideHandles.vue";
-import SkillButton from "@/components/SkillButton.vue";
-import ImportantLinks from "@/components/ImportantLinks.vue";
-import ProjectImageSlider from "@/components/ProjectImageSlider.vue";
+import ProjectDescription from "@/components/Projects/ProjectDescription.vue";
+import ProjectSideHandles from "@/components/Projects/ProjectSideHandles.vue";
+import SkillButton from "@/components/Home/Skills/SkillButton.vue";
+import ImportantLinks from "@/components/Projects/ImportantLinks.vue";
+import ProjectImageSlider from "@/components/Projects/ProjectImageSlider.vue";
 
 import { ref, onMounted } from "vue";
 import { useRoute } from "vue-router";

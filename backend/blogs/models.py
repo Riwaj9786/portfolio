@@ -15,16 +15,18 @@ class Blog(TimeStampedModel):
    content = CKEditor5Field('Text')
    slug = models.SlugField(unique=True, blank=True)
    banner_image = models.ImageField(upload_to='blog/banner_image/', validators=[validate_icon_size, validate_image_extension])
-   created_at = models.DateTimeField(auto_now_add=True)
-   published_at = models.DateTimeField(null=True, blank=True)
+   published_at = models.DateTimeField()
    is_draft = models.BooleanField(default=True)
 
    def __str__(self):
       return self.title
 
+   class Meta:
+      ordering = ('-published_at',)
+
    def save(self, *args, **kwargs):
       if not self.slug:
-         self.slug = generate_unique_slug(self, self.title)
+         self.slug = generate_unique_slug(self.title)
       super().save(*args, **kwargs)
 
 

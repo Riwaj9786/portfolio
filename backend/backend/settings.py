@@ -167,6 +167,10 @@ CELERY_BROKER_URL = config('CELERY_BROKER_URL')
 CELERY_ACCEPT_CONTENT = ["json"]
 CELERY_TASK_SERIALIZER = "json"
 
+CKEDITOR_5_UPLOAD_FILE_TYPES = ['jpeg', 'jpg', 'pdf', 'png']
+CKEDITOR_5_FILE_STORAGE = "backend.utils.CustomStorage"
+CKEDITOR_5_MAX_FILE_SIZE = 5
+
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = config('EMAIL_HOST', default='smtp.gmail.com')
 EMAIL_PORT = config('EMAIL_PORT', default=587, cast=int)
@@ -177,73 +181,53 @@ EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
 FRONTEND_URL = config('FRONTEND_URL')
 
 customColorPalette = [
-        {
-            'color': 'hsl(4, 90%, 58%)',
-            'label': 'Red'
-        },
-        {
-            'color': 'hsl(340, 82%, 52%)',
-            'label': 'Pink'
-        },
-        {
-            'color': 'hsl(291, 64%, 42%)',
-            'label': 'Purple'
-        },
-        {
-            'color': 'hsl(262, 52%, 47%)',
-            'label': 'Deep Purple'
-        },
-        {
-            'color': 'hsl(231, 48%, 48%)',
-            'label': 'Indigo'
-        },
-        {
-            'color': 'hsl(207, 90%, 54%)',
-            'label': 'Blue'
-        },
-    ]
-
+    {'color': 'hsl(4, 90%, 58%)', 'label': 'Red'},
+    {'color': 'hsl(340, 82%, 52%)', 'label': 'Pink'},
+    {'color': 'hsl(291, 64%, 42%)', 'label': 'Purple'},
+    {'color': 'hsl(262, 52%, 47%)', 'label': 'Deep Purple'},
+    {'color': 'hsl(231, 48%, 48%)', 'label': 'Indigo'},
+    {'color': 'hsl(207, 90%, 54%)', 'label': 'Blue'},
+    {'color': 'hsl(187, 100%, 42%)', 'label': 'Teal'},
+    {'color': 'hsl(122, 39%, 49%)', 'label': 'Green'},
+    {'color': 'hsl(52, 100%, 62%)', 'label': 'Yellow'},
+    {'color': 'hsl(48, 100%, 50%)', 'label': 'Amber'},
+    {'color': 'hsl(36, 100%, 50%)', 'label': 'Orange'},
+    {'color': 'hsl(0, 0%, 0%)', 'label': 'Black'},
+    {'color': 'hsl(0, 0%, 100%)', 'label': 'White'},
+]
 
 CKEDITOR_5_CONFIGS = {
     'default': {
         'toolbar': {
-            'items': ['heading', '|', 'bold', 'italic', 'link',
-                        'bulletedList', 'numberedList', 'blockQuote', 'imageUpload', ],
-                    }
-
-    },
-    'extends': {
-        'blockToolbar': [
-            'paragraph', 'heading1', 'heading2', 'heading3',
-            '|',
-            'bulletedList', 'numberedList',
-            '|',
-            'blockQuote',
-        ],
-        'toolbar': {
-            'items': ['heading', '|', 'outdent', 'indent', '|', 'bold', 'italic', 'link', 'underline', 'strikethrough',
-                        'code','subscript', 'superscript', 'highlight', '|', 'codeBlock', 'sourceEditing', 'insertImage',
-                    'bulletedList', 'numberedList', 'todoList', '|',  'blockQuote', 'imageUpload', '|',
-                    'fontSize', 'fontFamily', 'fontColor', 'fontBackgroundColor', 'mediaEmbed', 'removeFormat',
-                    'insertTable',
-                    ],
+            'items': [
+                'undo', 'redo', '|',
+                'heading', '|',
+                'fontFamily', 'fontSize', 'fontColor', 'fontBackgroundColor', '|',
+                'bold', 'italic', 'underline', 'strikethrough', '|',
+                'subscript', 'superscript', 'highlight', '|',
+                'link', 'blockQuote', 'code', 'codeBlock', 'sourceEditing', '|',
+                'bulletedList', 'numberedList', 'todoList', '|',
+                'outdent', 'indent', '|',
+                'alignment', '|',
+                'insertTable', 'mediaEmbed', 'imageUpload', '|',
+                'removeFormat', 'horizontalLine', 'pageBreak', 'specialCharacters', '|',
+                'findAndReplace', 'selectAll'
+            ],
             'shouldNotGroupWhenFull': True
         },
         'image': {
-            'toolbar': ['imageTextAlternative', '|', 'imageStyle:alignLeft',
-                        'imageStyle:alignRight', 'imageStyle:alignCenter', 'imageStyle:side',  '|'],
-            'styles': [
-                'full',
-                'side',
-                'alignLeft',
-                'alignRight',
-                'alignCenter',
-            ]
-
+            'toolbar': [
+                'imageTextAlternative', '|',
+                'imageStyle:alignLeft', 'imageStyle:alignRight',
+                'imageStyle:alignCenter', 'imageStyle:side'
+            ],
+            'styles': ['full', 'side', 'alignLeft', 'alignRight', 'alignCenter']
         },
         'table': {
-            'contentToolbar': [ 'tableColumn', 'tableRow', 'mergeTableCells',
-            'tableProperties', 'tableCellProperties' ],
+            'contentToolbar': [
+                'tableColumn', 'tableRow', 'mergeTableCells',
+                'tableProperties', 'tableCellProperties'
+            ],
             'tableProperties': {
                 'borderColors': customColorPalette,
                 'backgroundColors': customColorPalette
@@ -253,23 +237,71 @@ CKEDITOR_5_CONFIGS = {
                 'backgroundColors': customColorPalette
             }
         },
-        'heading' : {
+        'list': {
+            'properties': {
+                'styles': True,
+                'startIndex': True,
+                'reversed': True
+            }
+        },
+        'heading': {
             'options': [
-                { 'model': 'paragraph', 'title': 'Paragraph', 'class': 'ck-heading_paragraph' },
-                { 'model': 'heading1', 'view': 'h1', 'title': 'Heading 1', 'class': 'ck-heading_heading1' },
-                { 'model': 'heading2', 'view': 'h2', 'title': 'Heading 2', 'class': 'ck-heading_heading2' },
-                { 'model': 'heading3', 'view': 'h3', 'title': 'Heading 3', 'class': 'ck-heading_heading3' }
+                {'model': 'paragraph', 'title': 'Paragraph', 'class': 'ck-heading_paragraph'},
+                {'model': 'heading1', 'view': 'h1', 'title': 'Heading 1', 'class': 'ck-heading_heading1'},
+                {'model': 'heading2', 'view': 'h2', 'title': 'Heading 2', 'class': 'ck-heading_heading2'},
+                {'model': 'heading3', 'view': 'h3', 'title': 'Heading 3', 'class': 'ck-heading_heading3'},
+                {'model': 'heading4', 'view': 'h4', 'title': 'Heading 4', 'class': 'ck-heading_heading4'}
             ]
-        }
-    },
-    'list': {
-        'properties': {
-            'styles': 'true',
-            'startIndex': 'true',
-            'reversed': 'true',
-        }
+        },
+        'fontSize': {
+            'options': [
+                8, 10, 12, 14, 16, 18, 20, 24, 28, 32, 36, 48
+            ],
+            'supportAllValues': True
+        },
+        'fontFamily': {
+            'options': [
+                'default',
+                'Arial, Helvetica, sans-serif',
+                'Courier New, Courier, monospace',
+                'Georgia, serif',
+                'Lucida Sans Unicode, Lucida Grande, sans-serif',
+                'Tahoma, Geneva, sans-serif',
+                'Times New Roman, Times, serif',
+                'Trebuchet MS, Helvetica, sans-serif',
+                'Verdana, Geneva, sans-serif'
+            ],
+            'supportAllValues': True
+        },
+        'alignment': {
+            'options': ['left', 'center', 'right', 'justify']
+        },
+        'highlight': {
+            'options': [
+                { 'model': 'yellowMarker', 'class': 'marker-yellow', 'title': 'Yellow', 'color': 'var(--ck-highlight-marker-yellow)', 'type': 'marker' },
+                { 'model': 'greenMarker', 'class': 'marker-green', 'title': 'Green', 'color': 'var(--ck-highlight-marker-green)', 'type': 'marker' },
+                { 'model': 'pinkMarker', 'class': 'marker-pink', 'title': 'Pink', 'color': 'var(--ck-highlight-marker-pink)', 'type': 'marker' },
+                { 'model': 'blueMarker', 'class': 'marker-blue', 'title': 'Blue', 'color': 'var(--ck-highlight-marker-blue)', 'type': 'marker' },
+                { 'model': 'redPen', 'class': 'pen-red', 'title': 'Red pen', 'color': 'var(--ck-highlight-pen-red)', 'type': 'pen' },
+                { 'model': 'greenPen', 'class': 'pen-green', 'title': 'Green pen', 'color': 'var(--ck-highlight-pen-green)', 'type': 'pen' }
+            ]
+        },
+        'mediaEmbed': {
+            'previewsInData': True
+        },
+        'htmlSupport': {
+            'allow': [
+                {
+                    'name': '*',
+                    'attributes': True,
+                    'classes': True,
+                    'styles': True
+                },
+            ],
+        },
     }
 }
+
 
 
 JAZZMIN_SETTINGS = {
@@ -293,7 +325,7 @@ JAZZMIN_SETTINGS = {
         "skills.SkillCategory": "fa-solid fa-layer-group",
         "skills.Skill": "fa-solid fa-laptop-code",
     },
-
+    "search_model": ["projects.Project", "blogs.Blog", "services.Service"],
     "changeform_format": "horizontal_tabs",
     "show_password_change": True,
     "custom_links": {
@@ -306,7 +338,8 @@ JAZZMIN_SETTINGS = {
             }
         ]
     },
-    "custom_css": "css/custom_admin.css"
+    "navigation_expanded": False,
+    "custom_css": "css/custom_admin.css",
 }
 
 JAZZMIN_UI_TWEAKS = {
@@ -320,8 +353,8 @@ JAZZMIN_UI_TWEAKS = {
     "no_navbar_border": True,
     "navbar_fixed": True,
     "layout_boxed": False,
-    "footer_fixed": False,
-    "sidebar_fixed": False,
+    "footer_fixed": True,
+    "sidebar_fixed": True,
     "sidebar": "sidebar-dark-navy",
     "sidebar_nav_small_text": False,
     "sidebar_disable_expand": False,

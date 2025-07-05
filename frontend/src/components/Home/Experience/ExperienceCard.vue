@@ -1,6 +1,6 @@
 <script setup>
 import { computed } from 'vue';
-import SkillButton from './SkillButton.vue';
+import SkillButton from '@/components/Home/Skills/SkillButton.vue';
 
 // Define props
 const props = defineProps({

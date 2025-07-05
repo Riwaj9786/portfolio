@@ -22,6 +22,7 @@ class TestimonialAdmin(SortableAdminMixin, admin.ModelAdmin):
       'testimonial', 'to_publish',
       'updated_at', 'created_at'
    )
+   ordering = ('order',)
 
    def image_preview(self, obj):
       if obj.image:

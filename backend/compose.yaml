@@ -24,7 +24,7 @@ services:
 
   postgres_db:
     image: postgres
-    container_name: postgres
+    container_name: rioz_postgres
     env_file:
       - .env
     environment:

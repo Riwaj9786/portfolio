@@ -37,10 +37,17 @@ class TestimonialCreateAPIView(GenericAPIView):
    def post(self, request, *args, **kwargs):
       name_ref, email_ref = self.decode_ref(request)
 
-      if name_ref and email_ref:
+      testimonial_request = TestimonialRequest.objects.get(
+         name=name_ref,
+         email=email_ref
+      ) if name_ref and email_ref else None
+
+      if testimonial_request:
          data = request.data.copy()
-         data['name'] = name_ref
-         data['email'] = email_ref
+         data['name'] = testimonial_request.name
+         data['email'] = testimonial_request.email
+
+         testimonial_request.delete()
       else:
          data = request.data.copy()
          if not data.get('name') or not data.get('email'):

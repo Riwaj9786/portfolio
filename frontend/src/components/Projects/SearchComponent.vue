@@ -11,7 +11,7 @@ const updateSearch = () => {
 </script>
 
 <template>
-   <div class="w-full max-w-md relative">
+   <div class="w-full relative">
       <input
          v-model="searchQuery"
          @input="updateSearch"

@@ -1,10 +1,12 @@
 import base64
 
-from django.db.models.signals import post_save
+from django.db.models.signals import post_save, pre_save
 from django.dispatch import receiver
 from django.conf import settings
 
-from testimonial.models import TestimonialRequest
+from backend.utils import delete_file
+
+from testimonial.models import TestimonialRequest, Testimonial
 from testimonial.tasks import send_testimonial_form_request
 
 @receiver(post_save, sender=TestimonialRequest)
@@ -22,3 +24,9 @@ def send_testimonial_request(sender, instance, **kwargs):
          name=instance.name,
          testimonial_url=testimonial_url
       )
+
+
+@receiver(pre_save, sender=Testimonial)
+def delete_testimonial_image_on_delete(sender, instance, **kwargs):
+   if instance.image:
+      delete_file(instance.image)

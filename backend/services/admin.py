@@ -1,10 +1,12 @@
 from django.contrib import admin
 from django.utils.html import format_html
 
+from adminsortable2.admin import SortableAdminMixin
+
 from services.models import Service
 
 @admin.register(Service)
-class ServiceAdmin(admin.ModelAdmin):
+class ServiceAdmin(SortableAdminMixin, admin.ModelAdmin):
    list_display = ('title', 'description_truncated', 'icon_preview')
    list_display_links = list_display
    readonly_fields = ('icon_preview',)

@@ -5,6 +5,7 @@ import Blogs from '@/views/Blogs.vue'
 import Contact from '@/views/Contact.vue'
 import ProjectDetail from '@/views/ProjectDetail.vue'
 import TestimonialForm from '@/views/TestimonialForm.vue'
+import BlogDetail from '@/views/BlogDetail.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -24,11 +25,16 @@ const router = createRouter({
       name: 'projectDetail',
       component: ProjectDetail,
     },
-    // {
-    //   path: '/blogs',
-    //   name: 'blogs',
-    //   component: Blogs,
-    // },
+    {
+      path: '/blogs',
+      name: 'blogs',
+      component: Blogs,
+    },
+    {
+      path: '/blogs/:slug',
+      name: 'blogDetail',
+      component: BlogDetail
+    },
     {
       path: '/connect',
       name: 'connect',

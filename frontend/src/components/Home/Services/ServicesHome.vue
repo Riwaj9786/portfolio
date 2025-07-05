@@ -1,5 +1,5 @@
 <script setup>
-import ServiceCard from './ServiceCard.vue';
+import ServiceCard from '@/components/Home/Services/ServiceCard.vue';
 import axios from 'axios';
 import axiosInstance from '@/axios';
 import { ref, onMounted } from 'vue';

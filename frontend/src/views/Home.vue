@@ -1,11 +1,11 @@
 <script setup>
-import NavBar from "@/components/NavBar.vue";
-import Information from "@/components/Information.vue";
-import Experience from "@/components/Experience.vue";
-import ProjectsButton from "@/components/ProjectsButton.vue";
-import SkillSet from "@/components/SkillSet.vue";
-import ServicesHome from "@/components/ServicesHome.vue";
-import Testimonials from "@/components/Testimonials.vue";
+import NavBar from "@/components/NavBar/NavBar.vue";
+import Information from "@/components/Home/Information/Information.vue";
+import Experience from "@/components/Home/Experience/Experience.vue";
+import ProjectsButton from "@/components/Home/ProjectsButton/ProjectsButton.vue";
+import SkillSet from "@/components/Home/Skills/SkillSet.vue";
+import ServicesHome from "@/components/Home/Services/ServicesHome.vue";
+import Testimonials from "@/components/Home/Testimonial/Testimonials.vue";
 
 import { ref, onMounted } from "vue";
 import axiosInstance from "@/axios";
@@ -51,7 +51,7 @@ onMounted(async () => {
          <div class="m-12">
             <Experience />
          </div>
-         <div class="m-2 flex justify-center">
+         <div class="m-12 flex justify-center">
             <ProjectsButton/>
          </div>
          <div class="m-12">

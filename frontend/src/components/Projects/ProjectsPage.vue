@@ -1,8 +1,8 @@
 <script setup>
 import { ref, onMounted, watch, computed } from 'vue';
-import ProjectCard from './ProjectCard.vue';
-import ProjectCategory from './ProjectCategory.vue';
-import SearchComponent from './SearchComponent.vue';
+import ProjectCard from '@/components/Projects/ProjectCard.vue';
+import ProjectCategory from '@/components/Projects/ProjectCategory.vue';
+import SearchComponent from '@/components/Projects/SearchComponent.vue';
 import axiosInstance from '@/axios';
 
 const categories = ref([]);
@@ -92,8 +92,8 @@ const goToPage = (page) => {
 </script>
 
 <template>
-   <div class="px-4 py-8 w-full flex flex-col items-center">
-      <div class="w-full max-w-7xl space-y-8 flex flex-col items-center">
+   <div class="px-9 py-8 w-full flex flex-col items-center">
+      <div class="w-full space-y-8 px-9 flex flex-col items-center">
          <!-- Error message -->
          <div v-if="errorMessage" class="text-red-500 text-sm text-center mb-4">
             {{ errorMessage }}

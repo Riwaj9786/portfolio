@@ -11,8 +11,8 @@ from django.conf import settings
 
 
 class CustomStorage(FileSystemStorage):
-   location = os.path.join(settings.MEDIA_ROOT, "uploads")
-   base_url = urljoin(settings.MEDIA_URL, "uploads/")
+   location = os.path.join(settings.MEDIA_ROOT, "uploads/ckeditor/")
+   base_url = urljoin(settings.MEDIA_URL, "uploads/ckeditor/")
 
 def validate_pdf(file):
    ext = os.path.splitext(file.name)[1].lower()

@@ -1,6 +1,6 @@
 <script setup>
-import Information from './Information.vue';
-import MediaLinks from './MediaLinks.vue';
+import Information from '@/components/Home/Information/Information.vue';
+import MediaLinks from '@/components/Home/Information/MediaLinks.vue';
 import axios from 'axios';
 import axiosInstance from '@/axios';
 import { ref, onMounted } from 'vue';

@@ -24,7 +24,7 @@ const categoryClickHandler = (category) => {
 <template>
    <div class="md:bg-white/10 rounded-xl p-3 w-full shadow-md">
       <!-- Mobile dropdown -->
-      <div class="relative sm:hidden">
+      <div class="relative lg:hidden">
          <button 
             @click="isDropdownOpen = !isDropdownOpen"
             class="w-full flex justify-between items-center text-white bg-gray-800 text-sm md:text-lg font-medium px-4 py-2 rounded-lg hover:bg-gray-700 transition-all duration-200"
@@ -59,7 +59,7 @@ const categoryClickHandler = (category) => {
          </transition>
       </div>
 
-      <div class="hidden sm:grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 w-full">
+      <div class="hidden lg:grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 w-full">
          <button 
             v-for="(category, index) in list"
             :key="index"

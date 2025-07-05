@@ -1,5 +1,5 @@
 <script setup>
-import SkillButton from './SkillButton.vue';
+import SkillButton from '@/components/Home/Skills/SkillButton.vue';
 
 const props = defineProps({
    name: {

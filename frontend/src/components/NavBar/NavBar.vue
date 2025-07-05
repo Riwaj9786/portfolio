@@ -19,16 +19,17 @@ const toggleMenu = () => {
 };
 </script>
 
+
 <template>
-   <div class="w-full text-white p-4">
+   <div class="w-full text-white p-4 relative z-30">
       <div class="flex justify-between items-center px-4 py-3 md:px-8">
          <RouterLink to="/" class="flex items-center">
             <div class="h-10 w-10 md:h-12 md:w-12">
-               <img src="../assets/Rioz.jpg" alt="Logo" class="w-full h-full object-contain" />
+               <img src="@/assets/Rioz.jpg" alt="Logo" class="w-full h-full object-contain" />
             </div>
          </RouterLink>
 
-         <button @click="toggleMenu" class="md:hidden text-white focus:outline-none">
+         <button @click="toggleMenu" class="md:hidden text-white focus:outline-none z-40 relative">
             <svg v-if="!menuOpen" xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24"
                stroke="currentColor">
                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -44,7 +45,7 @@ const toggleMenu = () => {
          <div class="hidden md:flex gap-x-8 items-center text-xs md:text-sm">
             <div class="flex gap-x-6 items-center">
                <RouterLink to="/projects" class="hover:text-cyan-400">Projects</RouterLink>
-               <!-- <RouterLink to="/blogs" class="hover:text-cyan-400">Blogs</RouterLink> -->
+               <RouterLink to="/blogs" class="hover:text-cyan-400">Blogs</RouterLink>
                <RouterLink to="/connect" class="hover:text-cyan-400">Connect</RouterLink>
             </div>
             <a :href="data.resume" target="_blank"
@@ -54,10 +55,15 @@ const toggleMenu = () => {
          </div>
       </div>
 
-      <div v-if="menuOpen" class="md:hidden px-4 pt-2 pb-4 flex flex-col gap-4 text-center text-sm">
+      <!-- Overlay -->
+      <div v-if="menuOpen" class="fixed inset-0 bg-black/60 z-10"></div>
+
+      <!-- Mobile Menu -->
+      <div v-if="menuOpen"
+         class="md:hidden px-4 pt-2 pb-4 flex flex-col gap-4 text-center text-sm absolute w-full bg-[#0a0a0a] z-20">
          <div class="flex flex-col gap-4">
             <RouterLink to="/projects" @click="toggleMenu" class="hover:text-cyan-400">Projects</RouterLink>
-            <!-- <RouterLink to="/blogs" @click="toggleMenu" class="hover:text-cyan-400">Blogs</RouterLink> -->
+            <RouterLink to="/blogs" @click="toggleMenu" class="hover:text-cyan-400">Blogs</RouterLink>
             <RouterLink to="/connect" @click="toggleMenu" class="hover:text-cyan-400">Connect</RouterLink>
          </div>
          <div class="mt-4">

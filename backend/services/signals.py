@@ -13,4 +13,5 @@ def update_service_icon_file(sender, instance, **kwargs):
 
 @receiver(post_delete, sender=Service)
 def delete_files_on_delete(sender, instance, **kwargs):
-   delete_file(instance.icon)
+   if instance.icon:
+      delete_file(instance.icon)

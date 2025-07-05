@@ -11,11 +11,26 @@ class BlogImageInline(admin.StackedInline):
 
 @admin.register(Blog)
 class BlogAdmin(admin.ModelAdmin):
-   list_display = ('title', 'description_truncate', 'get_status', 'slug')
+   list_display = ('title', 'get_status', 'published_at', 'slug')
    list_display_links = list_display
+   readonly_fields = ('slug',)
+   list_per_page = 5
+   search_fields = ('title',)
 
    inlines = (BlogImageInline,)
    ordering = ('-published_at',)
+
+   fieldsets = (
+      ('Blog Information', {
+         'fields': ('is_draft', 'title', 'banner_image',  'slug')
+      }),
+      ('Content', {
+         'fields': ('content',)
+      }),
+      ('Publication Info', {
+         'fields': ('published_at',)
+      }),
+   )
 
    def description_truncate(self, obj):
       return f'{obj.content[:25]}'

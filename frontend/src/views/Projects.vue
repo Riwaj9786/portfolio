@@ -1,8 +1,5 @@
 <script setup>
-import NavBar from '@/components/NavBar.vue';
-import ProjectsPage from '@/components/ProjectsPage.vue';
-import FooterComponent from '@/components/FooterComponent.vue';
-import MediaLinks from '@/components/MediaLinks.vue';
+import ProjectsPage from '@/components/Projects/ProjectsPage.vue';
 
 import { RouterView } from 'vue-router';
 </script>

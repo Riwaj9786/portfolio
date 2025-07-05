@@ -1,5 +1,5 @@
 <script setup>
-import MediaLinks from '@/components/MediaLinks.vue';
+import MediaLinks from '@/components/Home/Information/MediaLinks.vue';
 </script>
 
 <template>

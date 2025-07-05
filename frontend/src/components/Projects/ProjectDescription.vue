@@ -27,14 +27,14 @@ const expanded = ref(false);
             v-html="description"
             :class="[
                'text-gray-300 leading-relaxed transition-all duration-300 ease-in-out',
-               expanded ? '' : 'line-clamp-15 overflow-hidden'
+               expanded ? '' : 'line-clamp-12 overflow-hidden'
             ]"
          ></div>
 
          <div v-else class="text-gray-300 italic">No description available.</div>
 
          <button
-            v-if="description && description.length > 1000"
+            v-if="description && description.length > 800"
             @click="expanded = !expanded"
             class="text-cyan-400 hover:underline mt-4 block"
          >
