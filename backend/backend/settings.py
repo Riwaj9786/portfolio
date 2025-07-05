@@ -93,6 +93,11 @@ TEMPLATES = [
 WSGI_APPLICATION = 'backend.wsgi.application'
 
 
+CSRF_TRUSTED_ORIGINS = [
+    "https://riwajbhurtel.com.np",
+    "https://api.riwajbhurtel.com.np",
+]
+
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
