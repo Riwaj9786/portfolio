@@ -40,7 +40,7 @@ class Testimonial(TimeStampedModel):
    def clean(self, *args, **kwargs):
       if not self.to_publish and self.published:
          raise ValidationError("You don't have consent to publish the testimonial. Consider this only as a message to you!")
-      super().save(*args, **kwargs)
+      # super().clean(*args, **kwargs)
 
    class Meta:
       verbose_name = "Testimonial"

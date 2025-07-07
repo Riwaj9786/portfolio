@@ -42,12 +42,16 @@ class TestimonialCreateAPIView(GenericAPIView):
          email=email_ref
       ) if name_ref and email_ref else None
 
+      image_file = request.FILES.get('image')
+      if image_file and image_file.size > 10 * 1024 * 1024:  # 10MB in bytes
+         return Response({
+               "error": "Image size exceeds 10MB limit."
+         }, status=400)
+
       if testimonial_request:
          data = request.data.copy()
          data['name'] = testimonial_request.name
          data['email'] = testimonial_request.email
-
-         testimonial_request.delete()
       else:
          data = request.data.copy()
          if not data.get('name') or not data.get('email'):
