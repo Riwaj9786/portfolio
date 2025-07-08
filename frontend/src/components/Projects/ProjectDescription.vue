@@ -16,12 +16,12 @@ const expanded = ref(false);
 </script>
 
 <template>
-   <div class="text-white p-6 mt-4">
+   <div class="text-white p-6">
       <div class="mb-6">
-         <h1 class="font-bold text-md lg:text-3xl">{{ name }}</h1>
+         <h1 class="font-bold text-xl lg:text-3xl">{{ name }}</h1>
       </div>
 
-      <div class="text-justify text-xs lg:text-lg description-container">
+      <div class="text-justify text-md lg:text-lg description-container">
          <div
             v-if="description && description.trim().length"
             v-html="description"

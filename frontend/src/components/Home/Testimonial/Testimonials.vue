@@ -54,7 +54,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-   <div class="max-w-5xl mx-auto">
+   <div class="mx-auto">
       <!-- Testimonial card -->
       <div
          v-if="!loading && data.length"

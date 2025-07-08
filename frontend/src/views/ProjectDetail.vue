@@ -39,7 +39,7 @@ const closeBannerFullscreen = () => {
 </script>
 
 <template>
-   <div class="grid grid-cols-1 lg:grid-cols-3 gap-x-4 mx-12">
+   <div class="grid grid-cols-1 lg:grid-cols-3 gap-x-4 mx-4 lg:mx-12">
       <div class="flex my-4 p-6 col-span-1 lg:hidden">
          <img class="w-full h-auto" :src="project.banner_image"/>
       </div>
@@ -67,7 +67,7 @@ const closeBannerFullscreen = () => {
          />
 
          <div>
-            <p class="text-white mb-2">Tools Used:</p>
+            <p class="text-white mb-2 font-bold">Tools Used:</p>
             <div class="flex flex-wrap gap-2">
                <SkillButton
                   v-for="(skill, index) in project.skills"
@@ -78,7 +78,7 @@ const closeBannerFullscreen = () => {
          </div>
 
          <div v-if="project.project_links && project.project_links.length">
-            <p class="text-white mb-2">Important Links:</p>
+            <p class="text-white mb-2 font-bold">Important Links:</p>
             <div class="flex flex-wrap gap-2">
                <ImportantLinks
                   v-for="(link, index) in project.project_links"
@@ -89,10 +89,10 @@ const closeBannerFullscreen = () => {
          </div>
 
          <div v-if="project.distinct_features" class="description-container">
-            <p class="text-white mb-2">Distinct Features:</p>
+            <p class="text-white mb-2 font-bold">Distinct Features:</p>
             <div
                v-html="project.distinct_features"
-               class="text-gray-300 text-xs lg:text-lg "
+               class="text-gray-300 text-md lg:text-lg "
             ></div>
          </div>
       </div>
@@ -126,5 +126,9 @@ const closeBannerFullscreen = () => {
    .description-container strong {
       color: cyan;
       opacity: 70%;
+   }
+
+   .description-container a {
+      text-decoration: underline;
    }
 </style>

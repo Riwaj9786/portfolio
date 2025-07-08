@@ -92,7 +92,7 @@ const goToPage = (page) => {
 </script>
 
 <template>
-   <div class="px-9 py-8 w-full flex flex-col items-center">
+   <div class="lg:px-9 py-8 w-full flex flex-col items-center">
       <div class="w-full space-y-8 px-9 flex flex-col items-center">
          <!-- Error message -->
          <div v-if="errorMessage" class="text-red-500 text-sm text-center mb-4">
@@ -142,7 +142,7 @@ const goToPage = (page) => {
          </div>
 
          <!-- Project List -->
-         <div v-else class="mt-6 w-full">
+         <div v-else class="mt-2 lg:mt-6 w-full">
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full justify-items-center">
                <ProjectCard
                   v-for="(project, index) in paginatedProjects" 

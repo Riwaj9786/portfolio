@@ -26,7 +26,7 @@ const contentTruncated = (content, length = 120) => {
 
 <template>
    <RouterLink :to="`/blogs/${data.slug}`" class="w-full max-w-sm">
-      <div class="w-full self-start px-9">
+      <div class="w-full self-start lg:px-9">
          <div class="bg-white/5 hover:bg-white/10 group rounded-lg p-6">
             <p class="text-3xl my-2 font-bold">Featured Blog:</p>
 

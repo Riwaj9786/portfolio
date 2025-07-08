@@ -7,7 +7,7 @@ import ConnectSection from '@/components/Contact/ConnectSection.vue';
 
 <template>
    <div class="flex flex-col">
-      <div class="grid grid-cols-1 xl:grid-cols-2 gap-6 m-6 px-6">
+      <div class="grid grid-cols-1 xl:grid-cols-2 gap-6 m-6 lg:px-6">
          <div class="flex">
             <div class="w-full h-full flex items-stretch">
                <ConnectSection class="w-full h-full p-6 border rounded-xl shadow-lg"/>

@@ -71,7 +71,7 @@ const goToPage = (page) => {
          </div>
 
          <!-- Search Bar -->
-         <div class="flex w-full px-4 items-center">
+         <div class="flex w-full items-center">
             <input
                class="flex w-full py-2 px-4 rounded-lg focus:ring focus:ring-blue-300 focus-outline items-center border border-white "
                v-model="searchQuery"

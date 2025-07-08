@@ -66,7 +66,7 @@ const formatDate = (dateString) => {
 
 <template>
    <div class="gap-x-4 md:px-8 lg:px-12 py-8 mx-12">
-      <div class="flex my-4">
+      <div class="flex">
          <img
             :src="blog.banner_image"
             :alt="title"
@@ -95,7 +95,7 @@ const formatDate = (dateString) => {
             {{ blog.title }}
          </div>
          <div 
-            class="text-white lg:text-lg py-12 description-container"
+            class="text-white lg:text-lg py-12 text-justify description-container"
             v-html="blog.content">
          </div>
          <div class="lg:p-6">
@@ -143,5 +143,10 @@ const formatDate = (dateString) => {
       margin-bottom: 1rem;
       border-radius: 8px;
       object-fit: contain;
+   }
+
+   .description-container a {
+      text-decoration: underline;
+      font-style: italic;
    }
 </style>

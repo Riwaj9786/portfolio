@@ -22,7 +22,7 @@ const categoryClickHandler = (category) => {
 </script>
 
 <template>
-   <div class="md:bg-white/10 rounded-xl p-3 w-full shadow-md">
+   <div class="md:bg-white/10 rounded-xl w-full shadow-md">
       <!-- Mobile dropdown -->
       <div class="relative lg:hidden">
          <button 

@@ -48,19 +48,19 @@ onMounted(async () => {
             <div v-else v-html="data.description" class="text-justify description-container"></div>
          </div>
          
-         <div class="m-12">
+         <div class="m-6 lg:m-12">
             <Experience />
          </div>
-         <div class="m-12 flex justify-center">
+         <div class="m-6 lg:m-12 flex justify-center">
             <ProjectsButton/>
          </div>
-         <div class="m-12">
+         <div class="m-6 lg:m-12">
             <ServicesHome/>
          </div>
-         <div class="m-12">
+         <div class="m-6 lg:m-12">
             <Testimonials/>
          </div>
-         <div class="m-12">
+         <div class="m-6 lg:m-12">
             <SkillSet/>
          </div>
       </div>
