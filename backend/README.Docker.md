@@ -1,22 +1,28 @@
-### Building and running your application
+# Docker stack
 
-When you're ready, start your application by running:
-`docker compose up --build`.
+The Compose project runs PostgreSQL, Redis, Django/Gunicorn, Celery, and the Vue/Nginx frontend.
 
-Your application will be available at http://localhost:8000.
+## Start everything
 
-### Deploying your application to the cloud
+From the repository root, ensure `backend/.env` exists, then run:
 
-First, build your image, e.g.: `docker build -t myapp .`.
-If your cloud uses a different CPU architecture than your development
-machine (e.g., you are on a Mac M1 and your cloud provider is amd64),
-you'll want to build the image for that platform, e.g.:
-`docker build --platform=linux/amd64 -t myapp .`.
+```sh
+docker compose up --build -d
+docker compose ps
+```
 
-Then, push it to your registry, e.g. `docker push myregistry.com/myapp`.
+Open the portfolio at <http://localhost:3000>. The Django API remains available at <http://localhost:8000/api/v1/> and the admin is proxied at <http://localhost:3000/admin/>.
 
-Consult Docker's [getting started](https://docs.docker.com/go/get-started-sharing/)
-docs for more detail on building and pushing.
+Uploaded files are served at `/media/` by Nginx directly from the mounted `backend/media` directory. Database fields continue to store only their relative uploaded-file paths.
 
-### References
-* [Docker's Python guide](https://docs.docker.com/language/python/)
+Database migrations and static-file collection run automatically before Gunicorn starts. PostgreSQL and Redis data use named volumes; uploaded media remains in `backend/media`.
+
+## Useful commands
+
+```sh
+docker compose logs -f
+docker compose exec server python manage.py createsuperuser
+docker compose down
+```
+
+Use `docker compose down -v` only when you intentionally want to delete PostgreSQL and Redis data.

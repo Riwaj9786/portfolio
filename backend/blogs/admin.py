@@ -11,11 +11,15 @@ class BlogImageInline(admin.StackedInline):
 
 @admin.register(Blog)
 class BlogAdmin(admin.ModelAdmin):
-   list_display = ('title', 'get_status', 'published_at', 'slug')
+   list_display = ('banner_preview', 'title', 'get_status', 'published_at', 'image_count')
    list_display_links = list_display
    readonly_fields = ('slug',)
-   list_per_page = 5
-   search_fields = ('title',)
+   list_per_page = 15
+   search_fields = ('title', 'content', 'slug')
+   list_filter = ('is_draft', 'published_at')
+   date_hierarchy = 'published_at'
+   save_on_top = True
+   actions = ('publish_selected', 'move_to_drafts')
 
    inlines = (BlogImageInline,)
    ordering = ('-published_at',)
@@ -43,6 +47,22 @@ class BlogAdmin(admin.ModelAdmin):
       return format_html('<span style="color: green;">Published</span>')
    
    get_status.short_description = "Status"
+
+   @admin.display(description="Preview")
+   def banner_preview(self, obj):
+      return format_html('<img src="{}" style="width:64px;height:44px;object-fit:cover;border-radius:8px" />', obj.banner_image.url) if obj.banner_image else "—"
+
+   @admin.display(description="Gallery")
+   def image_count(self, obj):
+      return obj.blog_images.count()
+
+   @admin.action(description="Publish selected articles")
+   def publish_selected(self, request, queryset):
+      self.message_user(request, f"{queryset.update(is_draft=False)} article(s) published.")
+
+   @admin.action(description="Move selected articles to drafts")
+   def move_to_drafts(self, request, queryset):
+      self.message_user(request, f"{queryset.update(is_draft=True)} article(s) moved to drafts.")
 
 
 @admin.register(FeaturedBlog)

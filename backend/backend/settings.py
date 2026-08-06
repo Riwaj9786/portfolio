@@ -77,7 +77,7 @@ ROOT_URLCONF = 'backend.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -96,6 +96,7 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 CSRF_TRUSTED_ORIGINS = [
     "https://riwajbhurtel.com.np",
     "https://api.riwajbhurtel.com.np",
+    "http://localhost:3000"
 ]
 
 # Database
@@ -311,15 +312,23 @@ CKEDITOR_5_CONFIGS = {
 
 
 JAZZMIN_SETTINGS = {
-    "site_title": "Riwaj Bhurtel",
-    "site_header": "Rioz",
-    "site_brand": "Welcome!",
+    "site_title": "Portfolio Studio",
+    "site_header": "Portfolio Studio",
+    "site_brand": "Riwaj Admin",
     "site_logo": 'Rioz.jpg',
+    "user_avatar": "profile_pic",
     "login_logo": None,
     "copyright": "Er. Riwaj Bhurtel",
+    "welcome_sign": "Welcome back — manage your portfolio",
+    "site_url": "http://localhost:3000",
+    "show_sidebar": True,
+    "show_ui_builder": False,
+    "order_with_respect_to": ["account", "projects", "blogs", "experience", "skills", "services", "testimonial", "contact", "auth"],
 
     "icons": {
         "auth.Group": "fas fa-users", 
+        "account.User": "fas fa-user-circle",
+        "account.MediaLinks": "fas fa-share-nodes",
 
         "experience.Experience": "fa fa-suitcase",
 
@@ -330,6 +339,12 @@ JAZZMIN_SETTINGS = {
 
         "skills.SkillCategory": "fa-solid fa-layer-group",
         "skills.Skill": "fa-solid fa-laptop-code",
+        "blogs.Blog": "fas fa-pen-nib",
+        "blogs.FeaturedBlog": "fas fa-star",
+        "contact.Message": "fas fa-envelope",
+        "contact.ContactInformation": "fas fa-address-card",
+        "testimonial.Testimonial": "fas fa-quote-left",
+        "testimonial.TestimonialRequest": "fas fa-paper-plane",
     },
     "search_model": ["projects.Project", "blogs.Blog", "services.Service"],
     "changeform_format": "horizontal_tabs",
@@ -353,22 +368,22 @@ JAZZMIN_UI_TWEAKS = {
     "footer_small_text": False,
     "body_small_text": False,
     "brand_small_text": False,
-    "brand_colour": "navbar-navy",
-    "accent": "accent-info",
-    "navbar": "navbar-navy navbar-dark",
+    "brand_colour": "navbar-white",
+    "accent": "accent-purple",
+    "navbar": "navbar-white navbar-light",
     "no_navbar_border": True,
     "navbar_fixed": True,
     "layout_boxed": False,
     "footer_fixed": True,
     "sidebar_fixed": True,
-    "sidebar": "sidebar-dark-navy",
+    "sidebar": "sidebar-light-primary",
     "sidebar_nav_small_text": False,
     "sidebar_disable_expand": False,
     "sidebar_nav_child_indent": False,
     "sidebar_nav_compact_style": False,
     "sidebar_nav_legacy_style": False,
     "sidebar_nav_flat_style": True,
-    "theme": "litera",
+    "theme": "flatly",
     "dark_mode_theme": None,
     "button_classes": {
         "primary": "btn-primary",

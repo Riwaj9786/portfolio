@@ -10,6 +10,11 @@ from testimonial.serializers import TestimonialSerializer
 
 class TestimonialCreateAPIView(GenericAPIView):
    serializer_class = TestimonialSerializer
+   # This is a public submission endpoint. Disabling DRF authentication here
+   # prevents an unrelated admin session cookie from invoking
+   # SessionAuthentication's CSRF enforcement.
+   authentication_classes = ()
+   permission_classes = (AllowAny,)
 
    def get_queryset(self):
       return Testimonial.objects.all()

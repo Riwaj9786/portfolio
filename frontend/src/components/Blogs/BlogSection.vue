@@ -15,7 +15,6 @@ let debounceTimeout;
 const fetchBlogs = async (query = '') => {
    loading.value = true;
    try {
-      console.log('Fetching blogs with search:', query);
       const response = await axiosInstance.get('blogs/blogs/', {
          params: query ? { search: query } : {},
       });
@@ -62,8 +61,8 @@ const goToPage = (page) => {
 
 
 <template>
-   <div class="px-4 w-full flex flex-col items-center">
-      <div class="w-full max-w-7xl space-y-8 flex flex-col items-center">
+   <div class="w-full">
+      <div class="w-full">
 
          <!-- Error -->
          <div v-if="error" class="text-red-500 text-sm text-center mb-4">
@@ -71,44 +70,27 @@ const goToPage = (page) => {
          </div>
 
          <!-- Search Bar -->
-         <div class="flex w-full items-center">
+         <div class="relative mb-9 flex w-full items-center">
+            <i class="pi pi-search absolute left-4 text-sm text-[var(--muted)]"></i>
             <input
-               class="flex w-full py-2 px-4 rounded-lg focus:ring focus:ring-blue-300 focus-outline items-center border border-white "
+               class="h-12 w-full rounded-full py-2 pl-11 pr-4 text-sm"
                v-model="searchQuery"
                @input="$emit('updateSearch', searchQuery)"
                type="text"
-               placeholder="Search Blogs..."
+               placeholder="Search the journal…"
             />
          </div>
 
          <!-- Loading -->
-         <div v-if="loading" class="w-full py-12 flex flex-col items-center space-y-4">
-            <div class="animate-pulse flex space-x-4 w-full max-w-md">
-               <div class="flex-1 space-y-4 py-1">
-                  <div class="h-4 bg-gray-700 rounded w-3/4"></div>
-                  <div class="space-y-2">
-                  <div class="h-4 bg-gray-700 rounded"></div>
-                  <div class="h-4 bg-gray-700 rounded w-5/6"></div>
-                  </div>
-               </div>
-            </div>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full justify-items-center">
-               <div
-                  v-for="i in 3"
-                  :key="i"
-                  class="w-full max-w-xs sm:max-w-none h-64 bg-gray-800 rounded-lg animate-pulse"
-               ></div>
-            </div>
+         <div v-if="loading" class="space-y-4 py-4"><div v-for="i in 4" :key="i" class="h-40 animate-pulse rounded-2xl bg-purple-500/10"></div>
          </div>
 
          <!-- Blog Cards -->
-         <div
-         v-else
-         class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full justify-items-center px-4"
-         >
+         <div v-else-if="paginatedBlogs.length" class="w-full">
          <BlogCard
             v-for="(blog, index) in paginatedBlogs"
-            :key="index"
+            :key="blog.id || blog.slug"
+            :index="(currentPage - 1) * itemsPerPage + index"
             :title="blog.title"
             :content="blog.content"
             :banner_image="blog.banner_image"
@@ -116,13 +98,14 @@ const goToPage = (page) => {
             :slug="blog.slug"
          />
          </div>
+         <div v-else class="surface py-14 text-center"><i class="pi pi-file-edit text-2xl text-[var(--primary)]"></i><h3 class="mt-4 font-bold">No articles found</h3><p class="mt-1 text-sm text-[var(--muted)]">Try a broader search term.</p></div>
 
          <!-- Pagination -->
          <div v-if="totalPages > 1" class="mt-8 flex flex-wrap justify-center gap-2">
             <button
                @click="goToPage(currentPage - 1)"
                :disabled="currentPage === 1"
-               class="px-3 py-1 bg-blue-900 text-white rounded disabled:opacity-50"
+               class="pagination-button"
             >
                Prev
             </button>
@@ -132,8 +115,8 @@ const goToPage = (page) => {
                :key="page"
                @click="goToPage(page)"
                :class="[
-                  'px-3 py-1 rounded',
-                  page === currentPage ? 'bg-white text-black' : 'bg-blue-800 text-white'
+                  'pagination-button',
+                  page === currentPage ? '!border-[var(--primary)] !bg-[var(--primary)] !text-white' : ''
                ]"
             >
                {{ page }}
@@ -142,7 +125,7 @@ const goToPage = (page) => {
             <button
                @click="goToPage(currentPage + 1)"
                :disabled="currentPage === totalPages"
-               class="px-3 py-1 bg-blue-900 text-white rounded disabled:opacity-50"
+               class="pagination-button"
             >
                Next
             </button>

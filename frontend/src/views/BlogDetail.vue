@@ -15,138 +15,154 @@ const error = ref(null);
 const copied = ref(false);
 
 const copyLink = async () => {
-   try {
-      await navigator.clipboard.writeText(window.location.href);
-      copied.value = true;
-      setTimeout(() => (copied.value = false), 2000);
-   } catch (err) {
-      console.error('Failed to copy: ', err);
-   }
+  try {
+    await navigator.clipboard.writeText(window.location.href);
+    copied.value = true;
+    setTimeout(() => (copied.value = false), 2000);
+  } catch (err) {
+    console.error("Failed to copy: ", err);
+  }
 };
 
 onMounted(async () => {
-   try {
-      const response = await axiosInstance.get(`blogs/blogs/${slug}/`);
-      blog.value = response.data;
-      const backendUrl = import.meta.env.VITE_BACKEND_URL || "http://localhost:8000";
-      const updatedContent = response.data.content.replace(
-         /src=(["'])\/media\//g,
-         `src=$1${backendUrl}/media/`
-      );
-      blog.value = { ...response.data, content: updatedContent };
-   } catch (err) {
-      error.value = err.response?.data?.detail || err.message;
-   } finally {
-      loading.value = false;
-   }
+  try {
+    const response = await axiosInstance.get(`blogs/blogs/${slug}/`);
+    blog.value = response.data;
+  } catch (err) {
+    error.value = err.response?.data?.detail || err.message;
+  } finally {
+    loading.value = false;
+  }
 });
 
 const isBannerFullscreen = ref(false);
 
 const openBannerFullscreen = () => {
-   isBannerFullscreen.value = true;
+  isBannerFullscreen.value = true;
 };
 
 const closeBannerFullscreen = () => {
-   isBannerFullscreen.value = false;
+  isBannerFullscreen.value = false;
 };
 
 const formatDate = (dateString) => {
-   if (!dateString) return '';
-   try {
-      const options = { year: 'numeric', month: 'short', day: 'numeric' };
-      const date = new Date(dateString);
-      if (isNaN(date.getTime())) return '';
-      return date.toLocaleDateString(undefined, options);
-   } catch (e) {
-      return '';
-   }
+  if (!dateString) return "";
+  try {
+    const options = { year: "numeric", month: "short", day: "numeric" };
+    const date = new Date(dateString);
+    if (isNaN(date.getTime())) return "";
+    return date.toLocaleDateString(undefined, options);
+  } catch (e) {
+    return "";
+  }
 };
 </script>
 
 <template>
-   <div class="gap-x-4 md:px-8 lg:px-12 py-8 mx-12">
-      <div class="flex">
-         <img
-            :src="blog.banner_image"
-            :alt="title"
-            class="w-full rounded-lg object-cover transition-transform duration-300 group-hover:scale-105
-                     h-60 sm:h-75 md:h-90 lg:h-100 xl:h-120"
-         />
+  <article class="page-wrap max-w-[1050px]">
+    <div v-if="loading" class="space-y-6">
+      <div class="h-8 w-40 animate-pulse rounded-full bg-purple-500/10"></div>
+      <div class="h-28 animate-pulse rounded-2xl bg-purple-500/10"></div>
+      <div
+        class="h-[420px] animate-pulse rounded-[2rem] bg-purple-500/10"
+      ></div>
+    </div>
+    <div v-else-if="error" class="surface p-10 text-center">
+      <p class="font-bold text-red-400">Unable to load this article</p>
+      <p class="mt-2 text-sm text-[var(--muted)]">{{ error }}</p>
+    </div>
+    <template v-else>
+      <RouterLink
+        to="/blogs"
+        class="mb-10 inline-flex items-center gap-2 text-sm font-semibold text-[var(--muted)] hover:text-[var(--primary)]"
+        ><i class="pi pi-arrow-left text-xs"></i> Back to journal</RouterLink
+      >
+      <header class="mx-auto mb-8 max-w-4xl text-left sm:mb-10 sm:text-center">
+        <p class="eyebrow mb-5">
+          Journal · {{ formatDate(blog.published_at) }}
+        </p>
+        <h1 class="section-title">{{ blog.title }}</h1>
+        <button
+          @click="copyLink"
+          class="mx-auto mt-7 flex items-center gap-2 rounded-full border border-[var(--line)] bg-[var(--surface)] px-5 py-2.5 text-sm font-semibold hover:border-[var(--primary)]"
+        >
+          <i
+            class="pi"
+            :class="
+              copied
+                ? 'pi-check text-green-400'
+                : 'pi-share-alt text-[var(--primary)]'
+            "
+          ></i
+          >{{ copied ? "Link copied" : "Share article" }}
+        </button>
+      </header>
+      <div
+        class="overflow-hidden rounded-[1.25rem] border border-[var(--line)] shadow-[var(--shadow)] sm:rounded-[2rem]"
+      >
+        <img
+          :src="blog.banner_image"
+          :alt="blog.title"
+          class="aspect-[4/3] w-full object-cover sm:aspect-[16/8]"
+        />
       </div>
-
-      <div class="flex flex-col lg:p-4">
-         <div class="w-full justify-between items-center flex flex-row">
-            <div class="text-gray-400 text-sm md:text-md py-4">{{ formatDate(blog.published_at) }}</div>
-            <div>
-               <button
-                  @click="copyLink"
-                  class="flex items-center gap-2 px-4 py-2 border border-blue-300 text-white rounded hover:bg-white/20 hover:text-white transition duration-200"
-               >
-                  <i
-                     class="pi pi-share-alt"
-                     :class="copied ? 'text-green-400' : 'text-white group-hover:text-white'"
-                  ></i>
-                  <span v-if="copied" class="text-sm font-medium">Copied!</span>
-               </button>
-            </div>
-         </div>
-         <div class="text-white w-full text-3xl md:text-4xl lg:text-5xl font-bold">
-            {{ blog.title }}
-         </div>
-         <div 
-            class="text-white lg:text-lg py-12 text-justify description-container"
-            v-html="blog.content">
-         </div>
-         <div class="lg:p-6">
-            <ProjectImageSlider v-if="blog.blog_images?.length" :images="blog.blog_images" />
-         </div>
+      <div class="mx-auto flex max-w-5xl flex-col">
+        <div
+          class="description-container py-8 text-sm text-justify sm:py-12 sm:text-lg"
+          v-html="blog.content"
+        ></div>
+        <div class="lg:p-6">
+          <ProjectImageSlider
+            v-if="blog.blog_images?.length"
+            :images="blog.blog_images"
+          />
+        </div>
       </div>
-   </div>
+    </template>
+  </article>
 </template>
 
-
 <style>
-   .description-container ul,
-   .description-container ol {
-      padding-left: 1.25rem;
-      margin-top: 0.5rem;
-      margin-bottom: 0.5rem;
-   }
+.description-container ul,
+.description-container ol {
+  padding-left: 1.25rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
 
-   .description-container ul {
-      list-style-type: disc;
-   }
+.description-container ul {
+  list-style-type: disc;
+}
 
-   .description-container ol {
-      list-style-type: decimal;
-   }
+.description-container ol {
+  list-style-type: decimal;
+}
 
-   .description-container ul li,
-   .description-container ol li {
-      margin-left: 1rem;
-      margin-bottom: 0.25rem; 
-   }
+.description-container ul li,
+.description-container ol li {
+  margin-left: 1rem;
+  margin-bottom: 0.25rem;
+}
 
-   .description-container b,
-   .description-container strong {
-      color: cyan;
-      opacity: 70%;
-   }
+.description-container b,
+.description-container strong {
+  color: var(--primary);
+  opacity: 70%;
+}
 
-   .description-container img {
-      max-height: 500px;
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-      margin-top: 1rem;
-      margin-bottom: 1rem;
-      border-radius: 8px;
-      object-fit: contain;
-   }
+.description-container img {
+  max-height: 500px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  object-fit: contain;
+}
 
-   .description-container a {
-      text-decoration: underline;
-      font-style: italic;
-   }
+.description-container a {
+  text-decoration: underline;
+  font-style: italic;
+}
 </style>

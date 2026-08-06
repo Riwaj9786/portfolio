@@ -1,0 +1,121 @@
+x-backend: &backend
+  build:
+    context: ./backend
+    dockerfile: Dockerfile
+  env_file:
+    - path: ./backend/.env
+      format: raw
+  environment:
+    DATABASE_HOST: postgres_db
+    CELERY_BROKER_URL: redis://redis:6379/0
+  volumes:
+    - ./backend/media:/app/media
+    - ./backend/static:/app/static
+  networks:
+    - portfolio
+
+services:
+  postgres_db:
+    image: postgres:17-alpine
+    restart: unless-stopped
+    env_file:
+      - path: ./backend/.env
+        format: raw
+    entrypoint:
+      - /bin/sh
+      - -c
+      - >-
+        export POSTGRES_USER="$$DATABASE_USER" POSTGRES_PASSWORD="$$DATABASE_PASSWORD"
+        POSTGRES_DB="$$DATABASE_NAME";
+        exec docker-entrypoint.sh postgres
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $$DATABASE_USER -d $$DATABASE_NAME"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+      start_period: 10s
+    networks:
+      - portfolio
+
+  redis:
+    image: redis:7-alpine
+    restart: unless-stopped
+    command: redis-server --appendonly yes
+    volumes:
+      - redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+    networks:
+      - portfolio
+
+  server:
+    <<: *backend
+    restart: unless-stopped
+    command: >-
+      sh -c "python manage.py migrate --noinput &&
+      python manage.py collectstatic --noinput &&
+      gunicorn backend.wsgi:application --bind 0.0.0.0:8000 --workers 3 --timeout 120"
+    ports:
+      - "8000:8000"
+    depends_on:
+      postgres_db:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/admin/login/', timeout=3)"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 30s
+
+  celery:
+    <<: *backend
+    restart: unless-stopped
+    command: celery -A backend.celery worker --loglevel=info
+    depends_on:
+      postgres_db:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+      server:
+        condition: service_healthy
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+      args:
+        VITE_API_BASE_URL: /api/v1/
+        # Override this when deploying to a different backend domain.
+        VITE_BACKEND_URL: ${VITE_BACKEND_URL:-https://api.riwajbhurtel.com.np}
+        VITE_MEDIA_BASE_URL: /media/
+    restart: unless-stopped
+    ports:
+      - "3000:80"
+    volumes:
+      - ./backend/media:/var/www/media:ro
+      - ./backend/static:/var/www/static:ro
+    depends_on:
+      server:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "wget", "--quiet", "--tries=1", "--spider", "http://127.0.0.1/"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - portfolio
+
+networks:
+  portfolio:
+    driver: bridge
+
+volumes:
+  postgres_data:
+  redis_data:

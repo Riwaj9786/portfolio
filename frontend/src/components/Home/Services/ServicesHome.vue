@@ -17,10 +17,10 @@ onMounted(async () => {
 </script>
 
 <template>
-   <div class="flex flex-col relative rounded-xl items-center text-white">
-      <div class="flex text-2xl font-bold p-6">Services</div>
+   <div class="flex flex-col relative rounded-xl text-[var(--ink)]">
+      <div class="section-title mb-8">What I bring to the table.</div>
       <div class="w-full">
-         <div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-4">
+         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div v-for="(service, index) in data" :key="index">
                <ServiceCard
                   :title="service.title"

@@ -1,35 +1,13 @@
 <script setup>
-import { ref } from 'vue';
-
-const searchQuery = ref('');
-
-const emit = defineEmits(['updateSearch']);
-
-const updateSearch = () => {
-   emit('updateSearch', searchQuery.value);
-};
+defineProps({ modelValue: { type: String, default: '' } })
+const emit = defineEmits(['update:modelValue'])
 </script>
 
 <template>
-   <div class="w-full relative">
-      <input
-         v-model="searchQuery"
-         @input="updateSearch"
-         type="text"
-         placeholder="Search projects..."
-         class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring focus:ring-blue-300 focus:outline-none"
-      />
-      <svg
-         class="absolute right-3 top-3 text-gray-400 h-5 w-5"
-         xmlns="http://www.w3.org/2000/svg"
-         viewBox="0 0 20 20"
-         fill="currentColor"
-      >
-         <path
-            fill-rule="evenodd"
-            d="M8 2a6 6 0 0 1 4.472 9.966l4.78 4.78a1 1 0 1 1-1.414 1.414l-4.78-4.78A6 6 0 1 1 8 2Zm0 2a4 4 0 1 0 2.828 6.828A4 4 0 0 0 8 4Z"
-            clip-rule="evenodd"
-         />
-      </svg>
-   </div>
+  <label class="relative block w-full">
+    <span class="sr-only">Search projects</span>
+    <i class="pi pi-search absolute left-4 top-1/2 -translate-y-1/2 text-sm text-[var(--muted)]"></i>
+    <input :value="modelValue" @input="emit('update:modelValue', $event.target.value)" type="search" placeholder="Search by project name…" class="h-12 w-full rounded-full py-3 pl-11 pr-11 text-sm" />
+    <button v-if="modelValue" type="button" aria-label="Clear search" class="absolute right-2 top-1/2 grid h-8 w-8 -translate-y-1/2 place-items-center rounded-full text-[var(--muted)] hover:bg-purple-500/10 hover:text-[var(--primary)]" @click="emit('update:modelValue', '')"><i class="pi pi-times text-xs"></i></button>
+  </label>
 </template>

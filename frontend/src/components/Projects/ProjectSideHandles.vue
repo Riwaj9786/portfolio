@@ -34,11 +34,11 @@ const formatDate = (dateString) => {
 <template>
    <div class="gap gap-y-4">
       <div class="my-2">
-         <p class="text-gray-400">Client: <span class="text-white">{{ client ? client : "Project" }}</span> </p>
+         <p class="text-[var(--muted)]">Client: <span class="text-[var(--ink)]">{{ client ? client : "Project" }}</span> </p>
       </div>
       <div class="my-2">
-         <p class="text-gray-400">Date:
-            <span class="text-white">
+         <p class="text-[var(--muted)]">Date:
+            <span class="text-[var(--ink)]">
                {{ formatDate(start_date) }}
                <span v-if="start_date && end_date"> - </span>
                {{ formatDate(end_date) }}
@@ -46,7 +46,7 @@ const formatDate = (dateString) => {
          </p>
       </div>
       <div class="my-2">
-         <p class="text-gray-400">Category: <span class="text-white">{{ category }}</span> </p>
+         <p class="text-[var(--muted)]">Category: <span class="text-[var(--ink)]">{{ category }}</span> </p>
       </div>
    </div>
 </template>

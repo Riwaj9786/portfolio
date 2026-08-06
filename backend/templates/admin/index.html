@@ -1,0 +1,101 @@
+{% extends "admin/base_site.html" %}
+{% load i18n static jazzmin log portfolio_admin %}
+{% get_jazzmin_ui_tweaks as jazzmin_ui %}
+{% portfolio_dashboard as stats %}
+
+{% block bodyclass %}{{ block.super }} dashboard portfolio-dashboard{% endblock %}
+{% block content_title %}{% endblock %}
+
+{% block extrastyle %}
+{{ block.super }}
+<style>
+  :root { --studio-purple:#7c3aed; --studio-violet:#a855f7; --studio-pink:#ec4899; --studio-ink:#172033; --studio-muted:#64748b; --studio-line:#e9e5f2; --studio-soft:#f7f5fb; }
+  .portfolio-dashboard #content { padding:24px 28px 34px; background:#f8f7fb; }
+  .portfolio-dashboard .content-wrapper { background:#f8f7fb; }
+  .studio-shell { max-width:1480px; margin:0 auto; color:var(--studio-ink); }
+  .studio-hero { position:relative; overflow:hidden; display:flex; align-items:center; justify-content:space-between; gap:24px; padding:28px 30px; margin-bottom:20px; color:#fff; border-radius:24px; background:linear-gradient(125deg,#4c1d95 0%,#7c3aed 48%,#c026d3 100%); box-shadow:0 18px 45px rgba(91,33,182,.2); }
+  .studio-hero:after { content:""; position:absolute; right:-70px; top:-110px; width:320px; height:320px; border:1px solid rgba(255,255,255,.2); border-radius:50%; box-shadow:0 0 0 45px rgba(255,255,255,.04),0 0 0 90px rgba(255,255,255,.035); }
+  .studio-hero-copy,.studio-profile { position:relative; z-index:1; }
+  .studio-eyebrow { display:flex; align-items:center; gap:8px; margin:0 0 8px; color:#e9d5ff; font-size:11px; font-weight:800; letter-spacing:.16em; text-transform:uppercase; }
+  .studio-eyebrow:before { content:""; width:7px; height:7px; border-radius:50%; background:#86efac; box-shadow:0 0 0 4px rgba(134,239,172,.15); }
+  .studio-hero h1 { margin:0; color:#fff; font-size:clamp(25px,3vw,38px); font-weight:800; letter-spacing:-.04em; }
+  .studio-hero p { max-width:620px; margin:8px 0 0; color:rgba(255,255,255,.78); font-size:14px; }
+  .studio-profile { display:flex; align-items:center; gap:12px; min-width:max-content; padding:10px 14px 10px 10px; border:1px solid rgba(255,255,255,.18); border-radius:16px; background:rgba(255,255,255,.1); backdrop-filter:blur(12px); }
+  .studio-profile img,.studio-avatar-fallback { width:44px; height:44px; border-radius:13px; object-fit:cover; background:rgba(255,255,255,.16); }
+  .studio-avatar-fallback { display:grid; place-items:center; font-weight:800; }
+  .studio-profile strong,.studio-profile small { display:block; }
+  .studio-profile strong { color:#fff; font-size:13px; }
+  .studio-profile small { max-width:190px; overflow:hidden; color:#e9d5ff; font-size:11px; text-overflow:ellipsis; }
+  .studio-grid { display:grid; gap:16px; }
+  .studio-metrics { grid-template-columns:repeat(4,minmax(0,1fr)); margin-bottom:20px; }
+  .studio-metric { position:relative; overflow:hidden; display:flex; align-items:flex-start; gap:14px; min-height:126px; padding:20px; color:var(--studio-ink)!important; border:1px solid var(--studio-line); border-radius:19px; background:#fff; box-shadow:0 5px 18px rgba(30,20,55,.045); transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease; }
+  .studio-metric:hover { transform:translateY(-3px); border-color:#d8b4fe; box-shadow:0 14px 30px rgba(91,33,182,.11); }
+  .metric-mark { display:grid; place-items:center; flex:0 0 42px; width:42px; height:42px; color:#7c3aed; border-radius:13px; background:#f3e8ff; font-size:17px; }
+  .metric-mark.pink { color:#db2777; background:#fce7f3; }.metric-mark.blue { color:#2563eb; background:#dbeafe; }.metric-mark.amber { color:#d97706; background:#fef3c7; }
+  .studio-metric strong { display:block; margin-top:-4px; font-size:31px; line-height:1; letter-spacing:-.04em; }
+  .studio-metric b { display:block; margin-top:8px; font-size:12px; }.studio-metric small { display:block; margin-top:3px; color:var(--studio-muted); font-size:11px; }
+  .studio-quick { display:flex; align-items:center; justify-content:space-between; gap:18px; padding:17px 20px; margin-bottom:20px; border:1px solid var(--studio-line); border-radius:18px; background:#fff; }
+  .studio-quick h2,.studio-panel h2 { margin:0; color:var(--studio-ink); font-size:15px; font-weight:800; }.studio-quick p { margin:3px 0 0; color:var(--studio-muted); font-size:12px; }
+  .studio-actions { display:flex; flex-wrap:wrap; gap:8px; }.studio-action { display:inline-flex; align-items:center; gap:7px; padding:9px 13px; color:#fff!important; border-radius:10px; background:var(--studio-purple); font-size:12px; font-weight:700; }.studio-action:hover { background:#6d28d9; }.studio-action.secondary { color:#6d28d9!important; background:#f3e8ff; }.studio-action.neutral { color:#475569!important; background:#f1f5f9; }
+  .studio-columns { grid-template-columns:minmax(0,1.45fr) minmax(320px,.75fr); align-items:start; }
+  .studio-panel { overflow:hidden; margin-bottom:16px; border:1px solid var(--studio-line); border-radius:19px; background:#fff; box-shadow:0 5px 18px rgba(30,20,55,.04); }
+  .studio-panel-head { display:flex; align-items:center; justify-content:space-between; gap:12px; min-height:62px; padding:15px 18px; border-bottom:1px solid var(--studio-line); }.studio-panel-head h2 { display:flex; align-items:center; gap:9px; }.studio-panel-head h2 i { color:var(--studio-purple); }.studio-panel-head>a { color:var(--studio-purple)!important; font-size:11px; font-weight:800; }
+  .studio-app { display:grid; grid-template-columns:180px 1fr; gap:16px; padding:16px 18px; border-bottom:1px solid #f0edf5; }.studio-app:last-child { border-bottom:0; }.studio-app-name strong,.studio-app-name small { display:block; }.studio-app-name strong { font-size:13px; }.studio-app-name small { margin-top:3px; color:var(--studio-muted); font-size:10px; }
+  .studio-models { display:flex; flex-wrap:wrap; gap:7px; }.studio-models a { display:inline-flex; align-items:center; gap:6px; padding:7px 10px; color:#475569!important; border:1px solid #ece8f2; border-radius:9px; background:#faf9fc; font-size:11px; font-weight:700; transition:.18s ease; }.studio-models a:hover { color:#6d28d9!important; border-color:#d8b4fe; background:#f5f0ff; }
+  .studio-row { display:flex; align-items:center; gap:11px; min-height:66px; padding:11px 17px; color:var(--studio-ink)!important; border-bottom:1px solid #f0edf5; transition:background .18s ease; }.studio-row:last-child { border-bottom:0; }.studio-row:hover { background:#faf7ff; }.studio-row-avatar { display:grid; place-items:center; flex:0 0 38px; width:38px; height:38px; color:#6d28d9; border-radius:12px; background:#f3e8ff; font-size:12px; font-weight:800; }.studio-row-copy { min-width:0; flex:1; }.studio-row strong,.studio-row small { display:block; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }.studio-row strong { font-size:12px; }.studio-row small { margin-top:3px; color:var(--studio-muted); font-size:10px; }.studio-row>i { color:#c4b5fd; font-size:10px; }
+  .studio-status { display:inline-flex; align-items:center; gap:5px; padding:5px 8px; color:#15803d; border-radius:999px; background:#dcfce7; font-size:9px; font-weight:800; }.studio-status.draft { color:#a16207; background:#fef3c7; }
+  .studio-empty { padding:30px 18px; color:var(--studio-muted); text-align:center; font-size:12px; }.studio-empty i { display:block; margin-bottom:8px; color:#c4b5fd; font-size:24px; }
+  @media(max-width:1100px){.studio-metrics{grid-template-columns:repeat(2,minmax(0,1fr))}.studio-columns{grid-template-columns:1fr}.studio-profile{display:none}}
+  @media(max-width:767px){.portfolio-dashboard #content{padding:16px 12px 28px}.studio-hero{padding:23px 20px;border-radius:19px}.studio-metrics{grid-template-columns:1fr 1fr;gap:10px}.studio-metric{min-height:112px;padding:15px;gap:10px}.metric-mark{width:36px;height:36px;flex-basis:36px}.studio-metric strong{font-size:25px}.studio-quick{align-items:flex-start;flex-direction:column}.studio-app{grid-template-columns:1fr;gap:10px}}
+  @media(max-width:430px){.studio-metrics{grid-template-columns:1fr}.studio-metric{min-height:auto}.studio-actions{width:100%}.studio-action{justify-content:center;flex:1}.studio-models a{flex:1;justify-content:space-between}}
+</style>
+{% endblock %}
+
+{% block content %}
+<main class="studio-shell">
+  <section class="studio-hero">
+    <div class="studio-hero-copy">
+      <div class="studio-eyebrow">Portfolio Dashboard</div>
+      <h1>Good {% now "H" as current_hour %}{% if current_hour < "12" %}morning{% elif current_hour < "17" %}afternoon{% else %}evening{% endif %}, {{ user.name|default:user.email }}</h1>
+      <p>Publish your work, keep content fresh, and respond to new opportunities from one focused workspace.</p>
+    </div>
+    <div class="studio-profile">
+      {% if user.profile_pic %}<img src="{{ user.profile_pic.url }}" alt="">{% else %}<span class="studio-avatar-fallback">{{ user.email|first|upper }}</span>{% endif %}
+      <span><strong>{{ user.name|default:"Administrator" }}</strong><small>{{ user.email }}</small></span>
+    </div>
+  </section>
+
+  <section class="studio-grid studio-metrics" aria-label="Portfolio statistics">
+    <a href="{% url 'admin:projects_project_changelist' %}" class="studio-metric"><span class="metric-mark"><i class="fas fa-diagram-project"></i></span><span><strong>{{ stats.projects }}</strong><b>Projects</b><small>{{ stats.active_projects }} live · {{ stats.archived_projects }} archived</small></span></a>
+    <a href="{% url 'admin:blogs_blog_changelist' %}" class="studio-metric"><span class="metric-mark pink"><i class="fas fa-pen-nib"></i></span><span><strong>{{ stats.blogs }}</strong><b>Journal entries</b><small>{{ stats.published_blogs }} published · {{ stats.draft_blogs }} drafts</small></span></a>
+    <a href="{% url 'admin:skills_skill_changelist' %}" class="studio-metric"><span class="metric-mark blue"><i class="fas fa-code"></i></span><span><strong>{{ stats.skills }}</strong><b>Skills</b><small>Across your technical toolkit</small></span></a>
+    <a href="{% url 'admin:contact_message_changelist' %}" class="studio-metric"><span class="metric-mark amber"><i class="fas fa-envelope"></i></span><span><strong>{{ stats.messages }}</strong><b>Enquiries</b><small>Messages received from visitors</small></span></a>
+  </section>
+
+  <section class="studio-quick">
+    <div><h2>Quick actions</h2><p>Your most common publishing tasks, one click away.</p></div>
+    <div class="studio-actions"><a href="{% url 'admin:projects_project_add' %}" class="studio-action"><i class="fas fa-plus"></i> New project</a><a href="{% url 'admin:blogs_blog_add' %}" class="studio-action secondary"><i class="fas fa-pen"></i> New article</a><a href="{% url 'admin:contact_message_changelist' %}" class="studio-action neutral"><i class="fas fa-inbox"></i> Open inbox</a></div>
+  </section>
+
+  <div class="studio-grid studio-columns">
+    <section class="studio-panel">
+      <div class="studio-panel-head"><h2><i class="fas fa-layer-group"></i> Content management</h2><span class="studio-status"><i class="fas fa-circle"></i> Ready</span></div>
+      {% get_side_menu using="app_list" as dashboard_list %}
+      {% for app in dashboard_list %}<div class="studio-app"><div class="studio-app-name"><strong>{{ app.name }}</strong><small>{{ app.models|length }} content type{{ app.models|length|pluralize }}</small></div><div class="studio-models">{% for model in app.models %}{% if model.url %}<a href="{{ model.url }}">{{ model.name }} <i class="fas fa-chevron-right"></i></a>{% endif %}{% endfor %}</div></div>{% empty %}<div class="studio-empty"><i class="fas fa-folder-open"></i>No content areas are available.</div>{% endfor %}
+    </section>
+
+    <aside>
+      <section class="studio-panel">
+        <div class="studio-panel-head"><h2><i class="fas fa-envelope-open-text"></i> Recent enquiries</h2><a href="{% url 'admin:contact_message_changelist' %}">VIEW ALL</a></div>
+        {% for message in stats.recent_messages %}<a href="{% url 'admin:contact_message_change' message.pk %}" class="studio-row"><span class="studio-row-avatar">{{ message.name|first|upper }}</span><span class="studio-row-copy"><strong>{{ message.name }}</strong><small>{{ message.email }} · {{ message.created_at|timesince }} ago</small></span><i class="fas fa-chevron-right"></i></a>{% empty %}<div class="studio-empty"><i class="far fa-envelope"></i>No enquiries yet.</div>{% endfor %}
+      </section>
+
+      <section class="studio-panel">
+        <div class="studio-panel-head"><h2><i class="fas fa-clock-rotate-left"></i> Recent changes</h2></div>
+        {% get_admin_log 5 as admin_log for_user user %}
+        {% for entry in admin_log %}<a href="{{ entry.get_admin_url|default:'#' }}" class="studio-row"><span class="studio-row-avatar"><i class="fas fa-pen"></i></span><span class="studio-row-copy"><strong>{{ entry.object_repr }}</strong><small>{{ entry.content_type|default:"Content" }} · {{ entry.action_time|timesince }} ago</small></span><i class="fas fa-chevron-right"></i></a>{% empty %}<div class="studio-empty"><i class="fas fa-clock-rotate-left"></i>No recent changes.</div>{% endfor %}
+      </section>
+    </aside>
+  </div>
+</main>
+{% endblock %}

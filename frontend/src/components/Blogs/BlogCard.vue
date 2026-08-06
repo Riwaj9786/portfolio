@@ -1,91 +1,90 @@
 <script setup>
-const props = defineProps({
-   title: {
-      type: String,
-      default: 'Title of Blog',
-   },
-   content: {
-      type: String,
-      default: 'Content of the blog goes here.',
-   },
-   banner_image: {
-      type: [String, File],
-      required: false,
-   },
-   published_at: {
-      type: [String, Date],
-      required: true,
-   },
-   slug: {
-      type: String,
-      required: true,
-   },
+defineProps({
+  title: String,
+  content: String,
+  banner_image: [String, File],
+  published_at: [String, Date],
+  slug: String,
+  index: { type: Number, default: 0 },
 });
-
-const formatDate = (dateString) => {
-   if (!dateString) return '';
-   try {
-      const options = { year: 'numeric', month: 'short', day: 'numeric' };
-      const date = new Date(dateString);
-      if (isNaN(date.getTime())) return '';
-      return date.toLocaleDateString(undefined, options);
-   } catch (e) {
-      return '';
-   }
+const formatDate = (value) => {
+  const date = new Date(value);
+  return Number.isNaN(date.getTime())
+    ? ""
+    : date.toLocaleDateString(undefined, {
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+      });
 };
-
-const contentTruncated = (content, length = 70) => {
-   if (!content) return '';
-   return content.length > length ? content.substring(0, length) + '...' : content;
+const excerpt = (html) => {
+  if (!html) return "";
+  const text = html
+    .replace(/<[^>]*>/g, " ")
+    .replace(/&nbsp;/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+  return text.length > 180 ? `${text.slice(0, 180)}…` : text;
 };
 </script>
 
 <template>
-   <RouterLink :to="`/blogs/${slug}`" class="w-full max-w-sm">
-      <div
-         class="relative h-[400px] w-full flex flex-col p-4 bg-white/5 group rounded-xl border border-white/5 
-               hover:bg-white/10 hover:border-white/20 transition-all duration-300 group"
+  <RouterLink
+    :to="`/blogs/${slug}`"
+    class="article-row group grid gap-5 border-b border-[var(--line)] py-7 first:pt-0 sm:grid-cols-[52px_1fr_180px] sm:items-center"
+  >
+    <span class="hidden font-mono text-xs text-[var(--muted)] sm:block">{{
+      String(index + 1).padStart(2, "0")
+    }}</span>
+    <div class="min-w-0 order-2 sm:order-none">
+      <time
+        class="text-[11px] font-bold uppercase tracking-[.16em] text-[var(--primary)]"
+        >{{ formatDate(published_at) }}</time
       >
-         <!-- Banner -->
-         <div class="w-full h-36 rounded-lg mb-3 bg-gradient-to-br from-gray-700 to-gray-900 relative overflow-hidden">
-            <img
-               :src="banner_image"
-               class="w-full h-full group-hover:scale-125 duration-300 object-cover object-center"
-               alt="Blog banner"
-            />
-            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-         </div>
-
-         <!-- Date -->
-         <div class="text-xs text-gray-400 mb-2 text-right">
-            {{ formatDate(published_at) }}
-         </div>
-
-         <!-- Title -->
-         <h3
-            class="text-xl font-semibold text-white group-hover:text-cyan-400 mb-2 
-                  transition-colors duration-300 line-clamp-2 min-h-[3rem]"
-         >
-            {{ title }}
-         </h3>
-
-         <!-- Content -->
-         <div
-            class="text-sm text-gray-300 mb-4 min-h-[3.5rem] line-clamp-3"
-            v-html="contentTruncated(content, 100)"
-         ></div>
-
-         <!-- Read Icon -->
-         <div
-            class="absolute bottom-3 right-3 text-gray-400
-                  group-hover:text-cyan-400 transition-colors duration-300 
-                  flex items-center justify-center w-30 h-7 rounded-full bg-white/5"
-         >
-            <div class="flex items-center gap-x-3 text-sm">
-               <p>Read More</p>
-               <i class="pi pi-arrow-up-right bg-white/10 group-hover:bg-cyan-500/40 p-1 rounded-full"></i>
-            </div>
-         </div>
-      </div>
-   </RouterLink>
+      <h2
+        class="mt-2 text-2xl font-bold leading-tight tracking-[-.035em] text-[var(--ink)] transition group-hover:text-[var(--primary)] sm:text-3xl"
+      >
+        {{ title }}
+      </h2>
+      <p class="mt-3 line-clamp-2 text-sm leading-relaxed text-[var(--muted)]">
+        {{ excerpt(content) }}
+      </p>
+      <span
+        class="mt-4 inline-flex items-center gap-2 text-xs font-bold text-[var(--ink)]"
+        >Read article
+        <i
+          class="pi pi-arrow-right text-[10px] transition-transform group-hover:translate-x-1"
+        ></i
+      ></span>
+    </div>
+    <div
+      class="order-1 h-48 overflow-hidden rounded-[1.2rem] bg-purple-500/10 sm:order-none sm:h-32"
+    >
+      <img
+        :src="banner_image"
+        :alt="title"
+        loading="lazy"
+        class="h-full w-full object-cover transition duration-700 group-hover:scale-105"
+      />
+    </div>
+  </RouterLink>
 </template>
+
+<style scoped>
+.article-row {
+  position: relative;
+}
+.article-row::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 0;
+  height: 1px;
+  background: var(--primary);
+  transition: width 0.45s ease;
+}
+.article-row:hover::after {
+  width: 100%;
+}
+</style>

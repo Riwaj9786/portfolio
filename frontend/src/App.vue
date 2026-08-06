@@ -2,16 +2,20 @@
 import { RouterView } from 'vue-router'
 import NavBar from './components/NavBar/NavBar.vue'
 import FooterComponent from './components/Footer/FooterComponent.vue'
+import WeatherAmbience from './components/Ambience/WeatherAmbience.vue'
 </script>
 
 <template>
-  <div class="min-h-screen flex flex-col">
+  <div class="site-shell flex flex-col">
+    <WeatherAmbience />
     <NavBar />
-    
-    <main class="flex-1">
-      <RouterView />
+    <main class="site-main flex-1">
+      <RouterView v-slot="{ Component }">
+        <Transition name="page" mode="out-in">
+          <component :is="Component" />
+        </Transition>
+      </RouterView>
     </main>
-
-    <!-- <FooterComponent /> -->
+    <footer class="site-footer w-full"><FooterComponent /></footer>
   </div>
 </template>

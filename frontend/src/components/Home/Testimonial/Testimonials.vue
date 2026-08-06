@@ -2,150 +2,114 @@
 import { ref, onMounted, onUnmounted } from "vue";
 import axiosInstance from "@/axios";
 
-const data = ref([]);
-const loading = ref(true);
-const error = ref(null);
-const currentIndex = ref(0);
-let intervalId = null;
-
-const startRotation = () => {
-   clearInterval(intervalId);
-   intervalId = setInterval(() => {
-      if (data.value.length > 0) {
-         currentIndex.value = (currentIndex.value + 1) % data.value.length;
-      }
-   }, 6000);
+const data = ref([]),
+  loading = ref(true),
+  error = ref(null),
+  currentIndex = ref(0);
+let intervalId;
+const rotate = () => {
+  clearInterval(intervalId);
+  if (data.value.length > 1)
+    intervalId = setInterval(
+      () => (currentIndex.value = (currentIndex.value + 1) % data.value.length),
+      7000,
+    );
 };
-
-const showNext = () => {
-   currentIndex.value = (currentIndex.value + 1) % data.value.length;
-   startRotation();
+const move = (direction) => {
+  currentIndex.value =
+    (currentIndex.value + direction + data.value.length) % data.value.length;
+  rotate();
 };
-
-const showPrev = () => {
-   currentIndex.value =
-      (currentIndex.value - 1 + data.value.length) % data.value.length;
-   startRotation();
-};
-
-const jumpToIndex = (index) => {
-   currentIndex.value = index;
-   startRotation();
-};
-
 onMounted(async () => {
-   try {
-      const response = await axiosInstance.get("testimonial/testimonials/");
-      data.value = response.data.filter((item) => item.to_publish === true);
-      if (data.value.length > 1) {
-         startRotation();
-      }
-   } catch (err) {
-      error.value = "Error fetching data!";
-      console.error(err);
-   } finally {
-      loading.value = false;
-   }
+  try {
+    data.value = (
+      await axiosInstance.get("testimonial/testimonials/")
+    ).data.filter((item) => item.to_publish);
+    rotate();
+  } catch (_) {
+    error.value = "Testimonials are unavailable right now.";
+  } finally {
+    loading.value = false;
+  }
 });
-
-onUnmounted(() => {
-   clearInterval(intervalId);
-});
+onUnmounted(() => clearInterval(intervalId));
+const initials = (name) =>
+  name
+    ?.split(" ")
+    .map((word) => word[0])
+    .join("")
+    .slice(0, 2)
+    .toUpperCase();
 </script>
 
 <template>
-   <div class="mx-auto">
-      <!-- Testimonial card -->
-      <div
-         v-if="!loading && data.length"
-         class="flex bg-white/5 hover:bg-white/10 p-6 rounded-xl transition-all duration-500"
-      >
-         <div
-         class="flex flex-col md:flex-row items-center justify-center"
-         >
-            <!-- Left: Image and Info -->
-            <div
-               class="flex flex-col items-center text-center md:text-left md:w-1/3"
+  <div v-if="loading" class="surface h-72 animate-pulse"></div>
+  <div
+    v-else-if="data.length"
+    class="surface relative overflow-hidden p-5 sm:p-8 lg:p-9"
+  >
+    <span
+      class="absolute -right-4 -top-12 select-none font-serif text-[12rem] leading-none text-purple-500/10"
+      >“</span
+    >
+    <Transition name="page" mode="out-in">
+      <div :key="currentIndex" class="relative">
+        <div class="mb-7 flex items-center gap-2 text-[var(--primary)]">
+          <p>Testimonials</p>
+          <i v-for="n in 5" :key="n" class="pi pi-star-fill text-xs"></i>
+        </div>
+        <blockquote
+          class="max-w-2xl text-sm font-light leading-relaxed text-justify tracking-[-.02em] text-[var(--ink)] sm:text-md"
+        >
+          “{{ data[currentIndex].testimonial }}”
+        </blockquote>
+        <div
+          class="mt-8 flex flex-wrap items-center justify-between gap-5 border-t border-[var(--line)] pt-6"
+        >
+          <div class="flex items-center gap-4">
+            <img
+              v-if="data[currentIndex].image"
+              :src="data[currentIndex].image"
+              :alt="data[currentIndex].name"
+              class="h-12 w-12 rounded-full object-cover ring-2 ring-purple-400/25"
+            />
+            <span
+              v-else
+              class="grid h-12 w-12 place-items-center rounded-full bg-[var(--primary)] text-sm font-bold text-white"
+              >{{ initials(data[currentIndex].name) }}</span
             >
-               <!-- Image -->
-               <div class="h-24 w-24 rounded-full overflow-hidden bg-gray-300">
-                  <img
-                  v-if="data[currentIndex].image"
-                  :src="data[currentIndex].image"
-                  alt="Profile Image"
-                  class="h-full w-full object-cover"
-                  loading="lazy"
-                  />
-                  <div
-                  v-else
-                  class="flex items-center justify-center h-full w-full text-3xl font-bold text-white bg-blue-600"
-                  >
-                  {{
-                     data[currentIndex].name
-                        .split(" ")
-                        .map((word) => word[0])
-                        .join("")
-                        .toUpperCase()
-                  }}
-                  </div>
-               </div>
-
-               <!-- Name -->
-               <div
-                  class="text-white text-lg md:text-xl font-semibold truncate max-w-[200px]"
-               >
-                  {{ data[currentIndex].name }}
-               </div>
-
-               <!-- Position -->
-               <div
-                  class="text-gray-300 text-xs md:text-sm uppercase truncate max-w-[200px]"
-               >
-                  {{ data[currentIndex].position }}
-               </div>
-
-               <!-- Company -->
-               <div
-                  class="text-gray-300 text-xs md:text-sm truncate max-w-[200px]"
-               >
-                  {{ data[currentIndex].company }}
-               </div>
+            <div>
+              <p class="font-bold text-[var(--ink)]">
+                {{ data[currentIndex].name }}
+              </p>
+              <p class="text-xs text-[var(--muted)]">
+                {{ data[currentIndex].position
+                }}<span v-if="data[currentIndex].company">
+                  · {{ data[currentIndex].company }}</span
+                >
+              </p>
             </div>
-
-            <!-- Right: Testimonial text -->
-            <div
-               class="flex min-w-0 items-center justify-center p-6"
-               style="word-break: break-word"
+          </div>
+          <div v-if="data.length > 1" class="flex gap-2">
+            <button
+              class="testimonial-arrow"
+              aria-label="Previous testimonial"
+              @click="move(-1)"
             >
-               <blockquote
-                  class="text-justify text-white md:px-4 before:content-['“'] after:content-['”']"
-               >
-                  {{ data[currentIndex].testimonial }}
-               </blockquote>
-            </div>
-         </div>
+              <i class="pi pi-arrow-left"></i></button
+            ><button
+              class="testimonial-arrow"
+              aria-label="Next testimonial"
+              @click="move(1)"
+            >
+              <i class="pi pi-arrow-right"></i>
+            </button>
+          </div>
+        </div>
       </div>
-
-      <!-- Pagination Dots OUTSIDE the testimonial card -->
-      <div
-         v-if="!loading && data.length > 1"
-         class="flex justify-center space-x-3 mt-4"
-      >
-         <button
-         v-for="(item, index) in data"
-         :key="index"
-         @click="jumpToIndex(index)"
-         :class="[
-            'h-4 w-4 rounded-full focus:outline-none',
-            currentIndex === index ? 'bg-white' : 'bg-white/40 hover:bg-white/70',
-         ]"
-         aria-label="'Go to testimonial ' + (index + 1)"
-         />
-      </div>
-
-      <!-- Loading and Error States -->
-      <div v-else-if="loading" class="text-white text-center">Loading...</div>
-      <div v-else class="text-red-400 text-center">{{ error }}</div>
-   </div>
+    </Transition>
+  </div>
+  <div v-else class="surface p-8 text-center text-sm text-[var(--muted)]">
+    {{ error || "Testimonials coming soon." }}
+  </div>
 </template>
-

@@ -6,7 +6,7 @@ import BlogsPage from '@/components/Blogs/BlogsPage.vue';
 
 <template>
    <div class="flex flex-col min-h-screen">
-      <div class="flex-grow text-white">
+      <div class="flex-grow text-[var(--ink)]">
          <BlogsPage />
       </div>
    </div>

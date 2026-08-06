@@ -5,11 +5,13 @@ from skills.models import SkillCategory, Skill
 
 @admin.register(Skill)
 class SkillAdmin(admin.ModelAdmin):
-   list_display = ('name', 'level', 'logo_preview', 'category_type')
+   list_display = ('logo_preview', 'name', 'category_type', 'level_preview', 'updated_at')
    list_display_links = list_display
    readonly_fields = ('updated_at',)
    list_filter = ('category__name',)
-   list_per_page = 8
+   search_fields = ('name', 'category__name')
+   ordering = ('category__name', '-level')
+   list_per_page = 20
 
    def category_type(self, obj):
       if obj.category:
@@ -31,6 +33,11 @@ class SkillAdmin(admin.ModelAdmin):
    
    logo_preview.short_description = "Logo"
 
+   @admin.display(description="Rating", ordering="level")
+   def level_preview(self, obj):
+      width = min(max(obj.level * 10, 0), 100)
+      return format_html('<div style="min-width:130px"><strong>{}/10</strong><div style="height:5px;background:#eee;border-radius:5px;margin-top:5px"><div style="width:{}%;height:100%;background:linear-gradient(90deg,#7c3aed,#c026d3);border-radius:5px"></div></div></div>', obj.level, width)
+
 
 class SkillInline(admin.TabularInline):
    model = Skill
@@ -49,6 +56,10 @@ class SkillInline(admin.TabularInline):
 
 @admin.register(SkillCategory)
 class SkillCategoryAdmin(admin.ModelAdmin):
-   list_display = ('name',)
+   list_display = ('name', 'skill_count', 'updated_at')
    list_display_links = list_display
    inlines = (SkillInline,)
+
+   @admin.display(description="Skills")
+   def skill_count(self, obj):
+      return obj.skills.count()

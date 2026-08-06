@@ -4,14 +4,14 @@ import MediaLinks from '@/components/Home/Information/MediaLinks.vue';
 
 <template>
    <div
-      class="flex flex-wrap items-center justify-center md:justify-between gap-4 px-6 py-4 border-t w-full"
+      class="flex flex-wrap items-center justify-center md:justify-between gap-5 px-5 py-8 md:px-12 w-full"
    >
       <MediaLinks />
 
       <p
-         class="text-gray-400 text-sm w-full sm:w-auto text-center sm:text-left"
+         class="text-[var(--muted)] text-sm w-full sm:w-auto text-center sm:text-left"
       >
-         &copy; Er. Riwaj Bhurtel 2025. All rights reserved.
+         &copy; {{ new Date().getFullYear() }} Er. Riwaj Bhurtel. Built with care.
       </p>
    </div>
 </template>

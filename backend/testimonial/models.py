@@ -13,7 +13,7 @@ class TestimonialRequest(TimeStampedModel):
 
    class Meta:
       verbose_name = "Testimonial Request"
-      verbose_name_plural = f"{verbose_name}s"
+      verbose_name_plural = f"Requests"
 
 
 class Testimonial(TimeStampedModel):

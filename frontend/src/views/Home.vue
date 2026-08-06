@@ -1,5 +1,4 @@
 <script setup>
-import NavBar from "@/components/NavBar/NavBar.vue";
 import Information from "@/components/Home/Information/Information.vue";
 import Experience from "@/components/Home/Experience/Experience.vue";
 import ProjectsButton from "@/components/Home/ProjectsButton/ProjectsButton.vue";
@@ -28,41 +27,36 @@ onMounted(async () => {
 </script>
 
 <template>
-   <div class="grid grid-cols-1 lg:grid-cols-2">
-      <div class="relative h-auto">
-         <div class="lg:sticky top-0">
+   <div class="mx-auto grid max-w-[1440px] grid-cols-1 lg:grid-cols-[.9fr_1.1fr]">
+      <div class="relative border-b border-white/10 lg:border-b-0 lg:border-r">
+         <div class="lg:sticky lg:top-10">
             <Information />
          </div>
       </div>
-      <div class="flex flex-col">
-         <!-- Description with Skeleton Loader -->
-         <div class="text-justify text-xs hidden md:block md:text-sm xl:text-lg text-gray-200 mt-12 mx-12">
-            <div v-if="loading" class="space-y-3 animate-pulse">
+      <div class="flex min-w-0 flex-col px-5 py-8 sm:px-9 lg:px-12 lg:py-12 xl:px-12">
+         <section class="mb-8 reveal sm:mb-10">
+            <div v-if="loading" class="space-y-2 animate-pulse">
                <div class="h-4 w-full bg-gray-700 rounded"></div>
                <div class="h-4 w-5/6 bg-gray-700 rounded"></div>
                <div class="h-4 w-4/6 bg-gray-700 rounded"></div>
                <div class="h-4 w-full bg-gray-700 rounded"></div>
                <div class="h-4 w-3/4 bg-gray-700 rounded"></div>
             </div>
-            <p v-else-if="error" class="text-red-500">{{ error }}</p>
-            <div v-else v-html="data.description" class="text-justify description-container"></div>
-         </div>
-         
-         <div class="m-6 lg:m-12">
+            <p v-else-if="error" class="text-red-400">{{ error }}</p>
+            <div v-else v-html="data.description" class="description-container text-justify text-base md:text-md"></div>
+         </section>
+         <section class="mb-8 sm:mb-10">
             <Experience />
-         </div>
-         <div class="m-6 lg:m-12 flex justify-center">
-            <ProjectsButton/>
-         </div>
-         <div class="m-6 lg:m-12">
+         </section>
+         <section class="mb-8 sm:mb-10">
             <ServicesHome/>
-         </div>
-         <div class="m-6 lg:m-12">
+         </section>
+         <section class="mb-8 sm:mb-10">
             <Testimonials/>
-         </div>
-         <div class="m-6 lg:m-12">
+         </section>
+         <section>
             <SkillSet/>
-         </div>
+         </section>
       </div>
    </div>
 </template>
@@ -92,6 +86,6 @@ onMounted(async () => {
    /* ✅ Cyan text for bold content */
    .description-container b,
    .description-container strong {
-      color: #22d3ee; /* Tailwind's cyan-400 */
+      color: var(--primary); /* Tailwind's cyan-400 */
    }
 </style>

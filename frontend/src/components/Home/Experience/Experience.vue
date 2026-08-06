@@ -1,12 +1,36 @@
 <script setup>
 import ExperienceCard from './ExperienceCard.vue';
-import axios from 'axios';
 import axiosInstance from '@/axios';
-import { ref, onMounted } from 'vue';
+import { computed, ref, onMounted } from 'vue';
 
 const data = ref([]);
 const loading = ref(true);
 const error = ref(null);
+
+const groupedExperiences = computed(() => {
+   const companies = new Map();
+
+   data.value.forEach((experience) => {
+      const key = experience.company?.trim().toLocaleLowerCase() || `experience-${experience.id}`;
+      if (!companies.has(key)) {
+         companies.set(key, {
+            company: experience.company,
+            company_url: experience.company_url,
+            roles: []
+         });
+      }
+      const group = companies.get(key);
+      group.roles.push(experience);
+      if (!group.company_url && experience.company_url) group.company_url = experience.company_url;
+   });
+
+   return Array.from(companies.values())
+      .map((group) => ({
+         ...group,
+         roles: group.roles.sort((a, b) => new Date(b.start_date) - new Date(a.start_date))
+      }))
+      .sort((a, b) => new Date(b.roles[0]?.start_date) - new Date(a.roles[0]?.start_date));
+});
 
 onMounted(async () => {
    try {
@@ -47,16 +71,8 @@ onMounted(async () => {
 
    <!-- Actual Content -->
    <div v-else>
-      <div v-for="(experience, index) in data" :key="index">
-         <ExperienceCard 
-            :title="experience.title"
-            :company="experience.company"
-            :company_url="experience.company_url"
-            :start_date="experience.start_date"
-            :end_date="experience.end_date"
-            :job_type="experience.job_type"
-            :skills="experience.skills"
-         />
+      <div v-for="company in groupedExperiences" :key="company.company">
+         <ExperienceCard :company="company.company" :company_url="company.company_url" :roles="company.roles" />
       </div>
    </div>
 </template>

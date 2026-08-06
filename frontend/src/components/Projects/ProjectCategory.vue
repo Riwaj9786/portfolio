@@ -1,77 +1,10 @@
 <script setup>
-import { ref } from 'vue';
-
-const props = defineProps({
-   list: {
-      type: Array,
-      required: true
-   },
-   activeCategory: {
-      type: String, 
-      default: null
-   }
-});
-
-const emit = defineEmits(['categorySelected']);
-const isDropdownOpen = ref(false);
-
-const categoryClickHandler = (category) => {
-   emit('categorySelected', category.name); 
-   isDropdownOpen.value = false;
-};
+defineProps({ list: { type: Array, required: true }, activeCategory: { type: String, default: 'All' } })
+const emit = defineEmits(['categorySelected'])
 </script>
 
 <template>
-   <div class="md:bg-white/10 rounded-xl w-full shadow-md">
-      <!-- Mobile dropdown -->
-      <div class="relative lg:hidden">
-         <button 
-            @click="isDropdownOpen = !isDropdownOpen"
-            class="w-full flex justify-between items-center text-white bg-gray-800 text-sm md:text-lg font-medium px-4 py-2 rounded-lg hover:bg-gray-700 transition-all duration-200"
-         >
-            {{ activeCategory || "Select Category" }}
-            <span 
-               :class="isDropdownOpen ? 'rotate-180' : ''" 
-               class="transition-transform duration-200"
-            >
-               ⌄
-            </span>
-         </button>
-
-         <transition
-            enter-active-class="transition duration-150 ease-out"
-            leave-active-class="transition duration-100 ease-in"
-         >
-            <div 
-               v-if="isDropdownOpen"
-               class="absolute left-0 w-full bg-gray-900 rounded-lg mt-2 shadow-lg z-10 overflow-hidden"
-            >
-               <button 
-                  v-for="(category, index) in list" 
-                  :key="index"
-                  @click="categoryClickHandler(category)"
-                  class="w-full text-left px-4 py-2 text-white hover:bg-cyan-500 transition-colors duration-200"
-                  :class="{ 'bg-cyan-500': category.name === activeCategory }"
-               >
-                  {{ category.name }}
-               </button>
-            </div>
-         </transition>
-      </div>
-
-      <div class="hidden lg:grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 w-full">
-         <button 
-            v-for="(category, index) in list"
-            :key="index"
-            @click="categoryClickHandler(category)"
-            class="w-full py-2 text-white text-sm font-medium rounded-lg cursor-pointer transition-all duration-200 flex items-center justify-center text-center"
-            :class="{
-               'bg-cyan-500': category.name === activeCategory,
-               'hover:bg-cyan-500/50': category.name !== activeCategory
-            }"
-         >
-            {{ category.name }}
-         </button>
-      </div>
-   </div>
+  <div class="scrollbar-hide flex w-full gap-2 overflow-x-auto pb-1" role="tablist" aria-label="Project categories">
+    <button v-for="category in list" :key="category.name" type="button" role="tab" :aria-selected="category.name === activeCategory" class="shrink-0 rounded-full border px-4 py-2.5 text-sm font-semibold transition" :class="category.name === activeCategory ? 'border-[var(--primary)] bg-[var(--primary)] text-white shadow-lg shadow-purple-500/20' : 'border-[var(--line)] bg-[var(--surface)] text-[var(--muted)] hover:border-purple-400/40 hover:text-[var(--ink)]'" @click="emit('categorySelected', category.name)">{{ category.name }}</button>
+  </div>
 </template>

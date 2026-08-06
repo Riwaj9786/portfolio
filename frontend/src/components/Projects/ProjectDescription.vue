@@ -16,22 +16,22 @@ const expanded = ref(false);
 </script>
 
 <template>
-   <div class="text-white p-6">
+   <div class="px-1 py-3 text-[var(--ink)] sm:p-6">
       <div class="mb-6">
          <h1 class="font-bold text-xl lg:text-3xl">{{ name }}</h1>
       </div>
 
-      <div class="text-justify text-md lg:text-lg description-container">
+      <div class="description-container text-justify text-sm sm:text-base lg:text-lg">
          <div
             v-if="description && description.trim().length"
             v-html="description"
             :class="[
-               'text-gray-300 leading-relaxed transition-all duration-300 ease-in-out',
+               'text-[var(--muted)] leading-relaxed transition-all duration-300 ease-in-out',
                expanded ? '' : 'line-clamp-12 overflow-hidden'
             ]"
          ></div>
 
-         <div v-else class="text-gray-300 italic">No description available.</div>
+         <div v-else class="text-[var(--muted)] italic">No description available.</div>
 
          <button
             v-if="description && description.length > 800"
@@ -105,7 +105,7 @@ const expanded = ref(false);
 
    .description-container b,
    .description-container strong {
-      color: cyan;
+      color: var(--primary);
       opacity: 70%;
    }
 
@@ -115,28 +115,28 @@ const expanded = ref(false);
       margin: 1rem 0;
       font-size: 0.95rem;
       text-align: left;
-      background-color: #0B0A2B; /* Base color */
-      color: #f0f0f0;
+      background-color: var(--surface-solid);
+      color: var(--ink);
    }
 
    .description-container th,
    .description-container td {
-      border: 1px solid #23224B; /* 10% lighter */
+      border: 1px solid var(--line);
       padding: 0.75rem 1rem;
    }
 
    .description-container th {
-      background-color: #23224B; /* 10% lighter */
-      color: cyan;
+      background-color: color-mix(in srgb, var(--primary) 10%, var(--surface-solid));
+      color: var(--primary);
       font-weight: bold;
    }
 
    .description-container tr:nth-child(even) {
-      background-color: #090823; /* 10% darker */
+      background-color: color-mix(in srgb, var(--surface-solid) 88%, var(--bg));
    }
 
    .description-container tr:hover {
-      background-color: #050513; /* 20–30% darker */
+      background-color: color-mix(in srgb, var(--primary) 8%, var(--surface-solid));
    }
 
 </style>

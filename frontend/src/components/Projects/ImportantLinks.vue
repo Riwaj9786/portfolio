@@ -20,7 +20,7 @@ defineProps({
       class="relative bg-white/5 block w-full p-4 rounded-full group hover:bg-white/10 transition"
    >
       <div class="flex justify-between items-start w-full">
-         <div class="text-white group-hover:text-cyan-500">
+         <div class="text-[var(--ink)] group-hover:text-[var(--primary)]">
             {{ name }}
          </div>
       </div>
@@ -33,7 +33,7 @@ defineProps({
       </div>
    </a>
 
-   <div v-else class="p-4 rounded bg-white/5 text-white">
+   <div v-else class="p-4 rounded bg-white/5 text-[var(--ink)]">
       {{ name }}
    </div>
 </template>
