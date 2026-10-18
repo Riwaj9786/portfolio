@@ -1,7 +1,7 @@
 <script setup>
 import { computed, onMounted, ref } from "vue";
 import MediaLinks from "@/components/Home/Information/MediaLinks.vue";
-import axiosInstance from "@/axios";
+import portfolioContent from "@/content";
 
 const data = ref({}),
   isLoading = ref(true),
@@ -20,7 +20,7 @@ const mapUrl = computed(() =>
 onMounted(async () => {
   try {
     data.value =
-      (await axiosInstance.get("contact/information/")).data[0] || {};
+      (await portfolioContent.get("contact/information/")).data[0] || {};
   } catch (_) {
     error.value = "Contact details are unavailable.";
   } finally {

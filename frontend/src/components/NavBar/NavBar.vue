@@ -1,5 +1,5 @@
 <script setup>
-import axiosInstance from "@/axios";
+import portfolioContent from "@/content";
 import { ref, nextTick, onMounted, onUnmounted, watch } from "vue";
 import { useRoute } from "vue-router";
 import { useAmbience } from "@/composables/useAmbience";
@@ -24,7 +24,7 @@ const weatherIcon = {
 onMounted(async () => {
   try {
     data.value =
-      (await axiosInstance.get("information/resume/")).data[0] || data.value;
+      (await portfolioContent.get("information/resume/")).data[0] || data.value;
   } catch (_) {}
 });
 watch(
@@ -92,7 +92,7 @@ onUnmounted(() => {
     class="sticky top-0 z-40 border-b border-white/10 bg-[var(--surface)] backdrop-blur-xl"
   >
     <nav
-      class="mx-auto flex h-20 max-w-[1440px] items-center justify-between px-5 md:px-10 lg:px-14"
+      class="page-container flex h-20 items-center justify-between"
       aria-label="Main navigation"
     >
       <RouterLink
@@ -101,7 +101,7 @@ onUnmounted(() => {
         @click="menuOpen = false"
       >
         <img
-          src="@/assets/Rioz.jpg"
+          src="/uploads/branding/rioz.jpg"
           alt="Riwaj Bhurtel logo"
           class="h-10 w-10 shrink-0 rounded-full object-cover shadow-lg shadow-purple-500/20 ring-2 ring-purple-400/20"
         />
@@ -222,7 +222,7 @@ onUnmounted(() => {
         <div class="mobile-menu-panel mx-auto flex h-full max-w-lg flex-col px-5 pb-[max(1rem,env(safe-area-inset-bottom))] sm:px-9">
           <div class="flex h-20 shrink-0 items-center justify-between border-b border-[var(--line)]">
             <RouterLink to="/" class="flex items-center gap-3" @click="menuOpen=false">
-              <img src="@/assets/Rioz.jpg" alt="Riwaj Bhurtel logo" class="h-10 w-10 rounded-full object-cover ring-2 ring-purple-400/20" />
+              <img src="/uploads/branding/rioz.jpg" alt="Riwaj Bhurtel logo" class="h-10 w-10 rounded-full object-cover ring-2 ring-purple-400/20" />
               <span><strong class="block text-sm font-bold text-[var(--ink)]">Er. Riwaj Bhurtel</strong><small class="block text-[9px] font-bold uppercase tracking-[.13em] text-[var(--primary)]">Portfolio</small></span>
             </RouterLink>
             <button ref="closeButton" class="flex h-10 items-center gap-2 rounded-full bg-[var(--primary)] px-4 text-xs font-bold text-white shadow-lg shadow-purple-500/20" aria-label="Close menu" @click="menuOpen=false"><span>Close</span><i class="pi pi-times text-xs"></i></button>

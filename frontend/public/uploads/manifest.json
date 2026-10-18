@@ -1,0 +1,716 @@
+[
+  {
+    "original": "uploads/profile_pic/Riwaj_Portfolio_1.png",
+    "path": "uploads/account/user/er-riwaj-bhurtel-bc359e01.svg",
+    "label": "Er. Riwaj Bhurtel",
+    "placeholder": true
+  },
+  {
+    "original": "uploads/icons/skills/267_Python-512.webp",
+    "path": "uploads/skills/skill/python-256a6baa.svg",
+    "label": "Python",
+    "placeholder": true
+  },
+  {
+    "original": "uploads/icons/skills/django-icon.webp",
+    "path": "uploads/skills/skill/django-32f8343b.svg",
+    "label": "Django",
+    "placeholder": true
+  },
+  {
+    "original": "uploads/icons/skills/0_jwhnh7jJZeigWdtH.jpg",
+    "path": "uploads/skills/skill/django-channels-b4db76f2.svg",
+    "label": "Django Channels",
+    "placeholder": true
+  },
+  {
+    "original": "uploads/icons/skills/Celery_logo.png",
+    "path": "uploads/skills/skill/celery-92139afd.svg",
+    "label": "Celery",
+    "placeholder": true
+  },
+  {
+    "original": "uploads/icons/skills/HTML5_logo_and_wordmark.svg.png",
+    "path": "uploads/skills/skill/html-5-6ca2bd08.svg",
+    "label": "HTML 5",
+    "placeholder": true
+  },
+  {
+    "original": "uploads/icons/skills/CSS3_logo.svg.png",
+    "path": "uploads/skills/skill/css-3-4ba134fb.svg",
+    "label": "CSS 3",
+    "placeholder": true
+  },
+  {
+    "original": "uploads/icons/skills/JavaScript-logo.png",
+    "path": "uploads/skills/skill/javascript-82fad236.svg",
+    "label": "Javascript",
+    "placeholder": true
+  },
+  {
+    "original": "uploads/icons/skills/Tailwind_CSS_Logo.svg.png",
+    "path": "uploads/skills/skill/tailwindcss-defd551a.svg",
+    "label": "TailwindCSS",
+    "placeholder": true
+  },
+  {
+    "original": "uploads/icons/skills/bootstrap-5-logo-png_seeklogo-386607.png",
+    "path": "uploads/skills/skill/bootstrap-aed2d7b6.svg",
+    "label": "Bootstrap",
+    "placeholder": true
+  },
+  {
+    "original": "uploads/icons/skills/redis.webp",
+    "path": "uploads/skills/skill/redis-a2e2db02.svg",
+    "label": "Redis",
+    "placeholder": true
+  },
+  {
+    "original": "uploads/icons/skills/mysql.png",
+    "path": "uploads/skills/skill/mysql-e95bdd3c.svg",
+    "label": "MySQL",
+    "placeholder": true
+  },
+  {
+    "original": "uploads/icons/skills/mongo.png",
+    "path": "uploads/skills/skill/mongodb-1fd4fa80.svg",
+    "label": "MongoDB",
+    "placeholder": true
+  },
+  {
+    "original": "uploads/icons/skills/postgrese.png",
+    "path": "uploads/skills/skill/postgresql-a8324165.svg",
+    "label": "PostgreSQL",
+    "placeholder": true
+  },
+  {
+    "original": "uploads/icons/skills/97_Docker_logo_logos-512.webp",
+    "path": "uploads/skills/skill/docker-d6e7ad33.svg",
+    "label": "Docker",
+    "placeholder": true
+  },
+  {
+    "original": "uploads/icons/skills/download.png",
+    "path": "uploads/skills/skill/nginx-be4a9e96.svg",
+    "label": "NGINX",
+    "placeholder": true
+  },
+  {
+    "original": "uploads/icons/skills/Adobe_Photoshop_CC_icon.svg.png",
+    "path": "uploads/skills/skill/adobe-photoshop-1ce7abbb.svg",
+    "label": "Adobe Photoshop",
+    "placeholder": true
+  },
+  {
+    "original": "uploads/icons/skills/Adobe_Illustrator_CC_icon.svg.png",
+    "path": "uploads/skills/skill/adobe-illustrator-a511363e.svg",
+    "label": "Adobe Illustrator",
+    "placeholder": true
+  },
+  {
+    "original": "uploads/icons/skills/65e09abf952724557o1e3b7_Premiere_icon.png",
+    "path": "uploads/skills/skill/adobe-premiere-pro-c04839a7.svg",
+    "label": "Adobe Premiere Pro",
+    "placeholder": true
+  },
+  {
+    "original": "uploads/icons/skills/canva.webp",
+    "path": "uploads/skills/skill/canva-97bef3f5.svg",
+    "label": "Canva",
+    "placeholder": true
+  },
+  {
+    "original": "uploads/icons/skills/Rioz.jpg",
+    "path": "uploads/skills/skill/logo-design-fccc5fcf.svg",
+    "label": "Logo Design",
+    "placeholder": true
+  },
+  {
+    "original": "uploads/icons/skills/Vue.js_Logo_2.svg.png",
+    "path": "uploads/skills/skill/vue-js-569f1a26.svg",
+    "label": "Vue.js",
+    "placeholder": true
+  },
+  {
+    "original": "uploads/icons/skills/numpy.png",
+    "path": "uploads/skills/skill/numpy-24b72304.svg",
+    "label": "NumPy",
+    "placeholder": true
+  },
+  {
+    "original": "uploads/icons/skills/pandas.png",
+    "path": "uploads/skills/skill/pandas-a5dd47e9.svg",
+    "label": "Pandas",
+    "placeholder": true
+  },
+  {
+    "original": "uploads/icons/skills/Created_with_Matplotlib-logo.svg.png",
+    "path": "uploads/skills/skill/matplotlib-68203ac3.svg",
+    "label": "Matplotlib",
+    "placeholder": true
+  },
+  {
+    "original": "uploads/icons/skills/jira.jpeg",
+    "path": "uploads/skills/skill/jira-d79fd586.svg",
+    "label": "Jira",
+    "placeholder": true
+  },
+  {
+    "original": "uploads/icons/skills/restapi.png",
+    "path": "uploads/skills/skill/rest-apis-719d642d.svg",
+    "label": "REST APIs",
+    "placeholder": true
+  },
+  {
+    "original": "uploads/icons/skills/nodejs.png",
+    "path": "uploads/skills/skill/node-js-c26a2f62.svg",
+    "label": "Node.js",
+    "placeholder": true
+  },
+  {
+    "original": "uploads/icons/skills/233VSmAsi5mRqo1hd77OZcJQh2c.webp",
+    "path": "uploads/skills/skill/meta-business-suite-d7416f5e.svg",
+    "label": "Meta Business Suite",
+    "placeholder": true
+  },
+  {
+    "original": "uploads/icons/skills/excel.jpeg",
+    "path": "uploads/skills/skill/microsoft-excel-67381424.svg",
+    "label": "Microsoft Excel",
+    "placeholder": true
+  },
+  {
+    "original": "uploads/icons/skills/download_KgKY3lP.png",
+    "path": "uploads/skills/skill/seaborn-a74fd14a.svg",
+    "label": "Seaborn",
+    "placeholder": true
+  },
+  {
+    "original": "uploads/icons/skills/download_1.png",
+    "path": "uploads/skills/skill/sqlite-b62cdd18.svg",
+    "label": "SQLite",
+    "placeholder": true
+  },
+  {
+    "original": "uploads/icons/skills/download_2.png",
+    "path": "uploads/skills/skill/aws-ec2-e83663f6.svg",
+    "label": "AWS EC2",
+    "placeholder": true
+  },
+  {
+    "original": "uploads/icons/skills/download_3.png",
+    "path": "uploads/skills/skill/figma-d12d077a.svg",
+    "label": "Figma",
+    "placeholder": true
+  },
+  {
+    "original": "uploads/icons/skills/wordpress.jpeg",
+    "path": "uploads/skills/skill/wordpress-e762a678.svg",
+    "label": "WordPress",
+    "placeholder": true
+  },
+  {
+    "original": "uploads/icons/skills/ubuntu.jpeg",
+    "path": "uploads/skills/skill/linux-ubuntu-5d6082f0.svg",
+    "label": "Linux (Ubuntu)",
+    "placeholder": true
+  },
+  {
+    "original": "uploads/icons/services/351-3517325_web-development-icon-png-front-end-development-icon.png",
+    "path": "uploads/services/service/full-stack-development-27322191.svg",
+    "label": "Full Stack Development",
+    "placeholder": true
+  },
+  {
+    "original": "uploads/icons/services/graphics.png",
+    "path": "uploads/services/service/creative-design-branding-fea63b7a.svg",
+    "label": "Creative Design & Branding",
+    "placeholder": true
+  },
+  {
+    "original": "uploads/icons/services/9423005.png",
+    "path": "uploads/services/service/data-ai-exploration-54dacc06.svg",
+    "label": "Data & AI Exploration",
+    "placeholder": true
+  },
+  {
+    "original": "uploads/projects/banner_images/download.jpeg",
+    "path": "uploads/projects/project/real-time-chat-application-with-django-channels-knox-au-b092ed0e.svg",
+    "label": "Real-Time Chat Application with Django Channels & Knox Authentication (Backend)",
+    "placeholder": true
+  },
+  {
+    "original": "uploads/projects/banner_images/before_logo.jpg",
+    "path": "uploads/projects/project/brand-identity-logo-design-for-before-education-consult-1cf53363.svg",
+    "label": "Brand Identity & Logo Design for Before Education Consultancy",
+    "placeholder": true
+  },
+  {
+    "original": "uploads/projects/2_j2xyCOx.png",
+    "path": "uploads/projects/project/powering-sarbam-foods-with-django-a-complete-backend-fo-193d1ea1.svg",
+    "label": "Powering Sarbam Foods with Django: A Complete Backend for Stock, Orders, and Authentication",
+    "placeholder": true
+  },
+  {
+    "original": "uploads/projects/Screenshot_2025-03-28_at_5.50.48pm.png",
+    "path": "uploads/projects/project/rebranding-the-sweet-life-partner-logo-c8fbaece.svg",
+    "label": "Rebranding the Sweet Life Partner Logo",
+    "placeholder": true
+  },
+  {
+    "original": "uploads/projects/Screenshot_2025-03-28_at_5.52.34pm.png",
+    "path": "uploads/projects/project/tournament-digital-support-for-kandel-consultancy-cup-d1f480aa.svg",
+    "label": "Tournament Digital Support for Kandel Consultancy Cup",
+    "placeholder": true
+  },
+  {
+    "original": "uploads/projects/banner_images/edu-assist.png",
+    "path": "uploads/projects/project/advanced-assignment-and-student-management-system-with--3afaae0b.svg",
+    "label": "Advanced Assignment and Student Management System with Plagiarism Checker",
+    "placeholder": true
+  },
+  {
+    "original": "uploads/projects/banner_images/spark.png",
+    "path": "uploads/projects/project/a-complete-branding-journey-spark-international-educati-9438e5d3.svg",
+    "label": "A Complete Branding Journey: Spark International Education Consultancy",
+    "placeholder": true
+  },
+  {
+    "original": "uploads/projects/banner_images/Screenshot_2025-05-22_at_4.21.34pm.png",
+    "path": "uploads/projects/project/full-stack-developer-portfolio-django-vue-aws-60111720.svg",
+    "label": "Full-Stack Developer Portfolio – Django, Vue & AWS",
+    "placeholder": true
+  },
+  {
+    "original": "uploads/projects/banner_images/3D_Finish.png",
+    "path": "uploads/projects/project/digital-marketing-and-graphic-design-sweet-life-partner-e292270e.svg",
+    "label": "Digital Marketing and Graphic Design: Sweet Life Partner",
+    "placeholder": true
+  },
+  {
+    "original": "uploads/projects/banner_images/spark_logo.jpg",
+    "path": "uploads/projects/project/brand-identity-and-logo-design-spark-international-educ-a059d996.svg",
+    "label": "Brand Identity and Logo Design: Spark International Education Consultancy",
+    "placeholder": true
+  },
+  {
+    "original": "uploads/projects/banner_images/Retic_Logo.png",
+    "path": "uploads/projects/project/building-a-brand-logo-for-retic-films-0bf59f59.svg",
+    "label": "Building a Brand Logo for Retic Films",
+    "placeholder": true
+  },
+  {
+    "original": "uploads/projects/banner_images/387858555_2542713759218057_4250477230207252598_n_DS91lvB.jpg",
+    "path": "uploads/projects/project/logo-design-project-rotaract-club-of-tribhuvan-universi-0aade58b.svg",
+    "label": "Logo Design Project: Rotaract Club of Tribhuvan University",
+    "placeholder": true
+  },
+  {
+    "original": "uploads/projects/banner_images/BBT_Final.png",
+    "path": "uploads/projects/project/building-trust-through-bold-design-the-bbt-logo-project-66978d04.svg",
+    "label": "Building Trust Through Bold Design: The BBT Logo Project",
+    "placeholder": true
+  },
+  {
+    "original": "uploads/projects/banner_images/Emblem_of_Nepal_aG2rLC7.svg.png",
+    "path": "uploads/projects/project/web-development-and-system-enhancement-for-ndrrma-natio-e0228bea.svg",
+    "label": "Web Development and System Enhancement for NDRRMA (National Disaster Risk Reduction and Management Authority)",
+    "placeholder": true
+  },
+  {
+    "original": "uploads/projects/banner_images/final_mamaghar.jpg",
+    "path": "uploads/projects/project/rooted-in-culture-crafted-for-celebration-the-mama-ghar-f48d8b7c.svg",
+    "label": "Rooted in Culture, Crafted for Celebration: The Mama Ghar Entertainment Identity",
+    "placeholder": true
+  },
+  {
+    "original": "uploads/projects/banner_images/arima_logo.jpg",
+    "path": "uploads/projects/project/forged-in-foil-crafting-the-iconic-identity-of-arima-al-a001e0e3.svg",
+    "label": "Forged in Foil: Crafting the Iconic Identity of Arima Aluminium Packaging",
+    "placeholder": true
+  },
+  {
+    "original": "uploads/projects/banner_images/banner_arima.png",
+    "path": "uploads/projects/project/building-a-bold-digital-presence-for-arima-aluminium-pa-2c8a1a02.svg",
+    "label": "Building a Bold Digital Presence for Arima Aluminium Packaging",
+    "placeholder": true
+  },
+  {
+    "original": "uploads/projects/banner_images/1723204898518.jpeg",
+    "path": "uploads/projects/project/redefining-team-identity-official-jersey-design-for-pok-01eaf5ab.svg",
+    "label": "Redefining Team Identity: Official Jersey Design for Pokhara University Cricket Club",
+    "placeholder": true
+  },
+  {
+    "original": "uploads/projects/Screenshot_2025-05-22_at_6.55.39am.png",
+    "path": "uploads/projects/projectimage/real-time-chat-application-with-django-channels-knox-au-2608de3d.svg",
+    "label": "Real-Time Chat Application with Django Channels & Knox Authentication (Backend)",
+    "placeholder": true
+  },
+  {
+    "original": "uploads/projects/Screenshot_2025-05-22_at_6.56.56am.png",
+    "path": "uploads/projects/projectimage/real-time-chat-application-with-django-channels-knox-au-7885ab69.svg",
+    "label": "Real-Time Chat Application with Django Channels & Knox Authentication (Backend)",
+    "placeholder": true
+  },
+  {
+    "original": "uploads/projects/Screenshot_2025-05-22_at_7.27.11am.png",
+    "path": "uploads/projects/projectimage/powering-sarbam-foods-with-django-a-complete-backend-fo-ba9470d7.svg",
+    "label": "Powering Sarbam Foods with Django: A Complete Backend for Stock, Orders, and Authentication",
+    "placeholder": true
+  },
+  {
+    "original": "uploads/projects/Screenshot_2025-05-22_at_7.28.49am.png",
+    "path": "uploads/projects/projectimage/powering-sarbam-foods-with-django-a-complete-backend-fo-9d912f26.svg",
+    "label": "Powering Sarbam Foods with Django: A Complete Backend for Stock, Orders, and Authentication",
+    "placeholder": true
+  },
+  {
+    "original": "uploads/projects/spark_logo.jpg",
+    "path": "uploads/projects/projectimage/a-complete-branding-journey-spark-international-educati-d3100041.svg",
+    "label": "A Complete Branding Journey: Spark International Education Consultancy",
+    "placeholder": true
+  },
+  {
+    "original": "uploads/projects/spark_cover.jpg",
+    "path": "uploads/projects/projectimage/a-complete-branding-journey-spark-international-educati-2ef62380.svg",
+    "label": "A Complete Branding Journey: Spark International Education Consultancy",
+    "placeholder": true
+  },
+  {
+    "original": "uploads/projects/spark_congrats.jpg",
+    "path": "uploads/projects/projectimage/a-complete-branding-journey-spark-international-educati-74abfa5b.svg",
+    "label": "A Complete Branding Journey: Spark International Education Consultancy",
+    "placeholder": true
+  },
+  {
+    "original": "uploads/projects/hiring.jpg",
+    "path": "uploads/projects/projectimage/a-complete-branding-journey-spark-international-educati-ef481fde.svg",
+    "label": "A Complete Branding Journey: Spark International Education Consultancy",
+    "placeholder": true
+  },
+  {
+    "original": "uploads/projects/abroad_spark.jpg",
+    "path": "uploads/projects/projectimage/a-complete-branding-journey-spark-international-educati-288b90a0.svg",
+    "label": "A Complete Branding Journey: Spark International Education Consultancy",
+    "placeholder": true
+  },
+  {
+    "original": "uploads/projects/Screenshot_2025-05-22_at_3.30.36pm.png",
+    "path": "uploads/projects/projectimage/advanced-assignment-and-student-management-system-with--717afc6f.svg",
+    "label": "Advanced Assignment and Student Management System with Plagiarism Checker",
+    "placeholder": true
+  },
+  {
+    "original": "uploads/projects/Screenshot_2025-05-22_at_3.31.30pm.png",
+    "path": "uploads/projects/projectimage/advanced-assignment-and-student-management-system-with--329cd452.svg",
+    "label": "Advanced Assignment and Student Management System with Plagiarism Checker",
+    "placeholder": true
+  },
+  {
+    "original": "uploads/projects/Screenshot_2025-05-22_at_3.32.09pm.png",
+    "path": "uploads/projects/projectimage/advanced-assignment-and-student-management-system-with--3e6dfecf.svg",
+    "label": "Advanced Assignment and Student Management System with Plagiarism Checker",
+    "placeholder": true
+  },
+  {
+    "original": "uploads/projects/Screenshot_2025-05-22_at_3.32.25pm.png",
+    "path": "uploads/projects/projectimage/advanced-assignment-and-student-management-system-with--d3881380.svg",
+    "label": "Advanced Assignment and Student Management System with Plagiarism Checker",
+    "placeholder": true
+  },
+  {
+    "original": "uploads/projects/edu-assist.png",
+    "path": "uploads/projects/projectimage/advanced-assignment-and-student-management-system-with--33af5e54.svg",
+    "label": "Advanced Assignment and Student Management System with Plagiarism Checker",
+    "placeholder": true
+  },
+  {
+    "original": "uploads/projects/Screenshot_2025-05-22_at_4.21.34pm.png",
+    "path": "uploads/projects/projectimage/full-stack-developer-portfolio-django-vue-aws-b1814238.svg",
+    "label": "Full-Stack Developer Portfolio – Django, Vue & AWS",
+    "placeholder": true
+  },
+  {
+    "original": "uploads/projects/Screenshot_2025-05-22_at_4.39.47pm.png",
+    "path": "uploads/projects/projectimage/full-stack-developer-portfolio-django-vue-aws-da90212b.svg",
+    "label": "Full-Stack Developer Portfolio – Django, Vue & AWS",
+    "placeholder": true
+  },
+  {
+    "original": "uploads/projects/Screenshot_2025-05-22_at_4.40.58pm.png",
+    "path": "uploads/projects/projectimage/full-stack-developer-portfolio-django-vue-aws-0afa024c.svg",
+    "label": "Full-Stack Developer Portfolio – Django, Vue & AWS",
+    "placeholder": true
+  },
+  {
+    "original": "uploads/projects/before_logo_explain.png",
+    "path": "uploads/projects/projectimage/brand-identity-logo-design-for-before-education-consult-85c9a8e9.svg",
+    "label": "Brand Identity & Logo Design for Before Education Consultancy",
+    "placeholder": true
+  },
+  {
+    "original": "uploads/projects/before_logo.jpg",
+    "path": "uploads/projects/projectimage/brand-identity-logo-design-for-before-education-consult-7a4b9b03.svg",
+    "label": "Brand Identity & Logo Design for Before Education Consultancy",
+    "placeholder": true
+  },
+  {
+    "original": "uploads/projects/SLP_logo_explain.png",
+    "path": "uploads/projects/projectimage/rebranding-the-sweet-life-partner-logo-852b6a1f.svg",
+    "label": "Rebranding the Sweet Life Partner Logo",
+    "placeholder": true
+  },
+  {
+    "original": "uploads/projects/3D_Finish.png",
+    "path": "uploads/projects/projectimage/rebranding-the-sweet-life-partner-logo-18c297ea.svg",
+    "label": "Rebranding the Sweet Life Partner Logo",
+    "placeholder": true
+  },
+  {
+    "original": "uploads/projects/cover_slp.jpg",
+    "path": "uploads/projects/projectimage/digital-marketing-and-graphic-design-sweet-life-partner-564a638d.svg",
+    "label": "Digital Marketing and Graphic Design: Sweet Life Partner",
+    "placeholder": true
+  },
+  {
+    "original": "uploads/projects/Swing.png",
+    "path": "uploads/projects/projectimage/digital-marketing-and-graphic-design-sweet-life-partner-49d51219.svg",
+    "label": "Digital Marketing and Graphic Design: Sweet Life Partner",
+    "placeholder": true
+  },
+  {
+    "original": "uploads/projects/Logo_Christmas.png",
+    "path": "uploads/projects/projectimage/digital-marketing-and-graphic-design-sweet-life-partner-fb961cfc.svg",
+    "label": "Digital Marketing and Graphic Design: Sweet Life Partner",
+    "placeholder": true
+  },
+  {
+    "original": "uploads/projects/preference.png",
+    "path": "uploads/projects/projectimage/digital-marketing-and-graphic-design-sweet-life-partner-dec7de5d.svg",
+    "label": "Digital Marketing and Graphic Design: Sweet Life Partner",
+    "placeholder": true
+  },
+  {
+    "original": "uploads/projects/Kites_Dashain.png",
+    "path": "uploads/projects/projectimage/digital-marketing-and-graphic-design-sweet-life-partner-0d519ffc.svg",
+    "label": "Digital Marketing and Graphic Design: Sweet Life Partner",
+    "placeholder": true
+  },
+  {
+    "original": "uploads/projects/Purnima.png",
+    "path": "uploads/projects/projectimage/digital-marketing-and-graphic-design-sweet-life-partner-74547d03.svg",
+    "label": "Digital Marketing and Graphic Design: Sweet Life Partner",
+    "placeholder": true
+  },
+  {
+    "original": "uploads/projects/chowk_tira.png",
+    "path": "uploads/projects/projectimage/digital-marketing-and-graphic-design-sweet-life-partner-da77b95c.svg",
+    "label": "Digital Marketing and Graphic Design: Sweet Life Partner",
+    "placeholder": true
+  },
+  {
+    "original": "uploads/projects/sapana_ko_mayalu.png",
+    "path": "uploads/projects/projectimage/digital-marketing-and-graphic-design-sweet-life-partner-de439adb.svg",
+    "label": "Digital Marketing and Graphic Design: Sweet Life Partner",
+    "placeholder": true
+  },
+  {
+    "original": "uploads/projects/Kandel_Cup_Logo.png",
+    "path": "uploads/projects/projectimage/tournament-digital-support-for-kandel-consultancy-cup-a02a36e8.svg",
+    "label": "Tournament Digital Support for Kandel Consultancy Cup",
+    "placeholder": true
+  },
+  {
+    "original": "uploads/projects/Trophy_Night.png",
+    "path": "uploads/projects/projectimage/tournament-digital-support-for-kandel-consultancy-cup-3a885e3d.svg",
+    "label": "Tournament Digital Support for Kandel Consultancy Cup",
+    "placeholder": true
+  },
+  {
+    "original": "uploads/projects/league_table.jpg",
+    "path": "uploads/projects/projectimage/tournament-digital-support-for-kandel-consultancy-cup-c3907ec6.svg",
+    "label": "Tournament Digital Support for Kandel Consultancy Cup",
+    "placeholder": true
+  },
+  {
+    "original": "uploads/projects/yeti_draw.jpg",
+    "path": "uploads/projects/projectimage/tournament-digital-support-for-kandel-consultancy-cup-e9092745.svg",
+    "label": "Tournament Digital Support for Kandel Consultancy Cup",
+    "placeholder": true
+  },
+  {
+    "original": "uploads/projects/winners.jpg",
+    "path": "uploads/projects/projectimage/tournament-digital-support-for-kandel-consultancy-cup-42b07ca6.svg",
+    "label": "Tournament Digital Support for Kandel Consultancy Cup",
+    "placeholder": true
+  },
+  {
+    "original": "uploads/projects/spark_explain.png",
+    "path": "uploads/projects/projectimage/brand-identity-and-logo-design-spark-international-educ-d6a04544.svg",
+    "label": "Brand Identity and Logo Design: Spark International Education Consultancy",
+    "placeholder": true
+  },
+  {
+    "original": "uploads/projects/logo_description.jpg",
+    "path": "uploads/projects/projectimage/brand-identity-and-logo-design-spark-international-educ-1aae8588.svg",
+    "label": "Brand Identity and Logo Design: Spark International Education Consultancy",
+    "placeholder": true
+  },
+  {
+    "original": "uploads/projects/Retic_Logo_Explain.png",
+    "path": "uploads/projects/projectimage/building-a-brand-logo-for-retic-films-cb476919.svg",
+    "label": "Building a Brand Logo for Retic Films",
+    "placeholder": true
+  },
+  {
+    "original": "uploads/projects/retic_final.png",
+    "path": "uploads/projects/projectimage/building-a-brand-logo-for-retic-films-3f828437.svg",
+    "label": "Building a Brand Logo for Retic Films",
+    "placeholder": true
+  },
+  {
+    "original": "uploads/projects/387858555_2542713759218057_4250477230207252598_n_Qka4MN5.jpg",
+    "path": "uploads/projects/projectimage/logo-design-project-rotaract-club-of-tribhuvan-universi-a4af7ce0.svg",
+    "label": "Logo Design Project: Rotaract Club of Tribhuvan University",
+    "placeholder": true
+  },
+  {
+    "original": "uploads/projects/Rotaract_Wheel_5lGUxLY.png",
+    "path": "uploads/projects/projectimage/logo-design-project-rotaract-club-of-tribhuvan-universi-2c8daa0e.svg",
+    "label": "Logo Design Project: Rotaract Club of Tribhuvan University",
+    "placeholder": true
+  },
+  {
+    "original": "uploads/projects/BBT_Final.png",
+    "path": "uploads/projects/projectimage/building-trust-through-bold-design-the-bbt-logo-project-09ba4ae4.svg",
+    "label": "Building Trust Through Bold Design: The BBT Logo Project",
+    "placeholder": true
+  },
+  {
+    "original": "uploads/projects/Screenshot_2025-07-08_at_12.47.53pm.png",
+    "path": "uploads/projects/projectimage/web-development-and-system-enhancement-for-ndrrma-natio-c6c30618.svg",
+    "label": "Web Development and System Enhancement for NDRRMA (National Disaster Risk Reduction and Management Authority)",
+    "placeholder": true
+  },
+  {
+    "original": "uploads/projects/Screenshot_2025-07-08_at_12.48.08pm.png",
+    "path": "uploads/projects/projectimage/web-development-and-system-enhancement-for-ndrrma-natio-5ff0d54f.svg",
+    "label": "Web Development and System Enhancement for NDRRMA (National Disaster Risk Reduction and Management Authority)",
+    "placeholder": true
+  },
+  {
+    "original": "uploads/projects/Screenshot_2025-07-08_at_12.48.38pm.png",
+    "path": "uploads/projects/projectimage/web-development-and-system-enhancement-for-ndrrma-natio-bcb8f046.svg",
+    "label": "Web Development and System Enhancement for NDRRMA (National Disaster Risk Reduction and Management Authority)",
+    "placeholder": true
+  },
+  {
+    "original": "uploads/projects/unnamed.webp",
+    "path": "uploads/projects/projectimage/web-development-and-system-enhancement-for-ndrrma-natio-10ed5dd3.svg",
+    "label": "Web Development and System Enhancement for NDRRMA (National Disaster Risk Reduction and Management Authority)",
+    "placeholder": true
+  },
+  {
+    "original": "uploads/projects/1.png",
+    "path": "uploads/projects/projectimage/building-trust-through-bold-design-the-bbt-logo-project-2f6c55b5.svg",
+    "label": "Building Trust Through Bold Design: The BBT Logo Project",
+    "placeholder": true
+  },
+  {
+    "original": "uploads/projects/2.png",
+    "path": "uploads/projects/projectimage/building-trust-through-bold-design-the-bbt-logo-project-97d627ab.svg",
+    "label": "Building Trust Through Bold Design: The BBT Logo Project",
+    "placeholder": true
+  },
+  {
+    "original": "uploads/projects/3.png",
+    "path": "uploads/projects/projectimage/building-trust-through-bold-design-the-bbt-logo-project-dc025734.svg",
+    "label": "Building Trust Through Bold Design: The BBT Logo Project",
+    "placeholder": true
+  },
+  {
+    "original": "uploads/projects/4.png",
+    "path": "uploads/projects/projectimage/building-trust-through-bold-design-the-bbt-logo-project-4ddeebf4.svg",
+    "label": "Building Trust Through Bold Design: The BBT Logo Project",
+    "placeholder": true
+  },
+  {
+    "original": "uploads/projects/final_mamaghar.jpg",
+    "path": "uploads/projects/projectimage/rooted-in-culture-crafted-for-celebration-the-mama-ghar-338d3ad7.svg",
+    "label": "Rooted in Culture, Crafted for Celebration: The Mama Ghar Entertainment Identity",
+    "placeholder": true
+  },
+  {
+    "original": "uploads/projects/mamghar.png",
+    "path": "uploads/projects/projectimage/rooted-in-culture-crafted-for-celebration-the-mama-ghar-535c49ee.svg",
+    "label": "Rooted in Culture, Crafted for Celebration: The Mama Ghar Entertainment Identity",
+    "placeholder": true
+  },
+  {
+    "original": "uploads/projects/arima_logo.jpg",
+    "path": "uploads/projects/projectimage/forged-in-foil-crafting-the-iconic-identity-of-arima-al-49d198f0.svg",
+    "label": "Forged in Foil: Crafting the Iconic Identity of Arima Aluminium Packaging",
+    "placeholder": true
+  },
+  {
+    "original": "uploads/projects/Monogram_A_structure_representing_Initial.png",
+    "path": "uploads/projects/projectimage/forged-in-foil-crafting-the-iconic-identity-of-arima-al-ec200c12.svg",
+    "label": "Forged in Foil: Crafting the Iconic Identity of Arima Aluminium Packaging",
+    "placeholder": true
+  },
+  {
+    "original": "uploads/projects/product_arima.jpg",
+    "path": "uploads/projects/projectimage/building-a-bold-digital-presence-for-arima-aluminium-pa-9e2b8cb3.svg",
+    "label": "Building a Bold Digital Presence for Arima Aluminium Packaging",
+    "placeholder": true
+  },
+  {
+    "original": "uploads/projects/banner_arima.png",
+    "path": "uploads/projects/projectimage/building-a-bold-digital-presence-for-arima-aluminium-pa-59370fa4.svg",
+    "label": "Building a Bold Digital Presence for Arima Aluminium Packaging",
+    "placeholder": true
+  },
+  {
+    "original": "uploads/projects/arima_logo_RJzslLC.jpg",
+    "path": "uploads/projects/projectimage/building-a-bold-digital-presence-for-arima-aluminium-pa-d31cace1.svg",
+    "label": "Building a Bold Digital Presence for Arima Aluminium Packaging",
+    "placeholder": true
+  },
+  {
+    "original": "uploads/projects/1723204898518.jpeg",
+    "path": "uploads/projects/projectimage/redefining-team-identity-official-jersey-design-for-pok-284fa9ce.svg",
+    "label": "Redefining Team Identity: Official Jersey Design for Pokhara University Cricket Club",
+    "placeholder": true
+  },
+  {
+    "original": "uploads/projects/Untitled_design.png",
+    "path": "uploads/projects/projectimage/redefining-team-identity-official-jersey-design-for-pok-b533784e.svg",
+    "label": "Redefining Team Identity: Official Jersey Design for Pokhara University Cricket Club",
+    "placeholder": true
+  },
+  {
+    "original": "blog/banner_image/unnamed_7ryF6CR.webp",
+    "path": "uploads/blogs/blog/translating-needs-into-code-my-collaborative-role-at-nd-cb4a0971.svg",
+    "label": "Translating Needs into Code: My Collaborative Role at NDRRMA with Youth Innovation Lab",
+    "placeholder": true
+  },
+  {
+    "original": "uploads/contact_banner/Er_ZcZ3SFA._Riwaj_Bhurtel.png",
+    "path": "uploads/contact/contactinformation/let-s-build-something-together-e21bd250.svg",
+    "label": "Let’s build something together",
+    "placeholder": true
+  },
+  {
+    "original": "uploads/testimonials/image/binay.jpg",
+    "path": "uploads/testimonial/testimonial/binaya-dhakal-fd693332.svg",
+    "label": "Binaya Dhakal",
+    "placeholder": true
+  },
+  {
+    "original": "uploads/testimonials/image/santosh.jpg",
+    "path": "uploads/testimonial/testimonial/santosh-bhurtel-e865ccb2.svg",
+    "label": "Santosh Bhurtel",
+    "placeholder": true
+  }
+]

@@ -3,7 +3,7 @@ import { ref, onMounted, watch, computed } from "vue";
 import ProjectCard from "@/components/Projects/ProjectCard.vue";
 import ProjectCategory from "@/components/Projects/ProjectCategory.vue";
 import SearchComponent from "@/components/Projects/SearchComponent.vue";
-import axiosInstance from "@/axios";
+import portfolioContent from "@/content";
 
 const categories = ref([]);
 const projects = ref([]);
@@ -20,7 +20,7 @@ const itemsPerPage = 6;
 onMounted(async () => {
   try {
     loading.value = true;
-    const response = await axiosInstance.get("projects/categories/");
+    const response = await portfolioContent.get("projects/categories/");
     categories.value = [{ name: "All" }, ...response.data];
     selectedCategory.value = "All";
     await fetchProjects("All");
@@ -33,6 +33,7 @@ onMounted(async () => {
 
 const fetchProjects = async (category) => {
   selectedCategory.value = category;
+  errorMessage.value = null;
   loading.value = true;
   projects.value = [];
   filteredProjects.value = [];
@@ -40,10 +41,10 @@ const fetchProjects = async (category) => {
   try {
     let response;
     if (category === "All") {
-      response = await axiosInstance.get("projects/project/");
+      response = await portfolioContent.get("projects/project/");
     } else {
       const encodedCategory = encodeURIComponent(category);
-      response = await axiosInstance.get(
+      response = await portfolioContent.get(
         `projects/project/?category__name=${encodedCategory}`,
       );
     }
@@ -95,9 +96,9 @@ const goToPage = (page) => {
 
 <template>
   <main
-    class="mx-auto w-full max-w-[1440px] px-5 py-9 sm:px-9 sm:py-12 lg:px-14 lg:py-20"
+    class="page-container py-9 sm:py-12 lg:py-20"
   >
-    <header class="mb-10 grid items-end gap-6 sm:mb-14 sm:gap-8 lg:grid-cols-[1fr_360px]">
+    <header class="mb-2 grid items-end gap-6 sm:mb-6 sm:gap-8 lg:grid-cols-[1fr_360px]">
       <div>
         <h1 class="section-title max-w-3xl">
           Thoughtful work,<br /><span class="text-[var(--primary)]"
@@ -113,7 +114,7 @@ const goToPage = (page) => {
     </header>
 
     <section
-      class="sticky top-20 z-20 -mx-2 mb-6 border-y border-[var(--line)] bg-[color-mix(in_srgb,var(--bg)_86%,transparent)] px-2 py-3 backdrop-blur-xl sm:mb-8 sm:py-4"
+      class="py-3"
     >
       <ProjectCategory
         v-if="categories.length"
@@ -123,7 +124,7 @@ const goToPage = (page) => {
       />
     </section>
 
-    <div class="mb-6 flex items-center justify-between gap-4">
+    <div class="mb-6 flex items-center justify-between">
       <p class="text-sm text-[var(--muted)]">
         <strong class="text-[var(--ink)]">{{ filteredProjects.length }}</strong>
         {{ filteredProjects.length === 1 ? "project" : "projects"
@@ -192,7 +193,7 @@ const goToPage = (page) => {
       </button>
     </div>
 
-    <div v-else class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+    <div v-else-if="!errorMessage" class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
       <ProjectCard
         v-for="project in paginatedProjects"
         :key="project.id || project.slug"

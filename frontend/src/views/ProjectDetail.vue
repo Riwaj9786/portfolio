@@ -5,37 +5,32 @@ import SkillButton from "@/components/Home/Skills/SkillButton.vue";
 import ImportantLinks from "@/components/Projects/ImportantLinks.vue";
 import ProjectImageSlider from "@/components/Projects/ProjectImageSlider.vue";
 
-import { ref, onMounted } from "vue";
+import { ref, watch } from "vue";
 import { useRoute } from "vue-router";
-import axiosInstance from "@/axios";
+import portfolioContent from "@/content";
 
 const route = useRoute();
-const slug = route.params.slug;
 
 const project = ref([]);
 const loading = ref(true);
 const error = ref(null);
 
-onMounted(async () => {
+const bannerFailed = ref(false);
+watch(() => route.params.slug, async (slug, _, onCleanup) => {
+  let stale = false;
+  onCleanup(() => { stale = true; });
+  loading.value = true;
+  error.value = null;
+  bannerFailed.value = false;
   try {
-    const response = await axiosInstance.get(`projects/project/${slug}/`);
-    project.value = response.data;
+    const response = await portfolioContent.get(`projects/project/${slug}/`);
+    if (!stale) project.value = response.data;
   } catch (err) {
-    error.value = err.response?.data?.detail || err.message;
+    if (!stale) error.value = err.response?.data?.detail || err.message;
   } finally {
-    loading.value = false;
+    if (!stale) loading.value = false;
   }
-});
-
-const isBannerFullscreen = ref(false);
-
-const openBannerFullscreen = () => {
-  isBannerFullscreen.value = true;
-};
-
-const closeBannerFullscreen = () => {
-  isBannerFullscreen.value = false;
-};
+}, { immediate: true });
 </script>
 
 <template>
@@ -62,28 +57,39 @@ const closeBannerFullscreen = () => {
         class="order-first inline-flex items-center gap-2 text-sm font-semibold text-[var(--muted)] hover:text-[var(--primary)] lg:col-span-2"
         ><i class="pi pi-arrow-left text-xs"></i> All projects</RouterLink
       >
-      <div class="order-2 min-w-0 lg:order-none">
+      <div class="order-2 min-w-0 space-y-5 lg:order-none lg:space-y-7">
+        <nav class="flex flex-wrap gap-4 px-1 text-[11px] font-semibold text-[var(--muted)]" aria-label="Project sections">
+          <a href="#project-overview" class="hover:text-[var(--primary)]">Overview</a>
+          <a v-if="project.project_images?.length" href="#project-gallery" class="hover:text-[var(--primary)]">Gallery</a>
+        </nav>
+        <section id="project-overview" class="surface scroll-mt-28 p-1 sm:p-2" aria-label="Project overview">
         <ProjectDescription
           :name="project.name"
           :description="project.description"
         />
-        <div class="mt-7">
+        </section>
+        <section v-if="project.project_images?.length" id="project-gallery" class="surface scroll-mt-28 p-4 sm:p-6" aria-labelledby="project-gallery-title">
+          <div class="flex items-center justify-between gap-3"><h2 id="project-gallery-title" class="text-sm font-bold text-[var(--ink)] sm:text-base">Project gallery</h2><span class="text-[10px] text-[var(--muted)]">{{ project.project_images.length }} images</span></div>
           <ProjectImageSlider
-            v-if="project.project_images?.length"
             :images="project.project_images"
           />
-        </div>
+        </section>
       </div>
 
       <aside
-        class="detail-aside order-1 flex h-fit flex-col gap-y-6 p-4 sm:p-5 lg:order-none lg:sticky lg:top-28"
+        id="project-details" aria-label="Project details"
+        class="detail-aside scroll-mt-28 order-1 flex h-fit flex-col gap-y-6 p-4 sm:p-5 lg:order-none lg:sticky lg:top-28"
       >
-        <div class="overflow-hidden rounded-[1.2rem] bg-purple-500/10">
+        <div class="flex items-center justify-between gap-2 border-b border-[var(--line)] pb-3"><p class="text-[10px] font-bold uppercase tracking-[.15em] text-[var(--primary)]">Project at a glance</p><i class="pi pi-briefcase text-xs text-[var(--muted)]" aria-hidden="true"></i></div>
+        <div class="relative overflow-hidden rounded-[1.2rem] bg-purple-500/10">
           <img
+            v-if="project.banner_image && !bannerFailed"
+            @error="bannerFailed = true"
             class="aspect-[4/3] w-full object-cover transition duration-500 hover:scale-105"
             :src="project.banner_image"
             :alt="project.name"
           />
+          <div v-else class="detail-thumbnail aspect-[4/3]" aria-hidden="true"><span>{{ project.name?.slice(0, 1) }}</span></div>
         </div>
 
         <ProjectSideHandles
@@ -93,7 +99,7 @@ const closeBannerFullscreen = () => {
           :category="project.category"
         />
 
-        <div>
+        <div class="border-t border-[var(--line)] pt-4">
           <p
             class="mb-3 text-xs font-bold uppercase tracking-[.16em] text-[var(--muted)]"
           >
@@ -108,7 +114,7 @@ const closeBannerFullscreen = () => {
           </div>
         </div>
 
-        <div v-if="project.project_links && project.project_links.length">
+        <div v-if="project.project_links && project.project_links.length" class="border-t border-[var(--line)] pt-4">
           <p
             class="mb-3 text-xs font-bold uppercase tracking-[.16em] text-[var(--muted)]"
           >
@@ -117,13 +123,14 @@ const closeBannerFullscreen = () => {
           <div class="flex flex-wrap gap-2">
             <ImportantLinks
               v-for="(link, index) in project.project_links"
+              :key="index"
               :name="link.name"
               :link="link.link"
             />
           </div>
         </div>
 
-        <div v-if="project.distinct_features" class="description-container text-justify">
+        <div v-if="project.distinct_features" class="description-container border-t border-[var(--line)] pt-4">
           <p
             class="mb-3 text-xs font-bold uppercase tracking-[.16em] text-[var(--muted)]"
           >
@@ -170,4 +177,10 @@ const closeBannerFullscreen = () => {
 .description-container a {
   text-decoration: underline;
 }
+</style>
+
+<style scoped>
+.detail-thumbnail { display:grid;place-items:center;overflow:hidden;background:radial-gradient(ellipse at 20% 0%,color-mix(in srgb,var(--primary) 30%,transparent),transparent 70%),var(--bg-2); }
+.detail-thumbnail span { display:grid;place-items:center;width:110px;height:110px;background:linear-gradient(135deg,var(--primary-bright),var(--primary));border-radius:30%;color:white;font-size:4.5rem;font-weight:800;box-shadow:15px 20px 40px color-mix(in srgb,var(--primary) 20%,transparent); }
+a:focus-visible { outline:2px solid var(--primary);outline-offset:4px; }
 </style>

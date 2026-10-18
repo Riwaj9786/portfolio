@@ -3,6 +3,7 @@ import { RouterView } from 'vue-router'
 import NavBar from './components/NavBar/NavBar.vue'
 import FooterComponent from './components/Footer/FooterComponent.vue'
 import WeatherAmbience from './components/Ambience/WeatherAmbience.vue'
+import ContentSearchChat from './components/Search/ContentSearchChat.vue'
 </script>
 
 <template>
@@ -17,5 +18,6 @@ import WeatherAmbience from './components/Ambience/WeatherAmbience.vue'
       </RouterView>
     </main>
     <footer class="site-footer w-full"><FooterComponent /></footer>
+    <ContentSearchChat />
   </div>
 </template>

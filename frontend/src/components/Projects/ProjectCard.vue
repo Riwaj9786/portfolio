@@ -1,7 +1,8 @@
 <script setup>
 import SkillButton from "@/components/Home/Skills/SkillButton.vue";
+import { ref, watch } from "vue";
 
-defineProps({
+const props = defineProps({
   name: String,
   banner_image: [String, File],
   skills: { type: Array, default: () => [] },
@@ -10,6 +11,8 @@ defineProps({
   end_date: [String, Date],
   slug: String,
 });
+const imageFailed = ref(false);
+watch(() => props.banner_image, () => { imageFailed.value = false; });
 const formatDate = (value) => {
   if (!value) return "";
   const date = new Date(value);
@@ -41,11 +44,19 @@ const spotlight = (event) => {
         class="relative h-52 overflow-hidden rounded-[1.2rem] bg-purple-500/10 sm:h-60"
       >
         <img
+          v-if="banner_image && !imageFailed"
           :src="banner_image"
           :alt="name"
           loading="lazy"
+          @error="imageFailed = true"
           class="h-full w-full object-cover transition duration-700 ease-out group-hover:scale-105"
         />
+        <div v-else class="generated-thumbnail" aria-hidden="true">
+          <span class="thumbnail-ring ring-one"></span>
+          <span class="thumbnail-ring ring-two"></span>
+          <span class="thumbnail-orb"></span>
+          <span class="thumbnail-letter">{{ (name || 'Project').slice(0, 1) }}</span>
+        </div>
         <div
           class="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent"
         ></div>
@@ -97,6 +108,12 @@ const spotlight = (event) => {
 </template>
 
 <style scoped>
+.generated-thumbnail { position:absolute;inset:0;display:grid;place-items:center;overflow:hidden;background:radial-gradient(ellipse at 20% 10%,color-mix(in srgb,var(--primary) 25%,transparent),transparent 70%),var(--bg-2); }
+.thumbnail-ring { position:absolute;width:300px;height:300px;border:1px solid color-mix(in srgb,var(--primary) 45%,transparent);border-radius:50%; }
+.ring-one { left:5%;top:-45%;transform:rotate(-35deg) scaleX(.55); }
+.ring-two { right:0;bottom:-60%;transform:rotate(40deg) scaleX(.6); }
+.thumbnail-orb { position:absolute;width:115px;height:115px;border-radius:30%;background:linear-gradient(140deg,color-mix(in srgb,var(--primary) 50%,var(--surface-solid)),var(--primary));transform:rotate(-25deg);box-shadow:15px 20px 30px color-mix(in srgb,var(--primary) 18%,transparent); }
+.thumbnail-letter { position:relative;color:white;font-size:5rem;line-height:1;font-weight:800;letter-spacing:-.07em; }
 .project-card {
   position: relative;
   transition:

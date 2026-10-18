@@ -9,6 +9,20 @@ import BlogDetail from '@/views/BlogDetail.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
+  scrollBehavior(to, from, savedPosition) {
+    if (savedPosition) return savedPosition;
+    if (!to.hash) return { top: 0 };
+    return new Promise((resolve) => {
+      let attempts = 0;
+      function locate() {
+        const element = document.getElementById(to.hash.slice(1));
+        if (element) resolve({ el: element, top: 110, behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
+        else if (++attempts < 90) requestAnimationFrame(locate);
+        else resolve({ top: 0 });
+      }
+      requestAnimationFrame(locate);
+    });
+  },
   routes: [
     {
       path: '/',

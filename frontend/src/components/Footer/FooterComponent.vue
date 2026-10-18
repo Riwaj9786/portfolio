@@ -4,7 +4,7 @@ import MediaLinks from '@/components/Home/Information/MediaLinks.vue';
 
 <template>
    <div
-      class="flex flex-wrap items-center justify-center md:justify-between gap-5 px-5 py-8 md:px-12 w-full"
+      class="page-container flex flex-wrap items-center justify-center md:justify-between gap-5 py-8"
    >
       <MediaLinks />
 

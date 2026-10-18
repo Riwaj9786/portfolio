@@ -1,104 +1,105 @@
 <script setup>
-import SkillSetCategories from './SkillSetCategories.vue';
-import axiosInstance from '@/axios';
-import { ref, onMounted } from 'vue';
-import { computed } from 'vue';
+import SkillSetCategories from "./SkillSetCategories.vue";
+import portfolioContent from "@/content";
+import { computed, onMounted, ref, watch } from "vue";
+import { useRoute } from "vue-router";
 
 const categories = ref([]);
-const selectedCategory = ref(null);
+const route = useRoute();
+const selectedCategory = ref("");
 const skills = ref([]);
-const errorMessage = ref(null);
-const loading = ref(false);
-const imageLoaded = ref({}); // Track loaded state for each image
+const errorMessage = ref("");
+const loading = ref(true);
 
 onMounted(async () => {
-   try {
-      const response = await axiosInstance.get('skill/categories/');
-      categories.value = response.data.map(category => category.name);
-
-      if (categories.value.length > 0) {
-         selectedCategory.value = categories.value[0];
-         fetchSkills(categories.value[0]);
-      }
-   } catch (error) {
-      console.error("Error Fetching Categories:", error);
-      errorMessage.value = "Failed to load categories";
-   }
+  try {
+    const [categoryResponse, skillResponse] = await Promise.all([
+      portfolioContent.get("skill/categories/"),
+      portfolioContent.get("skill/"),
+    ]);
+    categories.value = categoryResponse.data;
+    skills.value = skillResponse.data;
+    selectedCategory.value = categories.value.some((c) => c.name === route.query.skillCategory)
+      ? route.query.skillCategory : categories.value[0]?.name || "";
+  } catch (_) {
+    errorMessage.value =
+      "Skills could not be loaded from the portfolio content.";
+  } finally {
+    loading.value = false;
+  }
+});
+watch(() => route.query.skillCategory, (category) => {
+  if (categories.value.some((c) => c.name === category)) selectedCategory.value = category;
 });
 
-const fetchSkills = async (category) => {
-   selectedCategory.value = category;
-   loading.value = true;
-   skills.value = [];
-   imageLoaded.value = {}; // Reset loaded state when fetching new skills
-
-   try {
-      const encodedCategory = encodeURIComponent(category);
-      const response = await axiosInstance.get(`skill/?category__name=${encodedCategory}`);
-      skills.value = response.data;
-      
-      // Initialize image loaded state
-      skills.value.forEach((skill, index) => {
-         imageLoaded.value[index] = false;
-      });
-   } catch (error) {
-      console.error("Error fetching skills:", error);
-      errorMessage.value = "Failed to load skills";
-   } finally {
-      loading.value = false;
-   }
-};
-
-const handleImageLoad = (index) => {
-   imageLoaded.value[index] = true;
-};
-
-const topSkills = computed(() => [...skills.value].sort((a, b) => Number(b.level) - Number(a.level)).slice(0, 6));
-const ratingLabel = level => Number(level) >= 9 ? 'Expert' : Number(level) >= 7 ? 'Advanced' : Number(level) >= 5 ? 'Proficient' : 'Growing';
+const categoryNames = computed(() => categories.value.map(({ name }) => name));
+const categoryById = computed(
+  () => new Map(categories.value.map(({ id, name }) => [id, name])),
+);
+const categoryName = (skill) =>
+  categoryById.value.get(skill.category) || "Other";
+const score = (level) => Math.min(10, Math.max(0, Number(level) || 0));
+const ratingLabel = (level) =>
+   score(level) >= 9
+      ? "Expert"
+      : score(level) >= 7
+         ? "Advanced"
+         : score(level) >= 5
+         ? "Proficient"
+         : "Growing";
+   const visibleSkills = computed(() => {
+   return skills.value
+      .filter((skill) => categoryName(skill) === selectedCategory.value)
+      .sort(
+         (a, b) => score(b.level) - score(a.level) || a.name.localeCompare(b.name),
+      );
+   });
 </script>
 
 <template>
-   <div class="surface h-full overflow-hidden p-4 sm:p-7">
-      <div class="mb-7 flex flex-col gap-4 border-b border-[var(--line)] pb-6 sm:flex-row sm:items-end sm:justify-between">
-         <div><p class="text-xs font-bold uppercase tracking-[.18em] text-[var(--primary)]">Top expertise</p><h2 class="mt-2 text-3xl font-bold tracking-[-.04em] text-[var(--ink)]">Skills by category</h2><p class="mt-2 max-w-md text-sm text-[var(--muted)]">Highest-rated tools and capabilities in each discipline.</p></div>
+  <section class="surface h-full min-w-0 overflow-hidden p-3 sm:p-4 lg:p-5" aria-labelledby="skills-title">
+    <header class="mb-3 border-b border-[var(--line)] pb-3">
+      <div class="flex flex-wrap items-start justify-between gap-x-4 gap-y-2">
+        <div>
+          <p class="text-[10px] font-bold uppercase tracking-[.15em] text-[var(--primary)]">Tools & capabilities</p>
+          <h2 id="skills-title" class="mt-1 text-xl font-bold tracking-[-.04em] text-[var(--ink)] sm:text-2xl">Skills by category</h2>
+        </div>
+        <p v-if="!loading && !errorMessage" class="pt-1 text-[11px] text-[var(--muted)]">
+          <strong class="text-[var(--ink)]">{{ skills.length }}</strong> skills
+          <span class="mx-1.5" aria-hidden="true">/</span>
+          <strong class="text-[var(--ink)]">{{ categories.length }}</strong> disciplines
+        </p>
       </div>
-      <div v-if="errorMessage" class="text-red-500 text-sm text-center mb-4">
-         {{ errorMessage }}
+      <p class="mt-2 text-[11px] leading-relaxed text-[var(--muted)] sm:text-xs">
+        Explore the tools I work with across engineering, design, and delivery.
+        Proficiency is self-assessed on a scale of 10.
+      </p>
+    </header>
+
+    <p v-if="errorMessage" role="alert" class="py-3 text-sm text-red-500">{{ errorMessage }}</p>
+    <div v-else-if="loading" role="status" class="grid grid-cols-1 gap-2 min-[400px]:grid-cols-2">
+      <span class="sr-only">Loading skills…</span>
+      <div v-for="n in 6" :key="n" class="h-16 animate-pulse rounded-xl bg-purple-500/10" aria-hidden="true"></div>
+    </div>
+    <template v-else>
+      <SkillSetCategories :list="categoryNames" :activeCategory="selectedCategory" @categorySelected="selectedCategory = $event" />
+      <div class="mt-2 flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1 text-[10px] text-[var(--muted)] sm:text-[11px]">
+        <p role="status">{{ visibleSkills.length }} {{ visibleSkills.length === 1 ? 'skill' : 'skills' }} in {{ selectedCategory }}</p>
+        <span>Sorted by proficiency</span>
       </div>
 
-      <SkillSetCategories v-if="categories.length" :list="categories" :activeCategory="selectedCategory" @categorySelected="fetchSkills" />
-      
-      <div v-else-if="!errorMessage" class="text-[var(--muted)] text-center">Loading categories...</div>
-
-      <div v-if="selectedCategory">         
-         <div v-if="loading" class="grid grid-cols-1 gap-3 pt-5 sm:grid-cols-2"><div v-for="n in 6" :key="n" class="h-20 animate-pulse rounded-2xl bg-purple-500/10"></div></div>
-
-         <Transition name="page" mode="out-in">
-         <div v-if="topSkills.length" :key="selectedCategory" class="grid grid-cols-1 gap-3 pt-5 sm:grid-cols-2">
-            <div v-for="(skill, index) in topSkills" :key="skill.id || skill.name" class="group relative flex w-full items-center gap-4 overflow-hidden rounded-2xl border border-[var(--line)] bg-[var(--surface)] p-4 transition hover:-translate-y-1 hover:border-purple-400/50 hover:shadow-lg hover:shadow-purple-500/10">
-               <span class="absolute right-3 top-2 text-3xl font-black text-purple-500/[.07]">0{{ index + 1 }}</span>
-               <!-- Skeleton loader for logo -->
-               <div v-if="!imageLoaded[index]" class="w-10 h-10 rounded-full bg-gray-700 animate-pulse"></div>
-               
-               <!-- Actual image (hidden until loaded) -->
-               <img 
-                  :src="skill.logo" 
-                  :alt="skill.name" 
-                  class="h-11 w-11 rounded-xl bg-white/80 p-1.5 object-contain shadow-sm"
-                  :class="{'hidden': !imageLoaded[index]}"
-                  @load="handleImageLoad(index)"
-               >
-               
-               <div class="w-full">
-                  <div class="flex items-center justify-between gap-3"><h3 class="font-bold text-[var(--ink)]">{{ skill.name }}</h3><span class="text-[10px] font-bold uppercase tracking-wider text-[var(--primary)]">{{ ratingLabel(skill.level) }}</span></div>
-                  <div class="mt-2.5 h-1.5 overflow-hidden rounded-full bg-purple-500/10" :aria-label="`${skill.level} out of 10`">
-                     <div class="h-full rounded-full bg-gradient-to-r from-violet-500 to-fuchsia-400" :style="{width: skill.level * 10 + '%'}"></div>
-                  </div>
-               </div>
-            </div>
-         </div>
-         </Transition>
-         <div v-if="!loading && !skills.length" class="text-[var(--muted)] text-center mt-2">No skills available for this category.</div>
+      <div v-if="visibleSkills.length" class="grid grid-cols-1 gap-2 pt-2 min-[400px]:grid-cols-2">
+        <article v-for="skill in visibleSkills" :key="skill.id || skill.name" class="min-w-0 rounded-xl border border-[var(--line)] bg-[var(--surface)] px-3 py-2.5 transition-colors hover:border-purple-400/50">
+          <div class="flex flex-wrap items-baseline justify-between gap-x-2 gap-y-1">
+            <h3 class="min-w-0 flex-1 break-words text-xs font-bold leading-snug text-[var(--ink)] sm:text-sm">{{ skill.name }}</h3>
+            <span class="shrink-0 text-[9px] font-bold uppercase tracking-wide text-[var(--primary)]">{{ ratingLabel(skill.level) }}</span>
+          </div>
+          <div class="mt-2 h-1 overflow-hidden rounded-full bg-purple-500/10" role="meter" :aria-label="`${skill.name} proficiency`" :aria-valuenow="score(skill.level)" aria-valuemin="0" aria-valuemax="10">
+            <div class="h-full rounded-full bg-gradient-to-r from-violet-500 to-fuchsia-400" :style="{ width: `${score(skill.level) * 10}%` }"></div>
+          </div>
+        </article>
       </div>
-   </div>
+      <p v-else class="py-6 text-center text-sm text-[var(--muted)]">No skills in this category yet.</p>
+    </template>
+  </section>
 </template>

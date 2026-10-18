@@ -1,6 +1,6 @@
 <script setup>
 import { ref, onMounted, watch, computed } from 'vue';
-import axiosInstance from '@/axios';
+import portfolioContent from '@/content';
 import BlogCard from '@/components/Blogs/BlogCard.vue';
 
 const blogs = ref([]);
@@ -15,7 +15,7 @@ let debounceTimeout;
 const fetchBlogs = async (query = '') => {
    loading.value = true;
    try {
-      const response = await axiosInstance.get('blogs/blogs/', {
+      const response = await portfolioContent.get('blogs/blogs/', {
          params: query ? { search: query } : {},
       });
       blogs.value = response.data;

@@ -16,12 +16,13 @@ const expanded = ref(false);
 </script>
 
 <template>
-   <div class="px-1 py-3 text-[var(--ink)] sm:p-6">
-      <div class="mb-6">
-         <h1 class="font-bold text-xl lg:text-3xl">{{ name }}</h1>
+   <div class="px-3 py-4 text-[var(--ink)] sm:p-5">
+      <div class="mb-5 border-b border-[var(--line)] pb-5">
+         <p class="mb-2 text-[10px] font-bold uppercase tracking-[.15em] text-[var(--primary)]">Behind the project</p>
+         <h1 class="text-xl font-bold leading-tight tracking-[-.035em] sm:text-2xl lg:text-3xl">{{ name }}</h1>
       </div>
 
-      <div class="description-container text-justify text-sm sm:text-base lg:text-lg">
+      <div class="description-container break-words text-sm sm:text-[15px]">
          <div
             v-if="description && description.trim().length"
             v-html="description"
@@ -35,8 +36,10 @@ const expanded = ref(false);
 
          <button
             v-if="description && description.length > 800"
+            type="button"
+            :aria-expanded="expanded"
             @click="expanded = !expanded"
-            class="text-cyan-400 hover:underline mt-4 block"
+            class="mt-5 inline-flex rounded-full border border-[var(--line)] px-4 py-2 text-xs font-semibold text-[var(--primary)] transition hover:border-[var(--primary)]"
          >
             {{ expanded ? 'Read Less' : 'Read More' }}
          </button>

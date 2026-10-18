@@ -1,6 +1,6 @@
 <script setup>
 import { ref, onMounted } from 'vue';
-import axiosInstance from '@/axios';
+import portfolioContent from '@/content';
 
 const data = ref({});
 const loading = ref(true);
@@ -8,7 +8,7 @@ const error = ref(null);
 
 onMounted(async () => {
    try {
-      const response = await axiosInstance.get('blogs/featured_blog/');
+      const response = await portfolioContent.get('blogs/featured_blog/');
       data.value = response.data[0].blog;
    } catch (err) {
       error.value = 'Error Fetching Data!';

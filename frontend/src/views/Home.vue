@@ -7,7 +7,7 @@ import ServicesHome from "@/components/Home/Services/ServicesHome.vue";
 import Testimonials from "@/components/Home/Testimonial/Testimonials.vue";
 
 import { ref, onMounted } from "vue";
-import axiosInstance from "@/axios";
+import portfolioContent from "@/content";
 
 const data = ref([]);
 const loading = ref(true);
@@ -15,7 +15,7 @@ const error = ref(null);
 
 onMounted(async () => {
    try {
-      const response = await axiosInstance.get("information/description/");
+      const response = await portfolioContent.get("information/description/");
       data.value = response.data[0];
    } catch (err) {
       error.value = "Error Fetching Data!";
@@ -27,14 +27,14 @@ onMounted(async () => {
 </script>
 
 <template>
-   <div class="mx-auto grid max-w-[1440px] grid-cols-1 lg:grid-cols-[.9fr_1.1fr]">
+   <div class="page-container grid grid-cols-1 lg:grid-cols-[.9fr_1.1fr]">
       <div class="relative border-b border-white/10 lg:border-b-0 lg:border-r">
          <div class="lg:sticky lg:top-10">
             <Information />
          </div>
       </div>
-      <div class="flex min-w-0 flex-col px-5 py-8 sm:px-9 lg:px-12 lg:py-12 xl:px-12">
-         <section class="mb-8 reveal sm:mb-10">
+      <div class="flex min-w-0 flex-col py-5 sm:py-6 lg:pl-12 lg:py-12">
+         <section class="hidden reveal md:mb-6 md:block lg:mb-10">
             <div v-if="loading" class="space-y-2 animate-pulse">
                <div class="h-4 w-full bg-gray-700 rounded"></div>
                <div class="h-4 w-5/6 bg-gray-700 rounded"></div>
@@ -43,17 +43,17 @@ onMounted(async () => {
                <div class="h-4 w-3/4 bg-gray-700 rounded"></div>
             </div>
             <p v-else-if="error" class="text-red-400">{{ error }}</p>
-            <div v-else v-html="data.description" class="description-container text-justify text-base md:text-md"></div>
+            <div v-else v-html="data.description" class="description-container text-justify text-sm leading-relaxed lg:text-base"></div>
          </section>
-         <section class="mb-8 sm:mb-10">
+         <section class="mb-5 sm:mb-6 lg:mb-10">
             <Experience />
          </section>
-         <section class="mb-8 sm:mb-10">
+         <section class="mb-5 sm:mb-6 lg:mb-10">
             <ServicesHome/>
          </section>
-         <section class="mb-8 sm:mb-10">
+         <!-- <section class="mb-5 sm:mb-6 lg:mb-10">
             <Testimonials/>
-         </section>
+         </section> -->
          <section>
             <SkillSet/>
          </section>

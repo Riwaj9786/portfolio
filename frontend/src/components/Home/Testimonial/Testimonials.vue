@@ -1,6 +1,6 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from "vue";
-import axiosInstance from "@/axios";
+import portfolioContent from "@/content";
 
 const data = ref([]),
   loading = ref(true),
@@ -23,7 +23,7 @@ const move = (direction) => {
 onMounted(async () => {
   try {
     data.value = (
-      await axiosInstance.get("testimonial/testimonials/")
+      await portfolioContent.get("testimonial/testimonials/")
     ).data.filter((item) => item.to_publish);
     rotate();
   } catch (_) {

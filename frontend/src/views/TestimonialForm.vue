@@ -1,8 +1,6 @@
 <script setup>
 import { computed, onBeforeUnmount, onMounted, ref } from "vue";
-import axiosInstance from "@/axios";
 
-const apiEndpoint = "testimonial/testimonials/add/";
 const MAX_FILE_SIZE = 2 * 1024 * 1024;
 const ALLOWED_TYPES = ["image/jpeg", "image/png", "image/webp"];
 
@@ -85,41 +83,8 @@ function resetForm() {
   fieldErrors.value = {};
 }
 
-async function submitForm() {
-  errorMessage.value = "";
-  successMessage.value = "";
-  if (!validateForm()) {
-    requestAnimationFrame(() => document.querySelector("[aria-invalid='true']")?.focus());
-    return;
-  }
-
-  isLoading.value = true;
-  try {
-    const formData = new FormData();
-    for (const key of ["name", "email", "company", "position", "testimonial", "to_publish"]) {
-      formData.append(key, form.value[key]);
-    }
-    if (form.value.image) formData.append("image", form.value.image);
-
-    const response = await axiosInstance.post(apiEndpoint, formData, {
-      headers: { "Content-Type": "multipart/form-data" },
-    });
-    if (response.status === 201) {
-      resetForm();
-      successMessage.value = "Thank you—your testimonial was submitted successfully.";
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    }
-  } catch (error) {
-    let message = "Something went wrong while submitting your testimonial.";
-    if (error.response?.status === 413) message = "The image is too large. Please choose one smaller than 2 MB.";
-    else if (error.response?.data) {
-      const data = error.response.data;
-      message = typeof data === "object" ? Object.values(data).flat().join(" ") : data;
-    } else if (error.request) message = "We could not connect. Check your internet connection and try again.";
-    errorMessage.value = message;
-  } finally {
-    isLoading.value = false;
-  }
+function submitForm() {
+  errorMessage.value = "Online testimonial submissions are unavailable. Please get in touch using the contact page.";
 }
 
 onMounted(decodeAndFillForm);
@@ -127,11 +92,11 @@ onBeforeUnmount(clearPreview);
 </script>
 
 <template>
-  <section class="testimonial-page relative isolate overflow-hidden px-4 py-10 sm:px-6 sm:py-14 lg:px-10 lg:py-20">
+  <section class="testimonial-page relative isolate overflow-hidden py-10 sm:py-14 lg:py-20">
     <div class="testimonial-glow testimonial-glow-one" aria-hidden="true"></div>
     <div class="testimonial-glow testimonial-glow-two" aria-hidden="true"></div>
 
-    <div class="relative mx-auto grid max-w-[1240px] items-start gap-8 lg:grid-cols-[.82fr_1.18fr] lg:gap-12 xl:gap-16">
+    <div class="page-container relative grid items-start gap-8 lg:grid-cols-[.82fr_1.18fr] lg:gap-12 xl:gap-16">
       <aside class="lg:sticky lg:top-28 lg:pt-7">
         <div class="mb-6 inline-flex items-center gap-2 rounded-full border border-purple-400/20 bg-purple-500/10 px-3 py-1.5 text-[10px] font-bold uppercase tracking-[.18em] text-[var(--primary)]">
           <i class="pi pi-sparkles text-[10px]"></i> Your perspective matters
@@ -164,7 +129,8 @@ onBeforeUnmount(clearPreview);
         <div v-if="successMessage" class="notice success" role="status"><i class="pi pi-check-circle"></i><div><strong>Successfully received</strong><p>{{ successMessage }}</p></div></div>
         <div v-if="errorMessage" class="notice error" role="alert"><i class="pi pi-exclamation-circle"></i><div><strong>Unable to submit</strong><p>{{ errorMessage }}</p></div></div>
 
-        <form novalidate @submit.prevent="submitForm">
+        <p class="mb-5 text-sm text-[var(--muted)]" role="status">Online testimonial submissions are unavailable. Please get in touch using the contact page.</p>
+      <form novalidate @submit.prevent="submitForm">
           <div class="mb-7 flex flex-col gap-4 rounded-2xl border border-dashed border-[var(--line)] bg-purple-500/[.035] p-4 sm:flex-row sm:items-center">
             <div class="relative h-20 w-20 shrink-0 overflow-hidden rounded-2xl bg-purple-500/10 ring-1 ring-purple-400/20">
               <img v-if="imagePreview" :src="imagePreview" alt="Selected profile photo" class="h-full w-full object-cover" />
@@ -185,7 +151,7 @@ onBeforeUnmount(clearPreview);
 
           <label class="consent-card mt-5"><input v-model="form.to_publish" type="checkbox" /><span class="custom-check"><i class="pi pi-check"></i></span><span><strong>Allow this testimonial to appear on the portfolio</strong><small>This is optional. Your testimonial will only be displayed publicly when selected.</small></span></label>
 
-          <button type="submit" :disabled="isLoading" class="submit-button mt-7"><span v-if="isLoading" class="flex items-center justify-center gap-2"><i class="pi pi-spin pi-spinner"></i> Sending your testimonial…</span><span v-else class="flex items-center justify-center gap-2">Submit testimonial <i class="pi pi-arrow-right"></i></span></button>
+          <button type="submit" :disabled="true" class="submit-button mt-7"><span v-if="isLoading" class="flex items-center justify-center gap-2"><i class="pi pi-spin pi-spinner"></i> Sending your testimonial…</span><span v-else class="flex items-center justify-center gap-2">Submit testimonial <i class="pi pi-arrow-right"></i></span></button>
           <p class="mt-3 text-center text-[10px] leading-5 text-[var(--muted)]"><i class="pi pi-shield mr-1 text-[var(--primary)]"></i>Your information is used only to review and manage this testimonial.</p>
         </form>
       </div>
@@ -202,6 +168,6 @@ onBeforeUnmount(clearPreview);
 .field-wrap label{display:block;margin-bottom:.45rem;color:var(--ink);font-size:.72rem;font-weight:700}.field-wrap label span{color:var(--primary)}.field-wrap input,.field-wrap textarea{width:100%;border:1px solid var(--line);border-radius:.85rem;background:color-mix(in srgb,var(--surface) 92%,var(--bg));padding:.78rem .9rem;color:var(--ink);font-size:.78rem;outline:none;transition:border-color .18s,box-shadow .18s,background .18s}.field-wrap textarea{min-height:9rem;resize:vertical;line-height:1.65}.field-wrap input::placeholder,.field-wrap textarea::placeholder{color:color-mix(in srgb,var(--muted) 72%,transparent)}.field-wrap input:focus,.field-wrap textarea:focus{border-color:var(--primary);background:var(--surface);box-shadow:0 0 0 3px rgba(124,58,237,.12)}.field-wrap [aria-invalid=true]{border-color:#ef4444;box-shadow:0 0 0 3px rgba(239,68,68,.08)}.field-help,.field-error{display:block;margin-top:.4rem;font-size:.62rem;line-height:1.45}.field-help{color:var(--muted)}.field-error{color:#dc2626;font-weight:700}
 .consent-card{display:flex;align-items:flex-start;gap:.75rem;padding:1rem;border:1px solid var(--line);border-radius:1rem;cursor:pointer;transition:.2s ease}.consent-card:hover{border-color:color-mix(in srgb,var(--primary) 50%,var(--line));background:rgba(124,58,237,.035)}.consent-card input{position:absolute;opacity:0;pointer-events:none}.custom-check{display:grid;flex:0 0 1.2rem;width:1.2rem;height:1.2rem;place-items:center;margin-top:.05rem;border:1px solid var(--line);border-radius:.35rem;color:transparent;background:var(--surface);font-size:.58rem;transition:.18s}.consent-card input:checked+.custom-check{color:white;border-color:var(--primary);background:var(--primary)}.consent-card input:focus-visible+.custom-check{box-shadow:0 0 0 3px rgba(124,58,237,.18)}.consent-card strong,.consent-card small{display:block}.consent-card strong{color:var(--ink);font-size:.7rem}.consent-card small{margin-top:.25rem;color:var(--muted);font-size:.62rem;line-height:1.5}
 .submit-button{width:100%;border:0;border-radius:.9rem;padding:.9rem 1rem;color:white;background:linear-gradient(110deg,#6d28d9,#9333ea 55%,#c026d3);box-shadow:0 12px 25px rgba(124,58,237,.22);font-size:.78rem;font-weight:800;transition:.22s ease}.submit-button:hover:not(:disabled){transform:translateY(-2px);box-shadow:0 16px 30px rgba(124,58,237,.3)}.submit-button:disabled{cursor:not-allowed;opacity:.65}
-@media(max-width:639px){.form-card{border-radius:1.35rem}.testimonial-page{padding-left:.75rem;padding-right:.75rem}}
+@media(max-width:639px){.form-card{border-radius:1.35rem}}
 @media(prefers-reduced-motion:reduce){.upload-button,.submit-button,.consent-card{transition:none}.submit-button:hover:not(:disabled),.upload-button:hover{transform:none}}
 </style>

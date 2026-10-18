@@ -3,7 +3,7 @@ import ProjectImageSlider from "@/components/Projects/ProjectImageSlider.vue";
 
 import { ref, onMounted } from "vue";
 import { useRoute } from "vue-router";
-import axiosInstance from "@/axios";
+import portfolioContent from "@/content";
 
 const route = useRoute();
 const slug = route.params.slug;
@@ -26,7 +26,7 @@ const copyLink = async () => {
 
 onMounted(async () => {
   try {
-    const response = await axiosInstance.get(`blogs/blogs/${slug}/`);
+    const response = await portfolioContent.get(`blogs/blogs/${slug}/`);
     blog.value = response.data;
   } catch (err) {
     error.value = err.response?.data?.detail || err.message;
@@ -59,7 +59,7 @@ const formatDate = (dateString) => {
 </script>
 
 <template>
-  <article class="page-wrap max-w-[1050px]">
+  <article class="page-wrap">
     <div v-if="loading" class="space-y-6">
       <div class="h-8 w-40 animate-pulse rounded-full bg-purple-500/10"></div>
       <div class="h-28 animate-pulse rounded-2xl bg-purple-500/10"></div>

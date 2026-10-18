@@ -2,7 +2,7 @@
 import BlogSection from "@/components/Blogs/BlogSection.vue";
 
 import { ref, onMounted } from "vue";
-import axiosInstance from "@/axios";
+import portfolioContent from "@/content";
 import FeaturedBlog from "./FeaturedBlog.vue";
 
 const data = ref({});
@@ -11,7 +11,7 @@ const error = ref(null);
 
 onMounted(async () => {
   try {
-    const response = await axiosInstance.get("blogs/featured_blog/");
+    const response = await portfolioContent.get("blogs/featured_blog/");
     data.value = response.data[0].blog;
   } catch (err) {
     error.value = "Error Fetching Data!";
@@ -31,7 +31,7 @@ const contentTruncated = (content, length = 120) => {
 
 <template>
   <div
-    class="mx-auto w-full max-w-[1440px] px-5 py-9 sm:px-9 sm:py-12 lg:px-14 lg:py-20"
+    class="page-container py-9 sm:py-12 lg:py-20"
   >
     <div class="mb-10 grid gap-5 sm:mb-14 lg:grid-cols-2 lg:items-end">
       <div>

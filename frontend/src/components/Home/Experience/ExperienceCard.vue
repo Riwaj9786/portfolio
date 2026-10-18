@@ -5,17 +5,19 @@ import SkillButton from "@/components/Home/Skills/SkillButton.vue";
 const props = defineProps({
   company: { type: String, required: true },
   company_url: { type: String, default: "" },
+  logo: { type: String, default: "" },
   roles: { type: Array, default: () => [] },
 });
 
-const formatDate = (value) => {
+const formatDate = (value, precision = 'month') => {
   if (!value) return "Present";
   const date = new Date(value);
   return Number.isNaN(date.getTime())
     ? ""
     : new Intl.DateTimeFormat("en-US", {
         year: "numeric",
-        month: "short",
+        ...(precision === 'year' ? {} : { month: "short" }),
+        timeZone: 'UTC',
       }).format(date);
 };
 
@@ -30,32 +32,36 @@ const companyPeriod = computed(() => {
     .map((role) => (role.end_date ? new Date(role.end_date) : null))
     .filter(Boolean);
   const latest = hasCurrentRole ? null : new Date(Math.max(...ends));
-  return `${formatDate(earliest)} — ${latest ? formatDate(latest) : "Present"}`;
+  const precision = props.roles.every((role) => role.date_precision === 'year') ? 'year' : 'month';
+  return `${formatDate(earliest, precision)} — ${latest ? formatDate(latest, precision) : "Present"}`;
 });
 </script>
 
 <template>
   <article
-    class="experience-group my-4 overflow-hidden rounded-[1.6rem] border border-[var(--line)] bg-[var(--surface)] shadow-[var(--shadow)] backdrop-blur-xl"
+    class="experience-group my-3 overflow-hidden rounded-xl lg:my-4 lg:rounded-[1.6rem] border border-[var(--line)] bg-[var(--surface)] shadow-[var(--shadow)] backdrop-blur-xl"
   >
     <header
-      class="flex flex-col w-full gap-3 border-b border-[var(--line)] px-5 py-5 sm:flex-row sm:items-center sm:justify-between sm:px-7"
+      class="flex flex-col w-full gap-2 border-b border-[var(--line)] px-4 py-3 sm:flex-row sm:items-center sm:justify-between lg:gap-3 lg:px-7 lg:py-5"
     >
-      <div>
+      <div class="flex min-w-0 items-center gap-3">
+        <img v-if="logo" :src="logo" :alt="`${company} logo`" class="h-10 w-10 shrink-0 rounded-xl border border-[var(--line)] object-contain p-1 lg:h-12 lg:w-12" />
+        <div class="min-w-0">
         <p
           class="mb-1 text-[10px] font-bold uppercase tracking-[.18em] text-[var(--primary)]"
         >
           {{
             roles.length > 1
-              ? `${roles.length} roles · Career progression`
-              : "Experience"
+              ? `${roles.length} roles`
+              : ""
           }}
         </p>
         <div class="flex flex-wrap justify-between items-baseline gap-x-3 gap-y-1">
-          <h3 class="text-xl font-bold tracking-tight text-[var(--ink)]">
+          <h3 class="text-base font-bold tracking-tight lg:text-xl text-[var(--ink)]">
             {{ company }}
           </h3>
 
+        </div>
         </div>
       </div>
       <div class="flex items-center gap-3">
@@ -65,8 +71,8 @@ const companyPeriod = computed(() => {
         <span
           v-if="roles.length === 1"
           class="text-xs font-medium text-[var(--muted)]"
-          >{{ formatDate(roles[0].start_date) }} —
-          {{ formatDate(roles[0].end_date) }}</span
+          >{{ formatDate(roles[0].start_date, roles[0].date_precision) }} —
+          {{ formatDate(roles[0].end_date, roles[0].date_precision) }}</span
         >
         <a
           v-if="company_url"
@@ -81,7 +87,7 @@ const companyPeriod = computed(() => {
       </div>
     </header>
 
-    <div class="px-5 py-6 sm:px-7">
+    <div class="px-4 py-4 lg:px-7 lg:py-6">
       <ol
         class="relative"
         :class="roles.length > 1 ? 'ml-2 border-l border-purple-400/35' : ''"
@@ -89,8 +95,8 @@ const companyPeriod = computed(() => {
         <li
           v-for="(role, index) in roles"
           :key="role.id || `${role.title}-${role.start_date}`"
-          class="relative pb-7 last:pb-0"
-          :class="roles.length > 1 ? 'pl-7' : ''"
+          class="relative pb-4 lg:pb-7 last:pb-0"
+          :class="roles.length > 1 ? 'pl-5 lg:pl-7' : ''"
         >
           <span
             v-if="roles.length > 1"
@@ -100,19 +106,24 @@ const companyPeriod = computed(() => {
             class="flex flex-col gap-1 sm:flex-row sm:items-start sm:justify-between"
           >
             <div>
-              <h4 class="font-semibold text-[var(--ink)]">{{ role.title }}</h4>
+              <h4 class="text-sm font-semibold text-[var(--ink)] lg:text-base">{{ role.title }}</h4>
               <span
-                class="text-xs font-medium uppercase tracking-wider text-[var(--primary)]"
+                v-if="role.job_type"
+                class="text-[10px] font-medium uppercase tracking-wider lg:text-xs text-[var(--primary)]"
                 >{{ role.job_type }}</span
               >
             </div>
             <time
               v-if="roles.length > 1"
               class="shrink-0 text-xs text-[var(--muted)]"
-              >{{ formatDate(role.start_date) }} —
-              {{ formatDate(role.end_date) }}</time
+              >{{ formatDate(role.start_date, role.date_precision) }} —
+              {{ formatDate(role.end_date, role.date_precision) }}</time
             >
           </div>
+          <p v-if="role.description" class="mt-3 whitespace-pre-line text-xs leading-relaxed text-[var(--muted)] lg:text-sm">{{ role.description }}</p>
+          <ul v-if="role.achievements?.length" class="mt-3 list-disc space-y-1 pl-4 text-xs leading-relaxed text-[var(--muted)] lg:text-sm" aria-label="Achievements">
+            <li v-for="(achievement, achievementIndex) in role.achievements" :key="achievementIndex">{{ achievement }}</li>
+          </ul>
           <div v-if="role.skills?.length" class="mt-3 flex flex-wrap gap-1.5">
             <SkillButton
               v-for="skill in role.skills"
@@ -122,7 +133,7 @@ const companyPeriod = computed(() => {
           </div>
           <div
             v-if="roles.length > 1 && index < roles.length - 1"
-            class="mt-6 h-px bg-gradient-to-r from-[var(--line)] to-transparent"
+            class="mt-4 lg:mt-6 h-px bg-gradient-to-r from-[var(--line)] to-transparent"
           ></div>
         </li>
       </ol>

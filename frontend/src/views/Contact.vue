@@ -1,11 +1,13 @@
 <script setup>
-import ContactForm from "@/components/Contact/ContactForm.vue";
+import WorkTogether from "@/components/Contact/WorkTogether.vue";
 import ConnectSection from "@/components/Contact/ConnectSection.vue";
 </script>
 
 <template>
-  <main class="page-wrap max-w-[1380px]">
-    <header class="mb-9 grid gap-5 sm:mb-12 sm:gap-8 lg:grid-cols-[1fr_400px] lg:items-end">
+  <main class="page-wrap">
+    <header
+      class="mb-9 grid gap-5 sm:mb-12 sm:gap-8 lg:grid-cols-[1fr_400px] lg:items-end"
+    >
       <div>
         <div class="mb-5 flex items-center gap-3">
           <span class="h-2 w-2 animate-pulse rounded-full bg-green-400"></span
@@ -17,15 +19,18 @@ import ConnectSection from "@/components/Contact/ConnectSection.vue";
           >
         </h1>
       </div>
-      <p class="max-w-md text-base leading-relaxed text-[var(--muted)]">
-        Tell me what you’re building, where you’re stuck, or simply say hello.
-        I’ll read every message and get back to you personally.
+      <p
+        class="max-w-lg text-base text-justify leading-relaxed text-[var(--muted)]"
+      >
+        Looking for backend engineering, project leadership, or graphics design?
+        Reach out directly by email or WhatsApp and let’s talk about your next
+        step.
       </p>
     </header>
 
-    <div class="grid gap-5 lg:grid-cols-[.78fr_1.22fr]">
+    <div class="grid items-stretch gap-5 lg:grid-cols-2">
       <ConnectSection />
-      <ContactForm />
+      <WorkTogether />
     </div>
   </main>
 </template>

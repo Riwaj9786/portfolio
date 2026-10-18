@@ -17,7 +17,7 @@ defineProps({
       :href="link"
       target="_blank"
       rel="noopener noreferrer"
-      class="relative bg-white/5 block w-full p-4 rounded-full group hover:bg-white/10 transition"
+      class="group flex w-full items-center justify-between gap-3 rounded-xl border border-[var(--line)] bg-[var(--surface)] px-3 py-3 text-xs transition hover:border-[var(--primary)]"
    >
       <div class="flex justify-between items-start w-full">
          <div class="text-[var(--ink)] group-hover:text-[var(--primary)]">
@@ -25,11 +25,8 @@ defineProps({
          </div>
       </div>
 
-      <div
-         class="absolute bottom-3 right-3 text-gray-400 group-hover:bg-cyan-500/40 group-hover:text-cyan-400 
-         transition-colors duration-300 flex items-center justify-center w-7 h-7 rounded-full bg-white/5"
-      >
-         <i class="pi pi-arrow-up-right text-sm"></i>
+      <div class="shrink-0 text-[var(--primary)]">
+         <i class="pi pi-arrow-up-right text-xs" aria-hidden="true"></i>
       </div>
    </a>
 
