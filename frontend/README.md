@@ -146,3 +146,35 @@ Experience tab. The shared router scrolls to the relevant section. Edit the publ
 snapshot and rebuild to update search content. Run `node scripts/check-search.mjs`
 for typo matching, result filtering, deep links, and visibility checks.
 Search configuration follows the [Fuse.js fuzzy search documentation](https://www.fusejs.io/fuzzy-search.html).
+
+## Purple visual system
+
+The shared palette lives in `src/assets/main.css`, with matching light/dark tokens
+for surfaces, text, violet/indigo/lavender accents, and accessible action colors.
+`--primary` is the accent text color; `--primary-action` provides darker backgrounds for white button labels in both themes.
+
+The existing ambience component now draws decorative code circuits, design curves,
+a neural network, and leadership connections as lightweight SVGs. Background motion
+uses transforms and opacity, pauses when the page is hidden, and disables movement
+for reduced-motion preferences. Pointer glow is enabled only with a fine pointer
+and no reduced-motion preference. Mobile renders fewer decorative elements.
+Components use flat theme surfaces; gradients are reserved for the shared page
+background. Layouts and content remain unchanged.
+
+## Portfolio motion
+
+Motion's small JavaScript animation API integrates with the existing Vue components
+through `src/motion/portfolioMotion.js`. `v-reveal` reveals sections once, and
+`v-stagger` observes direct children with short capped delays. Motion uses opacity
+and CSS translate, preserving layout and existing hover transforms. Journey,
+skill categories, and project pages use shared enter/leave hooks.
+
+Journey role titles with descriptions or achievements can be expanded/collapsed
+with a keyboard-accessible button. Details start expanded, preserving the existing
+content. Role markers respond to viewport position and focus, and achievement
+entries reveal in sequence. Existing route navigation and category filtering remain.
+
+Reduced-motion changes cancel active effects immediately. Keyboard focus reveals
+content immediately; unsupported animation/observer APIs leave content visible.
+Directives clean up when elements leave the component tree. Run
+`node scripts/check-motion.mjs` to check fallback and cleanup behavior.

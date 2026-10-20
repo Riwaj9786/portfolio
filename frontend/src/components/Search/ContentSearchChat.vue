@@ -69,7 +69,9 @@ async function clearChat() {
     :aria-expanded="opened"
     @click="openChat"
   >
-    <span class="launcher-logo" aria-hidden="true"><AskRioLogo /></span><span class="launcher-label">AskRio</span><span class="launcher-status" aria-hidden="true"></span>
+    <span class="launcher-logo" aria-hidden="true"><AskRioLogo /></span
+    ><span class="launcher-label">AskRio</span
+    ><span class="launcher-status" aria-hidden="true"></span>
   </button>
   <dialog
     id="portfolio-search-chat"
@@ -216,7 +218,7 @@ async function clearChat() {
   max-height: none;
   border: 1px solid var(--line);
   border-radius: 1.4rem;
-  background: var(--surface-solid);
+  background: var(--surface);
   color: var(--ink);
   box-shadow: var(--shadow);
   padding: 0;
@@ -236,6 +238,7 @@ async function clearChat() {
   gap: 0.6rem;
   padding: 1rem;
   border-bottom: 1px solid var(--line);
+  background: var(--surface);
 }
 .chat-symbol {
   display: grid;
@@ -285,13 +288,13 @@ async function clearChat() {
   padding: 0.6rem 0 1rem;
 }
 .welcome-icon {
-  display:block;
-  width:64px;
-  height:64px;
-  padding:5px;
-  margin-bottom:1rem;
-  color:var(--primary);
-  animation:rio-float 5s ease-in-out infinite;
+  display: block;
+  width: 64px;
+  height: 64px;
+  padding: 5px;
+  margin-bottom: 1rem;
+  color: var(--primary);
+  animation: rio-float 5s ease-in-out infinite;
 }
 .welcome-message h3 {
   margin-top: 0.7rem;
@@ -320,7 +323,7 @@ async function clearChat() {
 }
 .chat-message.user {
   margin-left: 2rem;
-  background: var(--primary);
+  background: var(--primary-action);
   color: white;
   border-radius: 1rem 1rem 0.2rem 1rem;
   padding: 0.7rem 0.9rem;
@@ -415,7 +418,7 @@ async function clearChat() {
   height: 36px;
   flex-shrink: 0;
   border-radius: 0.6rem;
-  background: var(--primary);
+  background: var(--primary-action);
   color: white;
   font-size: 0.8rem;
 }
@@ -446,7 +449,9 @@ a:focus-visible {
     padding: 8px;
     justify-content: center;
   }
-  .search-launcher .launcher-status { display:none; }
+  .search-launcher .launcher-status {
+    display: none;
+  }
   .search-chat {
     right: 0.5rem;
     bottom: max(0.5rem, env(safe-area-inset-bottom));
@@ -459,23 +464,109 @@ a:focus-visible {
   }
 }
 
-.launcher-logo { display:block;flex-shrink:0;width:38px;height:38px;transition:transform .25s ease; }
-.launcher-label { letter-spacing:-.02em; }
-.launcher-status { width:6px;height:6px;flex-shrink:0;border-radius:50%;background:var(--primary);box-shadow:0 0 0 3px color-mix(in srgb,var(--primary) 12%,transparent); }
-.search-launcher { transition:transform .25s,box-shadow .25s;animation:rio-launch .45s ease-out; }
-.search-launcher:hover { transform:translateY(-3px);box-shadow:0 12px 35px color-mix(in srgb,var(--primary) 30%,transparent); }
-.search-launcher:hover .launcher-logo { transform:rotate(-9deg); }
-.search-chat[open] { animation:rio-open .25s cubic-bezier(.2,.8,.2,1) both;transform-origin:bottom right; }
-.search-chat[open]::backdrop { animation:rio-backdrop .2s ease-out both; }
-.chat-message { animation:rio-message .2s ease-out both; }
-@keyframes rio-launch { from { opacity:0;transform:translateY(12px) scale(.9); }to { opacity:1;transform:translateY(0) scale(1); } }
-@keyframes rio-open { from { opacity:0;transform:translateY(12px) scale(.96); }to { opacity:1;transform:translateY(0) scale(1); } }
-@keyframes rio-backdrop { from { opacity:0; }to { opacity:1; } }
-@keyframes rio-message { from { opacity:0;transform:translateY(5px); }to { opacity:1;transform:translateY(0); } }
-@keyframes rio-float { 0%,100% { transform:translateY(0) rotate(-3deg); }50% { transform:translateY(-4px) rotate(3deg); } }
-@media(prefers-reduced-motion:reduce) {
-  .search-launcher,.search-chat[open],.search-chat[open]::backdrop,.chat-message,.welcome-icon { animation:none; }
-  .search-launcher,.launcher-logo { transition:none; }
-  .search-launcher:hover,.search-launcher:hover .launcher-logo { transform:none; }
+.launcher-logo {
+  display: block;
+  flex-shrink: 0;
+  width: 38px;
+  height: 38px;
+  transition: transform 0.25s ease;
+}
+.launcher-label {
+  letter-spacing: -0.02em;
+}
+.launcher-status {
+  width: 6px;
+  height: 6px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: var(--primary-action);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--primary) 12%, transparent);
+}
+.search-launcher {
+  transition:
+    transform 0.25s,
+    box-shadow 0.25s;
+  animation: rio-launch 0.45s ease-out;
+}
+.search-launcher:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 35px color-mix(in srgb, var(--primary) 30%, transparent);
+}
+.search-launcher:hover .launcher-logo {
+  transform: rotate(-9deg);
+}
+.search-chat[open] {
+  animation: rio-open 0.25s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+  transform-origin: bottom right;
+}
+.search-chat[open]::backdrop {
+  animation: rio-backdrop 0.2s ease-out both;
+}
+.chat-message {
+  animation: rio-message 0.2s ease-out both;
+}
+@keyframes rio-launch {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+@keyframes rio-open {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+@keyframes rio-backdrop {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes rio-message {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes rio-float {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-3deg);
+  }
+  50% {
+    transform: translateY(-4px) rotate(3deg);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .search-launcher,
+  .search-chat[open],
+  .search-chat[open]::backdrop,
+  .chat-message,
+  .welcome-icon {
+    animation: none;
+  }
+  .search-launcher,
+  .launcher-logo {
+    transition: none;
+  }
+  .search-launcher:hover,
+  .search-launcher:hover .launcher-logo {
+    transform: none;
+  }
 }
 </style>

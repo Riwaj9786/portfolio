@@ -81,7 +81,7 @@ const excerpt = (html) => {
   bottom: -1px;
   width: 0;
   height: 1px;
-  background: var(--primary);
+  background: var(--primary-action);
   transition: width 0.45s ease;
 }
 .article-row:hover::after {

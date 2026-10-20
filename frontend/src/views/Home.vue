@@ -34,7 +34,7 @@ onMounted(async () => {
          </div>
       </div>
       <div class="flex min-w-0 flex-col py-5 sm:py-6 lg:pl-12 lg:py-12">
-         <section class="hidden reveal md:mb-6 md:block lg:mb-10">
+         <section v-reveal class="hidden md:mb-6 md:block lg:mb-10">
             <div v-if="loading" class="space-y-2 animate-pulse">
                <div class="h-4 w-full bg-gray-700 rounded"></div>
                <div class="h-4 w-5/6 bg-gray-700 rounded"></div>
@@ -48,7 +48,7 @@ onMounted(async () => {
          <section class="mb-5 sm:mb-6 lg:mb-10">
             <Experience />
          </section>
-         <section class="mb-5 sm:mb-6 lg:mb-10">
+         <section v-reveal class="mb-5 sm:mb-6 lg:mb-10">
             <ServicesHome/>
          </section>
          <!-- <section class="mb-5 sm:mb-6 lg:mb-10">

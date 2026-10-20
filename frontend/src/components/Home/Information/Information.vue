@@ -22,19 +22,20 @@ onMounted(async () => {
 
 <template>
   <section
-    class="flex flex-col justify-center py-5 sm:py-6 lg:min-h-[calc(100vh-5rem)] lg:pr-12"
+    class="hero-panel flex flex-col justify-center py-5 sm:py-6 lg:min-h-[calc(100vh-5rem)] lg:pr-12"
   >
     <div class="relative mx-auto w-full max-w-[240px] rounded-[1.25rem] sm:max-w-[280px] lg:mx-0 lg:max-w-xl lg:rounded-[2rem] shadow-[var(--shadow)]">
       <div
         v-if="loading"
         class="aspect-[4/5] w-full animate-pulse rounded-[1.25rem] lg:rounded-[2rem] bg-gray-800"
       ></div>
-      <div v-else>
+      <div v-else v-reveal class="profile-visual">
         <img
-          class="aspect-[4/5] w-full rounded-[1.25rem] lg:rounded-[2rem] object-cover grayscale-[10%] transition duration-700 hover:scale-[1.015]"
+          class="profile-photo aspect-[4/5] w-full rounded-[1.25rem] lg:rounded-[2rem] object-cover"
           :src="data.profile_pic"
           :alt="`${data.name || 'Er. Riwaj Bhurtel'} portrait`"
         />
+        <div class="portrait-scrim" aria-hidden="true"></div>
 
         <div
           class="absolute inset-x-2 bottom-2 flex gap-1.5 rounded-xl lg:inset-x-4 lg:bottom-4 lg:gap-2 lg:rounded-[1.3rem] border border-white/20 bg-black/20 p-2 backdrop-blur-md"
@@ -46,7 +47,7 @@ onMounted(async () => {
           ></RouterLink>
           <RouterLink
             to="/connect"
-            class="flex flex-1 items-center justify-center gap-1.5 whitespace-nowrap rounded-full border border-white/25 bg-white/10 px-2 py-2.5 text-[10px] font-bold text-white transition hover:-translate-y-0.5 hover:bg-white/20 min-[390px]:px-3 lg:text-xs xl:text-sm"
+            class="flex flex-1 items-center justify-center gap-1.5 whitespace-nowrap rounded-full border border-white/25 bg-black/35 px-2 py-2.5 text-[10px] font-bold text-white transition hover:-translate-y-0.5 hover:bg-white/20 min-[390px]:px-3 lg:text-xs xl:text-sm"
             >Send a message <i class="pi pi-send text-[10px]"></i
           ></RouterLink>
         </div>
@@ -70,7 +71,7 @@ onMounted(async () => {
         v-if="loading"
         class="pt-1 h-6 w-1/2 bg-gray-700 rounded animate-pulse"
       ></div>
-      <div v-else class="mt-2 text-xs font-medium leading-relaxed text-[#8b5cf6] sm:text-sm lg:mt-3 lg:text-base">
+      <div v-else class="mt-2 text-xs font-medium leading-relaxed text-[var(--primary)] sm:text-sm lg:mt-3 lg:text-base">
         {{ data.title }}
       </div>
     </div>
@@ -90,3 +91,22 @@ onMounted(async () => {
     </div>
   </section>
 </template>
+
+<style scoped>
+.profile-visual { position:relative;overflow:hidden;border-radius:inherit; }
+.profile-photo { transition:transform .45s ease; }
+.portrait-scrim {
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,.25);
+  backdrop-filter:blur(4px);
+  -webkit-backdrop-filter:blur(4px);
+  mask-image:linear-gradient(to top,#000 0%,rgba(0,0,0,.7) 25%,transparent 75%);
+  -webkit-mask-image:linear-gradient(to top,#000 0%,rgba(0,0,0,.7) 25%,transparent 75%);
+  pointer-events:none;
+  transition:opacity .45s ease;
+}
+.profile-visual:hover .profile-photo,.profile-visual:focus-within .profile-photo { transform:scale(1.015); }
+.profile-visual:hover .portrait-scrim,.profile-visual:focus-within .portrait-scrim { opacity:0; }
+@media(prefers-reduced-motion:reduce) { .profile-photo,.portrait-scrim { transition:none; }.profile-visual:hover .profile-photo,.profile-visual:focus-within .profile-photo { transform:none; } }
+</style>

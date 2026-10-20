@@ -189,11 +189,7 @@
   padding: clamp(1.1rem, 3vw, 2rem);
   overflow: hidden;
   position: relative;
-  background-image: radial-gradient(
-    ellipse at 50% 48%,
-    color-mix(in srgb, var(--primary) 9%, transparent),
-    transparent 70%
-  );
+  background-image: none;
 }
 .art-header {
   margin-bottom: 1.5rem;
@@ -227,13 +223,13 @@
   border-color: var(--tile-color);
 }
 .management {
-  --tile-color: #299c92;
+  --tile-color: var(--indigo);
 }
 .leadership {
-  --tile-color: #c88931;
+  --tile-color: var(--lavender);
 }
 .design {
-  --tile-color: #c65e9d;
+  --tile-color: var(--violet);
 }
 .tile-heading {
   display: flex;
@@ -397,16 +393,16 @@ svg ellipse {
   stroke-width: 1.5;
 }
 .palette rect:nth-child(1) {
-  fill: #7650d6;
+  fill: var(--primary);
 }
 .palette rect:nth-child(2) {
-  fill: #c65e9d;
+  fill: var(--violet);
 }
 .palette rect:nth-child(3) {
-  fill: #e5b064;
+  fill: var(--lavender);
 }
 .palette rect:nth-child(4) {
-  fill: #68b4ab;
+  fill: var(--indigo);
 }
 .art-footer {
   display: flex;

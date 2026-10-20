@@ -1,4 +1,5 @@
 <script setup>
+import { enterContent, leaveContent, cancelTransition } from "@/motion/portfolioMotion";
 import SkillSetCategories from "./SkillSetCategories.vue";
 import portfolioContent from "@/content";
 import { computed, onMounted, ref, watch } from "vue";
@@ -57,7 +58,7 @@ const ratingLabel = (level) =>
 </script>
 
 <template>
-  <section class="surface h-full min-w-0 overflow-hidden p-3 sm:p-4 lg:p-5" aria-labelledby="skills-title">
+  <section class="skills-section surface h-full min-w-0 overflow-hidden p-3 sm:p-4 lg:p-5" aria-labelledby="skills-title">
     <header class="mb-3 border-b border-[var(--line)] pb-3">
       <div class="flex flex-wrap items-start justify-between gap-x-4 gap-y-2">
         <div>
@@ -88,18 +89,20 @@ const ratingLabel = (level) =>
         <span>Sorted by proficiency</span>
       </div>
 
-      <div v-if="visibleSkills.length" class="grid grid-cols-1 gap-2 pt-2 min-[400px]:grid-cols-2">
-        <article v-for="skill in visibleSkills" :key="skill.id || skill.name" class="min-w-0 rounded-xl border border-[var(--line)] bg-[var(--surface)] px-3 py-2.5 transition-colors hover:border-purple-400/50">
+      <Transition :css="false" mode="out-in" @enter="enterContent" @leave="leaveContent" @enter-cancelled="cancelTransition" @leave-cancelled="cancelTransition">
+      <div v-if="visibleSkills.length" :key="selectedCategory" v-stagger class="grid grid-cols-1 gap-2 pt-2 min-[400px]:grid-cols-2">
+        <article v-for="skill in visibleSkills" :key="skill.id || skill.name" class="skill-card min-w-0 rounded-xl border border-[var(--line)] bg-[var(--surface)] px-3 py-2.5 transition-colors hover:border-purple-400/50">
           <div class="flex flex-wrap items-baseline justify-between gap-x-2 gap-y-1">
             <h3 class="min-w-0 flex-1 break-words text-xs font-bold leading-snug text-[var(--ink)] sm:text-sm">{{ skill.name }}</h3>
             <span class="shrink-0 text-[9px] font-bold uppercase tracking-wide text-[var(--primary)]">{{ ratingLabel(skill.level) }}</span>
           </div>
           <div class="mt-2 h-1 overflow-hidden rounded-full bg-purple-500/10" role="meter" :aria-label="`${skill.name} proficiency`" :aria-valuenow="score(skill.level)" aria-valuemin="0" aria-valuemax="10">
-            <div class="h-full rounded-full bg-gradient-to-r from-violet-500 to-fuchsia-400" :style="{ width: `${score(skill.level) * 10}%` }"></div>
+            <div class="h-full rounded-full bg-[var(--primary-action)]" :style="{ width: `${score(skill.level) * 10}%` }"></div>
           </div>
         </article>
       </div>
-      <p v-else class="py-6 text-center text-sm text-[var(--muted)]">No skills in this category yet.</p>
+      </Transition>
+      <p v-if="!visibleSkills.length" class="py-6 text-center text-sm text-[var(--muted)]">No skills in this category yet.</p>
     </template>
   </section>
 </template>

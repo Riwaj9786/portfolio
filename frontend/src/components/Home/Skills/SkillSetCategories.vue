@@ -51,7 +51,7 @@ onBeforeUnmount(() => resizeObserver?.disconnect());
       <button v-for="item in list" :key="item" type="button" :aria-pressed="item === activeCategory"
         class="shrink-0 rounded-full border px-3 py-2 text-[10px] lg:px-4 lg:text-xs font-bold transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-2px]"
         :class="item === activeCategory
-          ? 'border-[var(--primary)] bg-[var(--primary)] text-white shadow-md shadow-purple-500/20'
+          ? 'border-[var(--primary)] bg-[var(--primary-action)] text-white shadow-md shadow-purple-500/20'
           : 'border-[var(--line)] text-[var(--muted)] hover:border-purple-400/40 hover:text-[var(--ink)]'"
         @click="emit('categorySelected', item)">{{ item }}</button>
     </div>

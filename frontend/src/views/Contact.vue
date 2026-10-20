@@ -4,7 +4,7 @@ import ConnectSection from "@/components/Contact/ConnectSection.vue";
 </script>
 
 <template>
-  <main class="page-wrap">
+  <main class="portfolio-contact page-wrap">
     <header
       class="mb-9 grid gap-5 sm:mb-12 sm:gap-8 lg:grid-cols-[1fr_400px] lg:items-end"
     >
@@ -28,7 +28,7 @@ import ConnectSection from "@/components/Contact/ConnectSection.vue";
       </p>
     </header>
 
-    <div class="grid items-stretch gap-5 lg:grid-cols-2">
+    <div v-stagger class="grid items-stretch gap-5 lg:grid-cols-2">
       <ConnectSection />
       <WorkTogether />
     </div>

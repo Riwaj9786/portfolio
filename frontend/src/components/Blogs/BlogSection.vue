@@ -116,7 +116,7 @@ const goToPage = (page) => {
                @click="goToPage(page)"
                :class="[
                   'pagination-button',
-                  page === currentPage ? '!border-[var(--primary)] !bg-[var(--primary)] !text-white' : ''
+                  page === currentPage ? '!border-[var(--primary)] !bg-[var(--primary-action)] !text-white' : ''
                ]"
             >
                {{ page }}

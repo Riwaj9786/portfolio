@@ -11,9 +11,7 @@ The frontend reads the public snapshot in this file at build time through Vite.
 All portfolio details, filters, and detail pages use bundled local data; no Django,
 PostgreSQL, or API URL is required. Rebuild after editing the snapshot.
 
-Images resolve locally under `/uploads/` and live in `frontend/public/uploads/`.
-The current images are generated SVG placeholders. `public/uploads/manifest.json`
-preserves their original image paths for replacing them with the real assets later.
+Images resolve locally under `/uploads/` and live in `frontend/uploads/`.
 The original photos and project screenshots are not included. The resume PDF is
 not generated; supply the real file and update `resume` before publishing its link.
 
@@ -294,7 +292,7 @@ cannot replace a Django fixture for restoration.
     "title": "Computer Engineer | Full Stack Developer | Graphics Designer",
     "short_bio": "Full-Stack & Backend Developer (Django, DRF, React & Vue) | Graphic Designer with 4+ years of experience. Passionate about building scalable applications, exploring AI-powered solutions, and crafting impactful digital experiences.",
     "description": "<p>I am a <strong>Computer Engineer</strong> and <strong>Full Stack Developer</strong> specializing in <strong>Django</strong> and <strong>Vue.js</strong>, with a strong focus on building scalable, efficient, and intuitive web applications. With over <strong>four years of experience in Graphic Design</strong>, I also bring a creative edge to my work, crafting visually engaging brand identities and digital assets that elevate user experiences.</p><p>&nbsp;</p><p>In addition to my technical and design capabilities, I have a proven track record of <strong>leadership</strong> and <strong>community involvement</strong>. I am passionate about leveraging the power of technology and design to develop impactful, user-centric solutions that address real-world challenges. By bridging the gap between functionality and aesthetics, I strive to create digital experiences that are not only effective but meaningful.</p>",
-    "profile_pic": "uploads/account/user/er-riwaj-bhurtel-bc359e01.svg",
+    "profile_pic": "uploads/account/user/Riwaj_profile_pic-700x700.jpg",
     "resume": "uploads/resume/Resume.pdf"
   }
 ]
@@ -753,28 +751,28 @@ cannot replace a Django fixture for restoration.
   {
     "id": 1,
     "title": "Full Stack Development",
-    "icon": "uploads/services/service/full-stack-development-27322191.svg",
+    "icon": "uploads/services/fullstack.png",
     "description": "Building scalable, responsive, and user-friendly web applications with modern technologies like React, Django, and REST APIs.",
     "order": 0
   },
   {
     "id": 2,
     "title": "Creative Design & Branding",
-    "icon": "uploads/services/service/creative-design-branding-fea63b7a.svg",
+    "icon": "uploads/services/creative branding.png",
     "description": "Transforming ideas into compelling visual experiences through graphic design, branding, and intuitive user interfaces.",
     "order": 0
   },
   {
     "id": 3,
     "title": "Data & AI Exploration",
-    "icon": "uploads/services/service/data-ai-exploration-54dacc06.svg",
+    "icon": "uploads/services/ai exploration.png",
     "description": "Leveraging data analysis, visualization, and machine learning concepts to uncover insights and develop intelligent solutions.",
     "order": 0
   },
   {
     "id": 4,
     "title": "Leadership & Collaboration",
-    "icon": "uploads/services/service/data-ai-exploration-54dacc06.svg",
+    "icon": "uploads/services/leadership collaboration.png",
     "description": "Combining technical expertise with leadership, teamwork, and creative problem-solving to turn ambitious ideas into meaningful outcomes.",
     "order": 0
   }
@@ -805,7 +803,7 @@ cannot replace a Django fixture for restoration.
       26
     ],
     "category": "professional",
-    "description": "",
+    "description": "Developed scalable backend applications using Python, Django, REST APIs, and PostgreSQL, focusing on system architecture, integration, testing, and deployment.",
     "logo": null,
     "achievements": [],
     "date_precision": "month"
@@ -830,7 +828,7 @@ cannot replace a Django fixture for restoration.
       26
     ],
     "category": "professional",
-    "description": "",
+    "description": "Supported national disaster information systems, including Bipad Portal, through stakeholder coordination, system improvements, testing, deployment, and capacity-building initiatives.",
     "logo": null,
     "achievements": [],
     "date_precision": "month"
@@ -842,21 +840,29 @@ cannot replace a Django fixture for restoration.
     "company_url": null,
     "start_date": "2026-08-01",
     "end_date": null,
-    "job_type": "Hybrid",
+    "job_type": "Onsite",
     "skills": [
       1,
       2,
-      5,
-      6,
-      7,
-      16,
-      17,
-      18,
-      19,
-      20
+      3,
+      4,
+      7, 
+      8,
+      10,
+      13,
+      14,
+      15,
+      26,
+      36,
+      37,
+      42,
+      43,
+      44,
+      53,
+      55
     ],
     "category": "professional",
-    "description": "",
+    "description": "Leading national disaster management digital projects, overseeing implementation, technical teams, stakeholder coordination, system enhancements, and strategic project delivery at NDRRMA.",
     "logo": null,
     "achievements": [],
     "date_precision": "month"
@@ -875,7 +881,7 @@ cannot replace a Django fixture for restoration.
       30
     ],
     "category": "professional",
-    "description": "",
+    "description": "Managed student records, academic results, and statistical data using Microsoft Sandbox, ensuring data accuracy, system integrity, compliance, and efficient reporting.",
     "logo": null,
     "achievements": [],
     "date_precision": "month"
@@ -902,7 +908,7 @@ cannot replace a Django fixture for restoration.
       28
     ],
     "category": "professional",
-    "description": "",
+    "description": "Provided IT support, managed domains, databases, and applications, maintained digital systems, and supported web operations, troubleshooting, graphic design, and branding.",
     "logo": null,
     "achievements": [],
     "date_precision": "month"
@@ -913,7 +919,7 @@ cannot replace a Django fixture for restoration.
     "company": "Rotaract Club of Pokhara University",
     "company_url": null,
     "category": "leadership",
-    "description": "",
+    "description": "Led club operations, strategic planning, community service initiatives, and team management while fostering partnerships, member engagement, and impactful community development projects.",
     "logo": null,
     "achievements": [],
     "date_precision": "month",
@@ -936,7 +942,7 @@ cannot replace a Django fixture for restoration.
     "company": "Hult Prize at Pokhara University",
     "company_url": null,
     "category": "leadership",
-    "description": "",
+    "description": "Led campus-wide entrepreneurship initiatives, overseeing strategic planning, team coordination, event execution, stakeholder engagement, and operations to foster innovation and student participation.",
     "logo": null,
     "achievements": [],
     "date_precision": "month",
@@ -958,7 +964,7 @@ cannot replace a Django fixture for restoration.
     "company": "Rotaract Club of Pokhara University",
     "company_url": null,
     "category": "leadership",
-    "description": "",
+    "description": "Coordinated Rotary Foundation initiatives, supported fundraising and service activities, promoted foundation awareness, and collaborated with club members to strengthen community impact.",
     "logo": null,
     "achievements": [],
     "date_precision": "month",
@@ -978,7 +984,7 @@ cannot replace a Django fixture for restoration.
     "company": "Hult Prize at Pokhara University",
     "company_url": null,
     "category": "leadership",
-    "description": "",
+    "description": "Supported campus leadership in planning entrepreneurship events, coordinating teams, managing project timelines, and facilitating collaboration to ensure successful execution of initiatives.",
     "logo": null,
     "achievements": [],
     "date_precision": "month",
@@ -1000,7 +1006,7 @@ cannot replace a Django fixture for restoration.
     "company": "Hult Prize at Pokhara University",
     "company_url": null,
     "category": "leadership",
-    "description": "",
+    "description": "Managed operational activities, coordinated event logistics, supported promotional campaigns, and facilitated team communication to strengthen campus engagement and entrepreneurship initiatives.",
     "logo": null,
     "achievements": [],
     "date_precision": "month",
@@ -1021,7 +1027,7 @@ cannot replace a Django fixture for restoration.
     "company": "Rotaract Club of Pokhara University",
     "company_url": null,
     "category": "leadership",
-    "description": "",
+    "description": "Facilitated international collaboration, coordinated cross-cultural service initiatives, strengthened partnerships with Rotaract clubs, and promoted global understanding through meaningful community engagement activities.",
     "logo": null,
     "achievements": [],
     "date_precision": "month",
@@ -1040,7 +1046,7 @@ cannot replace a Django fixture for restoration.
     "company": "Rotaract Club of Pokhara University",
     "company_url": null,
     "category": "leadership",
-    "description": "",
+    "description": "Managed digital platforms, website content, branding materials, and social media activities while providing technical support and strengthening the club's online presence.",
     "logo": null,
     "achievements": [],
     "date_precision": "month",
@@ -1064,7 +1070,7 @@ cannot replace a Django fixture for restoration.
     "company": "Hult Prize Nepal Community",
     "company_url": null,
     "category": "leadership",
-    "description": "",
+    "description": "Designed promotional graphics, branding assets, and social media content using Adobe Creative Suite and Canva, supporting visual communication and digital engagement campaigns.",
     "logo": null,
     "achievements": [],
     "date_precision": "year",
@@ -1086,7 +1092,7 @@ cannot replace a Django fixture for restoration.
     "company": "Hult Prize Nepal Community",
     "company_url": null,
     "category": "leadership",
-    "description": "",
+    "description": "Led promotional strategies, coordinated creative teams, managed digital campaigns, and developed engaging content to increase awareness, participation, and visibility of entrepreneurship initiatives.",
     "logo": null,
     "achievements": [],
     "date_precision": "year",
@@ -1105,7 +1111,7 @@ cannot replace a Django fixture for restoration.
       54,
       57
     ]
-  }
+  },
 ]
 ```
 
@@ -1134,7 +1140,7 @@ cannot replace a Django fixture for restoration.
 [
   {
     "id": 1,
-    "name": "Real-Time Chat Application with Django Channels & Knox Authentication (Backend)",
+    "name": "Real-Time End-to-End Encrypted Chat API Using Signal Protocol",
     "skills": [
       1,
       2,
@@ -1149,10 +1155,10 @@ cannot replace a Django fixture for restoration.
     "banner_image": "uploads/projects/project/real-time-chat-application-with-django-channels-knox-au-b092ed0e.svg",
     "start_date": "2025-02-01",
     "end_date": "2025-03-01",
-    "description": "<p>Building a secure real-time chat application with <strong>Django Channels</strong> and <strong>Knox Authentication</strong> addresses the growing need for instant communication in platforms such as team collaboration, community interaction, and customer support. Real-time chat features are now integral to many platforms, making this project highly relevant.</p><p>&nbsp;</p><p>The journey begins with setting up a custom user model using Django’s <strong>AbstractBaseUser</strong>. Instead of relying on the default user model, this custom model includes an email as the unique identifier for login, a required name field to personalize the chat experience, and an optional avatar field for storing user profile pictures. This early customization ensures the authentication system fits seamlessly with the overall application.</p><p>&nbsp;</p><p>At the heart of the chat app are two main models: <strong>ChatRoom</strong> and <strong>Message</strong>. The ChatRoom model includes a name, members represented by a many-to-many relationship with the custom user model, and a unique slug generated using slugify combined with random characters. The Message model links to a ChatRoom and a sender (the user who sent the message), storing the actual message content as a CharField. This design allows efficient message storage and retrieval, while also restricting room access to authorized members.</p><p>&nbsp;</p><p>To enable real-time messaging, Django Channels is integrated into the project. By installing packages like channels, channels-redis, and daphne, and updating settings such as <strong>ASGI_APPLICATION</strong>, the app can handle <strong>WebSocket connections</strong>. During development, an <strong>InMemoryChannelLayer</strong> is used for convenience, though a Redis-backed channel layer is recommended for production environments for better performance and reliability.</p><p>&nbsp;</p><p>Security is a major focus, especially since chat applications handle constant user data exchange. <strong>Knox Authentication</strong> is used to secure WebSocket connections via a custom middleware called <strong>KnoxAuthMiddleware</strong>. This middleware ensures that only users with valid Knox tokens can open WebSocket connections, effectively preventing unauthorized access and safeguarding real-time data.</p><p>&nbsp;</p><p>The <strong>ChatConsumer</strong> class is the core WebSocket handler. It manages user connections and disconnections, receives messages from clients, broadcasts messages to chat groups, and persists messages to the database. By overriding methods like connect, disconnect, and receive_json, the consumer delivers smooth and responsive chat interactions.</p><p>&nbsp;</p><p>Finally, WebSocket routing and ASGI configuration are set up using <strong>ProtocolTypeRouter, AuthMiddlewareStack,</strong> and the custom <strong>KnoxAuthMiddleware</strong>, ensuring all incoming WebSocket requests are authenticated and correctly routed to the chat consumer. Testing the implementation with Postman confirmed that messages flow properly with valid Knox tokens, and that messages are saved correctly in the database.</p><p>&nbsp;</p><p>In summary, this project combines real-time WebSocket communication with secure token-based authentication within Django. Using Django Channels, Knox, and a custom user model, it builds a scalable and production-ready chat app architecture, ready to be enhanced with <strong>Redis</strong> for channel layers. Whether you’re building a social platform, collaboration tool, or support system, this approach provides a robust foundation for secure, real-time communication.</p>",
+    "description": "<p>Building a secure real-time chat application implementing the <strong>Signal E2EE Workflow</strong> along with <strong>Django Channels</strong> and <strong>Knox Authentication</strong> addresses the growing need for instant communication in platforms such as team collaboration, community interaction, and customer support. Real-time chat features are now integral to many platforms, making this project highly relevant.</p><p>&nbsp;</p><p>The journey begins with setting up a custom user model using Django’s <strong>AbstractBaseUser</strong>. Instead of relying on the default user model, this custom model includes an email as the unique identifier for login, a required name field to personalize the chat experience, and an optional avatar field for storing user profile pictures. This early customization ensures the authentication system fits seamlessly with the overall application.</p><p>&nbsp;</p><p>At the heart of the chat app are two main models: <strong>ChatRoom</strong> and <strong>Message</strong>. The ChatRoom model includes a name, members represented by a many-to-many relationship with the custom user model, and a unique slug generated using slugify combined with random characters. The Message model links to a ChatRoom and a sender (the user who sent the message), storing the actual message content as a CharField. This design allows efficient message storage and retrieval, while also restricting room access to authorized members.</p><p>&nbsp;</p><p>To enable real-time messaging, Django Channels is integrated into the project. By installing packages like channels, channels-redis, and daphne, and updating settings such as <strong>ASGI_APPLICATION</strong>, the app can handle <strong>WebSocket connections</strong>. During development, an <strong>InMemoryChannelLayer</strong> is used for convenience, though a Redis-backed channel layer is recommended for production environments for better performance and reliability.</p><p>&nbsp;</p><p>Security is a major focus, especially since chat applications handle constant user data exchange. <strong>Knox Authentication</strong> is used to secure WebSocket connections via a custom middleware called <strong>KnoxAuthMiddleware</strong>. This middleware ensures that only users with valid Knox tokens can open WebSocket connections, effectively preventing unauthorized access and safeguarding real-time data.</p><p>&nbsp;</p><p>The <strong>ChatConsumer</strong> class is the core WebSocket handler. It manages user connections and disconnections, receives messages from clients, broadcasts messages to chat groups, and persists messages to the database. By overriding methods like connect, disconnect, and receive_json, the consumer delivers smooth and responsive chat interactions.</p><p>&nbsp;</p><p>Finally, WebSocket routing and ASGI configuration are set up using <strong>ProtocolTypeRouter, AuthMiddlewareStack,</strong> and the custom <strong>KnoxAuthMiddleware</strong>, ensuring all incoming WebSocket requests are authenticated and correctly routed to the chat consumer. Testing the implementation with Postman confirmed that messages flow properly with valid Knox tokens, and that messages are saved correctly in the database.</p><p>&nbsp;</p><p>In summary, this project combines real-time WebSocket communication with secure token-based authentication within Django. Using Django Channels, Knox, and a custom user model, it builds a scalable and production-ready chat app architecture, ready to be enhanced with <strong>Redis</strong> for channel layers. Whether you’re building a social platform, collaboration tool, or support system, this approach provides a robust foundation for secure, real-time communication.</p>",
     "distinct_features": "<ul><li>Real-time messaging via <strong>Django Channels</strong>.</li><li>Token-based authentication using <strong>Knox</strong>.</li><li>Custom User Model.</li><li>Secure <strong>WebSocket connections</strong> restricted to authenticated users.</li><li>Production-ready with <code><strong>RedisChannelLayer</strong></code>.</li></ul>",
     "category": 1,
-    "slug": "chat-api-with-websockets-oYavl"
+    "slug": "chat-api-signal-protocol"
   },
   {
     "id": 3,
@@ -1294,7 +1300,7 @@ cannot replace a Django fixture for restoration.
       36
     ],
     "client": null,
-    "banner_image": "uploads/projects/project/full-stack-developer-portfolio-django-vue-aws-60111720.svg",
+    "banner_image": "uploads/projects/projectimage/web-responsive-frontend.png",
     "start_date": "2025-03-01",
     "end_date": "2025-07-08",
     "description": "<p>This portfolio website is a full-fledged <strong>personal branding platform</strong> built from scratch using a modern full-stack architecture. It serves as a central hub for showcasing my projects, technical skills, blog posts, and real-world experience. Every part of the system — from API design and database schema to frontend rendering and server deployment — was carefully crafted to ensure performance, scalability, and maintainability.</p><p>&nbsp;</p><p>The goal of this project was not just to build a website, but to simulate a <strong>production-grade system</strong> similar to what’s used in real startups or enterprise apps. It reflects my hands-on experience with a complete development workflow — from backend logic to frontend UI, from containerization to cloud deployment.</p><p>&nbsp;</p><h3><strong>Technology Stack</strong></h3><p><strong>a. Backend</strong></p><ul><li><strong>Django</strong>: A robust and secure Python web framework used to handle the server-side logic, user authentication, and data modeling.</li><li><strong>Django Rest Framework (DRF)</strong>: Used to build a scalable, clean, and versioned RESTful API that the frontend consumes.</li><li><strong>PostgreSQL</strong>: The primary relational database system — chosen for its reliability, performance, and advanced querying capabilities.</li><li><p><strong>Redis</strong>: Integrated as a caching layer for API responses and session data, dramatically improving performance under load.</p><p>&nbsp;</p></li></ul><p><strong>b. Frontend</strong></p><ul><li><p><strong>VueJS (Composition API + Script Setup)</strong>: Enables a modern reactive UI with a component-based architecture. Vue provides a seamless single-page application (SPA) experience with smooth transitions, reactivity, and interactivity.</p><p>&nbsp;</p></li><li><p><strong>TailwindCSS</strong>: Utility-first CSS framework that helped build a responsive and custom-designed interface with minimal custom CSS. Ensures consistent styling across the app and rapid prototyping.</p><p>&nbsp;</p></li></ul><p><strong>c. DevOps &amp; Infrastructure</strong></p><ul><li><strong>Docker</strong>: Every component of the app is containerized for consistency, portability, and scalability. I’ve created separate containers for the backend, frontend, Redis, PostgreSQL, and Nginx.</li><li><strong>Nginx</strong>: Acts as a reverse proxy and static file server, managing traffic efficiently and securely between services.</li><li><strong>Linux (Ubuntu)</strong>: The server OS running on the EC2 instance, providing a secure and lightweight environment for production workloads.</li><li><strong>AWS EC2 Instance</strong>: The entire application stack is deployed on a virtual machine running on <strong>Amazon Web Services (AWS)</strong>. This gave me hands-on experience with cloud infrastructure, SSH configuration, firewall rules, SSL certification, and uptime monitoring.</li><li><strong>Gunicorn</strong>: Used as the Python WSGI HTTP server to serve the Django application in production.</li><li><strong>Certbot + Let's Encrypt</strong>: Configured SSL certificates for HTTPS support, ensuring encrypted and secure communication.</li></ul><p>&nbsp;</p><p><strong>d. UI/UX Design</strong></p><ul><li><strong>Figma</strong>: designed the entire UI/UX of the portfolio website before development. This included:<ul><li>Creating wireframes and high-fidelity mockups</li><li>Planning responsive layouts for desktop and mobile</li><li>Designing reusable components like buttons, cards, and modals</li><li>Collaborating visually with layout ideas before writing any code</li><li>Using Figma helped ensure a <strong>user-friendly, visually consistent</strong> frontend that translated seamlessly into TailwindCSS and Vue components.<strong>&nbsp;</strong></li></ul></li></ul><p>&nbsp;</p><h3><strong>Version 2 Enhancements (v2)</strong></h3><p>The current version of the site (v2) introduces <strong>major architectural and UX enhancements</strong>, designed to improve performance, maintainability, and user engagement.</p><ul><li><strong>Feature Flag System</strong>: Integrated a flexible flag system that allows specific features (like experience tab, or project drafts) to be enabled/disabled dynamically — without deploying new code.</li><li><strong>Individual Project Pages</strong>: Each project now links to a detailed description page, including:<ul><li>Overview and purpose</li><li>Tech stack and architecture</li><li>Images related to the projects</li></ul></li><li><strong>Improved State Management</strong>: Leveraged Vue’s reactivity system to enhance UX, including image sliders, modals, and animations.</li><li><p><strong>Responsive Image Slider</strong>: Built a lightweight, responsive image slider using Vue transitions, supporting full-screen previews and smooth animations.</p><p>&nbsp;</p></li></ul>",
@@ -1332,7 +1338,7 @@ cannot replace a Django fixture for restoration.
       20
     ],
     "client": "Spark International Education Consultancy",
-    "banner_image": "uploads/projects/project/brand-identity-and-logo-design-spark-international-educ-a059d996.svg",
+    "banner_image": "uploads/projects/projectimage/spark-final.jpg",
     "start_date": "2024-08-01",
     "end_date": null,
     "description": "<p>I created the logo for <strong>Spark International Education Consultancy</strong> to visually represent its mission of guiding students toward higher education and success. The design thoughtfully integrates multiple symbolic elements that together tell a story of knowledge, inspiration, and growth.</p><p>&nbsp;</p><p>At the heart of the logo is a <strong>student figure</strong>, depicted wearing a graduation cap, symbolizing achievement and academic accomplishment. This figure is holding a bright <strong>spark</strong> above their head, which represents the ignition of curiosity, motivation, and the pursuit of knowledge. The spark conveys the idea of inspiration—lighting the way forward for students as they navigate their educational journey.</p><p>&nbsp;</p><p>The <strong>diyo</strong> (a traditional lamp) is another key element in the logo, symbolizing enlightenment and guidance. It reflects the consultancy’s role as a beacon of hope and support, illuminating the path for students in their quest for education abroad or higher learning opportunities. This traditional element connects cultural heritage with modern aspirations, emphasizing that education is both a timeless and transformative force.</p><p>&nbsp;</p><p>Books are also incorporated into the design to signify the <strong>foundation of learning</strong> and the <strong>accumulation of knowledge</strong>. These books emphasize academic rigor, intellectual growth, and the resources that Spark International Education Consultancy provides to help students succeed.</p><p>&nbsp;</p><p>The color palette of the logo plays an important role in reinforcing these themes. The <strong>blue</strong> hues convey <strong>trust, professionalism, and stability</strong>—qualities essential in an education consultancy that students and parents rely on for guidance and support. Meanwhile, the <strong>orange</strong> tones introduce <strong>warmth, enthusiasm, and energy, capturing the spark of creativity and optimism</strong> that drives students toward their goals.</p><p>&nbsp;</p><p>Together, the blue and orange colors balance each other to create a vibrant yet dependable identity, illustrating that Spark International Education Consultancy is both a <strong>steady guide and an inspiring force.</strong> The combination of symbolic elements and meaningful colors creates a logo that is not only visually appealing but also deeply representative of the consultancy’s commitment to empowering students on their educational journey.</p>",
@@ -1385,7 +1391,7 @@ cannot replace a Django fixture for restoration.
       20
     ],
     "client": "BBT",
-    "banner_image": "uploads/projects/project/building-trust-through-bold-design-the-bbt-logo-project-66978d04.svg",
+    "banner_image": "uploads/projects/projectimage/BBT Final.png",
     "start_date": "2025-03-01",
     "end_date": null,
     "description": "<p>The logo for <strong>BBT (Business Built on Trust)</strong> was created to visually represent the company’s identity as a <strong>Pokhara-based, one-stop wholesale destination</strong> for <strong>pellet feed, agricultural supplies, and grocery items</strong>.</p><p>&nbsp;As a <strong>growing group of companies</strong>, including <strong>BBT Agro Pvt. Ltd.</strong> and <strong>BBT General Stores and Suppliers Pvt. Ltd.</strong>, the brand required a <strong>bold, clean, and unified identity</strong> that reflects <strong>trust, professionalism, and sectoral diversity</strong>.</p><p>&nbsp;</p><h3><strong>Design Concept</strong></h3><p>The logo design follows a <strong>geometric and abstract minimalist approach</strong>, integrating meaning into both form and structure:</p><ul><li><strong>Geometric Custom Emblem</strong>: The symbol is meticulously constructed using balanced geometric shapes to form a cohesive, modern visual identity.</li><li><strong>Hidden Initials (B, B, T)</strong>: The emblem creatively incorporates the letters <strong>B, B, and T</strong>, subtly woven into the negative and positive spaces, inviting curiosity and engagement.</li><li><strong>Leaf/Sprout Motif</strong>: The abstract shape hints at a <strong>leaf or a growing field</strong>, representing <strong>sustainability, agriculture, and organic growth</strong>—core themes across BBT’s businesses.</li><li><strong>Scalable Identity</strong>: Designed to adapt across BBT’s companies and services while maintaining strong brand recognition in both digital and physical formats.</li></ul><p>&nbsp;</p><h3><strong>Color Theory</strong></h3><p><strong>1. Teal Green (#00A89D)</strong></p><ul><li>Represents <strong>freshness, stability</strong>, and <strong>agricultural connection</strong>.</li><li>Conveys trust and vitality—key values in BBT’s agro and feed operations.</li></ul><p><strong>2. Golden Yellow (#FFD400)</strong></p><ul><li>Symbolizes <strong>energy, optimism</strong>, and <strong>abundance</strong>.</li><li>Highlights BBT’s product diversity and dynamic business outlook.</li></ul><p><strong>3. Deep Navy Blue (#001F4D)</strong></p><ul><li>Used for the text and core acronym.</li><li><p>Signifies <strong>corporate strength, trustworthiness, and professionalism</strong>, reinforcing the brand promise in the tagline.</p><p>&nbsp;</p></li></ul><p>Together, these colors reflect a <strong>strategic balance</strong>:</p><ul><li><strong>Blue</strong> for trust and authority</li><li><strong>Green</strong> for sustainability and growth</li><li><strong>Yellow</strong> for energy and positivity</li></ul><p>&nbsp;</p><h3><strong>Typography</strong></h3><ul><li>The <strong>BBT acronym</strong> uses a <strong>bold, custom sans-serif font</strong> with clean geometry to ensure <strong>strength and simplicity</strong>.</li><li>The tagline “<strong>BUSINESS BUILT ON TRUST</strong>” is rendered in an <strong>uppercase, minimalist typeface</strong> that complements the bold logo while offering clarity and structure.</li><li>Typography aligns with BBT’s <strong>efficient, modern, and honest communication style</strong>.</li></ul><p>&nbsp;</p><h3><strong>Brand Extension &amp; Subsidiaries</strong></h3><p>This master brand identity flexibly extends to its two subsidiaries:</p><ul><li><strong>BBT Agro Pvt. Ltd.</strong> – Focused on <strong>livestock feed, fertilizers, and farm essentials</strong>.</li><li><strong>BBT General Stores and Suppliers Pvt. Ltd.</strong> – A trusted name for <strong>grocery and wholesale retail</strong>.</li></ul><p>&nbsp;</p><p>The unified identity system allows BBT to maintain a <strong>cohesive brand language</strong> across all entities while respecting their <strong>individual market roles</strong>.</p><p>&nbsp;</p><h3>Final Outcome</h3><p>The final logo delivers:</p><ul><li>A <strong>professional, modern, and scalable visual identity</strong>.</li><li>Strong visual storytelling through <strong>custom shapes and hidden symbolism</strong>.</li><li>Brand alignment for both <strong>BBT Agro Pvt. Ltd.</strong> and <strong>BBT General Stores and Suppliers Pvt. Ltd.</strong></li><li><p>Effective usability across <strong>store signage, packaging, uniforms, business cards, websites, and social media</strong>.</p><p>&nbsp;</p></li></ul><p>This logo confidently communicates <strong>BBT’s vision of trust, growth, and diversity</strong>, solidifying its position as a leading group in Pokhara’s wholesale and agricultural sectors.</p>",
@@ -1408,7 +1414,7 @@ cannot replace a Django fixture for restoration.
       26
     ],
     "client": "National Disaster Risk Reduction and Management Authority",
-    "banner_image": "uploads/projects/project/web-development-and-system-enhancement-for-ndrrma-natio-e0228bea.svg",
+    "banner_image": "uploads/projects/projectimage/ndrrma.png",
     "start_date": "2025-03-18",
     "end_date": "2025-07-31",
     "description": "<p>The project involved ongoing development and maintenance of the official platform for the National Disaster Risk Reduction and Management Authority (NDRRMA), Nepal. The platform serves as a centralized digital system to manage, monitor, and disseminate disaster-related data, reports, and updates. As part of the Youth Innovation Lab’s technical team, I contributed as a backend developer and played a collaborative role in project coordination between government stakeholders and the development team.</p><p>&nbsp;</p><p><strong>Key Contributions and Responsibilities:</strong></p><ul><li><strong>Backend Feature Enhancements:</strong><ul><li>Worked on a Django-based backend to implement and update core features such as <strong>model signals</strong> for automated field population and logging.</li><li>Managed <strong>database schema migrations</strong>, ensuring backward compatibility and safe deployment during live updates.</li><li>Customized the <strong>Django admin panel</strong> to streamline data management for internal users, including custom filters, inlines, and admin actions tailored to NDRRMA's workflows.</li></ul></li><li><strong>Serializer and API Updates:</strong><ul><li>Updated and optimized <strong>Django REST Framework serializers</strong> to support new frontend features and improve API performance.</li><li>Collaborated closely with frontend developers to ensure accurate data serialization/deserialization for seamless UI integration.</li></ul></li><li><strong>Cross-functional Coordination:</strong><ul><li>Acted as a <strong>bridge between the NDRRMA officials and the development team</strong>, ensuring that technical solutions were aligned with institutional expectations and functional requirements.</li><li>Participated in <strong>requirement gathering meetings</strong>, translated non-technical input into actionable development tasks, and regularly provided feedback to stakeholders on progress and implementation.</li></ul></li><li><strong>Quality Assurance and Flow Management:</strong><ul><li>Carefully studied and documented the existing codebase and project structure to maintain continuity and reduce risks during feature additions.</li><li><p>Ensured a <strong>smooth development workflow</strong> by managing version control, environment consistency, and adhering to development best practices.</p><p>&nbsp;</p></li></ul></li></ul><p><strong>Impact:</strong><br>This project significantly improved the functionality and maintainability of the NDRRMA platform, supporting the government’s mission to strengthen disaster preparedness and response. My contributions helped deliver timely updates and features while maintaining coordination across technical and non-technical stakeholders.</p>",
@@ -1426,7 +1432,7 @@ cannot replace a Django fixture for restoration.
       20
     ],
     "client": "Mamaghar Entertainment",
-    "banner_image": "uploads/projects/project/rooted-in-culture-crafted-for-celebration-the-mama-ghar-f48d8b7c.svg",
+    "banner_image": "uploads/projects/projectimage/mamaghar-final.png",
     "start_date": "2024-07-29",
     "end_date": "2024-08-18",
     "description": "<p><strong>Mama Ghar Entertainment</strong> is an event management company that emphasizes cultural roots, warmth, togetherness, and joyful celebrations. The brand name “Mama Ghar” translates to “Maternal Uncle’s Home” in Nepali, evoking a strong sense of nostalgia, safety, and belonging—a place associated with joy, childhood memories, and festive gatherings.</p><p>&nbsp;</p><h3><strong>Logo Design Concept</strong></h3><h4><strong>1. Traditional Nepali House Silhouette</strong></h4><ul><li>The central structure outlines a <strong>typical Nepali home</strong> with <strong>golden strokes</strong>, symbolizing cultural heritage, warmth, and familial comfort.</li><li>The house’s layered roof and windows are minimalist yet distinct, emphasizing authenticity without visual clutter.</li></ul><h4><strong>2. Children Illustration (Vanji &amp; Vanja)</strong></h4><ul><li>Two stylized children figures at the base represent <strong>Vanji and Vanja</strong>, symbolic of innocence, fun, and joyful togetherness.</li><li>Their hand-in-hand posture underlines <strong>unity, inclusivity, and the familial essence</strong> of the brand’s services.</li></ul><h4><strong>3. Bold Typography</strong></h4><ul><li>The brand name <strong>\"MAMA GHAR\"</strong> is written in <strong>bold, white, uppercase sans-serif</strong> font, exuding confidence and clarity.</li><li>The clean, modern font balances well with the traditional elements of the house.</li></ul><h4><strong>4. Subtext - ENTERTAINMENT</strong></h4><ul><li>Positioned underneath in <strong>golden uppercase serif</strong>, the word <strong>\"ENTERTAINMENT\"</strong> reflects sophistication and elegance.</li><li>The serif font here adds contrast and a hint of celebration, fitting for an events company.</li></ul><h4><strong>5. Starburst/Flare Detail</strong></h4><ul><li>A <strong>golden starburst</strong> appears within the letters “M” and “R” of \"MAMA GHAR\", adding a celebratory and vibrant touch.</li><li>This visual spark represents light, excitement, and highlights the company's role in illuminating joyful moments.</li></ul><p>&nbsp;</p><h3><strong>Brand Colors</strong></h3><figure class=\"table\"><table><thead><tr><th>Color</th><th>Hex Code</th><th>Meaning in Context</th></tr></thead><tbody><tr><td><strong>Gold</strong></td><td>#D4AF37</td><td>Luxury, celebration, tradition, festivity</td></tr><tr><td><strong>White</strong></td><td>#FFFFFF</td><td>Simplicity, clarity, trust</td></tr><tr><td><strong>Black</strong></td><td>#000000</td><td>Sophistication, elegance, depth</td></tr></tbody></table></figure><p>&nbsp;</p><p>These colors combine to reflect the <strong>premium, culturally rooted, and joyous</strong> nature of the brand.</p><p>&nbsp;</p><h3><strong>Typography</strong></h3><ul><li><strong>Primary Font (\"MAMA GHAR\")</strong>:<ul><li><strong>Style</strong>: Bold, Sans-serif, All Caps</li><li><strong>Attributes</strong>: Strong, clean, and modern—ensures legibility and brand authority.</li></ul></li><li><strong>Secondary Font (\"ENTERTAINMENT\")</strong>:<ul><li><strong>Style</strong>: Elegant Serif, All Caps, Gold-colored</li><li><strong>Attributes</strong>: Stylish, traditional, and refined—conveys celebration and class.</li></ul></li></ul><p>&nbsp;</p><h3><strong>Design Tone &amp; Message</strong></h3><p>The logo conveys a perfect balance between <strong>modern professionalism</strong> and <strong>cultural nostalgia</strong>. It tells a story—of home, warmth, childhood joy, and unforgettable events—making it ideal for an event management company that aims to create lasting memories.</p><p>&nbsp;</p><h3><strong>Use Cases</strong></h3><ul><li>Business cards, banners, merchandise, social media branding</li><li>Event backdrops, LED screens, and digital invites</li><li>Watermarks for photos/videos produced at events</li></ul>",
@@ -1501,26 +1507,14 @@ cannot replace a Django fixture for restoration.
   {
     "id": 4,
     "project": 1,
-    "image": "uploads/projects/projectimage/real-time-chat-application-with-django-channels-knox-au-2608de3d.svg",
+    "image": "uploads/projects/projectimage/knox-middleware.png",
     "caption": "Custom Knox Middleware Implementation"
   },
   {
     "id": 5,
     "project": 1,
-    "image": "uploads/projects/projectimage/real-time-chat-application-with-django-channels-knox-au-7885ab69.svg",
+    "image": "uploads/projects/projectimage/real-time-consumers.png",
     "caption": "Websocket Consumer Setup"
-  },
-  {
-    "id": 7,
-    "project": 4,
-    "image": "uploads/projects/projectimage/powering-sarbam-foods-with-django-a-complete-backend-fo-ba9470d7.svg",
-    "caption": "Github Project Repo Tree Structure"
-  },
-  {
-    "id": 8,
-    "project": 4,
-    "image": "uploads/projects/projectimage/powering-sarbam-foods-with-django-a-complete-backend-fo-9d912f26.svg",
-    "caption": "Integrating the mail sending logic with Celery Integration"
   },
   {
     "id": 9,
@@ -1585,20 +1579,14 @@ cannot replace a Django fixture for restoration.
   {
     "id": 20,
     "project": 9,
-    "image": "uploads/projects/projectimage/full-stack-developer-portfolio-django-vue-aws-b1814238.svg",
+    "image": "uploads/projects/projectimage/web-responsive-frontend.png",
     "caption": "Web Responsive Home Page (v2)"
   },
   {
     "id": 21,
     "project": 9,
-    "image": "uploads/projects/projectimage/full-stack-developer-portfolio-django-vue-aws-da90212b.svg",
+    "image": "uploads/projects/projectimage/code-env-frontend.png",
     "caption": "Code Environment Frontend"
-  },
-  {
-    "id": 22,
-    "project": 9,
-    "image": "uploads/projects/projectimage/full-stack-developer-portfolio-django-vue-aws-0afa024c.svg",
-    "caption": "Backend Administration Dashboard"
   },
   {
     "id": 23,
@@ -1705,13 +1693,13 @@ cannot replace a Django fixture for restoration.
   {
     "id": 41,
     "project": 11,
-    "image": "uploads/projects/projectimage/brand-identity-and-logo-design-spark-international-educ-d6a04544.svg",
+    "image": "uploads/projects/projectimage/spark-concept.png",
     "caption": "Explanation of the Representation of the elements in the Spark Logo"
   },
   {
     "id": 42,
     "project": 11,
-    "image": "uploads/projects/projectimage/brand-identity-and-logo-design-spark-international-educ-1aae8588.svg",
+    "image": "uploads/projects/projectimage/representational-spark.jpg",
     "caption": "Representational Description of Spark Logo"
   },
   {
@@ -1741,7 +1729,7 @@ cannot replace a Django fixture for restoration.
   {
     "id": 49,
     "project": 15,
-    "image": "uploads/projects/projectimage/building-trust-through-bold-design-the-bbt-logo-project-09ba4ae4.svg",
+    "image": "uploads/projects/projectimage/BBT Final.png",
     "caption": "FInal Logo for BBT Groups"
   },
   {
@@ -1771,37 +1759,37 @@ cannot replace a Django fixture for restoration.
   {
     "id": 54,
     "project": 15,
-    "image": "uploads/projects/projectimage/building-trust-through-bold-design-the-bbt-logo-project-2f6c55b5.svg",
-    "caption": "Logo Abstract Concept Visualization"
+    "image": "uploads/projects/projectimage/trademark-bbt.png",
+    "caption": "Logo Abstract Visualization"
   },
   {
     "id": 55,
     "project": 15,
-    "image": "uploads/projects/projectimage/building-trust-through-bold-design-the-bbt-logo-project-97d627ab.svg",
+    "image": "uploads/projects/projectimage/abstract-bbt.png",
     "caption": "Abstract Concept Description"
   },
   {
     "id": 56,
     "project": 15,
-    "image": "uploads/projects/projectimage/building-trust-through-bold-design-the-bbt-logo-project-dc025734.svg",
+    "image": "uploads/projects/projectimage/bbt-concept.png",
     "caption": "Color Theory and Typography Concept"
   },
   {
     "id": 57,
     "project": 15,
-    "image": "uploads/projects/projectimage/building-trust-through-bold-design-the-bbt-logo-project-4ddeebf4.svg",
+    "image": "uploads/projects/projectimage/4.png",
     "caption": "Final Approved Logo for BBT Agro, a subsidiary company"
   },
   {
     "id": 60,
     "project": 18,
-    "image": "uploads/projects/projectimage/rooted-in-culture-crafted-for-celebration-the-mama-ghar-338d3ad7.svg",
+    "image": "uploads/projects/projectimage/mamaghar-final.png",
     "caption": "Final Approved Logo for Mama Ghar Entertainment"
   },
   {
     "id": 61,
     "project": 18,
-    "image": "uploads/projects/projectimage/rooted-in-culture-crafted-for-celebration-the-mama-ghar-535c49ee.svg",
+    "image": "uploads/projects/projectimage/explanation-mamaghar.png",
     "caption": "Visualization of the Concept for the Logo"
   },
   {
@@ -1872,12 +1860,6 @@ cannot replace a Django fixture for restoration.
     "link": "https://github.com/Sarbam-Foods/backend-web"
   },
   {
-    "id": 5,
-    "project": 4,
-    "name": "Website",
-    "link": "https://sarbamfoods.com/"
-  },
-  {
     "id": 6,
     "project": 8,
     "name": "Website",
@@ -1910,7 +1892,7 @@ cannot replace a Django fixture for restoration.
   {
     "id": 11,
     "project": 9,
-    "name": "Figma",
+    "name": "Figma v1",
     "link": "https://www.figma.com/design/OT5o7tfUQKVVcql5ZAiOTu/Portfolio?node-id=0-1&t=LJlwXK6KUF1bSqas-1"
   },
   {
@@ -1990,7 +1972,7 @@ cannot replace a Django fixture for restoration.
 [
   {
     "id": 1,
-    "contact_banner": "uploads/contact/contactinformation/let-s-build-something-together-e21bd250.svg",
+    "contact_banner": "uploads/contact/contactinformation/Er. Riwaj Bhurtel.png",
     "whatsapp": "+977 9869146101",
     "address": "Tokha-10, Kathmandu"
   }

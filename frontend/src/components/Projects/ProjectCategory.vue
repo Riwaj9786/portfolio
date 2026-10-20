@@ -39,7 +39,7 @@ async function navigate(event, index) {
 .category-toggle { display:flex;gap:4px;padding:5px;width:fit-content;max-width:100%;overflow-x:auto;border:1px solid var(--line);border-radius:999px;background:color-mix(in srgb,var(--bg-2) 65%,var(--surface-solid)); }
 .category-toggle button { display:flex;align-items:center;justify-content:center;gap:.5rem;flex-shrink:0;min-height:40px;padding:.6rem 1rem;border:1px solid transparent;border-radius:999px;font-size:.7rem;font-weight:650;white-space:nowrap;color:var(--muted);transition:background .2s,color .2s,box-shadow .2s,border-color .2s; }
 .category-toggle button:hover:not(.selected) { color:var(--ink);background:var(--surface); }
-.category-toggle button.selected { color:white;background:var(--primary);border-color:color-mix(in srgb,var(--primary-bright) 50%,transparent);box-shadow:0 3px 10px color-mix(in srgb,var(--primary) 22%,transparent); }
+.category-toggle button.selected { color:white;background:var(--primary-action);border-color:color-mix(in srgb,var(--primary-bright) 50%,transparent);box-shadow:0 3px 10px color-mix(in srgb,var(--primary) 22%,transparent); }
 .toggle-dot { width:5px;height:5px;flex-shrink:0;border-radius:50%;background:currentColor;opacity:.45; }.selected .toggle-dot { opacity:1; }
 .category-toggle button:focus-visible { outline:2px solid var(--primary);outline-offset:-3px; }.category-toggle button.selected:focus-visible { outline-color:white; }
 @media(min-width:640px) { .category-toggle button { padding:.65rem 1.25rem;font-size:.8rem; } }

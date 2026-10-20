@@ -1,5 +1,6 @@
 <script setup>
 import { ref, onMounted, watch, computed } from "vue";
+import { enterContent, leaveContent, cancelTransition } from "@/motion/portfolioMotion";
 import ProjectCard from "@/components/Projects/ProjectCard.vue";
 import ProjectCategory from "@/components/Projects/ProjectCategory.vue";
 import SearchComponent from "@/components/Projects/SearchComponent.vue";
@@ -96,9 +97,9 @@ const goToPage = (page) => {
 
 <template>
   <main
-    class="page-container py-9 sm:py-12 lg:py-20"
+    class="portfolio-projects page-container py-9 sm:py-12 lg:py-20"
   >
-    <header class="mb-2 grid items-end gap-6 sm:mb-6 sm:gap-8 lg:grid-cols-[1fr_360px]">
+    <header v-reveal class="mb-2 grid items-end gap-6 sm:mb-6 sm:gap-8 lg:grid-cols-[1fr_360px]">
       <div>
         <h1 class="section-title max-w-3xl">
           Thoughtful work,<br /><span class="text-[var(--primary)]"
@@ -152,7 +153,7 @@ const goToPage = (page) => {
       <p class="mt-4 font-bold">Projects couldn’t be loaded</p>
       <p class="mt-1 text-sm text-[var(--muted)]">{{ errorMessage }}</p>
       <button
-        class="mt-5 rounded-full bg-[var(--primary)] px-5 py-2.5 text-sm font-bold text-white"
+        class="mt-5 rounded-full bg-[var(--primary-action)] px-5 py-2.5 text-sm font-bold text-white"
         @click="fetchProjects(selectedCategory || 'All')"
       >
         Try again
@@ -193,7 +194,8 @@ const goToPage = (page) => {
       </button>
     </div>
 
-    <div v-else-if="!errorMessage" class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+    <Transition v-else-if="!errorMessage" :css="false" mode="out-in" @enter="enterContent" @leave="leaveContent" @enter-cancelled="cancelTransition" @leave-cancelled="cancelTransition">
+    <div v-if="!errorMessage" :key="`${selectedCategory}:${currentPage}`" v-stagger class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
       <ProjectCard
         v-for="project in paginatedProjects"
         :key="project.id || project.slug"
@@ -206,6 +208,8 @@ const goToPage = (page) => {
         :slug="project.slug"
       />
     </div>
+
+    </Transition>
 
     <nav
       v-if="totalPages > 1"
@@ -227,7 +231,7 @@ const goToPage = (page) => {
         class="pagination-button"
         :class="
           page === currentPage
-            ? '!border-[var(--primary)] !bg-[var(--primary)] !text-white'
+            ? '!border-[var(--primary)] !bg-[var(--primary-action)] !text-white'
             : ''
         "
         :aria-current="page === currentPage ? 'page' : undefined"

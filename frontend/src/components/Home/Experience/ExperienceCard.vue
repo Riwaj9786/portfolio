@@ -1,5 +1,5 @@
 <script setup>
-import { computed } from "vue";
+import { computed, ref, useId } from "vue";
 import SkillButton from "@/components/Home/Skills/SkillButton.vue";
 
 const props = defineProps({
@@ -9,15 +9,26 @@ const props = defineProps({
   roles: { type: Array, default: () => [] },
 });
 
-const formatDate = (value, precision = 'month') => {
+const instanceId = useId();
+const closedRoles = ref(new Set());
+const roleKey = (role) => role.id || `${role.title}-${role.start_date}`;
+const hasDetails = (role) => Boolean(role.description || role.achievements?.length);
+function toggleRole(role) {
+  const key = roleKey(role);
+  const next = new Set(closedRoles.value);
+  if (next.has(key)) next.delete(key); else next.add(key);
+  closedRoles.value = next;
+}
+
+const formatDate = (value, precision = "month") => {
   if (!value) return "Present";
   const date = new Date(value);
   return Number.isNaN(date.getTime())
     ? ""
     : new Intl.DateTimeFormat("en-US", {
         year: "numeric",
-        ...(precision === 'year' ? {} : { month: "short" }),
-        timeZone: 'UTC',
+        ...(precision === "year" ? {} : { month: "short" }),
+        timeZone: "UTC",
       }).format(date);
 };
 
@@ -32,7 +43,9 @@ const companyPeriod = computed(() => {
     .map((role) => (role.end_date ? new Date(role.end_date) : null))
     .filter(Boolean);
   const latest = hasCurrentRole ? null : new Date(Math.max(...ends));
-  const precision = props.roles.every((role) => role.date_precision === 'year') ? 'year' : 'month';
+  const precision = props.roles.every((role) => role.date_precision === "year")
+    ? "year"
+    : "month";
   return `${formatDate(earliest, precision)} — ${latest ? formatDate(latest, precision) : "Present"}`;
 });
 </script>
@@ -45,23 +58,27 @@ const companyPeriod = computed(() => {
       class="flex flex-col w-full gap-2 border-b border-[var(--line)] px-4 py-3 sm:flex-row sm:items-center sm:justify-between lg:gap-3 lg:px-7 lg:py-5"
     >
       <div class="flex min-w-0 items-center gap-3">
-        <img v-if="logo" :src="logo" :alt="`${company} logo`" class="h-10 w-10 shrink-0 rounded-xl border border-[var(--line)] object-contain p-1 lg:h-12 lg:w-12" />
+        <img
+          v-if="logo"
+          :src="logo"
+          :alt="`${company} logo`"
+          class="h-10 w-10 shrink-0 rounded-xl border border-[var(--line)] object-contain p-1 lg:h-12 lg:w-12"
+        />
         <div class="min-w-0">
-        <p
-          class="mb-1 text-[10px] font-bold uppercase tracking-[.18em] text-[var(--primary)]"
-        >
-          {{
-            roles.length > 1
-              ? `${roles.length} roles`
-              : ""
-          }}
-        </p>
-        <div class="flex flex-wrap justify-between items-baseline gap-x-3 gap-y-1">
-          <h3 class="text-base font-bold tracking-tight lg:text-xl text-[var(--ink)]">
-            {{ company }}
-          </h3>
-
-        </div>
+          <p
+            class="mb-1 text-[10px] font-bold uppercase tracking-[.18em] text-[var(--primary)]"
+          >
+            {{ roles.length > 1 ? `${roles.length} roles` : "" }}
+          </p>
+          <div
+            class="flex flex-wrap justify-between items-baseline gap-x-3 gap-y-1"
+          >
+            <h3
+              class="text-base font-bold tracking-tight lg:text-xl text-[var(--ink)]"
+            >
+              {{ company }}
+            </h3>
+          </div>
         </div>
       </div>
       <div class="flex items-center gap-3">
@@ -95,18 +112,24 @@ const companyPeriod = computed(() => {
         <li
           v-for="(role, index) in roles"
           :key="role.id || `${role.title}-${role.start_date}`"
-          class="relative pb-4 lg:pb-7 last:pb-0"
+          v-reveal="{ timeline: true }"
+          class="timeline-role relative pb-4 lg:pb-7 last:pb-0"
           :class="roles.length > 1 ? 'pl-5 lg:pl-7' : ''"
         >
           <span
             v-if="roles.length > 1"
-            class="absolute -left-[7px] top-1.5 h-[13px] w-[13px] rounded-full border-[3px] border-[var(--surface-solid)] bg-[var(--primary)] shadow-[0_0_0_3px_color-mix(in_srgb,var(--primary)_16%,transparent)]"
+            class="absolute -left-[7px] top-1.5 h-[13px] w-[13px] rounded-full border-[3px] border-[var(--surface-solid)] bg-[var(--primary-action)] shadow-[0_0_0_3px_color-mix(in_srgb,var(--primary)_16%,transparent)]"
           ></span>
           <div
             class="flex flex-col gap-1 sm:flex-row sm:items-start sm:justify-between"
           >
             <div>
-              <h4 class="text-sm font-semibold text-[var(--ink)] lg:text-base">{{ role.title }}</h4>
+              <h4 class="text-sm font-semibold text-[var(--ink)] lg:text-base">
+                <button v-if="hasDetails(role)" type="button" class="role-details-toggle" :aria-expanded="!closedRoles.has(roleKey(role))" :aria-controls="`${instanceId}-role-${index}`" @click="toggleRole(role)">
+                  {{ role.title }}<i class="pi pi-chevron-down" :class="{ 'is-collapsed': closedRoles.has(roleKey(role)) }" aria-hidden="true"></i>
+                </button>
+                <template v-else>{{ role.title }}</template>
+              </h4>
               <span
                 v-if="role.job_type"
                 class="text-[10px] font-medium uppercase tracking-wider lg:text-xs text-[var(--primary)]"
@@ -120,10 +143,29 @@ const companyPeriod = computed(() => {
               {{ formatDate(role.end_date, role.date_precision) }}</time
             >
           </div>
-          <p v-if="role.description" class="mt-3 whitespace-pre-line text-xs leading-relaxed text-[var(--muted)] lg:text-sm">{{ role.description }}</p>
-          <ul v-if="role.achievements?.length" class="mt-3 list-disc space-y-1 pl-4 text-xs leading-relaxed text-[var(--muted)] lg:text-sm" aria-label="Achievements">
-            <li v-for="(achievement, achievementIndex) in role.achievements" :key="achievementIndex">{{ achievement }}</li>
+          <Transition name="role-details">
+            <div v-show="!closedRoles.has(roleKey(role))" :id="`${instanceId}-role-${index}`">
+          <p
+            v-if="role.description"
+            class="mt-3 whitespace-pre-line text-xs leading-relaxed text-justify text-[var(--muted)]"
+          >
+            {{ role.description }}
+          </p>
+          <ul
+            v-if="role.achievements?.length"
+            v-stagger
+            class="experience-achievements mt-3 list-disc space-y-1 pl-4 text-xs leading-relaxed text-[var(--muted)] lg:text-sm"
+            aria-label="Achievements"
+          >
+            <li
+              v-for="(achievement, achievementIndex) in role.achievements"
+              :key="achievementIndex"
+            >
+              {{ achievement }}
+            </li>
           </ul>
+            </div>
+          </Transition>
           <div v-if="role.skills?.length" class="mt-3 flex flex-wrap gap-1.5">
             <SkillButton
               v-for="skill in role.skills"
@@ -133,10 +175,23 @@ const companyPeriod = computed(() => {
           </div>
           <div
             v-if="roles.length > 1 && index < roles.length - 1"
-            class="mt-4 lg:mt-6 h-px bg-gradient-to-r from-[var(--line)] to-transparent"
+            class="mt-4 lg:mt-6 h-px bg-[var(--line)]"
           ></div>
         </li>
       </ol>
     </div>
   </article>
 </template>
+
+<style scoped>
+.role-details-toggle { display:inline-flex;align-items:baseline;gap:.65rem;text-align:left;font:inherit;color:inherit;border-radius:4px; }
+.role-details-toggle i { font-size:.55rem;color:var(--primary);transition:transform .2s; }
+.role-details-toggle i.is-collapsed { transform:rotate(-90deg); }
+.role-details-toggle:hover { color:var(--primary); }
+.role-details-toggle:focus-visible { outline:2px solid var(--primary);outline-offset:4px; }
+.timeline-role>span { transition:box-shadow .3s,background-color .3s; }
+.timeline-role.is-story-active>span,.timeline-role:focus-within>span { box-shadow:0 0 0 5px color-mix(in srgb,var(--primary) 18%,transparent); }
+.role-details-enter-active,.role-details-leave-active { transition:opacity .18s,translate .18s; }
+.role-details-enter-from,.role-details-leave-to { opacity:0;translate:0 4px; }
+@media(prefers-reduced-motion:reduce) { .role-details-toggle i,.timeline-role>span,.role-details-enter-active,.role-details-leave-active { transition:none; } }
+</style>

@@ -75,7 +75,7 @@ const initials = (name) =>
             />
             <span
               v-else
-              class="grid h-12 w-12 place-items-center rounded-full bg-[var(--primary)] text-sm font-bold text-white"
+              class="grid h-12 w-12 place-items-center rounded-full bg-[var(--primary-action)] text-sm font-bold text-white"
               >{{ initials(data[currentIndex].name) }}</span
             >
             <div>

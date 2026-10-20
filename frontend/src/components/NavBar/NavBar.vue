@@ -88,9 +88,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <header
-    class="sticky top-0 z-40 border-b border-white/10 bg-[var(--surface)] backdrop-blur-xl"
-  >
+  <header class="site-navbar sticky top-0 z-40">
     <nav
       class="page-container flex h-20 items-center justify-between"
       aria-label="Main navigation"
@@ -157,7 +155,7 @@ onUnmounted(() => {
           :href="data.resume"
           target="_blank"
           rel="noopener"
-          class="ml-1 rounded-full bg-[var(--primary)] px-5 py-2 text-sm font-semibold text-white hover:-translate-y-0.5"
+          class="ml-1 rounded-full bg-[var(--primary-action)] px-5 py-2 text-sm font-semibold text-white hover:-translate-y-0.5"
           >Résumé <span aria-hidden="true">↗</span></a
         >
       </div>
@@ -192,7 +190,7 @@ onUnmounted(() => {
           class="flex h-10 items-center gap-2 rounded-full border px-3.5 text-xs font-bold transition"
           :class="
             menuOpen
-              ? 'border-[var(--primary)] bg-[var(--primary)] text-white'
+              ? 'border-[var(--primary)] bg-[var(--primary-action)] text-white'
               : 'border-[var(--line)] bg-[var(--surface)] text-[var(--ink)] hover:border-[var(--primary)]'
           "
           :aria-expanded="menuOpen"
@@ -219,13 +217,39 @@ onUnmounted(() => {
         tabindex="-1"
         class="fixed inset-0 z-[100] h-[100dvh] overflow-hidden bg-[color-mix(in_srgb,var(--bg)_96%,transparent)] backdrop-blur-2xl lg:hidden"
       >
-        <div class="mobile-menu-panel mx-auto flex h-full max-w-lg flex-col px-5 pb-[max(1rem,env(safe-area-inset-bottom))] sm:px-9">
-          <div class="flex h-20 shrink-0 items-center justify-between border-b border-[var(--line)]">
-            <RouterLink to="/" class="flex items-center gap-3" @click="menuOpen=false">
-              <img src="/uploads/branding/rioz.jpg" alt="Riwaj Bhurtel logo" class="h-10 w-10 rounded-full object-cover ring-2 ring-purple-400/20" />
-              <span><strong class="block text-sm font-bold text-[var(--ink)]">Er. Riwaj Bhurtel</strong><small class="block text-[9px] font-bold uppercase tracking-[.13em] text-[var(--primary)]">Portfolio</small></span>
+        <div
+          class="mobile-menu-panel mx-auto flex h-full max-w-lg flex-col px-5 pb-[max(1rem,env(safe-area-inset-bottom))] sm:px-9"
+        >
+          <div
+            class="flex h-20 shrink-0 items-center justify-between border-b border-[var(--line)]"
+          >
+            <RouterLink
+              to="/"
+              class="flex items-center gap-3"
+              @click="menuOpen = false"
+            >
+              <img
+                src="/uploads/branding/rioz.jpg"
+                alt="Riwaj Bhurtel logo"
+                class="h-10 w-10 rounded-full object-cover ring-2 ring-purple-400/20"
+              />
+              <span
+                ><strong class="block text-sm font-bold text-[var(--ink)]"
+                  >Er. Riwaj Bhurtel</strong
+                ><small
+                  class="block text-[9px] font-bold uppercase tracking-[.13em] text-[var(--primary)]"
+                  >Portfolio</small
+                ></span
+              >
             </RouterLink>
-            <button ref="closeButton" class="flex h-10 items-center gap-2 rounded-full bg-[var(--primary)] px-4 text-xs font-bold text-white shadow-lg shadow-purple-500/20" aria-label="Close menu" @click="menuOpen=false"><span>Close</span><i class="pi pi-times text-xs"></i></button>
+            <button
+              ref="closeButton"
+              class="flex h-10 items-center gap-2 rounded-full bg-[var(--primary-action)] px-4 text-xs font-bold text-white shadow-lg shadow-purple-500/20"
+              aria-label="Close menu"
+              @click="menuOpen = false"
+            >
+              <span>Close</span><i class="pi pi-times text-xs"></i>
+            </button>
           </div>
           <div class="mb-2 mt-4 flex items-center justify-between">
             <p
@@ -245,13 +269,27 @@ onUnmounted(() => {
           >
             <RouterLink
               v-for="(item, index) in [
-                { to: '/projects', label: 'Work', description: 'Projects and case studies' },
-                { to: '/blogs', label: 'Journal', description: 'Ideas, notes and stories' },
-                { to: '/connect', label: 'Contact', description: 'Start a conversation' },
+                {
+                  to: '/projects',
+                  label: 'Work',
+                  description: 'Projects and case studies',
+                },
+                {
+                  to: '/blogs',
+                  label: 'Journal',
+                  description: 'Ideas, notes and stories',
+                },
+                {
+                  to: '/connect',
+                  label: 'Contact',
+                  description: 'Start a conversation',
+                },
               ]"
               :key="item.to"
               :to="item.to"
-              :aria-current="route.path.startsWith(item.to) ? 'page' : undefined"
+              :aria-current="
+                route.path.startsWith(item.to) ? 'page' : undefined
+              "
               class="group flex items-center gap-3 py-3"
               @click="menuOpen = false"
             >
@@ -271,7 +309,7 @@ onUnmounted(() => {
                 ></span
               >
               <span
-                class="grid h-9 w-9 place-items-center rounded-full border border-[var(--line)] text-[var(--muted)] transition group-hover:border-[var(--primary)] group-hover:bg-[var(--primary)] group-hover:text-white"
+                class="grid h-9 w-9 place-items-center rounded-full border border-[var(--line)] text-[var(--muted)] transition group-hover:border-[var(--primary)] group-hover:bg-[var(--primary-action)] group-hover:text-white"
                 ><i class="pi pi-arrow-up-right text-xs"></i
               ></span>
             </RouterLink>
@@ -283,8 +321,16 @@ onUnmounted(() => {
               @click="menuOpen = false"
             >
               <span class="font-mono text-[10px] text-[var(--muted)]">04</span>
-              <span class="min-w-0 flex-1"><strong class="block text-xl font-bold tracking-[-.04em] text-[var(--ink)] transition group-hover:text-[var(--primary)] sm:text-2xl">Resume</strong></span>
-              <span class="grid h-9 w-9 place-items-center rounded-full border border-[var(--line)] text-[var(--muted)] transition group-hover:border-[var(--primary)] group-hover:bg-[var(--primary)] group-hover:text-white"><i class="pi pi-download text-xs"></i></span>
+              <span class="min-w-0 flex-1"
+                ><strong
+                  class="block text-xl font-bold tracking-[-.04em] text-[var(--ink)] transition group-hover:text-[var(--primary)] sm:text-2xl"
+                  >Resume</strong
+                ></span
+              >
+              <span
+                class="grid h-9 w-9 place-items-center rounded-full border border-[var(--line)] text-[var(--muted)] transition group-hover:border-[var(--primary)] group-hover:bg-[var(--primary-action)] group-hover:text-white"
+                ><i class="pi pi-download text-xs"></i
+              ></span>
             </a>
           </nav>
 
@@ -323,7 +369,6 @@ onUnmounted(() => {
               </p>
             </button>
           </div>
-
         </div>
       </div>
     </Transition>

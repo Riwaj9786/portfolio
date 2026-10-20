@@ -31,12 +31,12 @@ const contentTruncated = (content, length = 120) => {
 
 <template>
   <div
-    class="page-container py-9 sm:py-12 lg:py-20"
+    class="portfolio-journal page-container py-9 sm:py-12 lg:py-20"
   >
     <div class="mb-10 grid gap-5 sm:mb-14 lg:grid-cols-2 lg:items-end">
       <div>
         <h1 class="section-title">
-          The journal<span class="text-[#a855f7]">.</span>
+          The journal<span class="text-[var(--primary)]">.</span>
         </h1>
       </div>
       <p

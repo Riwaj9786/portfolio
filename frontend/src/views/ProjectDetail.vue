@@ -34,7 +34,7 @@ watch(() => route.params.slug, async (slug, _, onCleanup) => {
 </script>
 
 <template>
-  <div class="page-wrap">
+  <div class="portfolio-project-detail page-wrap">
     <div v-if="loading" class="grid gap-6 lg:grid-cols-3">
       <div
         class="h-96 animate-pulse rounded-[2rem] bg-purple-500/10 lg:col-span-2"
@@ -62,13 +62,13 @@ watch(() => route.params.slug, async (slug, _, onCleanup) => {
           <a href="#project-overview" class="hover:text-[var(--primary)]">Overview</a>
           <a v-if="project.project_images?.length" href="#project-gallery" class="hover:text-[var(--primary)]">Gallery</a>
         </nav>
-        <section id="project-overview" class="surface scroll-mt-28 p-1 sm:p-2" aria-label="Project overview">
+        <section v-reveal id="project-overview" class="surface scroll-mt-28 p-1 sm:p-2" aria-label="Project overview">
         <ProjectDescription
           :name="project.name"
           :description="project.description"
         />
         </section>
-        <section v-if="project.project_images?.length" id="project-gallery" class="surface scroll-mt-28 p-4 sm:p-6" aria-labelledby="project-gallery-title">
+        <section v-reveal v-if="project.project_images?.length" id="project-gallery" class="surface scroll-mt-28 p-4 sm:p-6" aria-labelledby="project-gallery-title">
           <div class="flex items-center justify-between gap-3"><h2 id="project-gallery-title" class="text-sm font-bold text-[var(--ink)] sm:text-base">Project gallery</h2><span class="text-[10px] text-[var(--muted)]">{{ project.project_images.length }} images</span></div>
           <ProjectImageSlider
             :images="project.project_images"
@@ -138,7 +138,7 @@ watch(() => route.params.slug, async (slug, _, onCleanup) => {
           </p>
           <div
             v-html="project.distinct_features"
-            class="text-[var(--muted)] text-xs lg:text-sm"
+            class="text-[var(--muted)] text-xs lg:text-sm text-justify"
           ></div>
         </div>
       </aside>
@@ -180,7 +180,7 @@ watch(() => route.params.slug, async (slug, _, onCleanup) => {
 </style>
 
 <style scoped>
-.detail-thumbnail { display:grid;place-items:center;overflow:hidden;background:radial-gradient(ellipse at 20% 0%,color-mix(in srgb,var(--primary) 30%,transparent),transparent 70%),var(--bg-2); }
-.detail-thumbnail span { display:grid;place-items:center;width:110px;height:110px;background:linear-gradient(135deg,var(--primary-bright),var(--primary));border-radius:30%;color:white;font-size:4.5rem;font-weight:800;box-shadow:15px 20px 40px color-mix(in srgb,var(--primary) 20%,transparent); }
+.detail-thumbnail { display:grid;place-items:center;overflow:hidden;background: var(--surface); }
+.detail-thumbnail span { display:grid;place-items:center;width:110px;height:110px;background: var(--primary-action);border-radius:30%;color:white;font-size:4.5rem;font-weight:800;box-shadow:15px 20px 40px color-mix(in srgb,var(--primary) 20%,transparent); }
 a:focus-visible { outline:2px solid var(--primary);outline-offset:4px; }
 </style>
