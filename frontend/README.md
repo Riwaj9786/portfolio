@@ -21,8 +21,13 @@ image field in `FRONTEND_DATABASE.md` (use its actual file extension). Existing
 placeholder files can also be replaced with real SVG artwork at the same path.
 The creation script `node scripts/create-upload-placeholders.mjs` does not overwrite
 existing files. Run `node scripts/check-uploads.mjs` to check local image references.
-The resume PDF is not an image and has not been fabricated; add your real resume
-and update its Markdown path before using the download link.
+Real photos, project artwork, service images, and the resume PDF also live under
+`public/uploads/`. Add new media there using `uploads/...` paths in the Markdown.
+Vite copies these files into `dist/uploads/`; `frontend/uploads/` is not published.
+
+For Vercel, use Root Directory `frontend`, Build Command `npm run build`, and
+Output Directory `dist`. Run `node scripts/check-uploads.mjs dist` after building
+to verify the deployment media.
 
 The contact page presents collaboration areas and direct contact links. Testimonial
 submissions remain disabled because a static Markdown file cannot receive submissions. Live weather requests and geolocation

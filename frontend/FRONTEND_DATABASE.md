@@ -11,7 +11,7 @@ The frontend reads the public snapshot in this file at build time through Vite.
 All portfolio details, filters, and detail pages use bundled local data; no Django,
 PostgreSQL, or API URL is required. Rebuild after editing the snapshot.
 
-Images resolve locally under `/uploads/` and live in `frontend/uploads/`.
+Images resolve locally under `/uploads/` and live in `frontend/public/uploads/`.
 The original photos and project screenshots are not included. The resume PDF is
 not generated; supply the real file and update `resume` before publishing its link.
 
