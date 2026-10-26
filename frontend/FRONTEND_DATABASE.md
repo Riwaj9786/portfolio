@@ -740,7 +740,28 @@ cannot replace a Django fixture for restoration.
     "level": 7,
     "logo": null,
     "category": 6
-  }
+  },
+  {
+    "id": 59,
+    "name": "Java",
+    "level": 7,
+    "logo": null,
+    "category": 1
+  },
+  {
+    "id": 60,
+    "name": "ODK",
+    "level": 7,
+    "logo": null,
+    "category": 2
+  },
+  {
+    "id": 61,
+    "name": "Git",
+    "level": 8,
+    "logo": null,
+    "category": 6
+  },
 ]
 ```
 
@@ -828,7 +849,7 @@ cannot replace a Django fixture for restoration.
       26
     ],
     "category": "professional",
-    "description": "Supported national disaster information systems, including Bipad Portal, through stakeholder coordination, system improvements, testing, deployment, and capacity-building initiatives.",
+    "description": "Supported national disaster information systems being stationed at NDRRMA, including Bipad Portal, through stakeholder coordination, system improvements, testing, deployment, and capacity-building initiatives.",
     "logo": null,
     "achievements": [],
     "date_precision": "month"
@@ -1121,7 +1142,7 @@ cannot replace a Django fixture for restoration.
 [
   {
     "id": 1,
-    "name": "Web Development"
+    "name": "Development"
   },
   {
     "id": 2,
@@ -1134,7 +1155,7 @@ cannot replace a Django fixture for restoration.
 ]
 ```
 
-### `projects.project` (18 records)
+### `projects.project` (20 records)
 
 ```json
 [
@@ -1149,7 +1170,9 @@ cannot replace a Django fixture for restoration.
       10,
       13,
       14,
-      26
+      26,
+      61,
+      55,
     ],
     "client": null,
     "banner_image": "uploads/projects/project/real-time-chat-application-with-django-channels-knox-au-b092ed0e.svg",
@@ -1190,7 +1213,9 @@ cannot replace a Django fixture for restoration.
       13,
       14,
       15,
-      26
+      26,
+      61,
+      53,
     ],
     "client": "Sarbam Foods",
     "banner_image": "uploads/projects/project/powering-sarbam-foods-with-django-a-complete-backend-fo-193d1ea1.svg",
@@ -1249,7 +1274,11 @@ cannot replace a Django fixture for restoration.
       7,
       9,
       11,
-      19
+      19,
+      61,
+      55,
+      54,
+      53
     ],
     "client": null,
     "banner_image": "uploads/projects/project/advanced-assignment-and-student-management-system-with--3afaae0b.svg",
@@ -1411,7 +1440,9 @@ cannot replace a Django fixture for restoration.
       11,
       14,
       15,
-      26
+      26,
+      61,
+      53,
     ],
     "client": "National Disaster Risk Reduction and Management Authority",
     "banner_image": "uploads/projects/projectimage/ndrrma.png",
@@ -1496,7 +1527,52 @@ cannot replace a Django fixture for restoration.
     "distinct_features": "<ul><li><strong>Modern Gradient Aesthetic</strong>: A sleek gradient base with subtle tones to create a dynamic and premium sportswear look.</li><li><strong>Mountain Silhouette Detail</strong>: Represents the essence of Pokhara and adds a unique local identity to the design.</li><li><strong>Vector Precision</strong>: Designed entirely in Adobe Illustrator for sharp, scalable print quality.</li><li><strong>Realistic Mockup Presentation</strong>: Visualized in Adobe Photoshop to showcase how the jersey appears in real-life wear.</li></ul>",
     "category": 2,
     "slug": "redefining-team-identity-official-jersey-VcOkL"
-  }
+  },
+  {
+    "id": 22,
+    "name": "Disaster Risk Assessment Platform – Bipad Assessment Tool (BAT)",
+    "skills": [
+      59,
+      55,
+      60,
+      61
+    ],
+    "client": "National Disaster Risk Reduction and Management Authority",
+    "banner_image": "uploads/projects/projectimage/bat_banner.jpeg",
+    "start_date": "2025-07-01",
+    "end_date": "2025-09-30",
+    "description": "<p>I contributed to the development of the <strong>Bipad Assessment Tool (BAT)</strong>, a mobile-based disaster risk assessment and survey platform designed to support the <strong>National Disaster Risk Reduction and Management Authority (NDRRMA)</strong> in Nepal. The platform facilitates structured field data collection, disaster risk assessments, and survey management across disaster preparedness, response, and recovery operations.</p><p>&nbsp;</p><p>The application was developed by customizing the open-source <strong>ODK Collect</strong> Android application to align with Nepal's national disaster risk assessment requirements, institutional workflows, and operational standards.</p><p>&nbsp;</p><p><strong>Project Highlights:</strong></p><ul><li><strong>Mobile Application Customization:</strong> Modified and extended ODK Collect to accommodate NDRRMA-specific assessment methodologies, survey structures, and field data collection requirements.</li><li><strong>Structured Assessment Workflows:</strong> Adapted form handling and survey processes to support standardized disaster risk assessments across preparedness, response, and recovery phases.</li><li><strong>Project-Based Data Segregation:</strong> Implemented project-specific workflows to ensure that assessment forms and collected data remained logically separated across multiple initiatives.</li><li><strong>Secure Authentication:</strong> Enhanced application-level authentication by introducing username-based login and project-specific access tokens, ensuring authorized access to assigned assessments.</li><li><strong>Access Control and Data Integrity:</strong> Strengthened project-level access restrictions to improve security, accountability, and reliability of field data collection.</li><li><strong>Production Deployment:</strong> Coordinated the application's release and production rollout through the <strong>Google Play Console</strong>, including version management, updates, and release stability.</li><li><strong>Operational Support:</strong> Provided ongoing technical support, addressed field-level issues, and incorporated evolving operational requirements to maintain application reliability.</li></ul><p>&nbsp;</p><p><strong>Outcome:</strong><br>The customized Bipad Assessment Tool supports NDRRMA's disaster risk assessment workflows by providing a structured, secure, and project-oriented mobile data collection solution. The application contributes to improved assessment coordination, controlled access to field surveys, and reliable data management within Nepal's disaster risk reduction and management ecosystem.</p><p>&nbsp;</p><p><strong>Technologies and Tools Used:</strong><br>- ODK Collect (Open-Source Android Application)<br>- Android Application Development and Customization<br>- Username-Based Authentication<br>- Project-Specific Access Tokens<br>- Google Play Console<br>- Mobile Data Collection and Survey Management</p><p>&nbsp;</p><p>This project strengthened my practical expertise in <strong>Android application customization, secure authentication, structured data collection workflows, production deployment, and government-focused software development</strong>, while contributing to a national-level disaster risk management initiative.</p>",
+    "distinct_features": "<ul><li><strong>Customized ODK Collect Application:</strong> Extended the open-source ODK Collect platform to meet NDRRMA's specialized disaster risk assessment and field survey requirements.</li><li><strong>Username-Based Authentication:</strong> Introduced application-level username authentication to support secure access for authorized field enumerators.</li><li><strong>Project-Specific Access Tokens:</strong> Implemented token-based project access to restrict enumerators to their assigned projects and assessments.</li><li><strong>Project-Based Data Segregation:</strong> Organized assessment workflows and survey data by project to improve data isolation, security, and management.</li><li><strong>Standardized Assessment Workflows:</strong> Adapted form handling to support national disaster assessment methodologies across preparedness, response, and recovery operations.</li><li><strong>Production Release Management:</strong> Managed application publishing, version updates, and release coordination through Google Play Console.</li><li><strong>Field-Level Operational Support:</strong> Addressed real-world deployment challenges and evolving institutional requirements to maintain application stability and usability.</li></ul>",
+    "category": 1,
+    "slug": "disaster-risk-assessment-platform-bipad-assessment-tool-bat"
+  },
+  {
+    "id": 23,
+    "name": "Monitor for Disaster Strategic Action Plans (MDSA) – National Disaster Risk Reduction Project Monitoring Platform",
+    "skills": [
+      1,
+      2,
+      4,
+      14,
+      26,
+      34,
+      37,
+      43,
+      44,
+      46,
+      53,
+      55,
+      61
+    ],
+    "client": "National Disaster Risk Reduction and Management Authority",
+    "banner_image": "uploads/projects/projectimage/mdsa-banner.png",
+    "start_date": "2026-06-01",
+    "end_date": "2026-07-31",
+    "description": "<h3><strong>Project Overview</strong></h3><p>I was involved in the <strong>Upgradation of Monitor for Disaster Strategic Action Plans (MDSA) Portal</strong>, a national-level disaster risk reduction monitoring platform developed for the <strong>National Disaster Risk Reduction and Management Authority (NDRRMA)</strong> under the Ministry of Home Affairs, Government of Nepal. The project was implemented by <strong>Techcolab Pvt. Ltd.</strong> to modernize the existing platform, improve system performance, strengthen security, and enhance integration with Nepal's BIPAD Disaster Information Ecosystem.</p><p>&nbsp;</p><p>MDSA is a centralized, web-based information management system designed to monitor projects and initiatives contributing to Nepal's <strong>National Disaster Risk Reduction Strategic Action Plan (2018–2030)</strong>. The platform enables government authorities, implementing organizations, and development partners to record, track, analyze, and report on disaster risk reduction activities across different administrative levels.</p><p>&nbsp;</p><p>The upgradation focused on modernizing the technical architecture, improving project monitoring and reporting, strengthening data management and access control, and delivering a more intuitive and responsive user experience. These enhancements support institutional coordination, transparency, and evidence-based decision-making in disaster risk reduction and management.</p><h3><strong>My Role and Responsibilities</strong></h3><p>My primary involvement in this project was in <strong>project coordination and project management</strong>, supporting the planning, implementation, stakeholder communication, and successful delivery of the upgraded MDSA platform.</p><p>&nbsp;</p><p>I worked closely with the technical development team and institutional stakeholders to coordinate project activities, understand operational requirements, monitor implementation progress, and ensure that the delivered enhancements aligned with the agreed <strong>Terms of Reference (ToR)</strong> and NDRRMA's expectations.</p><p>&nbsp;</p><p>My responsibilities included facilitating stakeholder communication, coordinating requirement discussions, tracking deliverables, supporting technical review processes, and helping resolve implementation challenges. I also contributed to organizing system demonstrations, capacity-building sessions, and feedback discussions to support effective adoption of the upgraded platform.</p><h3><strong>Project Highlights</strong></h3><ul><li><strong>Project Planning and Coordination:</strong> Supported the planning, scheduling, implementation monitoring, and coordination of project activities throughout the 40-day project period.</li><li><strong>Stakeholder Engagement:</strong> Facilitated communication between the development team and institutional stakeholders to align technical implementation with operational requirements.</li><li><strong>Requirement and Scope Management:</strong> Coordinated requirement discussions, implementation priorities, and feedback management in accordance with the project Terms of Reference.</li><li><strong>System Modernization:</strong> Supported the coordinated delivery of backend improvements, frontend enhancements, optimized database operations, strengthened security, and standardized API integrations.</li><li><strong>Monitoring and Reporting Improvements:</strong> Coordinated the delivery of enhanced dashboards, interactive geographic visualizations, advanced project filtering, and automated report generation.</li><li><strong>Quality Review and Deliverable Tracking:</strong> Supported functional reviews, monitored implementation milestones, and facilitated verification of project deliverables against agreed requirements.</li><li><strong>Capacity Building and Knowledge Transfer:</strong> Contributed to coordinating system demonstrations and knowledge-sharing activities involving 25 participants, including NDRRMA officials, technical personnel, and system operators.</li><li><strong>Feedback and Project Closure:</strong> Supported stakeholder feedback collection, final system review discussions, documentation coordination, and project handover activities.</li></ul><h3><strong>Project Outcome</strong></h3><p>The MDSA Upgradation Project was successfully completed, delivering a <strong>modernized, secure, scalable, and user-friendly disaster risk reduction monitoring platform</strong>. The upgraded system introduced improved administrative management, standardized API integrations, automated email notifications, enhanced geospatial visualization, advanced searching and filtering, automated reporting, role-based access control, and containerized deployment.</p><p>&nbsp;</p><p>These improvements strengthened the platform's operational efficiency, maintainability, and capacity to support national disaster risk reduction monitoring and institutional reporting.</p><p>&nbsp;</p><p>Through this project, I gained practical experience in <strong>IT project coordination, stakeholder management, requirement analysis, implementation monitoring, cross-functional collaboration, and government-sector technology project delivery</strong>, while contributing to the modernization of Nepal's disaster risk management information ecosystem.</p>",
+    "distinct_features": "<ul><li><strong>Hierarchical Geographic Filtering:</strong> Dynamic project filtering across Nepal's province, district, local level, and ward hierarchy.</li><li><strong>Automated Project Reporting:</strong> Generation of structured, exportable project reports with configurable filters.</li><li><strong>Role-Based Access and Audit Trails:</strong> Permission-based authentication and activity logging for system security and accountability.</li><li><strong>Reliable Email Notification System:</strong> Automated background notifications with primary and secondary SMTP configurations.</li><li><strong>Containerized System Architecture:</strong> Docker-based deployment supporting scalability, stability, and simplified maintenance.</li></ul>",
+    "category": 1,
+    "slug": "monitor-for-disaster-strategic-action-plans-mdsa"
+  },
 ]
 ```
 
@@ -1833,7 +1909,25 @@ cannot replace a Django fixture for restoration.
     "project": 21,
     "image": "uploads/projects/projectimage/redefining-team-identity-official-jersey-design-for-pok-b533784e.svg",
     "caption": "Players in the final printed jersey"
-  }
+  },
+  {
+    "id": 69,
+    "project": 23,
+    "image": "uploads/projects/projectimage/mdsa-banner.png",
+    "caption": "Home Page for the updated MDSA portal"
+  },
+  {
+    "id": 69,
+    "project": 23,
+    "image": "uploads/projects/projectimage/mdsa-map.png",
+    "caption": "Project Map Dashboard"
+  },
+  {
+    "id": 70,
+    "project": 22,
+    "image": "uploads/projects/projectimage/bat_banner.jpeg",
+    "caption": null
+  },
 ]
 ```
 
@@ -1930,7 +2024,19 @@ cannot replace a Django fixture for restoration.
     "project": 20,
     "name": "Facebook",
     "link": "https://www.facebook.com/arima.packaging/"
-  }
+  },
+  {
+    "id": 18,
+    "project": 23,
+    "name": "MDSA",
+    "link": "https://mdsa.bipad.gov.np/"
+  },
+  {
+    "id": 19,
+    "project": 22,
+    "name": "BAT Google Play Store",
+    "link": "https://play.google.com/store/apps/details?id=np.gov.collect.android&hl=en"
+  },
 ]
 ```
 
