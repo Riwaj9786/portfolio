@@ -658,13 +658,6 @@ cannot replace a Django fixture for restoration.
     "category": 2
   },
   {
-    "id": 44,
-    "name": "Docker",
-    "level": 7,
-    "logo": null,
-    "category": 3
-  },
-  {
     "id": 45,
     "name": "Gunicorn",
     "level": 7,
@@ -758,6 +751,13 @@ cannot replace a Django fixture for restoration.
   {
     "id": 61,
     "name": "Git",
+    "level": 8,
+    "logo": null,
+    "category": 6
+  },
+  {
+    "id": 62,
+    "name": "System Analysis",
     "level": 8,
     "logo": null,
     "category": 6
@@ -1573,6 +1573,37 @@ cannot replace a Django fixture for restoration.
     "category": 1,
     "slug": "monitor-for-disaster-strategic-action-plans-mdsa"
   },
+  {
+    "id": 24,
+    "name": "BIPAD Portal Upgradation, Needs Analysis and Development",
+    "skills": [
+      1, 2, 7, 13, 14, 15, 26, 36, 37, 38, 43, 53, 55, 61, 62
+    ],
+    "client": "National Disaster Risk Reduction and Management Authority",
+    "banner_image": "uploads/projects/project/bipad_banner.png",
+    "start_date": "2025-05-01",
+    "end_date": "2026-10-31",
+    "description": "<h2>Project Overview</h2><p>The <strong>BIPAD Portal Upgradation, Needs Analysis and Development</strong> project focuses on enhancing the functionality, reliability, and operational efficiency of digital systems supporting Nepal's disaster risk reduction and management activities under the <strong>National Disaster Risk Reduction and Management Authority (NDRRMA)</strong>.</p><p>My involvement in the project began as a <strong>Project Associate</strong> and progressed into the position of <strong>Project Officer</strong>, where I contributed to requirements analysis, system improvement, feature development, and the coordination of technical solutions aligned with institutional needs.</p><h2>Role and Responsibilities</h2>My responsibilities involved analyzing existing workflows, identifying functional gaps, understanding stakeholder requirements, and translating operational needs into technical improvements.</p><h3>Project Associate: System Understanding and Development Support</h3><p>During my initial role as Project Associate, I focused on understanding existing system architecture, administrative processes, and operational requirements. My responsibilities included supporting requirements identification, analyzing system functionality, assisting with feature development, troubleshooting issues, and improving data processing workflows.</p><p>This role strengthened my understanding of how government information systems operate and how technical solutions must accommodate institutional procedures, data integrity requirements, and evolving user expectations.</p><h3>Project Officer: Requirements Analysis and System Enhancement</h3><p>As I progressed into the Project Officer role, my responsibilities expanded to include analyzing change requests, coordinating technical requirements, supporting development priorities, and contributing to the implementation and validation of system enhancements.</p><p>I worked on bridging the gap between institutional requirements and software development by evaluating workflows, identifying improvement opportunities, and supporting solutions that aligned with operational objectives.</p><h2>Key Contributions</h2><ol><li><strong>Needs Assessment and Requirements Analysis:</strong> Analyzed existing system functionalities, administrative workflows, and stakeholder requirements to identify gaps and improvement opportunities.</li><li><strong>Business Process Improvement:</strong> Supported the digital transformation of administrative procedures through appointment management and structured workflow enhancements.</li><li><strong>Data Management and Validation:</strong> Developed and improved import/export features and bulk data processing workflows, focusing on data consistency, validation, and error handling.</li><li><strong>System Configuration and Integration:</strong> Contributed to SMTP configuration and email communication functionality to support reliable system notifications.</li><li><strong>Disaster Response System Enhancement:</strong> Supported time-sensitive updates to the rescue module during the Rasuwa flood response, addressing evolving operational requirements while maintaining data integrity and traceable changes.</li><li><strong>Testing and Operational Support:</strong> Troubleshot functional issues, addressed edge cases, supported system validation, and contributed to the stability of existing workflows.</li><li><strong>Change and Version Management:</strong> Applied disciplined version control and change management practices to support maintainable and reliable system updates.</li></ol><h2>Professional Growth and Key Learnings</h2><p>Through this project, I gained practical experience in <strong>system analysis, requirements gathering, business process evaluation, stakeholder coordination, functional validation, technical problem-solving, and production system support</strong>.</p><p>My progression from Project Associate to Project Officer strengthened my ability to analyze software systems beyond their technical implementation, considering their institutional context, operational impact, and long-term maintainability.</p><p>The experience reinforced an important principle of systems analysis: <strong>successful digital solutions begin with understanding the problem, aligning stakeholder expectations, and translating requirements into reliable, practical system improvements.</strong></p>",
+    "distinct_features": "<ul><li><strong>Hierarchical Geographic Filtering:</strong> Dynamic project filtering across Nepal's province, district, local level, and ward hierarchy.</li><li><strong>Automated Project Reporting:</strong> Generation of structured, exportable project reports with configurable filters.</li><li><strong>Role-Based Access and Audit Trails:</strong> Permission-based authentication and activity logging for system security and accountability.</li><li><strong>Reliable Email Notification System:</strong> Automated background notifications with primary and secondary SMTP configurations.</li><li><strong>Containerized System Architecture:</strong> Docker-based deployment supporting scalability, stability, and simplified maintenance.</li></ul>",
+    "distinct_features": "<ul><li><strong>Requirements Analysis:</strong> Identified system gaps, analyzed stakeholder needs, and defined functional requirements.</li><li><strong>Workflow Digitalization:</strong> Developed appointment management features to streamline administrative processes.</li><li><strong>Data Management and Integration:</strong> Improved bulk uploads, import/export, data validation, and SMTP configuration.</li><li><strong>Disaster Response Enhancement:</strong> Updated the Rasuwa flood rescue module while ensuring data integrity and controlled changes.</li></ul>",
+    "category": 1,
+    "slug": "bipad-portal-upgradation-needs-analysis-development"
+  },
+  {
+    "id": 25,
+    "name": "NDRRMA E-Learning System Configuration and Management",
+    "skills": [
+      5, 7, 46, 55, 62
+    ],
+    "client": "National Disaster Risk Reduction and Management Authority",
+    "banner_image": null,
+    "start_date": "2025-04-01",
+    "end_date": "2025-08-31",
+    "description": "<h2>Project Overview</h2><p>The <strong>NDRRMA E-Learning System</strong> is a digital learning platform supporting training, knowledge sharing, and capacity-building initiatives related to disaster risk reduction and management.</p><p>My involvement focused on <strong>system configuration, platform administration, course management, and operational support</strong>, ensuring that the e-learning environment remained functional, organized, and aligned with institutional training requirements.</p><h2>Roles and Responsibilities</h2><p>Working with a <strong>System Analyst-oriented approach</strong>, I contributed to understanding administrative requirements, configuring platform functionalities, managing learning resources, and resolving system-level issues.</p><p>My responsibilities included configuring <strong>SMTP settings</strong> for system-generated email communication, managing courses and learning content, maintaining structured data, and configuring certificate generation and issuance settings according to training requirements.</p><p>I also supported server-level and application-level configurations, troubleshooting technical issues and adjusting system settings to improve platform functionality and operational reliability.</p><h2>Key Contributions and Learnings</h2><p>Through this project, I strengthened my practical understanding of <strong>Learning Management Systems, server administration, system configuration, course management, data organization, and certification workflows</strong>.</p><p>The experience helped me understand how institutional training requirements translate into system configurations and how effective platform administration supports consistent and accessible digital learning experiences.</p>",
+    "distinct_features": "<ul><li><strong>Server and SMTP Configuration:</strong> Managed system settings and email configurations for reliable platform communication.</li><li><strong>Course Management:</strong> Organized and configured courses, learning resources, and training content.</li><li><strong>Data Management:</strong> Maintained structured learning data and supported administrative data operations.</li><li><strong>Certification Configuration:</strong> Configured certificate generation and issuance settings for training completion.</li></ul>",
+    "category": 1,
+    "slug": "ndrrma-e-learning-system-configuration-management"
+  },
 ]
 ```
 
@@ -1928,6 +1959,18 @@ cannot replace a Django fixture for restoration.
     "image": "uploads/projects/projectimage/bat_banner.jpeg",
     "caption": null
   },
+  {
+    "id": 71,
+    "project": 24,
+    "image": "uploads/projects/project/bipad_banner.png",
+    "caption": "Bipad Portal Dashboard"
+  },
+  {
+    "id": 72,
+    "project": 24,
+    "image": "uploads/projects/projectimage/bipad_incident.png",
+    "caption": "Bipad Portal Incident Page"
+  },
 ]
 ```
 
@@ -2037,6 +2080,12 @@ cannot replace a Django fixture for restoration.
     "name": "BAT Google Play Store",
     "link": "https://play.google.com/store/apps/details?id=np.gov.collect.android&hl=en"
   },
+  {
+    "id": 20,
+    "project": 24,
+    "name": "Bipad Portal",
+    "link": "https://bipadportal.gov.np/"
+  },
 ]
 ```
 
@@ -2049,16 +2098,59 @@ cannot replace a Django fixture for restoration.
     "title": "Translating Needs into Code: My Collaborative Role at NDRRMA with Youth Innovation Lab",
     "content": "<p><strong>Stepping into the role of Project Associate at the </strong><a href=\"https://ndrrma.gov.np/\"><strong>National Disaster Risk Reduction and Management Authority (NDRRMA)</strong></a> was far more than just a technical assignment — it was a profoundly meaningful chapter of my professional journey, where backend development met the real-world mission of saving lives.</p><p>&nbsp;</p><p>As part of the dynamic team at <a href=\"https://youthinnovationlab.org/\"><strong>Youth Innovation Lab</strong></a>, I had the unique opportunity to contribute to a live, government-facing digital platform built using <strong>Django</strong> and <strong>Django REST Framework</strong>. My core responsibilities included implementing new backend features, managing and updating the database schema, configuring signals and serializers, and refining the Django admin interface to ensure it remained efficient and intuitive for end users.</p><p>&nbsp;</p><p>However, the heart of this project lay in <strong>bridging the gap between technology and public service</strong>. I actively <strong>communicated with </strong><a href=\"https://ndrrma.gov.np/\"><strong>NDRRMA</strong></a><strong> officials</strong>, translating their feedback and operational needs into actionable development tasks. Acting as a conduit between the government stakeholders and the IT team at <a href=\"https://youthinnovationlab.org/\">Youth Innovation Lab</a>, I ensured that every feature enhancement, bug fix, or workflow adjustment reflected the real needs of those working on the frontlines of disaster risk reduction.</p><p>&nbsp;</p><p>In this role, I also facilitated <strong>collaboration between the backend and frontend teams</strong>, aligning development efforts during feature rollouts and making sure that both the technical and non-technical perspectives were in sync. This involved careful planning, requirement analysis, and iterative discussions to ensure the platform served its intended purpose — to provide a reliable, responsive, and effective digital tool for disaster management.</p><p>&nbsp;</p><p>One of the greatest takeaways from this experience was the importance of seeing beyond the code — to understand the <strong>system as a whole</strong>, including how it fits into broader organizational and national goals. That systems-level thinking helped ensure smooth technical updates without disrupting the workflow of our users at NDRRMA, ultimately supporting the agency’s mission to enhance disaster preparedness and response.</p><p>&nbsp;</p><p>I am deeply grateful to everyone who contributed to this enriching journey. To the <strong>NDRRMA officials</strong>, thank you for your trust, guidance, and clear communication — your insights shaped the direction of our work in meaningful ways. To the <strong>entire IT and leadership team at </strong><a href=\"https://youthinnovationlab.org/\"><strong>Youth Innovation Lab</strong></a>, thank you for your constant support, mentorship, and collaborative spirit.&nbsp;</p><p>&nbsp;</p><p>A special thanks to <strong>Mr. Pradip Khatiwada</strong>, Executive Director at <a href=\"https://youthinnovationlab.org/\">Youth Innovation Lab</a>, for believing in me and giving me the opportunity to be a part of this impactful project. Your trust was the foundation that allowed me to grow and contribute meaningfully to a national cause.</p><p>&nbsp;</p><p>Working alongside such dedicated professionals was an honor, and every challenge we tackled together was a chance to grow — not just as a developer, but as a contributor to a mission that matters.</p><p>&nbsp;</p><p>This project reaffirmed my belief that <strong>technology, when guided by purpose and empathy, can be a powerful force for public good</strong> — and I’m proud to have played a part in that mission.</p>",
     "slug": "translating-needs-into-code-my-collabora-Q4OHd",
-    "banner_image": "uploads/blogs/blog/translating-needs-into-code-my-collaborative-role-at-nd-cb4a0971.svg",
-    "published_at": "2025-07-06T04:15:00Z"
-  }
+    "banner_image": "uploads/blogs/blog/Translating needs into development.JPG",
+    "published_at": "2026-07-06T04:15:00Z"
+  },
+  {
+    "id": 2,
+    "title": "Beyond Development: Lessons from a Year of Building and Maintaining a Government Digital System",
+    "content": "<p>Over a year of building and maintaining a government website has taught me that launching a feature is only the beginning.</p><p>The real learning comes from keeping it reliable, adapting to changing requirements, and making everyday work easier for the people who depend on it.</p><p>During my work on the <strong>NDRRMA system</strong>, I’ve developed and improved several key components:</p><ol><li><strong>Appointment management:</strong> translating administrative workflows into a structured digital process.</li><li><strong>Import/export and bulk uploads:</strong> simplifying large-scale data management while strengthening validation, consistency, and error handling.</li><li><strong>SMTP configuration:</strong> understanding the configuration and reliability behind email communication.</li><li><strong>Rasuwa flood updates under the rescue module:</strong>learning to make quick decisions, build features that protect data integrity, and manage urgent changes through disciplined version control.</li></ol><p>The Rasuwa flood updates were a particularly valuable learning experience. They taught me how to respond to evolving needs under time pressure while keeping changes traceable and data dependable. </p><p>Each component brought lessons beyond writing code: understanding users, handling edge cases, troubleshooting issues, and improving the system while supporting existing workflows.</p><p>A year in, I’m still learning—and becoming a more thoughtful developer through the work.</p>",
+    "slug": "beyond_development",
+    "banner_image": "uploads/blogs/blog/beyond_development_banner.jpeg",
+    "published_at": "2026-10-05T14:00:00Z"
+  },
+  {
+    "id": 3,
+    "title": "From On-Campus Champions to the Dubai Stage: My Hult Prize Journey (2020–2023)",
+    "content": "<p>Some journeys begin with a clear destination, while others unfold through unexpected opportunities. My journey with the <strong>Hult Prize</strong> was definitely the latter. What started as an opportunity to explore entrepreneurship during my university years gradually became one of the most meaningful experiences of my personal and professional growth.</p><p>From <strong>winning the Hult Prize Pokhara University On-Campus Competition in 2020/21 with Team Impact Engineers</strong> to <strong>representing Nepal at the Hult Prize Dubai Regional Impact Summit in 2023 with Team Aswat-Thama</strong>, the experience introduced me to the world of social entrepreneurship, challenged my thinking, and taught me lessons that extended far beyond academics.</p><h2>The Beginning: Discovering the Hult Prize in 2020</h2><p>My involvement with the Hult Prize began in 2020, when I joined the Hult Prize Nepal Community as a Graphic Designer. As a Computer Engineering student at Pokhara University with an interest in design, technology, and creative problem-solving, this opportunity allowed me to contribute my skills to a global movement focused on social entrepreneurship.</p><p>Initially, I was involved in the creative and promotional aspects of the program. However, as I learned more about the Hult Prize, I became increasingly interested in the ideas behind the competition.</p><p>The concept was inspiring: bringing young people together to develop innovative, sustainable business solutions addressing real-world challenges.</p><p>It made me realize that entrepreneurship was not simply about starting a business. It was also about identifying problems, understanding communities, and creating solutions capable of generating meaningful social impact.</p><h2>The First Milestone: Winning Hult Prize On-Campus 2020/21</h2><figure class=\"image\"><img src=\"/uploads/blogs/blog/oncampus_winner.jpeg\" alt=\"Team Impact Engineers - Hult Prize On-Campus Winners 2020/21\"><figcaption>Hult Prize Pokhara University On-Campus Champions 2020/21</figcaption></figure><p>One of the defining moments of my journey came during the <strong>Hult Prize Pokhara University On-Campus Competition 2020/21</strong>, when I participated as a member of <strong>Team Impact Engineers</strong>.</p><p>The competition revolved around the global challenge <em>Food for Good</em>, encouraging young entrepreneurs to explore innovative approaches to transforming food systems.</p><p>For our team, the competition became an opportunity to move beyond theoretical knowledge and explore entrepreneurship through practical problem-solving.</p><p>We had to think critically, develop our idea, consider its feasibility, and communicate its potential impact. The process required collaboration, research, creativity, and the ability to accept feedback and improve our approach.</p><p>Eventually, <strong>Team Impact Engineers emerged as the On-Campus Champion</strong>, earning the opportunity to advance to the next stage of the Hult Prize competition.</p><p>Winning was an exciting achievement, but the most valuable part was everything we learned along the way. It was my first major exposure to pitching a startup concept, working toward a shared entrepreneurial vision, and understanding the importance of balancing innovation with practical implementation.</p><p>More importantly, it gave me the confidence to continue exploring the possibilities of social entrepreneurship.</p><h2>Growing Beyond Competition: From Participant to Organizer</h2><p>My journey with the Hult Prize did not end with that first victory.</p><p>Over the following years, I continued contributing to the Hult Prize ecosystem through different leadership and organizational roles.</p><p>I served as <strong>Promotions Manager for the Hult Prize Nepal Community</strong>, followed by roles including <strong>General Manager and Deputy Campus Director at Hult Prize Pokhara University</strong>.</p><p>These experiences allowed me to see the competition from an entirely different perspective.</p><p>As a participant, my primary focus had been developing an idea and presenting it effectively. As an organizer, I began understanding the work required to create those opportunities for other aspiring entrepreneurs.</p><p>From supporting events and coordinating teams to promoting entrepreneurial activities and engaging with students, each responsibility helped me develop leadership, communication, and organizational skills.</p><p>I learned that successful events depend not only on planning but also on teamwork, adaptability, and the willingness to solve unexpected problems.</p><p>These responsibilities gradually transformed my relationship with the Hult Prize. It was no longer simply a competition I had participated in; it had become a platform through which I could contribute to the growth of other student entrepreneurs.</p><h2>A New Chapter: Team Aswat-Thama and the Road to Dubai</h2><p>During the <strong>2022/23 Hult Prize journey</strong>, another exciting opportunity emerged when I became part of <strong>Team Aswat-Thama</strong>.</p><p>Our startup concept focused on transforming <strong>banana fiber into sustainable fabrics and fashionable clothing</strong>, exploring how agricultural resources could be utilized to create environmentally conscious products.</p><p>The idea introduced me to another important dimension of entrepreneurship: identifying value in resources that are often overlooked and exploring how innovation can contribute to sustainability.</p><p>Working with Team Aswat-Thama brought together different perspectives, skills, and experiences.</p><p>It was an opportunity to apply lessons from my earlier Hult Prize involvement while continuing to learn from a new team and a different entrepreneurial concept.</p><p>Our journey eventually took us beyond Nepal, to the <strong>Hult Prize Dubai Regional Impact Summit in June 2023</strong>.</p><h2>Representing Nepal at the Dubai Regional Impact Summit 2023</h2><p><em>June 23–24, 2023 | Dubai, United Arab Emirates</em></p><p>Participating in the Dubai Regional Impact Summit was one of the proudest and most memorable milestones of my Hult Prize journey.</p><p>Being part of a seven-member team representing Nepal on an international entrepreneurial platform was an experience unlike anything I had encountered before.</p><p>The summit brought together entrepreneurial teams from different countries, each presenting innovative solutions to pressing global challenges.</p><p>Suddenly, the experience had expanded far beyond our university. We were surrounded by passionate entrepreneurs, different perspectives, and ideas shaped by challenges from across the world.</p><p>It was an opportunity not only to present our startup concept but also to observe how other teams approached business models, sustainability, innovation, and social impact.</p><p>Representing Nepal carried its own sense of responsibility and pride.</p><p>Our team competed alongside approximately 30 teams from around the world, and through our collective efforts, <strong>Team Aswat-Thama secured the position of 1st Runner-Up at the Dubai Regional Impact Summit</strong>.</p><p>The achievement was incredibly meaningful.</p><p>However, beyond the result, the experience demonstrated what could be possible when young entrepreneurs from Nepal were given opportunities to compete and collaborate internationally.</p><p>The summit also strengthened my understanding that good ideas need more than creativity. They require research, clear communication, practical execution, teamwork, and the ability to adapt to feedback.</p><h2>Lessons That Stayed With Me</h2><p>Looking back at the journey from 2020 to 2023, I realize that the biggest rewards were not limited to certificates, awards, or competition results.</p><p>The Hult Prize helped me develop several perspectives that continue to influence how I approach challenges today.</p><ol><li><strong>Innovation begins with understanding a problem.</strong> Technology and creativity are powerful, but meaningful solutions begin with understanding the needs of the people and communities they aim to serve.</li><li><strong>Teamwork turns individual ideas into collective achievements.</strong> Both Team Impact Engineers and Team Aswat-Thama taught me the importance of collaboration, shared responsibility, and learning from people with different perspectives.</li><li><strong>Leadership is about creating opportunities for others.</strong> My organizational roles helped me understand that leadership involves supporting a team, managing responsibilities, and enabling others to grow.</li><li><strong>Growth often happens outside the classroom.</strong> Pitching ideas, developing startup concepts, organizing events, meeting entrepreneurs, and participating internationally taught me lessons that traditional academic experiences alone could not provide.</li><li><strong>Success is part of the journey, not its final destination.</strong> Winning the On-Campus Competition was an important milestone. Reaching the Dubai Summit was another. But the confidence, connections, experiences, and perspectives gained throughout the process have remained equally valuable.</li></ol><h2>From a University Competition to a Global Experience</h2><p>When I first became involved with the Hult Prize in 2020, I could not have predicted where the journey would lead.</p><p>What began with graphic design and an On-Campus entrepreneurship competition eventually evolved into experiences involving team leadership, startup development, national representation, and international participation.</p><p>From celebrating an On-Campus victory with Team Impact Engineers to standing alongside Team Aswat-Thama at the Dubai Regional Impact Summit, every stage contributed something different to my growth.</p><p>These experiences also shaped my later leadership journey, eventually leading me to serve as <strong>Campus Director of Hult Prize Pokhara University for 2023/24</strong>, where I had the opportunity to help other students explore entrepreneurship and develop their own ideas.</p><p>As someone pursuing a career in technology, I continue to carry the lessons from the Hult Prize into my professional work: understanding problems before building solutions, appreciating collaboration, remaining adaptable, and considering the real-world impact of what we create.</p><p><strong>The Hult Prize was more than a competition for me. It was a journey that transformed curiosity into confidence, participation into leadership, and local opportunities into global experiences.</strong></p><p>And perhaps the most important lesson was that the journey of learning, building, and creating impact never truly ends.</p>",
+    "slug": "my_hult_prize_journey",
+    "banner_image": "uploads/blogs/blog/oncampus_winner2.jpeg",
+    "published_at": "2024-08-01T00:00:00Z"
+  },
+  {
+    "id": 4,
+    "title": "Building the Bipad Assessment Tool (BAT): Customizing ODK Collect for Disaster Risk Assessment in Nepal",
+    "content": "<p>I worked on the development of the <strong>Bipad Assessment Tool (BAT)</strong>, a mobile-based disaster risk assessment and survey platform designed to support <strong>NDRRMA’s field data collection and assessment workflows</strong>. The project was built by customizing the open-source <strong>ODK Collect</strong> application to align with Nepal’s national disaster risk assessment requirements and operational standards.</p><p>My primary responsibility involved modifying and extending ODK Collect to support structured assessment and survey workflows defined by NDRRMA. This included adapting form handling, project-based data segregation, and ensuring compatibility with assessment methodologies used during disaster preparedness, response, and recovery phases.</p><h2>Authentication and Secure Data Collection</h2><p>To meet institutional security and operational needs, I implemented application-level authentication enhancements, introducing <strong>username-based login and project-specific access tokens</strong>. This ensured that field enumerators could securely access only the assessments and projects assigned to them, improving both data integrity and accountability across multiple assessment initiatives.</p><h2>Deployment and Production Release</h2><p>In addition to development, I actively coordinated the deployment and release process, managing the production rollout of the customized application through the <strong>Google Play Console</strong>. I ensured version stability, handled updates, and provided ongoing operational support to address field-level issues and evolving requirements.</p><h2>Key Learnings and Experience</h2><p>Through this project, I gained hands-on experience in <strong>mobile application customization, government-grade system requirements, secure data collection workflows, and production deployment</strong>, while directly contributing to Nepal’s national disaster risk assessment and management ecosystem.</p>",
+    "slug": "building_bipad_assessment_tool",
+    "banner_image": "uploads/blogs/blog/bat_banner.jpeg",
+    "published_at": "2026-01-25"
+  },
 ]
 ```
 
 ### `blogs.blogimage` (0 records)
 
 ```json
-[]
+[
+  {
+    "id": 1,
+    "blog": 2,
+    "image": "uploads/blogs/blog/beyond_development_rasuwa_dashboard.jpeg",
+    "caption": "Rasuwa Flood Information Dashboard"
+  },
+  {
+    "id": 2,
+    "blog": 2,
+    "image": "uploads/blogs/blog/beyond_development_appointment.jpeg",
+    "caption": "NDRRMA Appointment System Page"
+  },
+  {
+    "id": 3,
+    "blog": 3,
+    "image": "uploads/blogs/blog/dubai_summits.jpg",
+    "caption": "Dubai Summits: Team Aswat-Thama"
+  },
+]
 ```
 
 ### `blogs.featuredblog` (1 records)
@@ -2067,10 +2159,12 @@ cannot replace a Django fixture for restoration.
 [
   {
     "id": 1,
-    "blog": 1
+    "blog": 2
   }
 ]
 ```
+
+
 
 ### `contact.contactinformation` (1 records)
 

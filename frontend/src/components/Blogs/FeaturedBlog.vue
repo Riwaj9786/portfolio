@@ -1,21 +1,6 @@
 <script setup>
-import { ref, onMounted } from 'vue';
-import portfolioContent from '@/content';
-
-const data = ref({});
-const loading = ref(true);
-const error = ref(null);
-
-onMounted(async () => {
-   try {
-      const response = await portfolioContent.get('blogs/featured_blog/');
-      data.value = response.data[0].blog;
-   } catch (err) {
-      error.value = 'Error Fetching Data!';
-      console.error(err);
-   } finally {
-      loading.value = false;
-   }
+defineProps({
+   blog: { type: Object, required: true },
 });
 
 const contentTruncated = (content, length = 120) => {
@@ -25,25 +10,23 @@ const contentTruncated = (content, length = 120) => {
 </script>
 
 <template>
-   <RouterLink :to="`/blogs/${data.slug}`" class="block w-full">
+   <RouterLink :to="`/blogs/${blog.slug}`" class="block w-full">
       <div class="w-full self-start">
          <div class="surface group overflow-hidden p-3">
             <div class="flex items-center justify-between px-3 pb-3 pt-2"><p class="eyebrow">Featured read</p><i class="pi pi-bookmark text-[var(--primary)]"></i></div>
 
-            <div v-if="loading" class="text-[var(--muted)]">Loading...</div>
-            <div v-else-if="error" class="text-red-400">{{ error }}</div>
-            <div v-else>
+            <div>
                <div class="overflow-hidden rounded-[1.2rem]">
                <img
-                  :src="data.banner_image"
+                  :src="blog.banner_image"
                   alt="Featured Blog Image"
                   loading="lazy"
                   decoding="async"
                   class="h-64 w-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
                />
                </div>
-               <div class="p-4"><h2 class="mb-2 text-2xl font-bold tracking-tight">{{ data.title }}</h2>
-               <p class="mb-5 line-clamp-3 text-sm leading-relaxed text-[var(--muted)]" v-html="contentTruncated(data.content, 150)"></p>
+               <div class="p-4"><h2 class="mb-2 text-2xl font-bold tracking-tight">{{ blog.title }}</h2>
+               <p class="mb-5 line-clamp-3 text-sm leading-relaxed text-[var(--muted)]" v-html="contentTruncated(blog.content, 150)"></p>
                <div class="relative w-full overflow-hidden rounded-full bg-purple-500/10 px-4 py-2.5">
                   <div class="flex justify-between items-center w-full">
                      <span class="text-[var(--ink)] group-hover:text-[var(--primary)] transition-colors">

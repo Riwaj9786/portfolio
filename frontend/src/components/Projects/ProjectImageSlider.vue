@@ -1,5 +1,5 @@
 <script setup>
-import { ref, watch } from "vue";
+import { nextTick, ref, watch } from "vue";
 
 const props = defineProps({
    images: {
@@ -10,6 +10,7 @@ const props = defineProps({
 
 const currentIndex = ref(0);
 const isFullscreen = ref(false);
+const closeButton = ref(null);
 
 const nextSlide = () => {
    currentIndex.value = (currentIndex.value + 1) % props.images.length;
@@ -28,10 +29,27 @@ const closeFullscreen = () => {
    isFullscreen.value = false;
 };
 
+watch(isFullscreen, async (isOpen, _, onCleanup) => {
+   if (!isOpen) return;
+
+   const trigger = document.activeElement;
+   const previousOverflow = document.body.style.overflow;
+   document.body.style.overflow = "hidden";
+
+   onCleanup(() => {
+      document.body.style.overflow = previousOverflow;
+      trigger?.focus();
+   });
+
+   await nextTick();
+   if (isFullscreen.value) closeButton.value?.focus();
+});
+
 watch(
    () => props.images,
    () => {
       currentIndex.value = 0;
+      closeFullscreen();
    }
 );
 </script>
@@ -45,13 +63,20 @@ watch(
       aria-label="Project image slider"
    >
       <transition name="fade" mode="out-in">
-         <img
-         :key="images[currentIndex].image"
-         :src="images[currentIndex].image"
-         :alt="`Project image ${currentIndex + 1}`"
-         class="w-full h-full object-contain bg-black/25 cursor-pointer"
-         @click="openFullscreen"
-         />
+         <button
+            :key="images[currentIndex].image"
+            type="button"
+            class="block h-full w-full cursor-zoom-in bg-black/25 focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-[var(--primary)]"
+            :aria-label="`View project image ${currentIndex + 1} fullscreen`"
+            aria-haspopup="dialog"
+            @click="openFullscreen"
+         >
+            <img
+               :src="images[currentIndex].image"
+               :alt="images[currentIndex].caption || `Project image ${currentIndex + 1}`"
+               class="h-full w-full object-contain"
+            />
+         </button>
       </transition>
 
       <button
@@ -89,25 +114,34 @@ watch(
       {{ images[currentIndex].caption }}
    </div>
 
-   <div
-      v-if="isFullscreen"
-      class="fixed inset-0 z-50 bg-black bg-opacity-90 flex flex-col items-center justify-center"
-      @click.self="closeFullscreen"
-   >
-      <img
-         :src="images[currentIndex].image"
-         :alt="`Fullscreen image ${currentIndex + 1}`"
-         class="max-h-[80dvh] max-w-[94vw] object-contain"
-      />
-      <div class="text-white text-sm mt-4 px-4 text-center">
-         {{ images[currentIndex].caption }}
-      </div>
-      <button
-         @click="closeFullscreen"
-         class="absolute right-4 top-4 grid h-11 w-11 place-items-center rounded-full bg-black/50 text-2xl text-white hover:bg-black"
-         aria-label="Close fullscreen"
+   <Teleport to="body">
+      <div
+         v-if="isFullscreen && images.length"
+         role="dialog"
+         aria-modal="true"
+         aria-label="Fullscreen project image"
+         class="fixed inset-0 z-[200] flex h-[100dvh] flex-col items-center justify-center bg-black/95 px-4 py-20"
+         @click.self="closeFullscreen"
+         @keydown.esc.stop.prevent="closeFullscreen"
+         @keydown.tab.prevent="closeButton?.focus()"
       >
-         ×
-      </button>
-   </div>
+         <img
+            :src="images[currentIndex].image"
+            :alt="images[currentIndex].caption || `Fullscreen image ${currentIndex + 1}`"
+            class="min-h-0 max-h-[80dvh] max-w-full object-contain"
+         />
+         <div v-if="images[currentIndex].caption" class="mt-4 max-h-20 shrink-0 overflow-y-auto px-4 text-center text-sm text-white">
+            {{ images[currentIndex].caption }}
+         </div>
+         <button
+            ref="closeButton"
+            type="button"
+            @click="closeFullscreen"
+            class="absolute right-4 top-4 grid h-11 w-11 place-items-center rounded-full bg-white/10 text-3xl text-white hover:bg-white/20 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
+            aria-label="Close fullscreen"
+         >
+            <span aria-hidden="true">×</span>
+         </button>
+      </div>
+   </Teleport>
 </template>

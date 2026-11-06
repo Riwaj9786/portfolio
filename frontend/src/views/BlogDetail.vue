@@ -98,7 +98,7 @@ const formatDate = (dateString) => {
         </button>
       </header>
       <div
-        class="overflow-hidden rounded-[1.25rem] border border-[var(--line)] shadow-[var(--shadow)] sm:rounded-[2rem]"
+        class="mx-auto w-full max-w-5xl overflow-hidden rounded-[1.25rem] border border-[var(--line)] shadow-[var(--shadow)] sm:rounded-[2rem]"
       >
         <img
           :src="blog.banner_image"

@@ -5,28 +5,16 @@ import { ref, onMounted } from "vue";
 import portfolioContent from "@/content";
 import FeaturedBlog from "./FeaturedBlog.vue";
 
-const data = ref({});
-const loading = ref(true);
-const error = ref(null);
+const featuredBlog = ref(null);
 
 onMounted(async () => {
   try {
     const response = await portfolioContent.get("blogs/featured_blog/");
-    data.value = response.data[0].blog;
+    featuredBlog.value = response.data?.[0]?.blog ?? null;
   } catch (err) {
-    error.value = "Error Fetching Data!";
     console.error(err);
-  } finally {
-    loading.value = false;
   }
 });
-
-const contentTruncated = (content, length = 120) => {
-  if (!content) return "";
-  return content.length > length
-    ? content.substring(0, length) + "..."
-    : content;
-};
 </script>
 
 <template>
@@ -47,11 +35,12 @@ const contentTruncated = (content, length = 120) => {
       </p>
     </div>
     <div
-      class="grid w-full grid-cols-1 gap-9 sm:gap-12 lg:grid-cols-[360px_minmax(0,1fr)]"
+      class="grid w-full grid-cols-1 gap-9 sm:gap-12"
+      :class="{ 'lg:grid-cols-[360px_minmax(0,1fr)]': featuredBlog }"
     >
       <!-- Featured Blog with sticky on lg+ -->
-      <div class="w-full lg:sticky lg:top-28 self-start">
-        <FeaturedBlog />
+      <div v-if="featuredBlog" class="w-full lg:sticky lg:top-28 self-start">
+        <FeaturedBlog :blog="featuredBlog" />
       </div>
 
       <!-- Blog Cards Section -->
