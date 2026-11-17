@@ -4,6 +4,7 @@ import Experience from "@/components/Home/Experience/Experience.vue";
 import ProjectsButton from "@/components/Home/ProjectsButton/ProjectsButton.vue";
 import SkillSet from "@/components/Home/Skills/SkillSet.vue";
 import ServicesHome from "@/components/Home/Services/ServicesHome.vue";
+import Certifications from "@/components/Home/Certifications/Certifications.vue";
 import Testimonials from "@/components/Home/Testimonial/Testimonials.vue";
 
 import { ref, onMounted } from "vue";
@@ -51,6 +52,7 @@ onMounted(async () => {
          <section v-reveal class="mb-5 sm:mb-6 lg:mb-10">
             <ServicesHome/>
          </section>
+         <Certifications />
          <!-- <section class="mb-5 sm:mb-6 lg:mb-10">
             <Testimonials/>
          </section> -->

@@ -1,9 +1,10 @@
 <script setup>
 import { onMounted, onUnmounted } from 'vue'
 import { useAmbience } from '@/composables/useAmbience'
+import WeatherEffects from './WeatherEffects.vue'
 
-// Keep the existing theme/time lifecycle; this backdrop makes no network requests.
-const { initialiseAmbience } = useAmbience()
+// Initialise the shared theme, clock, and location-based weather once on app mount.
+const { initialiseAmbience, weather, weatherKind, weatherIsNight } = useAmbience()
 let cleanup
 let pointerFrame
 let reducedMotion
@@ -82,6 +83,7 @@ onUnmounted(() => {
     <!-- Leadership: people and ideas brought into alignment. -->
     <svg class="atmosphere-motif motif-leadership" viewBox="0 0 440 280" fill="none" focusable="false"><g stroke="currentColor" stroke-width="1.2"><path d="M220 65V135M220 135H75V200M220 135H365V200M220 135V220"/><circle cx="220" cy="50" r="25"/><circle cx="75" cy="225" r="23"/><circle cx="220" cy="245" r="23"/><circle cx="365" cy="225" r="23"/><circle cx="220" cy="50" r="38" stroke-dasharray="2 7"/><path d="M200 51L214 63L241 36"/></g></svg>
     <div class="atmosphere-particles"><i v-for="(particle, index) in particles" :key="index" :style="{ left:particle.x, top:particle.y, '--particle-delay':particle.delay, '--particle-duration':particle.duration }"></i></div>
+    <WeatherEffects :kind="weatherKind" :night="weatherIsNight" :wind="weather.wind" />
     <div class="atmosphere-pointer"></div>
   </div>
 </template>

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600" role="img" aria-labelledby="title description">
+  <title id="title">Sample certificate placeholder</title>
+  <desc id="description">A sample certificate for previewing the Certifications section. Replace with a real certificate image.</desc>
+  <rect width="800" height="600" rx="24" fill="#f7f4ff"/>
+  <rect x="28" y="28" width="744" height="544" rx="16" fill="#fdfbff" stroke="#7540c0" stroke-width="3"/>
+  <rect x="46" y="46" width="708" height="508" rx="8" fill="none" stroke="#ddccf5" stroke-width="2"/>
+  <g font-family="Arial, sans-serif" text-anchor="middle">
+    <rect x="300" y="96" width="200" height="38" rx="19" fill="#eee7fc"/>
+    <text x="400" y="122" font-size="18" font-weight="700" letter-spacing="3" fill="#7540c0">SAMPLE</text>
+    <text x="400" y="221" font-size="44" font-weight="700" fill="#241638">CERTIFICATE</text>
+    <text x="400" y="265" font-size="20" letter-spacing="4" fill="#655775">OF COMPLETION</text>
+    <path d="M240 310h320" stroke="#ddccf5" stroke-width="2"/>
+    <text x="400" y="363" font-size="22" fill="#655775">Your learning milestone goes here</text>
+    <circle cx="400" cy="438" r="30" fill="#eee7fc" stroke="#7540c0" stroke-width="2"/>
+    <path d="m386 438 10 10 18-21" fill="none" stroke="#7540c0" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="400" y="515" font-size="16" fill="#655775">Replace with your certificate image</text>
+  </g>
+</svg>

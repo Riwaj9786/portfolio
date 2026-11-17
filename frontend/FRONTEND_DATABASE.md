@@ -16,7 +16,8 @@ The original photos and project screenshots are not included. The resume PDF is
 not generated; supply the real file and update `resume` before publishing its link.
 
 Contact and testimonial forms display an unavailable notice and do not submit.
-Live weather requests are removed; theme and time controls still work locally.
+The browser requests location permission on opening the site, then loads local
+weather from Open-Meteo. Theme and time controls also work without location access.
 No backend environment variables are used by the frontend.
 
 ## Historical backend API contract
@@ -267,6 +268,38 @@ Django also maintains authentication permissions/groups, content types, sessions
 logs, migration history, and implicit many-to-many join tables (user groups/permissions,
 project skills, experience skills). These are backend infrastructure, not frontend content.
 Private messages and testimonial requests are recorded in the model inventory only.
+
+## Home page certifications
+
+The Home page shows Certifications between Services and Skills only when the
+`certifications.certification` snapshot array has records. An empty or missing array
+hides the entire section, including its spacing. Records display newest first by
+`issued_at`. This is frontend content and does not require a backend model or API.
+
+To add a certificate, copy an object in this format into that snapshot array:
+
+```json
+[
+  {
+    "id": 1,
+    "title": "Your certification title",
+    "certificate_number": "CERT-001",
+    "image": "uploads/certifications/your-certificate.jpg",
+    "academy": "Issuing Academy",
+    "issued_at": "2026-11-14"
+  }
+]
+```
+
+Use a unique `id` and keep `certificate_number` as a string to preserve leading zeros.
+`title` is optional; `certificate_number`, `image`, `academy`, and `issued_at` describe
+the certificate. Use `YYYY-MM-DD` for its issue date, or an ISO 8601 timestamp if an
+exact time is available. The page displays the issue date. Place the image under
+`frontend/public/uploads/certifications/` and store its path relative to
+`frontend/public/`, as above. Clicking the image opens it in a new tab.
+Update the heading's record count and rebuild after editing the snapshot.
+The current certification records are sample entries for previewing the section;
+replace them and the placeholder image with your own certificates.
 
 ## Public content snapshot
 
@@ -1142,6 +1175,28 @@ cannot replace a Django fixture for restoration.
 ]
 ```
 
+### `certifications.certification` (2 records)
+
+```json
+[]
+```
+  <!-- {
+    "id": 1,
+    "title": "Sample: Full Stack Development",
+    "certificate_number": "SAMPLE-2026-001",
+    "image": "uploads/certifications/sample-certificate.svg",
+    "academy": "Sample Learning Academy",
+    "issued_at": "2026-11-01"
+  },
+  {
+    "id": 2,
+    "title": "Sample: User Experience Design",
+    "certificate_number": "SAMPLE-2026-002",
+    "image": "uploads/certifications/sample-certificate.svg",
+    "academy": "Sample Design Academy",
+    "issued_at": "2026-10-15"
+  } -->
+
 ### `projects.projectcategory` (3 records)
 
 ```json
@@ -1309,7 +1364,7 @@ cannot replace a Django fixture for restoration.
       35
     ],
     "client": "Spark International Education Consultancy",
-    "banner_image": null,
+    "banner_image": "uploads/projects/projectimage/spark-final.jpg",
     "start_date": "2024-11-01",
     "end_date": "2025-01-30",
     "description": "<p>Spark International Education Consultancy aimed to establish a distinctive identity in the competitive education consulting industry. My responsibility was to create a complete branding and marketing foundation that would make the organization stand out and connect effectively with its target audience — students seeking guidance for international studies.</p><p>&nbsp;</p><h3><strong>Roles &amp; Responsibilities</strong></h3><ul><li><strong>Brand Development</strong><br>I worked closely with the company’s leadership to understand their mission and values. Based on this insight, I created a complete visual identity system:<ul><li>Designed a <strong>modern and meaningful logo</strong> that resonates with trust, guidance, and global opportunity.</li><li>Selected a brand <strong>color palette</strong> and <strong>typography system</strong> that reflects professionalism and approachability.</li><li><p>Developed brand consistency across digital and print media.</p><p>&nbsp;</p></li></ul></li><li><strong>Social Media Marketing</strong><br>Built and executed a social media strategy to increase visibility, attract leads, and engage the audience:<ul><li>Designed <strong>branded post templates</strong> for platforms like Facebook and Instagram.</li><li>Managed campaign content calendars.</li><li><p>Focused on <strong>audience growth and retention</strong>, leading to improved online presence and inquiries.</p><p>&nbsp;</p></li></ul></li><li><strong>Company Profile Creation</strong><ul><li>Drafted and designed a compelling <strong>company profile</strong> for both online and offline use, showcasing services, success stories, and core values.</li><li><p>Ensured all profile materials reflected a <strong>consistent tone and design</strong>.</p><p>&nbsp;</p></li></ul></li><li><strong>Website Design &amp; Development</strong><br>Using <strong>WordPress</strong>, I designed a <strong>responsive</strong>, SEO-ready website:<ul><li>Optimized for both mobile and desktop users.</li><li>Structured with easy-to-navigate content, service listings, contact forms, and blog sections.</li><li>Embedded key <strong>branding elements</strong> to ensure brand recognition and trust.</li></ul></li></ul><p>&nbsp;</p><h3><strong>Outcome &amp; Impact</strong></h3><ul><li>Established a <strong>recognizable brand identity</strong> across all mediums.</li><li>Increased <strong>social media engagement and followers</strong> organically through consistent content.</li><li>Built a <strong>professional online presence</strong> that led to increased inquiries and trust from clients.</li><li>Delivered all assets with scalability in mind — enabling Spark to expand its marketing activities without rebranding.</li></ul>",

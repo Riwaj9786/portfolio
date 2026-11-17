@@ -30,8 +30,27 @@ Output Directory `dist`. Run `node scripts/check-uploads.mjs dist` after buildin
 to verify the deployment media.
 
 The contact page presents collaboration areas and direct contact links. Testimonial
-submissions remain disabled because a static Markdown file cannot receive submissions. Live weather requests and geolocation
-are removed; local time and theme controls continue working.
+submissions remain disabled because a static Markdown file cannot receive submissions.
+On opening the site, the browser requests location permission and the navbar loads
+current weather and Celsius temperature from [Open-Meteo](https://open-meteo.com/en/docs).
+Location access requires HTTPS or localhost. Coordinates are rounded to two decimal
+places before the weather request and stay in memory; no location is saved by the app.
+If permission is denied or a request fails, the weather badge shows an unavailable
+state and can be tapped to retry. Browsers may require a tap to show the permission
+prompt, and previously blocked access must be re-enabled in browser settings.
+Local time and theme controls work independently of weather access.
+Run `node scripts/check-weather.mjs` to check permission, weather, and cleanup behavior.
+
+The background follows the same current conditions: sun or moon and stars for clear
+skies, drifting clouds, rain, snow, fog, or a slow glow during storms. Day/night comes
+from the weather response, and wind strength adjusts precipitation drift. Effects
+are softly masked to the page container's outer gutters, keeping the content area
+clear, and do not intercept clicks. Mobile shows fewer particles at lower opacity;
+reduced-motion preferences replace movement with a static sky. Hidden tabs pause
+effects and skip weather polling. While visible, weather refreshes every 15 minutes
+using the location already shared for this visit; coordinates remain only in memory.
+If location or weather is unavailable, the original portfolio background remains.
+Run `node scripts/check-weather-effects.mjs` to check weather scene rendering.
 
 Build with `npm run build`; output is `dist/`. The build needs only this frontend
 directory and its Markdown file, with no backend, database credentials, or API URL
@@ -117,7 +136,7 @@ strings in the admin. Job type and skills are optional for either category.
 
 The backend API supports `?category=professional` or `?category=leadership` on
 `/api/v1/experience/experiences/` and exposes the new fields. The static frontend
-continues reading Markdown and makes no API requests. After editing in admin,
+continues reading Markdown without backend API requests. After editing in admin,
 export visible experiences and rebuild the frontend:
 
 ```sh

@@ -92,6 +92,9 @@ export function createContentReader(content, mediaOrigin) {
     if (simple[route]) {
       const [model, fields] = simple[route]
       data = records(model).map((row) => fields ? Object.fromEntries(fields.map((field) => [field, row[field]])) : row)
+    } else if (route === 'certification/certifications') {
+      data = [...records('certifications.certification')].sort((a, b) =>
+        (b.issued_at || '').localeCompare(a.issued_at || ''))
     } else if (route === 'service/services') {
       data = [...records('services.service')].sort((a, b) => a.order - b.order)
     } else if (route === 'experience/experiences') {

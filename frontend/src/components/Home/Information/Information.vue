@@ -38,18 +38,26 @@ onMounted(async () => {
         <div class="portrait-scrim" aria-hidden="true"></div>
 
         <div
-          class="absolute inset-x-2 bottom-2 flex gap-1.5 rounded-xl lg:inset-x-4 lg:bottom-4 lg:gap-2 lg:rounded-[1.3rem] border border-white/20 bg-black/20 p-2 backdrop-blur-md"
+          class="absolute inset-x-2 bottom-2 grid grid-cols-2 gap-1.5 rounded-xl lg:inset-x-4 lg:bottom-4 lg:gap-2 lg:rounded-[1.3rem] border border-white/20 bg-black/20 p-2 backdrop-blur-md"
         >
           <RouterLink
             to="/projects"
-            class="flex flex-1 items-center justify-center gap-1.5 whitespace-nowrap rounded-full bg-white px-2 py-2.5 text-[10px] font-bold text-purple-800 shadow-lg transition hover:-translate-y-0.5 min-[390px]:px-3 lg:text-xs xl:text-sm"
-            >Explore my work <i class="pi pi-arrow-up-right text-[10px]"></i
-          ></RouterLink>
+            aria-label="Explore my work"
+            class="flex min-h-11 min-w-0 items-center justify-center gap-1.5 whitespace-nowrap rounded-full bg-white px-2 py-2.5 text-center text-[10px] font-bold leading-snug text-purple-800 shadow-lg transition hover:-translate-y-0.5 lg:px-3 lg:text-xs xl:text-sm"
+          >
+            <span class="profile-action-label-short truncate">Work</span>
+            <span class="profile-action-label-full truncate">Explore my work</span>
+            <i class="pi pi-arrow-up-right shrink-0 text-[10px]" aria-hidden="true"></i>
+          </RouterLink>
           <RouterLink
             to="/connect"
-            class="flex flex-1 items-center justify-center gap-1.5 whitespace-nowrap rounded-full border border-white/25 bg-black/35 px-2 py-2.5 text-[10px] font-bold text-white transition hover:-translate-y-0.5 hover:bg-white/20 min-[390px]:px-3 lg:text-xs xl:text-sm"
-            >Send a message <i class="pi pi-send text-[10px]"></i
-          ></RouterLink>
+            aria-label="Send a message"
+            class="flex min-h-11 min-w-0 items-center justify-center gap-1.5 whitespace-nowrap rounded-full border border-white/25 bg-black/35 px-2 py-2.5 text-center text-[10px] font-bold leading-snug text-white transition hover:-translate-y-0.5 hover:bg-white/20 lg:px-3 lg:text-xs xl:text-sm"
+          >
+            <span class="profile-action-label-short truncate">Message</span>
+            <span class="profile-action-label-full truncate">Send a message</span>
+            <i class="pi pi-send shrink-0 text-[10px]" aria-hidden="true"></i>
+          </RouterLink>
         </div>
       </div>
     </div>
@@ -93,7 +101,12 @@ onMounted(async () => {
 </template>
 
 <style scoped>
-.profile-visual { position:relative;overflow:hidden;border-radius:inherit; }
+.profile-visual { position:relative;overflow:hidden;border-radius:inherit;container-type:inline-size;container-name:profile-portrait; }
+.profile-action-label-full { display:none; }
+@container profile-portrait (min-width:380px) {
+  .profile-action-label-short { display:none; }
+  .profile-action-label-full { display:block; }
+}
 .profile-photo { transition:transform .45s ease; }
 .portrait-scrim {
   position:absolute;

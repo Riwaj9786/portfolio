@@ -1,6 +1,6 @@
 <script setup>
 import portfolioContent from "@/content";
-import { ref, nextTick, onMounted, onUnmounted, watch } from "vue";
+import { computed, ref, nextTick, onMounted, onUnmounted, watch } from "vue";
 import { useRoute } from "vue-router";
 import { useAmbience } from "@/composables/useAmbience";
 
@@ -11,9 +11,14 @@ const menuDialog = ref(null);
 const closeButton = ref(null);
 let previouslyFocused = null;
 const route = useRoute();
-const { theme, resolvedTheme, weather, weatherKind, cycleTheme } =
+const { theme, resolvedTheme, weather, weatherKind, weatherIsNight, weatherLoading, weatherError, requestWeather, cycleTheme } =
   useAmbience();
+const weatherTemperature = computed(() => weatherLoading.value ? "…" : weather.value.temperature === null ? "—" : `${weather.value.temperature}°C`);
+const weatherSummary = computed(() => [weather.value.label, weather.value.location, weather.value.temperature === null ? "" : weatherTemperature.value, weatherError.value].filter(Boolean).join(" · "));
+const weatherTitle = computed(() => `${weatherSummary.value}${weatherLoading.value ? "" : " · Tap to update local weather"}`);
+const currentWeatherIcon = computed(() => weatherLoading.value ? "pi-spinner pi-spin" : weatherKind.value === 'clear' && weatherIsNight.value ? "pi-moon" : weatherIcon[weatherKind.value]);
 const weatherIcon = {
+  unknown: "pi-map-marker",
   clear: "pi-sun",
   clouds: "pi-cloud",
   fog: "pi-align-justify",
@@ -89,6 +94,7 @@ onUnmounted(() => {
 
 <template>
   <header class="site-navbar sticky top-0 z-40">
+    <span role="status" class="sr-only">{{ weatherSummary }}</span>
     <nav
       class="page-container flex h-20 items-center justify-between"
       aria-label="Main navigation"
@@ -129,18 +135,22 @@ onUnmounted(() => {
           "
           >{{ item.label }}</RouterLink
         >
-        <div
-          class="ml-2 flex items-center gap-2 rounded-full border border-[var(--line)] bg-[var(--surface)] px-3 py-2"
-          :title="`${weather.label} · ${weather.location}`"
+        <button
+          type="button"
+          class="ml-2 flex items-center gap-2 rounded-full border border-[var(--line)] bg-[var(--surface)] px-3 py-2 hover:border-[var(--primary)] disabled:cursor-wait"
+          :title="weatherTitle"
+          :aria-label="weatherTitle"
+          :aria-busy="weatherLoading"
+          :disabled="weatherLoading"
+          @click="requestWeather"
         >
           <i
             class="pi text-[var(--primary)]"
-            :class="weatherIcon[weatherKind]"
+            :class="currentWeatherIcon"
+            aria-hidden="true"
           ></i
-          ><span class="text-xs text-[var(--muted)]">{{
-            weather.temperature === null ? "—" : `${weather.temperature}°`
-          }}</span>
-        </div>
+          ><span class="text-xs text-[var(--muted)]">{{ weatherTemperature }}</span>
+        </button>
         <button
           class="grid h-10 w-10 place-items-center rounded-full border border-[var(--line)] hover:border-[var(--primary)]"
           :title="`Theme: ${theme}`"
@@ -160,19 +170,23 @@ onUnmounted(() => {
         >
       </div>
       <div class="flex shrink-0 items-center gap-2 lg:hidden">
-        <div
+        <button
           v-if="!menuOpen"
-          class="hidden items-center gap-1.5 rounded-full border border-[var(--line)] bg-purple-500/5 px-2.5 py-2 min-[390px]:flex"
-          :title="weather.label"
+          type="button"
+          class="hidden items-center gap-1.5 rounded-full border border-[var(--line)] bg-purple-500/5 px-2.5 py-2 hover:border-[var(--primary)] disabled:cursor-wait min-[390px]:flex"
+          :title="weatherTitle"
+          :aria-label="weatherTitle"
+          :aria-busy="weatherLoading"
+          :disabled="weatherLoading"
+          @click="requestWeather"
         >
           <i
             class="pi text-xs text-[var(--primary)]"
-            :class="weatherIcon[weatherKind]"
+            :class="currentWeatherIcon"
+            aria-hidden="true"
           ></i
-          ><span class="text-[10px] font-bold text-[var(--muted)]">{{
-            weather.temperature === null ? "—" : `${weather.temperature}°`
-          }}</span>
-        </div>
+          ><span class="text-[10px] font-bold text-[var(--muted)]">{{ weatherTemperature }}</span>
+        </button>
         <button
           v-if="!menuOpen"
           class="grid h-10 w-10 place-items-center rounded-full border border-[var(--line)] bg-[var(--surface)] text-[var(--ink)] hover:border-[var(--primary)] hover:text-[var(--primary)]"
@@ -335,22 +349,24 @@ onUnmounted(() => {
           </nav>
 
           <div class="mt-4 grid grid-cols-2 gap-2">
-            <div
-              class="rounded-2xl border border-[var(--line)] bg-[var(--surface)] p-3"
+            <button
+              type="button"
+              class="min-w-0 rounded-2xl border border-[var(--line)] bg-[var(--surface)] p-3 text-left hover:border-[var(--primary)] disabled:cursor-wait"
+              :title="weatherTitle"
+              :aria-label="weatherTitle"
+              :aria-busy="weatherLoading"
+              :disabled="weatherLoading"
+              @click="requestWeather"
             >
               <div class="flex items-center gap-2">
                 <i
                   class="pi text-[var(--primary)]"
-                  :class="weatherIcon[weatherKind]"
+                  :class="currentWeatherIcon"
+                  aria-hidden="true"
                 ></i
-                ><strong class="text-lg text-[var(--ink)]">{{
-                  weather.temperature === null ? "—" : `${weather.temperature}°`
-                }}</strong>
+                ><strong class="text-lg text-[var(--ink)]">{{ weatherTemperature }}</strong>
               </div>
-              <p class="mt-1 truncate text-[10px] text-[var(--muted)]">
-                {{ weather.label }} · {{ weather.location }}
-              </p>
-            </div>
+            </button>
             <button
               class="rounded-2xl border border-[var(--line)] bg-[var(--surface)] p-3 text-left hover:border-[var(--primary)]"
               @click="cycleTheme"
