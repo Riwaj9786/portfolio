@@ -1215,7 +1215,7 @@ cannot replace a Django fixture for restoration.
     "company": "Reliance College, Chabahil",
     "company_url": "https://riacollege.edu.np/",
     "category": "professional",
-    "description": "Led promotional strategies, coordinated creative teams, managed digital campaigns, and developed engaging content to increase awareness, participation, and visibility of entrepreneurship initiatives.",
+    "description": "Teaching undergraduate computing courses, delivering practical and theory-based lectures, guiding students through software development projects, and mentoring them in applying engineering concepts to real-world problems.",
     "logo": null,
     "achievements": [],
     "date_precision": "month",
