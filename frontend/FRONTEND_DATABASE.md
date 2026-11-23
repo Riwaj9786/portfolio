@@ -284,6 +284,7 @@ To add a certificate, copy an object in this format into that snapshot array:
     "id": 1,
     "title": "Your certification title",
     "certificate_number": "CERT-001",
+    "url": "https://example.com/verify/CERT-001",
     "image": "uploads/certifications/your-certificate.jpg",
     "academy": "Issuing Academy",
     "issued_at": "2026-11-14"
@@ -296,10 +297,10 @@ Use a unique `id` and keep `certificate_number` as a string to preserve leading 
 the certificate. Use `YYYY-MM-DD` for its issue date, or an ISO 8601 timestamp if an
 exact time is available. The page displays the issue date. Place the image under
 `frontend/public/uploads/certifications/` and store its path relative to
-`frontend/public/`, as above. Clicking the image opens it in a new tab.
+`frontend/public/`, as above. Set `url` to the certificate's full verification URL.
+Clicking anywhere on the certificate card opens `url` in a new tab. If `url` is
+empty or omitted, the card opens the certificate image instead.
 Update the heading's record count and rebuild after editing the snapshot.
-The current certification records are sample entries for previewing the section;
-replace them and the placeholder image with your own certificates.
 
 ## Public content snapshot
 
@@ -1178,24 +1179,27 @@ cannot replace a Django fixture for restoration.
 ### `certifications.certification` (2 records)
 
 ```json
-[]
-```
-  <!-- {
+[
+  {
     "id": 1,
-    "title": "Sample: Full Stack Development",
-    "certificate_number": "SAMPLE-2026-001",
-    "image": "uploads/certifications/sample-certificate.svg",
-    "academy": "Sample Learning Academy",
-    "issued_at": "2026-11-01"
+    "title": "Introduction to Systems Analysis",
+    "certificate_number": "NDFZ6CP32CL7",
+    "url": "https://coursera.org/share/3006d6106fd0459d94a023b8e516dfab",
+    "image": "uploads/certifications/introduction-to-system-analyst.jpeg",
+    "academy": "IBM",
+    "issued_at": "2026-11-23"
   },
   {
     "id": 2,
-    "title": "Sample: User Experience Design",
-    "certificate_number": "SAMPLE-2026-002",
-    "image": "uploads/certifications/sample-certificate.svg",
-    "academy": "Sample Design Academy",
-    "issued_at": "2026-10-15"
-  } -->
+    "title": "Python and Django Full Stack Developer Bootcamp",
+    "certificate_number": "UC-81f5b84b-be3d-4ba0-9939-ff8066599947",
+    "url": "http://ude.my/UC-81f5b84b-be3d-4ba0-9939-ff8066599947",
+    "image": "uploads/certifications/full-stack.jpg",
+    "academy": "Pierian Training, Udemy",
+    "issued_at": "2024-09-02"
+  },
+]
+```
 
 ### `projects.projectcategory` (3 records)
 
