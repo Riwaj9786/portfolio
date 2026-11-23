@@ -1,6 +1,7 @@
 <script setup>
 import Information from "@/components/Home/Information/Information.vue";
 import Experience from "@/components/Home/Experience/Experience.vue";
+import AcademicQualifications from "@/components/Home/Experience/AcademicQualifications.vue";
 import ProjectsButton from "@/components/Home/ProjectsButton/ProjectsButton.vue";
 import SkillSet from "@/components/Home/Skills/SkillSet.vue";
 import ServicesHome from "@/components/Home/Services/ServicesHome.vue";
@@ -49,6 +50,7 @@ onMounted(async () => {
          <section class="mb-5 sm:mb-6 lg:mb-10">
             <Experience />
          </section>
+         <AcademicQualifications />
          <section v-reveal class="mb-5 sm:mb-6 lg:mb-10">
             <ServicesHome/>
          </section>

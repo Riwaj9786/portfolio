@@ -71,10 +71,6 @@ const ratingLabel = (level) =>
           <strong class="text-[var(--ink)]">{{ categories.length }}</strong> disciplines
         </p>
       </div>
-      <p class="mt-2 text-[11px] leading-relaxed text-[var(--muted)] sm:text-xs">
-        Explore the tools I work with across engineering, design, and delivery.
-        Proficiency is self-assessed on a scale of 10.
-      </p>
     </header>
 
     <p v-if="errorMessage" role="alert" class="py-3 text-sm text-red-500">{{ errorMessage }}</p>

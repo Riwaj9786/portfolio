@@ -6,7 +6,7 @@ import portfolioContent from "@/content";
 const data = ref({}),
   isLoading = ref(true),
   error = ref(null);
-const email = "riwajbhurtel9786@gmail.com";
+const email = computed(() => data.value.email || "");
 const whatsappUrl = computed(() =>
   data.value.whatsapp
     ? `https://wa.me/${data.value.whatsapp.replace(/\D/g, "")}`
@@ -62,7 +62,7 @@ onMounted(async () => {
           Direct channels
         </p>
         <div class="mt-4 divide-y divide-[var(--line)]">
-          <a :href="`mailto:${email}`" class="contact-channel group"
+          <a v-if="email" :href="`mailto:${email}`" class="contact-channel group"
             ><span class="contact-channel-icon"
               ><i class="pi pi-envelope"></i></span
             ><span

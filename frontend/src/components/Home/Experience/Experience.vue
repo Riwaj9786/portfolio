@@ -9,25 +9,25 @@ const data = ref([]);
 const loading = ref(true);
 const error = ref(null);
 const activeCategory = ref("professional");
+const tabs = [
+  { value: "professional", label: "Professional" },
+  { value: "leadership", label: "Leadership" },
+];
 const route = useRoute();
 watch(
   () => route.query.journey,
   (category) => {
     activeCategory.value =
-      category === "leadership" ? "leadership" : "professional";
+      tabs.some((tab) => tab.value === category) ? category : "professional";
   },
   { immediate: true },
 );
-const tabs = [
-  { value: "professional", label: "Professional" },
-  { value: "leadership", label: "Leadership" },
-];
 function handleTabKey(event, index) {
   const key = event.key;
   if (!["ArrowLeft", "ArrowRight", "Home", "End"].includes(key)) return;
   event.preventDefault();
   const next =
-    key === "Home" ? 0 : key === "End" ? 1 : (index + 1) % tabs.length;
+    key === "Home" ? 0 : key === "End" ? tabs.length - 1 : (index + (key === "ArrowLeft" ? -1 : 1) + tabs.length) % tabs.length;
   activeCategory.value = tabs[next].value;
   event.currentTarget.parentElement
     .querySelectorAll('[role="tab"]')
@@ -91,15 +91,11 @@ onMounted(async () => {
   <section class="journey-section" aria-labelledby="journey-title">
     <header v-reveal class="mb-4 lg:mb-6">
       <h2 id="journey-title" class="section-title">My Journey</h2>
-      <p class="mt-2 text-xs leading-relaxed text-[var(--muted)] lg:text-sm">
-        A blend of professional expertise, leadership, and meaningful
-        contributions.
-      </p>
     </header>
-    <div class="journey-tabs" role="tablist" aria-label="Experience categories">
+    <div class="journey-tabs" role="tablist" aria-label="Journey categories">
       <span
         class="journey-tab-indicator"
-        :class="{ 'is-leadership': activeCategory === 'leadership' }"
+        :style="{ transform: 'translateX(' + tabs.findIndex((tab) => tab.value === activeCategory) * 100 + '%)' }"
         aria-hidden="true"
       ></span>
       <button
@@ -204,13 +200,10 @@ onMounted(async () => {
   background: var(--primary-action);
   transition: transform 0.32s cubic-bezier(.22,1,.36,1);
 }
-.journey-tab-indicator.is-leadership {
-  transform: translateX(100%);
-}
 .journey-tabs button {
   min-height: 44px;
   padding: 0.5rem 0.4rem;
-  font-size: clamp(0.62rem, 1.4vw, 0.78rem);
+  font-size: .75rem;
   font-weight: 700;
   color: var(--muted);
   border-radius: 999px;

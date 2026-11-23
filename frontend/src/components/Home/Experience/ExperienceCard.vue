@@ -7,6 +7,8 @@ const props = defineProps({
   company_url: { type: String, default: "" },
   logo: { type: String, default: "" },
   roles: { type: Array, default: () => [] },
+  item_label: { type: String, default: "positions" },
+  period: { type: String, default: undefined },
 });
 
 const instanceId = useId();
@@ -33,6 +35,7 @@ const formatDate = (value, precision = "month") => {
 };
 
 const companyPeriod = computed(() => {
+  if (props.period !== undefined) return props.period;
   if (!props.roles.length) return "";
   const starts = props.roles
     .map((role) => new Date(role.start_date))
@@ -67,8 +70,8 @@ const companyPeriod = computed(() => {
         <div class="min-w-0">
           <h3 class="text-base font-bold leading-snug tracking-tight text-[var(--primary)]">{{ company }}</h3>
           <div v-if="roles.length > 1" class="mt-1.5 flex flex-wrap items-center gap-x-2 gap-y-1 text-xs text-[var(--muted)]">
-            <span class="rounded-full bg-purple-500/10 px-2 py-0.5 font-medium text-[var(--primary)]">{{ roles.length }} positions</span>
-            <span>{{ companyPeriod }}</span>
+            <span class="rounded-full bg-purple-500/10 px-2 py-0.5 font-medium text-[var(--primary)]">{{ roles.length }} {{ item_label }}</span>
+            <span v-if="companyPeriod">{{ companyPeriod }}</span>
           </div>
         </div>
       </div>
@@ -81,7 +84,7 @@ const companyPeriod = computed(() => {
         :aria-label="`Visit ${company} website (opens in a new tab)`"
       ><i class="pi pi-arrow-up-right text-xs" aria-hidden="true"></i></a>
     </header>
-    <ol class="role-list" :class="{ 'has-timeline': roles.length > 1 }" role="list" :aria-label="`Positions at ${company}, newest first`">
+    <ol class="role-list" :class="{ 'has-timeline': roles.length > 1 }" role="list" :aria-label="`${item_label} at ${company}, newest first`">
       <li
         v-for="(role, index) in roles"
         :key="roleKey(role)"
@@ -100,11 +103,14 @@ const companyPeriod = computed(() => {
             @click="hasDetails(role) && toggleRole(role)"
           >
             <span class="role-title">{{ role.title }}</span>
-            <span class="role-period">
+            <span v-if="role.display_period === undefined || role.display_period" class="role-period">
+              <template v-if="role.display_period !== undefined">{{ role.display_period }}</template>
+              <template v-else>
               <time :datetime="role.start_date">{{ formatDate(role.start_date, role.date_precision) }}</time>
               <span> — </span>
               <time v-if="role.end_date" :datetime="role.end_date">{{ formatDate(role.end_date, role.date_precision) }}</time>
               <span v-else>Present</span>
+              </template>
             </span>
             <i
               v-if="hasDetails(role)"

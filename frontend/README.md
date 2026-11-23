@@ -8,6 +8,40 @@ Components use `src/content.js` for local content reads. Filters, search, relate
 skills, project details, blog details, and featured content work without API calls.
 `src/axios.js` is only a compatibility re-export; it makes no HTTP requests.
 
+The navbar's **Resume** button offers **View Resume** or **Generate CV**.
+The first opens the uploaded PDF; the second opens a content chooser, then a
+searchable PDF in a new tab. The builder has separate Profile, Skills, Experience,
+Academic, Projects, Certifications, and Review tabs. Experience has Professional and Leadership
+views. Organization and project category lists expand independently, and project
+search helps find specific work. The Review tab shows exactly what is selected and
+provides Edit links back to each section. Checkboxes select individual roles and projects, skill
+categories, academic qualifications, and certifications. Academic has select-all
+and individual qualification checkboxes, with selected entries shown in Review
+and in the PDF's Academic Qualifications section. Name and title are always included.
+The Profile tab offers an editable professional title and a custom summary editor
+for the generated CV only. The Review tab and PDF use the edited title; website
+content stays unchanged.
+Technical skills use a table; a checkbox controls whether category names appear.
+Individual category checkboxes control which skills are included. Project category
+checkboxes select or deselect every project in that category, with partial-selection
+states when individual projects are changed. Professional and leadership experience
+are grouped by organization, with a checkbox to select all its positions and nested
+checkboxes for individual roles. These selections stay independent across sections.
+Organization headings and table headers appear once, without duplication on later
+pages. Generation runs
+locally from the same public snapshot. Its Letter layout, green section headings, bold
+titles, dates, links, and bullets follow `Resume Technical.pdf`. The PDF includes
+profile, contact, skills, experience, project features (or an opening description),
+leadership, academic qualifications, and certifications; empty sections are omitted.
+Body paragraphs, bullet text, and skills table content use justified alignment,
+with paragraph endings left naturally spaced. Experience roles are
+indented beneath each company, with bullet points indented further. Update the public
+contact `email`, `whatsapp`, and `address` fields in `FRONTEND_DATABASE.md` for both
+the contact page and CV. Rebuild after content edits. Run `node scripts/check-cv.mjs` to verify CV
+content and pagination. Run `node scripts/check-cv-dialog.mjs` for component
+interaction checks covering navigation, selection, search, custom summary editing,
+review, and PDF opening without starting a local server.
+
 Images now live in `public/uploads/` and are served at `/uploads/`. The public
 snapshot in `FRONTEND_DATABASE.md` points directly to these local assets, so no
 backend media server is needed. There are 119 generated SVG placeholder images
@@ -115,7 +149,15 @@ npm run build
 ## My Journey experiences
 
 The home page defaults to Professional Experience and offers a Leadership Experience
-tab. Both use the existing grouped experience cards and display optional logos,
+tab. A separate Academic Qualifications section sits directly below My Journey
+and reuses the same expandable card style, with a separate card for every
+qualification, including those at the same institution. Academic records live in the
+`education.qualification` JSON block in `FRONTEND_DATABASE.md`. Add each degree,
+institution, optional dates, grade, description, and achievements there and rebuild.
+Unknown dates remain `null`; completed study never shows Present for a missing end
+date. `to_display: false` hides a qualification. Link to the academic section with
+`/#academic-qualifications`. Professional and Leadership use the existing
+grouped experience cards and display optional logos,
 plain-text descriptions, achievements, and skills. Categories are `professional` and
 `leadership`; records without a category remain professional for compatibility.
 

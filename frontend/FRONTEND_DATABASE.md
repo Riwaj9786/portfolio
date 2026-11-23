@@ -12,8 +12,22 @@ All portfolio details, filters, and detail pages use bundled local data; no Djan
 PostgreSQL, or API URL is required. Rebuild after editing the snapshot.
 
 Images resolve locally under `/uploads/` and live in `frontend/public/uploads/`.
-The original photos and project screenshots are not included. The resume PDF is
-not generated; supply the real file and update `resume` before publishing its link.
+The original photos and project screenshots are not included. The navbar Resume
+button offers the uploaded file in `resume` or Generate CV. The generator opens
+Profile, Skills, Experience, Academic, Projects, Certifications, and Review tabs with
+checkboxes to choose sections and individual items, including bulk project selection
+by category and bulk professional/leadership positions by organization, then opens
+the PDF in a new tab. Headings appear once without repetition at page breaks. It supports
+an editable professional title, an optional custom professional summary for that CV,
+and a skills table with optional
+category names. Category checkboxes control which skills appear. Website content
+is unchanged by these customizations. The PDF uses
+the current public snapshot with the layout of Resume Technical.pdf. It can include
+the profile, public contact details (`email`, `whatsapp`, `address`), LinkedIn and
+GitHub links, skills, professional experience, academic qualifications, projects,
+leadership, and certifications. Academic qualifications have select-all and
+individual checkboxes. CV body paragraphs, bullets, and skill table values are justified.
+Rebuild after editing the snapshot to update both the website and generated CV.
 
 Contact and testimonial forms display an unavailable notice and do not submit.
 The browser requests location permission on opening the site, then loads local
@@ -302,6 +316,28 @@ Clicking anywhere on the certificate card opens `url` in a new tab. If `url` is
 empty or omitted, the card opens the certificate image instead.
 Update the heading's record count and rebuild after editing the snapshot.
 
+## Academic qualifications on the Home page
+
+The Home page shows Academic Qualifications as a separate section directly below
+My Journey. My Journey contains only Professional and Leadership tabs. Academic
+qualifications reuse the same institution headers and expandable details as
+experience, with one separate card per qualification and no shared timeline.
+Academic reads `education.qualification` below through
+the local content reader at `education/qualifications/`; no backend API or database
+model is needed. Link directly to the section with `/#academic-qualifications`.
+
+Add one object per qualification to the JSON array below, using a unique `id`.
+`degree` and `institution` are the displayed qualification and school/university.
+Optional fields are `institution_url` (full HTTP/HTTPS link), `location`, `grade`,
+plain-text `description`, and `achievements` (a list of strings). Set `to_display`
+to `false` to hide a record. Set `status` to `completed` or `ongoing`.
+Use `YYYY-MM-DD` dates and `date_precision: "year"` or `"month"` (year-only `YYYY`
+values also work with year precision); leave dates
+`null` when unknown. A missing end date only displays Present for ongoing study.
+Ongoing qualifications sort first, followed by the most recent dated records.
+Use the existing entries as templates for additional qualifications.
+Edit the JSON, keep its heading and fences intact, and rebuild to update the site.
+
 ## Public content snapshot
 
 The following JSON blocks contain actual public content from `data.json`. Every section
@@ -323,9 +359,9 @@ cannot replace a Django fixture for restoration.
   {
     "id": 1,
     "name": "Er. Riwaj Bhurtel",
-    "title": "Computer Engineer | Full Stack Developer | Graphics Designer",
+    "title": "Computer Engineer | Tech Professional | Graphics Designer",
     "short_bio": "Full-Stack & Backend Developer (Django, DRF, React & Vue) | Graphic Designer with 4+ years of experience. Passionate about building scalable applications, exploring AI-powered solutions, and crafting impactful digital experiences.",
-    "description": "<p>I am a <strong>Computer Engineer</strong> and <strong>Full Stack Developer</strong> specializing in <strong>Django</strong> and <strong>Vue.js</strong>, with a strong focus on building scalable, efficient, and intuitive web applications. With over <strong>four years of experience in Graphic Design</strong>, I also bring a creative edge to my work, crafting visually engaging brand identities and digital assets that elevate user experiences.</p><p>&nbsp;</p><p>In addition to my technical and design capabilities, I have a proven track record of <strong>leadership</strong> and <strong>community involvement</strong>. I am passionate about leveraging the power of technology and design to develop impactful, user-centric solutions that address real-world challenges. By bridging the gap between functionality and aesthetics, I strive to create digital experiences that are not only effective but meaningful.</p>",
+    "description": "<p>I am a <strong>Computer Engineer and Technology Professional</strong> specializing in <strong>Software Engineering, Project Analysis and Coordination, and Digital Transformation</strong>. With expertise in <strong>Python, Django, Vue.js, API development, and database management</strong>, I build scalable, efficient, and user-centric digital solutions. I also bring experience in <strong>project coordination, AI-driven applications, UI/UX design, and technical leadership</strong>, driven by a passion for using technology to solve real-world challenges.",
     "profile_pic": "uploads/account/user/Riwaj_profile_pic-700x700.jpg",
     "resume": "uploads/resume/Resume.pdf"
   }
@@ -1172,6 +1208,81 @@ cannot replace a Django fixture for restoration.
       54,
       57
     ]
+  },
+  {
+    "id": 18,
+    "title": "Lecturer, BCA & BSc CSIT",
+    "company": "Reliance College, Chabahil",
+    "company_url": "https://riacollege.edu.np/",
+    "category": "professional",
+    "description": "Led promotional strategies, coordinated creative teams, managed digital campaigns, and developed engaging content to increase awareness, participation, and visibility of entrepreneurship initiatives.",
+    "logo": null,
+    "achievements": [],
+    "date_precision": "month",
+    "start_date": "2026-03-01",
+    "end_date": null,
+    "job_type": "Onsite",
+    "skills": [
+      11,
+      25,
+      30,
+      34,
+      55,
+      57,
+      61,
+    ]
+  },
+]
+```
+
+### `education.qualification` (3 records)
+
+```json
+[
+  {
+    "id": 1,
+    "degree": "Bachelor in Computer Engineering",
+    "institution": "School of Engineering, Pokhara University",
+    "institution_url": null,
+    "location": "",
+    "start_date": "2019",
+    "end_date": "2024",
+    "date_precision": "year",
+    "status": "completed",
+    "grade": "",
+    "description": "",
+    "achievements": [],
+    "to_display": true
+  },
+  {
+    "id": 2,
+    "degree": "NEB +2 (Science)",
+    "institution": "SOS Hermann Gmeiner School Gandaki",
+    "institution_url": null,
+    "location": "",
+    "start_date": "2015",
+    "end_date": "2017",
+    "date_precision": "year",
+    "status": "completed",
+    "grade": "",
+    "description": "",
+    "achievements": [],
+    "to_display": true
+  },
+  {
+    "id": 3,
+    "degree": "SLC",
+    "institution": "SOS Hermann Gmeiner School Gandaki",
+    "institution_url": null,
+    "location": "",
+    "start_date": "2015",
+    "end_date": "2017",
+    "date_precision": "year",
+    "status": "completed",
+    "grade": "",
+    "description": "",
+    "achievements": [],
+    "to_display": true
   },
 ]
 ```
@@ -2145,7 +2256,7 @@ cannot replace a Django fixture for restoration.
     "id": 11,
     "project": 9,
     "name": "Figma v1",
-    "link": "https://www.figma.com/design/OT5o7tfUQKVVcql5ZAiOTu/Portfolio?node-id=0-1&t=LJlwXK6KUF1bSqas-1"
+    "link": "https://www.figma.com/design/OT5o7tfUQKVVcql5ZAiOTu/Portfolio"
   },
   {
     "id": 12,
@@ -2312,6 +2423,7 @@ cannot replace a Django fixture for restoration.
   {
     "id": 1,
     "contact_banner": "uploads/contact/contactinformation/Er. Riwaj Bhurtel.png",
+    "email": "riwajbhurtel9786@gmail.com",
     "whatsapp": "+977 9869146101",
     "address": "Tokha-10, Kathmandu"
   }

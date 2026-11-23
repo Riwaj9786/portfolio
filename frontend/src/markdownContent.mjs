@@ -1,3 +1,5 @@
+import { publicAcademicQualifications } from './academicQualifications.mjs'
+
 // Allow trailing commas from manual edits without touching commas inside strings.
 export function removeTrailingCommas(json) {
   let result = ''
@@ -92,6 +94,8 @@ export function createContentReader(content, mediaOrigin) {
     if (simple[route]) {
       const [model, fields] = simple[route]
       data = records(model).map((row) => fields ? Object.fromEntries(fields.map((field) => [field, row[field]])) : row)
+    } else if (route === 'education/qualifications') {
+      data = publicAcademicQualifications(records('education.qualification'))
     } else if (route === 'certification/certifications') {
       data = [...records('certifications.certification')].sort((a, b) =>
         (b.issued_at || '').localeCompare(a.issued_at || ''))

@@ -3,9 +3,16 @@ import portfolioContent from "@/content";
 import { computed, ref, nextTick, onMounted, onUnmounted, watch } from "vue";
 import { useRoute } from "vue-router";
 import { useAmbience } from "@/composables/useAmbience";
+import ResumeOptions from "@/components/Resume/ResumeOptions.vue";
 
 const data = ref({ resume: "#" });
 const menuOpen = ref(false);
+const resumeOptions = ref(null);
+async function openResumeOptions() {
+  menuOpen.value = false;
+  await nextTick();
+  resumeOptions.value.show();
+}
 const menuTrigger = ref(null);
 const menuDialog = ref(null);
 const closeButton = ref(null);
@@ -161,12 +168,12 @@ onUnmounted(() => {
             :class="resolvedTheme === 'dark' ? 'pi-moon' : 'pi-sun'"
           ></i>
         </button>
-        <a
-          :href="data.resume"
-          target="_blank"
-          rel="noopener"
-          class="ml-1 rounded-full bg-[var(--primary-action)] px-5 py-2 text-sm font-semibold text-white hover:-translate-y-0.5"
-          >Résumé <span aria-hidden="true">↗</span></a
+        <button
+          type="button"
+          aria-haspopup="dialog"
+          class="resume-trigger ml-1 rounded-full bg-[var(--primary-action)] px-5 py-2 text-sm font-semibold text-white hover:-translate-y-0.5"
+          @click="openResumeOptions"
+          >Résumé</button
         >
       </div>
       <div class="flex shrink-0 items-center gap-2 lg:hidden">
@@ -327,12 +334,11 @@ onUnmounted(() => {
                 ><i class="pi pi-arrow-up-right text-xs"></i
               ></span>
             </RouterLink>
-            <a
-              :href="data.resume"
-              target="_blank"
-              rel="noopener"
-              class="group flex items-center gap-3 py-3"
-              @click="menuOpen = false"
+            <button
+              type="button"
+              aria-haspopup="dialog"
+              class="resume-trigger group flex w-full items-center gap-3 py-3 text-left"
+              @click="openResumeOptions"
             >
               <span class="font-mono text-[10px] text-[var(--muted)]">04</span>
               <span class="min-w-0 flex-1"
@@ -343,9 +349,9 @@ onUnmounted(() => {
               >
               <span
                 class="grid h-9 w-9 place-items-center rounded-full border border-[var(--line)] text-[var(--muted)] transition group-hover:border-[var(--primary)] group-hover:bg-[var(--primary-action)] group-hover:text-white"
-                ><i class="pi pi-download text-xs"></i
+                ><i class="pi pi-file-pdf text-xs"></i
               ></span>
-            </a>
+            </button>
           </nav>
 
           <div class="mt-4 grid grid-cols-2 gap-2">
@@ -389,6 +395,7 @@ onUnmounted(() => {
       </div>
     </Transition>
   </Teleport>
+  <ResumeOptions ref="resumeOptions" :resume="data.resume" />
 </template>
 
 <style scoped>

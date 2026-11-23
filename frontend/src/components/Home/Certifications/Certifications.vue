@@ -35,9 +35,6 @@ const formatDate = (value) => {
   >
     <header class="mb-4 lg:mb-6">
       <h2 id="certifications-title" class="section-title">Certifications</h2>
-      <p class="mt-2 text-xs leading-relaxed text-[var(--muted)] lg:text-sm">
-        Learning milestones and the academies behind them.
-      </p>
     </header>
     <div class="space-y-2">
       <a
