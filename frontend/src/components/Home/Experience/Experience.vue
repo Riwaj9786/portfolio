@@ -160,7 +160,7 @@ onMounted(async () => {
 
       <!-- Actual Content -->
       <Transition v-else :css="false" mode="out-in" @enter="enterContent" @leave="leaveContent" @enter-cancelled="cancelTransition" @leave-cancelled="cancelTransition">
-        <div :key="activeCategory" v-stagger>
+        <div :key="activeCategory" v-stagger class="space-y-3">
           <div v-for="company in groupedExperiences" :key="company.company">
             <ExperienceCard
               :company="company.company"

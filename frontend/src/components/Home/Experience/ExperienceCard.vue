@@ -10,14 +10,14 @@ const props = defineProps({
 });
 
 const instanceId = useId();
-const closedRoles = ref(new Set());
+const expandedRoles = ref(new Set());
 const roleKey = (role) => role.id || `${role.title}-${role.start_date}`;
-const hasDetails = (role) => Boolean(role.description || role.achievements?.length);
+const hasDetails = (role) => Boolean(role.description || role.achievements?.length || role.skills?.length || role.job_type);
 function toggleRole(role) {
   const key = roleKey(role);
-  const next = new Set(closedRoles.value);
+  const next = new Set(expandedRoles.value);
   if (next.has(key)) next.delete(key); else next.add(key);
-  closedRoles.value = next;
+  expandedRoles.value = next;
 }
 
 const formatDate = (value, precision = "month") => {
@@ -52,146 +52,171 @@ const companyPeriod = computed(() => {
 
 <template>
   <article
-    class="experience-group my-3 overflow-hidden rounded-xl lg:my-4 lg:rounded-[1.6rem] border border-[var(--line)] bg-[var(--surface)] shadow-[var(--shadow)] backdrop-blur-xl"
+    class="experience-group relative overflow-hidden rounded-2xl border border-[var(--line)] bg-[var(--surface)] shadow-[var(--shadow)] backdrop-blur-xl"
+    :class="{ 'is-single': roles.length === 1, 'has-logo': Boolean(logo) }"
   >
-    <header
-      class="flex flex-col w-full gap-2 border-b border-[var(--line)] px-4 py-3 sm:flex-row sm:items-center sm:justify-between lg:gap-3 lg:px-7 lg:py-5"
-    >
-      <div class="flex min-w-0 items-center gap-3">
+    <header class="organization-header flex items-start justify-between gap-3 border-b border-[var(--line)] p-4 sm:p-5">
+      <div class="organization-identity flex min-w-0 items-start gap-3">
         <img
           v-if="logo"
           :src="logo"
           :alt="`${company} logo`"
-          class="h-10 w-10 shrink-0 rounded-xl border border-[var(--line)] object-contain p-1 lg:h-12 lg:w-12"
+          loading="lazy"
+          class="organization-logo h-11 w-11 shrink-0 rounded-xl border border-[var(--line)] bg-[var(--surface-solid)] object-contain p-1"
         />
         <div class="min-w-0">
-          <p
-            class="mb-1 text-[10px] font-bold uppercase tracking-[.18em] text-[var(--primary)]"
-          >
-            {{ roles.length > 1 ? `${roles.length} roles` : "" }}
-          </p>
-          <div
-            class="flex flex-wrap justify-between items-baseline gap-x-3 gap-y-1"
-          >
-            <h3
-              class="text-base font-bold tracking-tight lg:text-xl text-[var(--ink)]"
-            >
-              {{ company }}
-            </h3>
+          <h3 class="text-base font-bold leading-snug tracking-tight text-[var(--primary)]">{{ company }}</h3>
+          <div v-if="roles.length > 1" class="mt-1.5 flex flex-wrap items-center gap-x-2 gap-y-1 text-xs text-[var(--muted)]">
+            <span class="rounded-full bg-purple-500/10 px-2 py-0.5 font-medium text-[var(--primary)]">{{ roles.length }} positions</span>
+            <span>{{ companyPeriod }}</span>
           </div>
         </div>
       </div>
-      <div class="flex items-center gap-3">
-        <span v-if="roles.length > 1" class="text-xs text-[var(--muted)]">{{
-          companyPeriod
-        }}</span>
-        <span
-          v-if="roles.length === 1"
-          class="text-xs font-medium text-[var(--muted)]"
-          >{{ formatDate(roles[0].start_date, roles[0].date_precision) }} —
-          {{ formatDate(roles[0].end_date, roles[0].date_precision) }}</span
-        >
-        <a
-          v-if="company_url"
-          :href="company_url"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="grid h-9 w-9 place-items-center rounded-full border border-[var(--line)] text-[var(--primary)] hover:-translate-y-0.5 hover:border-[var(--primary)]"
-          :aria-label="`Visit ${company} website`"
-        >
-          <i class="pi pi-arrow-up-right text-xs"></i>
-        </a>
-      </div>
+      <a
+        v-if="company_url"
+        :href="company_url"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="company-link grid h-10 w-10 shrink-0 place-items-center rounded-full border border-[var(--line)] text-[var(--primary)]"
+        :aria-label="`Visit ${company} website (opens in a new tab)`"
+      ><i class="pi pi-arrow-up-right text-xs" aria-hidden="true"></i></a>
     </header>
-
-    <div class="px-4 py-4 lg:px-7 lg:py-6">
-      <ol
-        class="relative"
-        :class="roles.length > 1 ? 'ml-2 border-l border-purple-400/35' : ''"
+    <ol class="role-list" :class="{ 'has-timeline': roles.length > 1 }" role="list" :aria-label="`Positions at ${company}, newest first`">
+      <li
+        v-for="(role, index) in roles"
+        :key="roleKey(role)"
+        v-reveal="{ timeline: roles.length > 1 }"
+        class="role-item"
       >
-        <li
-          v-for="(role, index) in roles"
-          :key="role.id || `${role.title}-${role.start_date}`"
-          v-reveal="{ timeline: true }"
-          class="timeline-role relative pb-4 lg:pb-7 last:pb-0"
-          :class="roles.length > 1 ? 'pl-5 lg:pl-7' : ''"
-        >
-          <span
-            v-if="roles.length > 1"
-            class="absolute -left-[7px] top-1.5 h-[13px] w-[13px] rounded-full border-[3px] border-[var(--surface-solid)] bg-[var(--primary-action)] shadow-[0_0_0_3px_color-mix(in_srgb,var(--primary)_16%,transparent)]"
-          ></span>
-          <div
-            class="flex flex-col gap-1 sm:flex-row sm:items-start sm:justify-between"
+        <span v-if="roles.length > 1" class="role-marker" aria-hidden="true"></span>
+        <h4>
+          <component
+            :is="hasDetails(role) ? 'button' : 'div'"
+            :type="hasDetails(role) ? 'button' : undefined"
+            class="role-summary"
+            :class="{ 'is-expandable': hasDetails(role) }"
+            :aria-expanded="hasDetails(role) ? expandedRoles.has(roleKey(role)) : undefined"
+            :aria-controls="hasDetails(role) ? `${instanceId}-role-${index}` : undefined"
+            @click="hasDetails(role) && toggleRole(role)"
           >
-            <div>
-              <h4 class="text-sm font-semibold text-[var(--ink)] lg:text-base">
-                <button v-if="hasDetails(role)" type="button" class="role-details-toggle" :aria-expanded="!closedRoles.has(roleKey(role))" :aria-controls="`${instanceId}-role-${index}`" @click="toggleRole(role)">
-                  {{ role.title }}<i class="pi pi-chevron-down" :class="{ 'is-collapsed': closedRoles.has(roleKey(role)) }" aria-hidden="true"></i>
-                </button>
-                <template v-else>{{ role.title }}</template>
-              </h4>
-              <span
-                v-if="role.job_type"
-                class="text-[10px] font-medium uppercase tracking-wider lg:text-xs text-[var(--primary)]"
-                >{{ role.job_type }}</span
-              >
-            </div>
-            <time
-              v-if="roles.length > 1"
-              class="shrink-0 text-xs text-[var(--muted)]"
-              >{{ formatDate(role.start_date, role.date_precision) }} —
-              {{ formatDate(role.end_date, role.date_precision) }}</time
+            <span class="role-title">{{ role.title }}</span>
+            <span class="role-period">
+              <time :datetime="role.start_date">{{ formatDate(role.start_date, role.date_precision) }}</time>
+              <span> — </span>
+              <time v-if="role.end_date" :datetime="role.end_date">{{ formatDate(role.end_date, role.date_precision) }}</time>
+              <span v-else>Present</span>
+            </span>
+            <i
+              v-if="hasDetails(role)"
+              class="role-chevron pi pi-chevron-down"
+              :class="{ 'is-collapsed': !expandedRoles.has(roleKey(role)) }"
+              aria-hidden="true"
+            ></i>
+          </component>
+        </h4>
+        <Transition name="role-details">
+          <div v-show="expandedRoles.has(roleKey(role))" :id="`${instanceId}-role-${index}`" class="role-details">
+            <p v-if="role.job_type" class="mb-3 text-xs font-medium uppercase tracking-wider text-[var(--primary)]">{{ role.job_type }}</p>
+            <p v-if="role.description" class="whitespace-pre-line text-sm leading-relaxed text-[var(--muted)]">{{ role.description }}</p>
+            <ul
+              v-if="role.achievements?.length"
+              class="experience-achievements mt-3 list-disc space-y-1 pl-4 text-sm leading-relaxed text-[var(--muted)]"
+              aria-label="Achievements"
             >
-          </div>
-          <Transition name="role-details">
-            <div v-show="!closedRoles.has(roleKey(role))" :id="`${instanceId}-role-${index}`">
-          <p
-            v-if="role.description"
-            class="mt-3 whitespace-pre-line text-xs leading-relaxed text-justify text-[var(--muted)]"
-          >
-            {{ role.description }}
-          </p>
-          <ul
-            v-if="role.achievements?.length"
-            v-stagger
-            class="experience-achievements mt-3 list-disc space-y-1 pl-4 text-xs leading-relaxed text-[var(--muted)] lg:text-sm"
-            aria-label="Achievements"
-          >
-            <li
-              v-for="(achievement, achievementIndex) in role.achievements"
-              :key="achievementIndex"
-            >
-              {{ achievement }}
-            </li>
-          </ul>
+              <li v-for="(achievement, achievementIndex) in role.achievements" :key="achievementIndex">{{ achievement }}</li>
+            </ul>
+            <div v-if="role.skills?.length" class="mt-3 flex flex-wrap gap-1.5">
+              <SkillButton v-for="skill in role.skills" :key="skill.name" :text="skill.name" />
             </div>
-          </Transition>
-          <div v-if="role.skills?.length" class="mt-3 flex flex-wrap gap-1.5">
-            <SkillButton
-              v-for="skill in role.skills"
-              :key="skill.name"
-              :text="skill.name"
-            />
           </div>
-          <div
-            v-if="roles.length > 1 && index < roles.length - 1"
-            class="mt-4 lg:mt-6 h-px bg-[var(--line)]"
-          ></div>
-        </li>
-      </ol>
-    </div>
+        </Transition>
+      </li>
+    </ol>
   </article>
 </template>
 
 <style scoped>
-.role-details-toggle { display:inline-flex;align-items:baseline;gap:.65rem;text-align:left;font:inherit;color:inherit;border-radius:4px; }
-.role-details-toggle i { font-size:.55rem;color:var(--primary);transition:transform .2s; }
-.role-details-toggle i.is-collapsed { transform:rotate(-90deg); }
-.role-details-toggle:hover { color:var(--primary); }
-.role-details-toggle:focus-visible { outline:2px solid var(--primary);outline-offset:4px; }
-.timeline-role>span { transition:box-shadow .3s,background-color .3s; }
-.timeline-role.is-story-active>span,.timeline-role:focus-within>span { box-shadow:0 0 0 5px color-mix(in srgb,var(--primary) 18%,transparent); }
-.role-details-enter-active,.role-details-leave-active { transition:opacity .18s,translate .18s; }
-.role-details-enter-from,.role-details-leave-to { opacity:0;translate:0 4px; }
-@media(prefers-reduced-motion:reduce) { .role-details-toggle i,.timeline-role>span,.role-details-enter-active,.role-details-leave-active { transition:none; } }
+.experience-group > .organization-header {
+  background: color-mix(in srgb, var(--primary) 6%, transparent);
+  box-shadow: inset 3px 0 0 color-mix(in srgb, var(--primary) 40%, transparent);
+}
+.role-list.has-timeline { padding: .25rem 1rem .5rem; }
+.has-timeline > .role-item { position: relative; padding-left: 1.25rem; }
+.has-timeline > .role-item:not(:last-child)::before {
+  content: '';
+  position: absolute;
+  left: calc(.375rem - .5px);
+  top: 1.7rem;
+  bottom: -1.7rem;
+  width: 1px;
+  background: color-mix(in srgb, var(--primary) 25%, var(--line));
+}
+.role-marker {
+  position: absolute;
+  left: 0;
+  top: 1.35rem;
+  width: .75rem;
+  height: .75rem;
+  border: 3px solid var(--surface-solid);
+  border-radius: 50%;
+  background: var(--primary);
+  box-shadow: 0 0 0 1px var(--line);
+  transition: box-shadow .2s;
+}
+.role-item.is-story-active > .role-marker,
+.role-item:focus-within > .role-marker {
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--primary) 12%, transparent);
+}
+.role-summary {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 1rem;
+  align-items: center;
+  column-gap: .75rem;
+  row-gap: .3rem;
+  width: 100%;
+  min-height: 64px;
+  padding: 1rem;
+  text-align: left;
+  color: var(--ink);
+  transition: background-color .2s, color .2s;
+}
+.role-title { grid-column: 1; font-size: .875rem; font-weight: 600; line-height: 1.5; overflow-wrap: anywhere; }
+.role-period { grid-column: 1; color: var(--muted); font-size: .75rem; font-weight: 400; line-height: 1.5; }
+.role-chevron { grid-column: 2; grid-row: 1 / span 2; color: var(--primary); font-size: .625rem; transition: transform .2s; }
+.role-chevron.is-collapsed { transform: rotate(-90deg); }
+.role-summary.is-expandable { cursor: pointer; }
+.role-summary:focus-visible, .company-link:focus-visible { outline: 2px solid var(--primary); outline-offset: -3px; }
+.role-details { padding: 0 1rem 1rem; }
+.role-details-enter-active, .role-details-leave-active { transition: opacity .18s, translate .18s; }
+.role-details-enter-from, .role-details-leave-to { opacity: 0; translate: 0 4px; }
+@media (hover: hover) {
+  .role-summary.is-expandable:hover { color: var(--primary); background: color-mix(in srgb, var(--primary) 5%, transparent); }
+  .company-link:hover { background: color-mix(in srgb, var(--primary) 8%, transparent); border-color: color-mix(in srgb, var(--primary) 30%, var(--line)); }
+}
+@media (min-width: 640px) {
+  .role-summary { grid-template-columns: minmax(0, 1fr) auto 1rem; padding: 1rem 1.25rem; }
+  .role-title { font-size: 1rem; }
+  .role-period { grid-column: 2; font-size: .875rem; text-align: right; }
+  .role-chevron { grid-column: 3; grid-row: 1; }
+  .role-details { padding: 0 1.25rem 1.25rem; }
+  .role-list.has-timeline { padding-right: 1.25rem; padding-left: 1.25rem; }
+}
+.has-timeline .role-summary { padding-right: .25rem; padding-left: .75rem; }
+.has-timeline .role-details { padding-right: .25rem; padding-left: .75rem; }
+.experience-group.is-single > .organization-header {
+  border-bottom: 0;
+  padding: 1rem 4.25rem 0 1rem;
+  background: transparent;
+  box-shadow: none;
+}
+.is-single.has-logo .organization-identity { padding-left: 3.5rem; }
+.is-single .organization-logo { position: absolute; top: 1rem; left: 1rem; }
+.is-single .company-link { position: absolute; top: 1rem; right: 1rem; }
+.is-single .role-summary { grid-template-columns: minmax(0, 1fr) 1rem; min-height: 0; padding: .35rem 1rem 1rem; }
+.is-single.has-logo .role-summary { padding-left: 4.5rem; }
+.is-single .role-period { grid-column: 1; text-align: left; }
+.is-single .role-chevron { grid-column: 2; grid-row: 1 / span 2; }
+@media (prefers-reduced-motion: reduce) {
+  .role-summary, .role-chevron, .role-marker, .role-details-enter-active, .role-details-leave-active { transition: none; }
+}
 </style>
